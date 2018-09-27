@@ -11,6 +11,7 @@ play18$Year = 2018
 
 play=rbind(play17, play18)
 
+
 # Get Rid of NA #
 play = play[!is.na(play$pitcher),]
 play$runner_on_1st_dest[is.na(play$runner_on_1st_dest)]=0
@@ -130,10 +131,20 @@ rv = ddply(play, .(event_type), summarise,
 rv
 
 # Run Value for Player #
+
 rv.player = ddply(play, .(batter, Year), summarise,
-                  Runs.Created = sum(runs.value),
+                  Runs.Created = round(sum(runs.value), digits = 2),
+                  Runs.Start = round(mean(runs.state), digits = 2),
+                  Runs.End = round(mean(runs.new.state), digits = 2),
+                  Avg.Runs = round(mean(runs.scored), digits = 2),
                   N = length(runs.value))
 
-# Number of games #
-ngames=ddply(play, .(gameID, ), summarise, 
-             no.plays = length(event_num))
+
+player.team = as.data.frame(unique(play[c("batter_last_name", "batting_team")]))
+
+teams.home = as.data.frame(unique(play["home_team"]))
+colnames(teams.home) = "Team"
+teams.away = as.data.frame(unique(play["visiting_team"]))
+colnames(teams.away) = "Team"
+
+teams = merge(teams.home, teams.away, all.x = T, all.y = T)
