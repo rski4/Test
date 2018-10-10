@@ -84,5 +84,3 @@ spray.chart = function(batID) {
         axis.title = element_blank(),axis.text = element_blank()) +
     coord_fixed()
 }
-
-spray.chart("wartburgcollegeThumann")
