@@ -63,7 +63,7 @@ spray.chart = function(batID) {
   df.ba$BABIP = with(df.ba, round(Hits/BIP,digits = 3))
   df.ba$SLG = with(df.ba, round((Single + 2*Double + 3*Triple + 4*HR)/BIP, digits = 3))
   df.ba$Slash = with(df.ba, ifelse(hit.loc == "lf"|hit.loc == "cf"|hit.loc == "rf"
-                                   ,paste(BABIP,SLG,sep = "/"),BABIP))
+                                   ,paste(BABIP,SLG,sep = "/\n"),BABIP))
   colnames(df.ba)[1] = "loc"
 
   df.freq = merge(df.freq,df.ba[,c("loc", "Slash")], by = "loc")
