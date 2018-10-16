@@ -115,8 +115,10 @@ spray.chart = function(batID) {
     scale_fill_brewer(palette = "Reds", name = "Freq") +
     theme(legend.position = "bottom", panel.background = element_blank(),
           axis.line = element_blank(), axis.ticks = element_blank(), 
-          axis.title = element_blank(),axis.text = element_blank()) +
+          axis.title = element_blank(),axis.text = element_blank(),
+          plot.title = element_text(hjust = 0.5, face = "bold")) +
     coord_fixed() +
     geom_label(aes(x = x.1, y = y.1), 
-               fontface = "bold")
+               fontface = "bold") + 
+    ggtitle(batID)
 }
