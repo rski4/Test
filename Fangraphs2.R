@@ -43,12 +43,15 @@ ui <- navbarPage("IIAC Fangraphs",
                tableOutput("Run.Expectancy.Event"), align = "center"),
                       tags$head(tags$style("table {background-color: ghostwhite; }", media="screen", type="text/css"))),
              tabPanel("Inning"),
+             tabPanel("Count"),
              tabPanel("Win Probability"),
              tabPanel("Park Factors")
              ),
   
   navbarMenu("Player",
-             tabPanel("Spray Charts"),
+             tabPanel("Spray Charts", textInput("batterID", h3("Batter ID"), 
+                                                value = "Enter batterID"),
+                      plotOutput("Player.Spray.Chart")),
              tabPanel("Base Runners"),
              tabPanel("Out"),
              tabPanel("Count")
@@ -68,6 +71,13 @@ server <- function(input, output) {
                            header = TRUE, sep = "", dec = ".",
                            colClasses = c("character", "numeric", "numeric", "numeric"))
   
+  play17 = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/events2017.csv"))
+  play17$Year = 2017
+  play18 = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/events2018.csv"))
+  play18$Year = 2018
+  play=rbind(play17, play18)
+  
+  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Spray%20Chart.R")))
   
   output$Batting.Stats.Standard <- renderDataTable(
     ind.bat[order(ind.bat$year, decreasing = TRUE),],
@@ -94,6 +104,10 @@ server <- function(input, output) {
     hover = TRUE,
     spacing = 'l'
     )
-}
+  
+  output$Player.Spray.Chart <- renderPlot({
+    spray.chart(input$'batterID')})
+
+    }
 
 shinyApp(ui = ui, server = server)
