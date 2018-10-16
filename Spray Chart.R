@@ -78,7 +78,7 @@ spray.chart = function(batID) {
     xlim(0,200) +
     ylim(0,150) +
     geom_polygon(aes(x=x, y=y, fill = as.factor(Freq), group = loc), color = "black") +
-    scale_fill_brewer(palette = "Reds", direction = -1,type = "seq", name = "Freq") +
+    scale_fill_brewer(palette = "Reds", name = "Freq") +
     theme(legend.position = "bottom", panel.background = element_blank(),
         axis.line = element_blank(), axis.ticks = element_blank(), 
         axis.title = element_blank(),axis.text = element_blank()) +
