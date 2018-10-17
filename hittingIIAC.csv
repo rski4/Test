@@ -1,0 +1,2867 @@
+Player,teamID,pa,wOBA,ISO,wRAA,wRC,year
+Tony Coppola, SIM ,151,0.355,0.324,15,40,2002
+Greg Torgerson, WAR ,184,0.364,0.333,19,49,2002
+Emile Shaffer, UIU ,114,0.330,0.286,9,28,2002
+Andy Walker, SIM ,144,0.313,0.218,10,34,2002
+Nick Beard, BVU ,163,0.377,0.452,18,45,2002
+Bobby Glaser, UIU ,156,0.332,0.310,13,39,2002
+Kyle Bassett, COE ,174,0.321,0.276,14,42,2002
+Travis Wielenga, BVU ,156,0.268,0.096,7,33,2002
+P.J. Garcia, UIU ,165,0.284,0.176,9,36,2002
+Ian Harden, COR ,122,0.271,0.123,6,26,2002
+Nate Iverson, COE ,162,0.300,0.209,11,37,2002
+Tim Vinyard, COE ,157,0.343,0.397,14,40,2002
+Jude Burger, WAR ,196,0.269,0.112,9,42,2002
+J.R. Taylor, UIU ,154,0.295,0.235,10,35,2002
+Chet Knake, COR ,135,0.283,0.208,7,30,2002
+John Jaeger, LUT ,124,0.302,0.295,8,29,2002
+Brett Firzlaff, DBQ ,105,0.246,0.108,3,21,2002
+Scott Sibbel, SIM ,150,0.304,0.303,10,35,2002
+Matt Menninga, CEN ,139,0.277,0.240,7,30,2002
+Nick Nissen, COE ,161,0.312,0.302,12,38,2002
+Cory Kennedy, BVU ,110,0.230,0.092,3,21,2002
+Ben Lickteig, BVU ,154,0.252,0.163,6,31,2002
+Quinn Hildman, BVU ,147,0.228,0.041,3,28,2002
+Tom Cooper, BVU ,159,0.287,0.267,9,35,2002
+Nathan Eichmeyer, COR ,131,0.277,0.243,7,28,2002
+Brent Delger, SIM ,136,0.259,0.176,6,28,2002
+Danny Love, COR ,120,0.226,0.130,3,22,2002
+Dave Swanson, LOR ,144,0.253,0.206,5,29,2002
+Tom Andrews, LOR ,139,0.231,0.150,3,26,2002
+Jason Henninger, CEN ,129,0.221,0.074,2,24,2002
+Chris Kollbaum, CEN ,125,0.259,0.162,5,26,2002
+Jay Bollman, WAR ,165,0.227,0.053,4,31,2002
+Corey Parr, DBQ ,111,0.235,0.150,3,21,2002
+B.J. Meaney, WAR ,153,0.259,0.206,6,32,2002
+Darnell Wiltz, COR ,142,0.246,0.174,5,28,2002
+Curtis Schultz, DBQ ,105,0.199,0.054,1,18,2002
+Chris Winter, WAR ,159,0.211,0.073,2,28,2002
+Eric Gold, LOR ,123,0.222,0.125,2,23,2002
+Nick Sinn, SIM ,126,0.245,0.198,4,25,2002
+Jay Whannel, WAR ,167,0.219,0.106,3,30,2002
+Brent Henry, COR ,142,0.230,0.116,3,27,2002
+Jon Schroeder, COE ,147,0.257,0.266,6,30,2002
+Jason Moreno, UIU ,156,0.244,0.146,5,31,2002
+Justin Mosbo, LUT ,132,0.206,0.096,1,23,2002
+J.P. Newman, DBQ ,127,0.201,0.114,1,22,2002
+Wes Digmann, COE ,147,0.241,0.210,4,29,2002
+Marc Mette, DBQ ,117,0.172,0.029,-1,18,2002
+Pat Block, COR ,111,0.211,0.182,1,20,2002
+Ronnie Lamfers, CEN ,142,0.191,0.102,0,24,2002
+Austin DeHoogh, CEN ,119,0.194,0.108,0,20,2002
+Jesse Freiburger, LOR ,114,0.203,0.116,1,20,2002
+Justin McAtee, BVU ,127,0.175,0.071,-1,20,2002
+Tim Gearhart, WAR ,134,0.162,0.018,-2,20,2002
+Brian Kallback, LOR ,130,0.160,0.082,-2,19,2002
+Kody Wohlers, CEN ,121,0.193,0.115,0,20,2002
+Brad Paulsrud, LUT ,120,0.182,0.072,-1,19,2002
+JD Hews, SIM ,1,0.910,1.000,0,1,2002
+Nate Lamphier, UIU ,1,0.540,0.000,0,0,2002
+Jason Roggentien, UIU ,3,0.483,0.333,1,1,2002
+Adam Heineman, WAR ,5,0.360,0.000,1,1,2002
+Josh Gruber, UIU ,6,0.377,0.250,1,2,2002
+Erich Minton, CEN ,2,0.270,0.000,0,0,2002
+Brandon Bray, SIM ,2,0.270,0.000,0,0,2002
+Joe Koch, UIU ,22,0.333,0.250,2,5,2002
+Eric Hemesath, COE ,31,0.300,0.154,2,7,2002
+Josh Carr, UIU ,77,0.306,0.177,5,18,2002
+Todd Ehlers, CEN ,18,0.305,0.200,1,4,2002
+Thomas Carte, UIU ,93,0.289,0.164,5,21,2002
+Dan Nuehring, BVU ,93,0.297,0.213,6,21,2002
+James Scherf, UIU ,92,0.263,0.060,4,19,2002
+David Isaacson, SIM ,73,0.244,0.070,2,14,2002
+Jason Fowler, UIU ,54,0.234,0.080,1,10,2002
+Brock Reed, LUT ,44,0.251,0.128,2,9,2002
+Tim Griffith, DBQ ,54,0.252,0.146,2,11,2002
+Joe Colander, DBQ ,24,0.233,0.130,1,5,2002
+Caleb Klein, WAR ,91,0.271,0.187,4,19,2002
+Jason Karaidos, LUT ,100,0.288,0.238,6,22,2002
+Sam Bjorling, DBQ ,3,0.180,0.000,0,0,2002
+Chet Medinger, LOR ,38,0.192,0.000,0,6,2002
+Tim Stoffer, WAR ,106,0.245,0.151,3,21,2002
+Joey Young, SIM ,68,0.280,0.250,4,15,2002
+David Espinoza, UIU ,74,0.255,0.094,3,15,2002
+Dan Rieck, SIM ,54,0.253,0.159,2,11,2002
+Aaron Kroll, COE ,42,0.244,0.094,1,8,2002
+Matt DeWolf, SIM ,18,0.182,0.000,0,3,2002
+Lance Ploeger, BVU ,88,0.218,0.054,1,16,2002
+Ryan Mix, WAR ,137,0.265,0.155,6,29,2002
+Andy Schemmel, DBQ ,83,0.203,0.093,1,14,2002
+Edgardo Baez, UIU ,110,0.179,0.033,-1,17,2002
+Matt Bologna, LUT ,75,0.224,0.106,1,14,2002
+Kent Bass, BVU ,45,0.193,0.025,0,7,2002
+Nathan Carlson, WAR ,22,0.199,0.100,0,4,2002
+Anthony Everman, LOR ,11,0.183,0.000,0,2,2002
+Mike Soenen, BVU ,19,0.185,0.000,0,3,2002
+Travis Hilsabeck, CEN ,105,0.211,0.106,1,19,2002
+Scott Malcolm, DBQ ,49,0.226,0.103,1,9,2002
+Brett Murphy, SIM ,64,0.206,0.123,1,11,2002
+Eric Blaser, COE ,81,0.207,0.076,1,14,2002
+Ben Moser, CEN ,52,0.204,0.091,0,9,2002
+Kory Tuescher, LOR ,53,0.192,0.023,0,9,2002
+Mike Donnenwerth, SIM ,60,0.261,0.271,3,12,2002
+Ben Griffin, COE ,104,0.210,0.112,1,18,2002
+Brent Fridley, CEN ,107,0.186,0.043,0,17,2002
+Curtis Gunter, UIU ,74,0.227,0.203,2,14,2002
+Jason Stravers, LUT ,56,0.175,0.000,0,9,2002
+Dustin Sifford, CEN ,26,0.209,0.000,0,5,2002
+Grant Fjetland, SIM ,23,0.203,0.053,0,4,2002
+Bradley Solheim, LUT ,94,0.184,0.050,0,15,2002
+Ryan Block, LOR ,83,0.211,0.137,1,15,2002
+Matt Ough, LUT ,93,0.202,0.027,1,16,2002
+Kevin Huston, WAR ,62,0.181,0.037,0,10,2002
+Justin McDermott, LOR ,85,0.184,0.090,0,14,2002
+Pat Brown, DBQ ,86,0.189,0.092,0,14,2002
+Chase Holliday, LUT ,56,0.166,0.038,-1,8,2002
+Nathan Landas, CEN ,53,0.202,0.114,0,9,2002
+Bryan Mayer, CEN ,34,0.236,0.214,1,7,2002
+David Zelinskas, LUT ,23,0.170,0.000,0,4,2002
+Joe Ellig, LUT ,17,0.210,0.000,0,3,2002
+Chad Kleopfer, COE ,7,0.244,0.000,0,1,2002
+Mike Kastner, COE ,5,0.135,0.000,0,1,2002
+Ben Metzger, CEN ,97,0.164,0.054,-2,14,2002
+Matt Walters, COE ,52,0.213,0.156,1,9,2002
+Nolan Carson, SIM ,64,0.190,0.073,0,11,2002
+Jeff Smielewski, DBQ ,42,0.189,0.059,0,7,2002
+Justin Burns, BVU ,20,0.185,0.059,0,3,2002
+Sebastian Sciotti, COR ,56,0.156,0.064,-1,8,2002
+Steve Gebhart, CEN ,33,0.189,0.133,0,5,2002
+Jason Uhlenhake, WAR ,14,0.196,0.154,0,2,2002
+Nick Bjork, COE ,114,0.188,0.110,0,19,2002
+Justin Mashburn, COR ,37,0.159,0.031,-1,5,2002
+Matt Ditch, COR ,66,0.208,0.200,1,12,2002
+Matt Birkenholz, LUT ,28,0.173,0.043,0,4,2002
+John Robichaud, DBQ ,14,0.116,0.000,-1,2,2002
+Brandon Gravett, SIM ,19,0.167,0.000,0,3,2002
+Robbie Nielsen, UIU ,17,0.163,0.071,0,3,2002
+Jon Clanton, SIM ,60,0.187,0.170,0,10,2002
+Glen Kneeland, LOR ,31,0.143,0.034,-1,4,2002
+Jerod Driscoll, LOR ,47,0.182,0.077,0,8,2002
+Kaleb VanCleve, DBQ ,64,0.153,0.085,-1,9,2002
+Drew Simonis, COR ,12,0.155,0.000,0,2,2002
+Ben Rengstorf, LUT ,82,0.150,0.056,-2,12,2002
+Jared Spangenberg, COR ,67,0.141,0.000,-2,9,2002
+Derek Distin, LUT ,36,0.156,0.094,-1,5,2002
+Jeremy Bartolo, LOR ,29,0.131,0.074,-1,4,2002
+Jeremiah Knutzen, BVU ,51,0.161,0.077,-1,8,2002
+Zach Wigle, LUT ,32,0.156,0.071,-1,5,2002
+Nate Mozena, DBQ ,33,0.125,0.000,-1,4,2002
+Justin Jaeger, LUT ,13,0.165,0.167,0,2,2002
+Jeff Plasschaert, LOR ,39,0.150,0.031,-1,6,2002
+Pat Groves, BVU ,32,0.140,0.037,-1,4,2002
+Joel Reynolds, WAR ,17,0.132,0.000,-1,2,2002
+Brodie Gilligan, LOR ,7,0.130,0.143,0,1,2002
+Aaron Nielsen, COE ,26,0.223,0.067,1,5,2002
+Tim Schneden, LOR ,57,0.111,0.000,-3,7,2002
+Gregg Winters, BVU ,10,0.132,0.000,0,1,2002
+Chris Petersen, BVU ,18,0.134,0.176,-1,2,2002
+Vince Klopfenstein, SIM ,22,0.104,0.000,-1,3,2002
+D.J. Jedlicka, COR ,25,0.137,0.000,-1,3,2002
+Brian Edwards, UIU ,30,0.128,0.000,-1,4,2002
+Kurt Andrews, LOR ,21,0.083,0.000,-1,2,2002
+Ian Cooper, COE ,32,0.056,0.000,-3,3,2002
+Jimmy Slater, UIU ,17,0.046,0.000,-1,1,2002
+Dru Williams, SIM ,8,0.049,0.000,-1,1,2002
+Steve Lamberti, SIM ,8,0.049,0.000,-1,1,2002
+Kevin Moses, COR ,5,0.000,0.000,-1,0,2002
+Damon Scholl, WAR ,5,0.078,0.000,0,0,2002
+Andy Peterson, DBQ ,4,0.000,0.000,0,0,2002
+Nick Leytem, LOR ,4,0.000,0.000,0,0,2002
+Brett Townsend, COR ,4,0.098,0.000,0,0,2002
+Blake Shepherd, SIM ,3,0.000,0.000,0,0,2002
+Brett Fuller, WAR ,3,0.000,0.000,0,0,2002
+Josh Jansen, LUT ,3,0.000,0.000,0,0,2002
+Justin Albers, LUT ,3,0.000,0.000,0,0,2002
+Ben Kirk, COR ,5,0.156,0.000,0,1,2002
+Steve Domino, WAR ,3,0.000,0.000,0,0,2002
+Cory Darrington, SIM ,3,0.000,0.000,0,0,2002
+Jeremy Renner, UIU ,4,0.195,0.000,0,1,2002
+Ben Ecker, DBQ ,3,0.130,0.000,0,0,2002
+Grant Lodden, COE ,2,0.000,0.000,0,0,2002
+Brandon Noerrlinger, SIM ,2,0.000,0.000,0,0,2002
+Travis Johnson, COE ,3,0.130,0.000,0,0,2002
+Robb Niedfeldt, LUT ,1,0.000,0.000,0,0,2002
+Jim Barclay, CEN ,1,0.000,0.000,0,0,2002
+Mitch Connot, BVU ,1,0.000,0.000,0,0,2002
+Andy Haugen, LUT ,1,0.000,0.000,0,0,2002
+Adam Hadenfeldt, COR ,1,0.000,0.000,0,0,2002
+Mark Wolf, LOR ,1,0.000,0.000,0,0,2002
+Josh Earley, UIU ,2,0.210,0.000,0,0,2002
+Rick Hillard, WAR ,1,0.000,0.000,0,0,2002
+Tiedeman, SIM ,1,0.000,0.000,0,0,2002
+Jim Thompson, COR ,0,NA,NA,NA,NA,2002
+Chris Tanner, DBQ ,0,NA,NA,NA,NA,2002
+Aaron Lund, LUT ,0,NA,NA,NA,NA,2002
+Brian Ricken, BVU ,0,NA,NA,NA,NA,2002
+Steve Higgins, UIU ,0,NA,NA,NA,NA,2002
+Dustin Boerm, COE ,0,NA,NA,NA,NA,2002
+Ben Layer, LOR ,0,NA,NA,NA,NA,2002
+Aaron Countryman, WAR ,0,NA,NA,NA,NA,2002
+Jason Kuffel, LOR ,0,NA,NA,NA,NA,2002
+Joe Martin, LOR ,0,NA,NA,NA,NA,2002
+Kurt Andrews, LOR,1,0.540,0.000,0,0,2003
+Brad Hingtgen, LOR,2,0.650,1.000,1,1,2003
+Steve Higgins, UIU,5,0.408,0.000,1,1,2003
+Todd Ehlers, CEN,7,0.340,0.167,1,2,2003
+Andy Peterson, DBQ,4,0.363,0.250,0,1,2003
+Aaron Port, WAR,2,0.610,1.000,0,1,2003
+Scott McGuire, LOR,3,0.433,0.500,0,1,2003
+Curt Schulte, UIU,16,0.284,0.067,1,4,2003
+Tom Andrews, LOR,113,0.335,0.343,10,28,2003
+Matt Reichle, BVU,159,0.283,0.157,9,35,2003
+Jay Whannel, WAR,163,0.280,0.157,9,36,2003
+Mike Kastner, COE,24,0.263,0.136,1,5,2003
+Dustin Roth, LOR,142,0.246,0.046,5,28,2003
+Ian Harden, COR,174,0.294,0.200,11,39,2003
+James Brown, SIM,7,0.319,0.200,1,2,2003
+Brian Greiner, WAR,196,0.254,0.082,7,40,2003
+Justin Shepard, DBQ,145,0.297,0.197,9,33,2003
+Tim Griffith, DBQ,87,0.302,0.284,6,20,2003
+Paul John Zobeck, COR,152,0.360,0.449,15,40,2003
+John Jaeger, LUT,138,0.271,0.167,7,29,2003
+Danny Love, COR,156,0.235,0.049,4,30,2003
+Caleb Klein, WAR,144,0.294,0.230,9,33,2003
+Marc Mette, DBQ,153,0.292,0.239,9,34,2003
+Chet Medinger, LOR,170,0.270,0.149,8,36,2003
+Jon Clanton, SIM,134,0.305,0.267,9,31,2003
+Matt Cessna, LUT,139,0.254,0.069,5,28,2003
+Mike Donnenwerth, SIM,137,0.291,0.240,8,31,2003
+Bobby Bibeau, LOR,144,0.285,0.202,8,32,2003
+Joel Reynolds, WAR,193,0.268,0.180,9,41,2003
+Steve Gebhart, CEN,108,0.273,0.204,5,23,2003
+Austin DeHoogh, CEN,24,0.239,0.000,1,5,2003
+TJ Stoffer, WAR,104,0.242,0.114,3,20,2003
+Tom Mager, COR,12,0.213,0.000,0,2,2003
+Chet Knake, COR,163,0.285,0.232,9,36,2003
+Kody Wohlers, CEN,74,0.297,0.241,5,17,2003
+Adam Heineman, WAR,91,0.238,0.028,3,18,2003
+Cole Lyons, DBQ,86,0.252,0.128,3,17,2003
+Travis Johnson, COE,133,0.248,0.116,5,27,2003
+Pat Block, COR,176,0.245,0.107,6,35,2003
+Casey Toops, WAR,165,0.269,0.132,8,35,2003
+Adam Hadenfeldt, COR,122,0.237,0.116,3,23,2003
+Brian Ricken, BVU,157,0.235,0.094,4,30,2003
+Greg Torgerson, WAR,152,0.288,0.242,9,34,2003
+Kevin Huston, WAR,142,0.240,0.126,4,28,2003
+Dan Mang, UIU,97,0.296,0.288,6,22,2003
+Joey Young, SIM,126,0.308,0.337,9,30,2003
+Jason Moreno, UIU,126,0.234,0.109,3,24,2003
+Brett Murphy, SIM,120,0.247,0.131,4,24,2003
+Brian Pins, WAR,63,0.240,0.078,2,12,2003
+Ross Anderson, SIM,10,0.204,0.000,0,2,2003
+Chris Tanner, DBQ,11,0.283,0.222,1,2,2003
+Travis Wiltgen, COE,5,0.344,0.333,0,1,2003
+Joe Martin, LOR,3,0.180,0.000,0,0,2003
+Ryan Mix, WAR,193,0.262,0.166,8,40,2003
+Brad Baker, UIU,97,0.230,0.125,2,18,2003
+Drew Simonis, COR,133,0.249,0.142,5,27,2003
+Brian Cyronek, SIM,176,0.237,0.135,5,34,2003
+Kory Tuescher, LOR,112,0.207,0.051,1,20,2003
+Keith Bernard, DBQ,146,0.217,0.100,2,26,2003
+Ben Licktieg, BVU,165,0.269,0.221,8,35,2003
+Dan Rieck, SIM,141,0.228,0.104,3,26,2003
+Kyle Bassett, COE,145,0.259,0.198,6,30,2003
+Mike Soenen, BVU,152,0.265,0.220,7,32,2003
+Tim Schneden, LOR,36,0.210,0.034,0,6,2003
+Eric Gold, LOR,157,0.229,0.151,4,30,2003
+Tom Murphy, BVU,154,0.256,0.215,6,31,2003
+Justin Jaeger, LUT,30,0.222,0.077,1,6,2003
+Jeremy Bartolo, LOR,138,0.215,0.127,2,25,2003
+Jacob Naumann, UIU,95,0.206,0.038,1,17,2003
+Shea Stamp, CEN,86,0.289,0.329,5,19,2003
+Scott Crannel, CEN,10,0.162,0.000,0,1,2003
+Nate Eichmeyer, COR,153,0.241,0.212,5,30,2003
+Chad Kramer, COE,82,0.214,0.117,1,15,2003
+Tim Higgins, CEN,142,0.247,0.194,5,28,2003
+Scott Sibbel, SIM,174,0.246,0.219,6,34,2003
+Tim Gearhart, WAR,53,0.209,0.068,1,9,2003
+Justin McDermott, LOR,19,0.159,0.000,0,3,2003
+Wes Digmann, COE,146,0.227,0.135,3,27,2003
+Brian Edwards, UIU,79,0.216,0.077,1,14,2003
+Corey Parr, DBQ,126,0.231,0.168,3,24,2003
+Brad Paulsrud, LUT,128,0.214,0.100,2,23,2003
+Ian Cooper, COE,88,0.192,0.026,0,15,2003
+David Zelinskas, LUT,123,0.202,0.040,1,21,2003
+Bryan Grewe, UIU,50,0.206,0.109,0,9,2003
+Matt Mausser, LOR,42,0.187,0.051,0,7,2003
+Curtis Schultz, DBQ,134,0.222,0.087,3,25,2003
+Jesse Freiburger, LOR,113,0.225,0.167,2,21,2003
+Cory Kennedy, BVU,140,0.224,0.105,3,26,2003
+Grant Fjetland, SIM,71,0.183,0.000,0,11,2003
+Brian Loughren, DBQ,118,0.191,0.058,0,20,2003
+Steve Lamberti, SIM,143,0.235,0.168,4,27,2003
+Patrick Johnson, CEN,144,0.219,0.126,3,26,2003
+Michael Schmalfeldt, LUT,93,0.190,0.048,0,15,2003
+Robbie Nielsen, UIU,111,0.202,0.121,1,19,2003
+Derek Fink, BVU,91,0.227,0.156,2,17,2003
+Jared Spangenberg, COR,13,0.187,0.000,0,2,2003
+Andy Haugen, LUT,12,0.168,0.000,0,2,2003
+Eric Hemesath, COE,138,0.198,0.090,1,23,2003
+Eric Haynes, UIU,42,0.220,0.162,1,8,2003
+Tom Ammon, UIU,40,0.183,0.054,0,6,2003
+Steve Lunn, LUT,127,0.208,0.096,1,22,2003
+Adam Duerfeldt, CEN,147,0.223,0.118,3,27,2003
+Travis Wielenga, BVU,156,0.223,0.160,3,29,2003
+Ben Metzger, CEN,98,0.178,0.085,-1,15,2003
+John Schroeder, COE,130,0.213,0.150,2,23,2003
+Neil Theisen, LUT,86,0.205,0.069,1,15,2003
+Brent Fridley, CEN,110,0.201,0.066,1,19,2003
+BJ Meaney, WAR,83,0.191,0.057,0,14,2003
+Justin Inskeep, UIU,93,0.178,0.105,-1,15,2003
+Dusty Kain, SIM,106,0.173,0.042,-1,16,2003
+James Scherf, UIU,135,0.217,0.153,2,24,2003
+Dan Nuehring, BVU,133,0.178,0.045,-1,21,2003
+Nathan Dlouhy, COE,101,0.179,0.076,-1,16,2003
+Jon Michael Porras, UIU,49,0.209,0.159,1,9,2003
+Chris Cyronek, SIM,28,0.171,0.042,0,4,2003
+Robert Ripley, UIU,16,0.224,0.083,0,3,2003
+Brett Townsend, COR,5,0.186,0.000,0,1,2003
+Jason Karaidos, LUT,146,0.230,0.215,3,28,2003
+Aaron Nielsen, COE,87,0.198,0.043,0,15,2003
+AJ Sagen, LOR,29,0.166,0.000,0,4,2003
+Vince Klopfenstein, SIM,22,0.199,0.190,0,4,2003
+Casey Olney, CEN,19,0.155,0.000,0,3,2003
+Mike Cordero, UIU,47,0.172,0.000,0,7,2003
+Jimmy Slater, UIU,14,0.144,0.000,0,2,2003
+Joe Colander, DBQ,37,0.145,0.086,-1,5,2003
+Andy Dunkin, DBQ,108,0.183,0.097,0,17,2003
+Nate Landas, CEN,106,0.194,0.144,0,18,2003
+Jesse Bouman, LOR,12,0.190,0.000,0,2,2003
+Eddie Daniels, UIU,12,0.169,0.000,0,2,2003
+Ryan Bender, LOR,35,0.146,0.000,-1,5,2003
+Jade Knippel, UIU,17,0.186,0.071,0,3,2003
+Nate Mozena, DBQ,37,0.168,0.091,0,6,2003
+Mike Poch, CEN,35,0.151,0.061,-1,5,2003
+Justin Mashburn, COR,126,0.155,0.064,-3,18,2003
+Brock Reed, LUT,119,0.164,0.032,-2,18,2003
+Jason Roggentien, UIU,75,0.162,0.032,-1,11,2003
+Joe Poole, BVU,81,0.170,0.030,-1,12,2003
+Matt DeWolf, SIM,37,0.145,0.029,-1,5,2003
+Grant Lodden, COE,41,0.142,0.051,-1,6,2003
+Glen Kneeland, LOR,90,0.159,0.075,-2,13,2003
+Ryan Stout, UIU,12,0.155,0.000,0,2,2003
+Travis Hilsabeck, CEN,107,0.176,0.141,-1,17,2003
+Josh Schauf, COE,34,0.130,0.000,-1,4,2003
+Dominic Wilson, COR,33,0.155,0.111,-1,5,2003
+Nick Luke, COE,26,0.128,0.000,-1,3,2003
+Justin Burns, BVU,14,0.187,0.091,0,2,2003
+Jeff Plasschaert, LOR,38,0.126,0.029,-1,5,2003
+Jason Stravers, LUT,41,0.136,0.028,-1,5,2003
+Patrick Brown, DBQ,44,0.142,0.028,-1,6,2003
+Nick Poch, CEN,6,0.090,0.000,0,1,2003
+David Issacson, SIM,40,0.113,0.027,-2,5,2003
+Adam Sires, UIU,56,0.131,0.060,-2,7,2003
+Eric Blaser, COE,50,0.174,0.053,0,8,2003
+Dennis Brodbeck, LUT,36,0.149,0.094,-1,5,2003
+Ryan Page, DBQ,8,0.068,0.000,-1,1,2003
+Damon Scholl, WAR,10,0.103,0.000,-1,1,2003
+Dave Manion, UIU,14,0.049,0.000,-1,1,2003
+Mark Becker, DBQ,18,0.110,0.000,-1,2,2003
+Jared Miller, SIM,11,0.035,0.000,-1,1,2003
+Brodie Gilligan, LOR,11,0.035,0.000,-1,1,2003
+JD Hews, SIM,8,0.000,0.000,-1,0,2003
+Seth Shepherd, SIM,6,0.000,0.000,-1,0,2003
+Ricky Legree, COR,8,0.150,0.000,0,1,2003
+John Robichaud, DBQ,5,0.000,0.000,-1,0,2003
+Nick Price, BVU,4,0.000,0.000,0,0,2003
+Justin Stoulil, SIM,3,0.000,0.000,0,0,2003
+Scott McCarty, SIM,3,0.000,0.000,0,0,2003
+Kent Bass, BVU,3,0.000,0.000,0,0,2003
+Mike Droste, UIU,4,0.098,0.000,0,0,2003
+Spencer Jones, LUT,3,0.000,0.000,0,0,2003
+Ben Gabriel, DBQ,2,0.000,0.000,0,0,2003
+Adam Klaren, LUT,2,0.000,0.000,0,0,2003
+Ben Ecker, DBQ,2,0.000,0.000,0,0,2003
+Mark Guy, LUT,1,0.000,0.000,0,0,2003
+Mike Wieseler, COE,1,0.000,0.000,0,0,2003
+Dan Latimer, COR,1,0.000,0.000,0,0,2003
+Jeff Spiwak, WAR,3,0.130,0.000,0,0,2003
+Michael Nass, LUT,1,0.000,0.000,0,0,2003
+Doug Ongie, LUT,1,0.000,0.000,0,0,2003
+Tyler Neer, BVU,1,0.420,NA,0,0,2003
+Kevin Moses, COR,0,NA,NA,NA,NA,2003
+Patrick Henderson, WAR,0,NA,NA,NA,NA,2003
+Cody Tibbetts, BVU,0,NA,NA,NA,NA,2003
+Jeremiah Knutzen, BVU,0,NA,NA,NA,NA,2003
+Ted Cemper, BVU,0,NA,NA,NA,NA,2003
+Jon Osborn, UIU,0,NA,NA,NA,NA,2003
+Kent Patterson, CEN,0,NA,NA,NA,NA,2003
+Justin Kingrey, CEN,0,NA,NA,NA,NA,2003
+Adam Rozenboom, CEN,0,NA,NA,NA,NA,2003
+Jason Kuffel, LOR,0,NA,NA,NA,NA,2003
+Justin Bro, BVU,0,NA,NA,NA,NA,2003
+Alex Foell, CEN,0,NA,NA,NA,NA,2003
+Jase Jensen, COE,0,NA,NA,NA,NA,2003
+Joe Campanelli, COR,0,NA,NA,NA,NA,2003
+James Vorbau, LOR,0,NA,NA,NA,NA,2003
+TJ Chase, DBQ,2,0.725,0.500,1,1,2005
+Kent Patterson, CEN,1,0.540,0.000,0,0,2005
+Jeff Weisenborn, BVU,1,0.540,0.000,0,0,2005
+Jared Greenfield, CEN,1,0.540,0.000,0,0,2005
+Brandt Rost, LUT,12,0.419,0.286,2,4,2005
+John Uribe, DBQ,10,0.483,0.300,2,3,2005
+Zach Schoh, WAR,3,0.360,0.000,0,1,2005
+Jeff Spiwak, WAR,7,0.287,0.000,0,2,2005
+Justin Brown, WAR,7,0.344,0.167,1,2,2005
+Skylar Price, COE,3,0.310,0.000,0,1,2005
+Brandon Bauer, LOR,2,0.270,0.000,0,0,2005
+Sean Keough, DBQ,2,0.270,0.000,0,0,2005
+Stirling Wade, COE,2,0.270,0.000,0,0,2005
+Andrew Roder, COE,25,0.329,0.200,2,6,2005
+Gavin Tugana, LUT,7,0.284,0.143,0,2,2005
+Joseph Hapanionek, DBQ,149,0.375,0.472,16,41,2005
+Adam Duerfeldt, CEN,160,0.315,0.279,12,38,2005
+Shea Stamp, CEN,168,0.331,0.270,14,42,2005
+Todd Reichart, COR,137,0.330,0.294,11,34,2005
+Chad Kramer, COE,171,0.312,0.263,12,41,2005
+Jason McClaffin, SIM,5,0.216,0.000,0,1,2005
+Kyle Blacker, WAR,93,0.232,0.025,2,18,2005
+Steve Gebhart, CEN,155,0.310,0.307,11,37,2005
+Aaron Meyer, LOR,157,0.284,0.207,9,35,2005
+Ben Lickteig, BVU,170,0.304,0.281,12,40,2005
+Joel Reynolds, WAR,200,0.297,0.251,13,46,2005
+Paul John Zobeck, COR,137,0.319,0.366,10,33,2005
+James Brown, SIM,146,0.267,0.159,7,31,2005
+Ryan Baranowski, COE,111,0.225,0.075,2,21,2005
+Kyle Schroeder, LUT,149,0.290,0.248,9,33,2005
+Will Renner, COE,97,0.314,0.312,7,23,2005
+Joey Young, SIM,143,0.269,0.181,7,30,2005
+John Jaeger, LUT,163,0.286,0.243,9,36,2005
+Eric Hemesath, COE,146,0.260,0.141,6,30,2005
+Cody Smith, COE,114,0.242,0.084,3,22,2005
+Kyle Pearson, LUT,130,0.267,0.195,6,27,2005
+Cameron Gallegos, COR,38,0.216,0.059,1,7,2005
+Pat Block, COR,148,0.226,0.072,3,28,2005
+Derek Fink, BVU,147,0.269,0.158,7,31,2005
+Joe Poole, BVU,175,0.260,0.158,7,36,2005
+Steve Lunn, LUT,126,0.232,0.073,3,24,2005
+Alex Fokken, BVU,24,0.255,0.174,1,5,2005
+Ricky Legree, COR,144,0.249,0.107,5,29,2005
+Michael Schmalfeldt, LUT,106,0.233,0.066,3,20,2005
+Adam Hardie, BVU,70,0.243,0.089,2,14,2005
+Danny Love, COR,145,0.208,0.047,2,25,2005
+Ryan Martin, WAR,76,0.220,0.085,1,14,2005
+Chris Cyronek, SIM,131,0.216,0.071,2,24,2005
+Kody Wohlers, CEN,146,0.271,0.242,7,31,2005
+Brad Paulsrud, LUT,150,0.268,0.254,7,32,2005
+David Zelinskas, LUT,167,0.235,0.069,4,32,2005
+Kris Thomas, LOR,123,0.248,0.139,4,25,2005
+Chet Medinger, LOR,167,0.250,0.180,6,34,2005
+Timothy Cook, DBQ,133,0.229,0.000,3,25,2005
+Mike Soenen, BVU,154,0.237,0.145,4,30,2005
+Austin DeHoogh, CEN,113,0.222,0.083,2,21,2005
+Brian Greiner, WAR,193,0.258,0.202,8,40,2005
+Michael Edwards, CEN,93,0.203,0.037,1,16,2005
+Justin Shepard, DBQ,159,0.238,0.108,5,31,2005
+Aaron Port, WAR,210,0.207,0.049,2,37,2005
+Casey Pauli, WAR,198,0.228,0.112,5,37,2005
+Jon Clanton, SIM,129,0.271,0.259,6,27,2005
+Marc Numedahl, WAR,161,0.209,0.072,2,28,2005
+Pete Wheeler, LOR,161,0.242,0.114,5,32,2005
+Mike Koenecke, BVU,138,0.261,0.224,6,29,2005
+Ross Anderson, SIM,79,0.207,0.056,1,14,2005
+Adam Burroughs, DBQ,136,0.205,0.073,1,24,2005
+Matt Reichle, BVU,140,0.215,0.095,2,25,2005
+Adam Hadenfeldt, COR,135,0.205,0.064,1,23,2005
+Mike Turnure, SIM,148,0.215,0.134,2,27,2005
+Travis Wiltgen, COE,167,0.227,0.076,4,31,2005
+Matt Cessna, LUT,94,0.209,0.119,1,17,2005
+Brian Ricken, BVU,171,0.201,0.066,1,29,2005
+BJ Noethe, COE,60,0.221,0.098,1,11,2005
+Dustin Roth, LOR,148,0.222,0.127,3,27,2005
+Neil Theisen, LUT,134,0.204,0.114,1,23,2005
+Matt Murphy, CEN,100,0.212,0.051,1,18,2005
+Dan Flaherty, CEN,53,0.217,0.089,1,10,2005
+Andy Long, CEN,89,0.210,0.041,1,16,2005
+Justin Stoulil, SIM,107,0.261,0.241,4,22,2005
+Brandon Steinbrecher, WAR,121,0.225,0.193,2,22,2005
+Travis Lyons, DBQ,72,0.197,0.104,0,12,2005
+Chris Robertson, WAR,183,0.230,0.157,4,35,2005
+Zach Habben, BVU,39,0.230,0.194,1,7,2005
+Cody Cooper, SIM,17,0.259,0.182,1,3,2005
+Josh Schauf, COE,96,0.209,0.027,1,17,2005
+Justin Maxwell, COE,103,0.193,0.047,0,17,2005
+Brock Auten, COE,156,0.212,0.178,2,28,2005
+Joe Gigac, LOR,62,0.188,0.020,0,10,2005
+Ryan Smuck, COE,101,0.186,0.057,0,16,2005
+Alex Ross, LUT,68,0.192,0.082,0,11,2005
+Jeremy Kippley, CEN,126,0.246,0.214,4,25,2005
+Jeremy Rannals, DBQ,113,0.208,0.094,1,20,2005
+Mark Huber, DBQ,84,0.192,0.059,0,14,2005
+Justin Owens, CEN,73,0.161,0.047,-1,11,2005
+Mike White, DBQ,58,0.189,0.096,0,10,2005
+Chris Dolezal, BVU,48,0.169,0.025,-1,7,2005
+George Bruggenthies, LOR,26,0.223,0.100,1,5,2005
+Gregg Williams, LOR,68,0.172,0.066,-1,10,2005
+Don Pirkle, LOR,45,0.175,0.073,0,7,2005
+Aaron Hadenfeldt, COR,111,0.156,0.029,-2,16,2005
+Dusty Kain, SIM,157,0.188,0.068,0,26,2005
+Patrick Henderson, WAR,140,0.177,0.043,-1,22,2005
+Cole Lyons, DBQ,132,0.169,0.027,-2,20,2005
+Nathan Dlouhy, COE,112,0.163,0.050,-2,17,2005
+Josh Sandin, CEN,80,0.183,0.085,0,13,2005
+Benjamin Ecker, DBQ,24,0.265,0.333,1,5,2005
+Ryan Dunkel, DBQ,146,0.182,0.071,-1,23,2005
+Jeffrey Hiatt, LUT,21,0.167,0.000,0,3,2005
+Dustin Townsend, WAR,18,0.127,0.000,-1,2,2005
+Brook Beisell, SIM,79,0.224,0.172,2,15,2005
+Tom Sieverding, LOR,72,0.168,0.033,-1,11,2005
+Jim Bose, COR,35,0.199,0.115,0,6,2005
+Marc Geoders, BVU,97,0.171,0.049,-1,15,2005
+Kyle Noesen, COR,72,0.181,0.111,0,11,2005
+Aaron Becker, LOR,64,0.178,0.056,0,10,2005
+Matt Ritchey, SIM,9,0.196,0.222,0,2,2005
+Chris Beall, SIM,125,0.171,0.117,-1,19,2005
+Dan Lynch, LOR,115,0.174,0.071,-1,18,2005
+Tom Kersbergen, WAR,38,0.180,0.152,0,6,2005
+Matt Scherbring, WAR,38,0.160,0.061,-1,6,2005
+Jared Spangenberg, COR,46,0.140,0.068,-1,6,2005
+Jase Jensen, COE,11,0.134,0.000,0,1,2005
+Dennis Brodbeck, LUT,12,0.263,0.400,1,2,2005
+Spencer Jones, LUT,6,0.155,0.000,0,1,2005
+Mike Marola, DBQ,5,0.108,0.000,0,1,2005
+Brett Delaney, CEN,7,0.189,0.000,0,1,2005
+Anthony Cozzi, COR,37,0.145,0.032,-1,5,2005
+Troy Peterson, LUT,36,0.199,0.077,0,6,2005
+Ruben Gandarilla, DBQ,20,0.178,0.063,0,3,2005
+Justin List, BVU,13,0.176,0.091,0,2,2005
+Jason Crane, DBQ,56,0.145,0.060,-1,8,2005
+Matt Mausser, LOR,61,0.169,0.078,-1,9,2005
+Grant Lodden, COE,27,0.151,0.083,-1,4,2005
+Curtis Bickford, COE,30,0.169,0.154,0,5,2005
+Mark Becker, DBQ,16,0.141,0.000,0,2,2005
+Patrick Reilly, LOR,80,0.146,0.016,-2,11,2005
+Joey Campanelli, COR,31,0.085,0.000,-2,3,2005
+Michael Barta, BVU,43,0.165,0.156,-1,6,2005
+Brad Hintgen, LOR,18,0.082,0.000,-1,2,2005
+Dustin Schulz, BVU,10,0.093,0.000,-1,1,2005
+Neal Reasland, COR,10,0.130,0.111,0,1,2005
+Tim Rodemeyer, WAR,12,0.113,0.000,-1,1,2005
+AJ Wieck, SIM,32,0.120,0.038,-1,4,2005
+Nathan Mozena, DBQ,23,0.061,0.000,-2,2,2005
+Justin Burns, BVU,15,0.000,0.000,-2,1,2005
+Scott Mangin, WAR,11,0.071,0.000,-1,1,2005
+Ryan Johnson, WAR,10,0.078,0.000,-1,1,2005
+Matt Kuempel, CEN,7,0.000,0.000,-1,0,2005
+Ashton Northern, COE,9,0.049,0.000,-1,1,2005
+Mitch Williams, DBQ,3,0.000,0.000,0,0,2005
+Blake Rieman, SIM,3,0.000,0.000,0,0,2005
+Jacob Vaverka, CEN,2,0.000,0.000,0,0,2005
+TJ Kasperbauer, SIM,3,0.130,0.000,0,0,2005
+Dave Strellner, LOR,2,0.195,0.000,0,0,2005
+Jon Doudna, CEN,1,0.000,0.000,0,0,2005
+Ben Gander, CEN,1,0.000,0.000,0,0,2005
+Quince Springer, COE,2,0.195,0.000,0,0,2005
+Joshua Toufar, LUT,1,0.000,0.000,0,0,2005
+Justin Patnode, LUT,1,0.000,0.000,0,0,2005
+Steve Murray, COR,1,0.000,0.000,0,0,2005
+Eric Blunt, COR,1,0.000,0.000,0,0,2005
+Steve Kreinbrink, COR,1,0.000,0.000,0,0,2005
+Bart Dlouhy, COE,1,0.000,0.000,0,0,2005
+Blake Wittrock, BVU,1,0.000,0.000,0,0,2005
+Aaron Roland, SIM,2,0.195,0.000,0,0,2005
+Drew Riemenschneider, CEN,1,0.000,0.000,0,0,2005
+Tim Andrews, LOR,2,0.195,0.000,0,0,2005
+Brock Hall, LOR,1,0.000,0.000,0,0,2005
+Grant Kaestner, LOR,2,0.195,0.000,0,0,2005
+Tad Barry, COR,1,0.000,0.000,0,0,2005
+Tyler Downing, COR,2,0.420,NA,0,1,2005
+Anthony Kobler, COR,2,0.390,NA,0,1,2005
+Rob Rossi, LOR,3,0.390,NA,0,1,2005
+Matt Rohach, CEN,1,0.420,NA,0,0,2005
+Justin Peters, SIM,0,NA,NA,NA,NA,2005
+Luke Fier, LUT,0,NA,NA,NA,NA,2005
+Justin Shaffer, DBQ,0,NA,NA,NA,NA,2005
+Alex Messerole, BVU,0,NA,NA,NA,NA,2005
+Jeremy Robinson, CEN,0,NA,NA,NA,NA,2005
+Mitch Pattee, BVU,0,NA,NA,NA,NA,2005
+Ben Rudman, COR,0,NA,NA,NA,NA,2005
+Todd Lawler, WAR,0,NA,NA,NA,NA,2005
+Zack Mundy, WAR,0,NA,NA,NA,NA,2005
+Sean Adam, LOR,0,NA,NA,NA,NA,2005
+Mike Murtaugh, COE,0,NA,NA,NA,NA,2005
+Adam Brink, DBQ,0,NA,NA,NA,NA,2005
+Nick Viet, BVU,0,NA,NA,NA,NA,2005
+Jake Waddle, LUT,181,0.291,0.184,11,41,2007
+Ryan Grant, WAR,188,0.260,0.098,8,39,2007
+Troy Peterson, LUT,191,0.300,0.218,12,44,2007
+Adam Gross, LOR,163,0.300,0.248,11,38,2007
+Kyle Meyer, SIM,180,0.247,0.077,6,36,2007
+Zachary Kass, DBQ,144,0.263,0.136,6,30,2007
+Michael Edwards, CEN,160,0.291,0.234,10,36,2007
+Jake Shandri, WAR,173,0.301,0.252,11,40,2007
+Alex Martinez, DBQ,164,0.283,0.193,9,36,2007
+Kyle Schroeder, LUT,195,0.297,0.264,12,45,2007
+Jeff Hiatt, LUT,167,0.261,0.155,7,35,2007
+Danny Cantu, DBQ,143,0.240,0.100,4,28,2007
+Alex Fokken, BVU,132,0.236,0.096,4,25,2007
+Josh Schauf, COE,138,0.244,0.085,4,27,2007
+Cory Dawson, SIM,126,0.247,0.167,4,25,2007
+Curt Bjork, SIM,166,0.248,0.099,6,33,2007
+Nick Olberding, LOR,173,0.246,0.132,6,34,2007
+Cody Smith, COE,164,0.242,0.094,5,32,2007
+Kyle Noesen, COR,110,0.248,0.147,4,22,2007
+Ryan Johnson, WAR,177,0.244,0.127,6,35,2007
+Corey Rasmussen, SIM,144,0.235,0.106,4,28,2007
+Pat Richmond, COE,148,0.198,0.023,1,25,2007
+Mike Johnson, WAR,180,0.247,0.175,6,36,2007
+Danny Broiher, WAR,136,0.242,0.147,4,27,2007
+Mark Blum, BVU,128,0.217,0.067,2,23,2007
+Nate Neis, LUT,175,0.224,0.068,4,32,2007
+Derek Knutson, CEN,135,0.262,0.204,6,28,2007
+Dustin Schulz, BVU,110,0.247,0.146,4,22,2007
+Jeremy Kippley, CEN,162,0.239,0.121,5,31,2007
+AJ Lewis, WAR,149,0.228,0.159,3,28,2007
+Justin Maxwell, COE,149,0.215,0.054,2,27,2007
+Kyle Harris, DBQ,164,0.242,0.145,5,32,2007
+Don Pirkle, LOR,167,0.221,0.071,3,31,2007
+Lance Eddie, BVU,138,0.247,0.179,5,27,2007
+Casey Korn, COR,142,0.219,0.109,2,26,2007
+Kyle Jones, WAR,174,0.237,0.173,5,34,2007
+Aaron Saeugling, WAR,172,0.252,0.191,6,35,2007
+Chris Jones, SIM,129,0.203,0.085,1,22,2007
+Tad Barry, COR,128,0.205,0.074,1,22,2007
+Brock Schneden, LOR,162,0.223,0.137,3,30,2007
+Jake Jadlowski, CEN,170,0.198,0.068,1,29,2007
+Alex Ross, LUT,174,0.198,0.043,1,30,2007
+Ryan Baranowski, COE,113,0.180,0.020,-1,18,2007
+Ben Schott, LUT,178,0.209,0.103,2,31,2007
+Jason Hemann, COR,135,0.202,0.083,1,23,2007
+Jason McClaflin, SIM,139,0.191,0.081,0,23,2007
+Ben Tressel, CEN,170,0.200,0.064,1,29,2007
+Adam Hardie, BVU,118,0.190,0.069,0,19,2007
+Tyler Downing, COR,123,0.198,0.085,1,21,2007
+Marc Goeders, BVU,120,0.179,0.000,-1,19,2007
+Ben Rudman, COR,108,0.157,0.000,-2,16,2007
+Anthony Cozzi, COR,131,0.189,0.028,0,22,2007
+Michael Ramos, DBQ,153,0.196,0.097,1,26,2007
+Ryan Dupic, BVU,117,0.188,0.031,0,19,2007
+Patrick Reilly, LOR,158,0.186,0.039,0,26,2007
+Danny Rose, WAR,137,0.176,0.044,-1,21,2007
+Alex Thomas, LUT,152,0.150,0.036,-4,21,2007
+Nathan Dlouhy, COE,128,0.184,0.102,0,21,2007
+Tim Andrews, LOR,147,0.163,0.053,-2,22,2007
+Kris Thomas, LOR,121,0.170,0.068,-1,19,2007
+Justin Owens, CEN,139,0.146,0.042,-4,19,2007
+Jim Bose, COR,128,0.193,0.190,0,21,2007
+Joe Alexander, BVU,1,0.540,0.000,0,0,2007
+Zack Topping, LUT,2,0.650,1.000,1,1,2007
+Scott Muhlenbruch, BVU,2,0.480,0.000,0,1,2007
+Jared Sass, SIM,1,0.540,0.000,0,0,2007
+Bryan Albaugh, LUT,16,0.294,0.000,1,4,2007
+Clayton Niewoehner, COE,4,0.363,0.250,0,1,2007
+Luke Goemaat, SIM,2,0.270,0.000,0,0,2007
+Christopher Dahle, DBQ,2,0.270,0.000,0,0,2007
+Michael Thompson, COR,35,0.287,0.032,2,8,2007
+Andrew Rubly, DBQ,12,0.245,0.000,0,2,2007
+Chris Duran, DBQ,58,0.297,0.120,4,13,2007
+Andy Oberhoffer, COE,47,0.253,0.048,2,10,2007
+Mark Weber, LUT,13,0.273,0.125,1,3,2007
+Nick Robertson, COE,74,0.246,0.098,2,15,2007
+Michael Stephenson, BVU,101,0.237,0.078,3,19,2007
+Jeff Weisenborn, BVU,62,0.246,0.137,2,12,2007
+Ricardo Flores, SIM,72,0.253,0.155,3,15,2007
+Alex Larson, DBQ,69,0.222,0.108,1,13,2007
+Matthew Bliven, COR,93,0.209,0.060,1,16,2007
+Jared Swim, SIM,87,0.228,0.087,2,16,2007
+Bart Dlouhy, COE,31,0.213,0.000,0,6,2007
+Jeff Riddle, LUT,116,0.212,0.022,2,21,2007
+Michael Tierney, COR,96,0.196,0.057,0,16,2007
+Chad Christell, LOR,24,0.235,0.059,1,5,2007
+William Davila, DBQ,124,0.226,0.062,3,23,2007
+Dan Murphy, SIM,28,0.257,0.280,1,6,2007
+Anthony Bazant, CEN,109,0.191,0.043,0,18,2007
+Ryan Martin, WAR,40,0.207,0.111,0,7,2007
+Blaine Nicks, LOR,67,0.181,0.017,0,11,2007
+John Schroeder, LOR,49,0.202,0.025,0,8,2007
+Beau Kaplan, SIM,85,0.204,0.061,1,15,2007
+Jon Reiner, COE,11,0.147,0.000,0,2,2007
+Jesus Guillen, DBQ,70,0.187,0.017,0,11,2007
+Andrew Roder, COE,104,0.200,0.099,1,18,2007
+Michael Barta, BVU,75,0.203,0.035,1,13,2007
+TJ Reidy, COE,21,0.167,0.000,0,3,2007
+Dan Adams, COE,93,0.178,0.036,-1,15,2007
+Joe Nelson, LUT,36,0.188,0.065,0,6,2007
+Ben Kuebel, LOR,80,0.166,0.000,-1,12,2007
+Greg Williams, LOR,39,0.212,0.171,1,7,2007
+Matt Lampugnano, DBQ,65,0.180,0.068,0,10,2007
+Curt Bickford, DBQ,25,0.145,0.000,-1,3,2007
+Kyle Evangelista, LOR,5,0.260,0.250,0,1,2007
+George Bruggenthies, LOR,9,0.270,0.000,0,2,2007
+Darin Schneider, LUT,5,0.186,0.000,0,1,2007
+Paul Endriss, COE,80,0.164,0.015,-1,12,2007
+Jesse Reis, SIM,92,0.180,0.027,-1,15,2007
+Joe Pogge, SIM,48,0.193,0.053,0,8,2007
+Jake Miksell, WAR,17,0.134,0.000,-1,2,2007
+Nate Roling, LOR,111,0.172,0.031,-1,17,2007
+Justin List, BVU,77,0.218,0.210,1,14,2007
+Jeremy Perez, DBQ,74,0.151,0.017,-2,11,2007
+Cameron Gallegos, COR,86,0.159,0.026,-2,13,2007
+Skylar Price, COE,31,0.221,0.222,1,6,2007
+Ryan Fincham, COR,9,0.161,0.111,0,1,2007
+Nick McKenzie, COE,11,0.147,0.000,0,2,2007
+Tom Sheehan, CEN,95,0.172,0.073,-1,15,2007
+Trent Kain, SIM,51,0.147,0.043,-1,7,2007
+Stryder Morissette, DBQ,59,0.160,0.020,-1,9,2007
+Ryan Schisler, COE,16,0.136,0.000,-1,2,2007
+Brandon Steinbrecher, WAR,23,0.162,0.053,0,3,2007
+Phil Worden, LUT,57,0.136,0.042,-2,8,2007
+Quince Springer, COE,6,0.160,0.000,0,1,2007
+Chris Dolezal, BVU,43,0.152,0.000,-1,6,2007
+Quinn O'Brien, CEN,80,0.124,0.014,-3,10,2007
+BJ Pilling, CEN,51,0.169,0.000,-1,8,2007
+AJ Wieck, SIM,124,0.191,0.067,0,21,2007
+Aaron Heffernan, CEN,39,0.142,0.057,-1,5,2007
+Justin Ramos, DBQ,33,0.117,0.000,-1,4,2007
+Adam Squires, CEN,40,0.183,0.188,0,6,2007
+Charlie Eastlund, CEN,78,0.168,0.089,-1,12,2007
+Arron Merchlewitz, DBQ,27,0.111,0.000,-1,3,2007
+Joe Swanson, COE,17,0.108,0.063,-1,2,2007
+Scott Mangin, WAR,19,0.118,0.000,-1,2,2007
+Curt Graham, SIM,8,0.068,0.000,-1,1,2007
+Michael Szela, COE,11,0.085,0.000,-1,1,2007
+Nate Halupnick, BVU,30,0.032,0.000,-3,2,2007
+Bill Albee, DBQ,7,0.000,0.000,-1,0,2007
+Nick Selby, COR,5,0.000,0.000,-1,0,2007
+Tyler Shireman, LOR,4,0.000,0.000,0,0,2007
+Joe Martin, DBQ,2,0.000,0.000,0,0,2007
+Brad Arends, CEN,2,0.000,0.000,0,0,2007
+TJ Chase,DBQ,2,0.000,0.000,0,0,2007
+Nick Teson, LOR,2,0.000,0.000,0,0,2007
+Jake Appelgate, BVU,3,0.130,0.000,0,0,2007
+Doug Elfstrom, LUT,3,0.130,0.000,0,0,2007
+Scott Hanson, LUT,3,0.130,0.000,0,0,2007
+Garrett Hill, BVU,2,0.210,0.000,0,0,2007
+Matt Tegeler, WAR,1,0.000,0.000,0,0,2007
+David Bartine, COR,2,0.195,0.000,0,0,2007
+Eric Bermudez, DBQ,2,0.000,0.000,0,0,2007
+Christopher Jones, DBQ,1,0.000,0.000,0,0,2007
+Samuel Little, DBQ,1,0.000,0.000,0,0,2007
+Tregg Fay, BVU,1,0.000,0.000,0,0,2007
+Brent Richter, BVU,2,0.195,0.000,0,0,2007
+Kamron Koplitz, DBQ,1,0.000,0.000,0,0,2007
+Max Flaig, LUT,1,0.000,0.000,0,0,2007
+Aaron Hall, COR,1,0.000,0.000,0,0,2007
+Brady Buresh, SIM,2,0.195,0.000,0,0,2007
+Garrett Christensen, SIM,1,0.000,0.000,0,0,2007
+Joel Hugunin, CEN,1,0.000,0.000,0,0,2007
+Steve Chamberlin, WAR,0,NA,NA,NA,NA,2007
+Greenfield, CEN,0,NA,NA,NA,NA,2007
+Thomas Brown, COR,0,NA,NA,NA,NA,2007
+Jon Fitzpatrick, SIM,1,0.390,NA,0,0,2007
+Joshua Velazquez, DBQ,0,NA,NA,NA,NA,2007
+Tony Bladel, DBQ,0,NA,NA,NA,NA,2007
+Justin Shaffer, DBQ,0,NA,NA,NA,NA,2007
+Brandon Thurm, WAR,0,NA,NA,NA,NA,2007
+Luke Roth, LOR,0,NA,NA,NA,NA,2007
+Mike Brehm, LOR,0,NA,NA,NA,NA,2007
+Brent Poffenbarger, LOR,1,0.420,NA,0,0,2007
+Byron Abram, DBQ,0,NA,NA,NA,NA,2007
+Jake Waddle, LUT,144,0.317,0.231,11,35,2008
+Danny Cantu, DBQ,152,0.261,0.106,6,31,2008
+Alex Martinez, DBQ,153,0.310,0.262,11,36,2008
+Jerrold Martijn, WAR,166,0.307,0.262,12,39,2008
+Cory Dawson, SIM,151,0.273,0.155,7,32,2008
+Jeff Hiatt, LUT,141,0.251,0.118,5,28,2008
+Ryan Baranowski, COE,158,0.263,0.120,7,33,2008
+Jason McClaflin, SIM,187,0.271,0.159,9,40,2008
+AJ Lewis, WAR,124,0.241,0.115,4,24,2008
+Aaron Saeugling, WAR,163,0.261,0.161,7,34,2008
+Caleb Rangel, CEN,172,0.248,0.099,6,34,2008
+Ben Schott, LUT,137,0.241,0.060,4,27,2008
+Tyler Downing, COR,108,0.247,0.099,4,21,2008
+Tyler McAllister, COE,183,0.262,0.182,8,38,2008
+Don Pirkle, LOR,185,0.234,0.052,5,35,2008
+Jeff Weisenborn, BVU,136,0.238,0.081,4,26,2008
+Ryan Velvick, COE,125,0.257,0.197,5,26,2008
+Jesse Reis, SIM,146,0.263,0.128,6,30,2008
+Kyle Jones, WAR,146,0.282,0.227,8,32,2008
+Michael Ramos, DBQ,160,0.245,0.171,5,32,2008
+Nick Olberding, LOR,197,0.238,0.140,6,38,2008
+Cody Smith, COE,186,0.237,0.081,5,36,2008
+Chris Duran, DBQ,147,0.221,0.042,3,27,2008
+Michael Edwards, CEN,180,0.255,0.161,7,37,2008
+Alex Ross, LUT,146,0.230,0.087,3,28,2008
+Mike Johnson, WAR,157,0.225,0.083,3,29,2008
+Chris Jones, SIM,162,0.249,0.182,6,32,2008
+Ryan Schisler, COE,164,0.215,0.118,2,29,2008
+Anthony Bazant, CEN,183,0.230,0.126,4,35,2008
+Jake Jadlowski, CEN,176,0.211,0.083,2,31,2008
+Brandon Pietrzyk, BVU,133,0.293,0.373,8,30,2008
+Ben Kuebel, LOR,156,0.191,0.043,0,26,2008
+Tim Andrews, LOR,144,0.209,0.098,2,25,2008
+Derek Knutson, CEN,173,0.228,0.132,4,32,2008
+Brock Schneden, LOR,151,0.234,0.172,4,29,2008
+Adam Gross, LOR,198,0.217,0.118,3,36,2008
+Ben Tressel, CEN,171,0.206,0.049,2,30,2008
+Pat Richmond, COE,173,0.198,0.078,1,29,2008
+Ben Rudman, COR,99,0.179,0.011,-1,16,2008
+Mark Blum, BVU,124,0.244,0.194,4,24,2008
+Brad Blum, BVU,116,0.205,0.092,1,20,2008
+Zach Nagle, WAR,150,0.219,0.137,3,27,2008
+Michael Tierney, COR,92,0.183,0.059,0,15,2008
+Jeff Riddle, LUT,145,0.217,0.091,2,26,2008
+Michael Stephenson, BVU,124,0.226,0.077,3,23,2008
+Blake Smith, CEN,148,0.216,0.115,2,27,2008
+Stryder Morissette, DBQ,166,0.205,0.078,2,29,2008
+Alex Miklo, LOR,176,0.213,0.059,2,31,2008
+Isiah Stevens, WAR,155,0.207,0.129,2,27,2008
+Casey Korn, COR,91,0.208,0.139,1,16,2008
+John Schroeder, LOR,172,0.195,0.128,0,29,2008
+Beau Kaplan, SIM,167,0.169,0.052,-2,25,2008
+Curt Bjork, SIM,161,0.199,0.063,1,27,2008
+Kevin Kloewer, BVU,106,0.181,0.138,-1,17,2008
+Danny Rose, WAR,144,0.180,0.078,-1,23,2008
+Cameron Gallegos, COR,91,0.172,0.050,-1,14,2008
+Jim Bose, COR,90,0.198,0.118,0,15,2008
+Alex Thomas, LUT,99,0.152,0.034,-2,14,2008
+Tad Barry, COR,100,0.164,0.079,-2,15,2008
+Tregg Fay, BVU,1,0.540,0.000,0,0,2008
+Paul Ryan, LUT,4,0.428,0.000,1,1,2008
+Michael Mohn, LUT,1,0.540,0.000,0,0,2008
+Brett Wilson, BVU,11,0.449,0.333,2,3,2008
+Matt Tegeler, WAR,7,0.379,0.250,1,2,2008
+Anthony Miller, CEN,5,0.342,0.000,0,1,2008
+Jesse Searls, COR,2,0.270,0.000,0,0,2008
+Kevin Baranowski, COE,2,0.270,0.000,0,0,2008
+Steve Chamberlin, WAR,10,0.319,0.143,1,2,2008
+Brandon Thurm, WAR,22,0.278,0.111,1,5,2008
+Michael Hoffman, BVU,85,0.276,0.171,4,18,2008
+Steve Johnston, BVU,40,0.290,0.282,2,9,2008
+Tyler Case, BVU,91,0.243,0.110,3,18,2008
+Matthew Shimanovsky, COR,75,0.248,0.115,3,15,2008
+Alex Larson, DBQ,107,0.218,0.052,2,19,2008
+Jeff Kinkel-Schuster, SIM,96,0.238,0.111,3,19,2008
+Chad Christell, LOR,14,0.276,0.250,1,3,2008
+Chris Dahle, DBQ,88,0.214,0.000,1,16,2008
+Garrett Hill, BVU,32,0.224,0.000,1,6,2008
+Corey Rasmussen, SIM,118,0.212,0.061,2,21,2008
+Jason Hayes, SIM,56,0.254,0.026,2,11,2008
+Matthew Bruhn, LUT,85,0.220,0.070,2,16,2008
+Dave Johnson, SIM,119,0.233,0.119,3,23,2008
+Eric Hanna, COE,116,0.241,0.141,4,23,2008
+Clark Egdorf, LOR,111,0.192,0.050,0,18,2008
+Trent Svehla, COE,45,0.224,0.125,1,8,2008
+Jared Lackey, CEN,50,0.250,0.200,2,10,2008
+Joe Swanson, COE,50,0.204,0.049,0,9,2008
+Cody Aldrich, BVU,10,0.317,0.429,1,2,2008
+Joe Pogge, SIM,82,0.215,0.106,1,15,2008
+John-Paul Baker, BVU,12,0.168,0.000,0,2,2008
+Austin Brown, LOR,12,0.166,0.091,0,2,2008
+Mark Weber, LUT,64,0.220,0.169,1,12,2008
+Andy Krekel, COR,66,0.151,0.016,-2,9,2008
+Aaron Heffernan, CEN,52,0.177,0.000,0,8,2008
+Tyler Shireman, LOR,47,0.172,0.024,-1,7,2008
+Spencer Stumpff, WAR,49,0.187,0.087,0,8,2008
+Justin Owens, CEN,122,0.204,0.106,1,21,2008
+Zack Topping, LUT,61,0.194,0.093,0,10,2008
+Jeff Wagner, COE,62,0.183,0.055,0,10,2008
+Scott Mangin, WAR,62,0.178,0.038,0,10,2008
+Paul Endriss, COE,52,0.185,0.000,0,8,2008
+Jon Reiner, COE,16,0.213,0.083,0,3,2008
+Jason Hassman, CEN,11,0.210,0.000,0,2,2008
+Scott Hanson, LUT,12,0.238,0.125,0,2,2008
+Charlie Eastlund, CEN,9,0.204,0.125,0,2,2008
+Scott Muhlenbruch, BVU,4,0.135,0.000,0,1,2008
+Drew Yarkosky, SIM,4,0.305,0.500,0,1,2008
+Patrick Grau, WAR,82,0.192,0.087,0,14,2008
+Ben Roemmich, WAR,40,0.169,0.054,0,6,2008
+Nathan Halupnick, BVU,43,0.171,0.053,0,7,2008
+Ron Manthe, DBQ,94,0.166,0.082,-1,14,2008
+BJ Pilling, CEN,31,0.162,0.000,-1,5,2008
+Jacob Schwind, COE,11,0.172,0.000,0,2,2008
+Nick Robertson, COE,96,0.137,0.000,-3,13,2008
+Tony Foster, DBQ,79,0.171,0.135,-1,12,2008
+Bill Albee, DBQ,32,0.150,0.000,-1,5,2008
+Joe Thompson, LUT,65,0.145,0.035,-2,9,2008
+Brady Buresh, SIM,7,0.155,0.000,0,1,2008
+Andrew Patzke, COR,6,0.160,0.000,0,1,2008
+David Lakin, CEN,6,0.160,0.000,0,1,2008
+Chris Dolezal, BVU,39,0.157,0.032,-1,6,2008
+Jared Swim, SIM,80,0.153,0.082,-2,11,2008
+Steve Beckman, LUT,98,0.167,0.051,-1,15,2008
+Jacob Miksell, WAR,40,0.126,0.027,-1,5,2008
+Jeremy Kippley, CEN,72,0.164,0.138,-1,11,2008
+Andy Compton, BVU,29,0.169,0.000,0,4,2008
+Justin Ramos, DBQ,14,0.161,0.000,0,2,2008
+Darin Schneider, LUT,12,0.125,0.000,0,2,2008
+Nick McKenzie, COE,58,0.146,0.020,-1,8,2008
+Joe Alexander, BVU,39,0.153,0.034,-1,6,2008
+Justin Shaffer, DBQ,35,0.132,0.032,-1,5,2008
+Michael Szela, COE,16,0.166,0.077,0,2,2008
+Anthony Cozzi, COR,18,0.197,0.154,0,3,2008
+Matt Lampugnano, DBQ,84,0.152,0.045,-2,12,2008
+Matthew Bliven, COR,62,0.105,0.000,-3,7,2008
+Tyler Larson, SIM,9,0.150,0.000,0,1,2008
+Dan Adams, COE,10,0.150,0.000,0,1,2008
+Phil Worden, LUT,30,0.114,0.000,-1,4,2008
+David Bartine, COR,11,0.155,0.000,0,2,2008
+Andy Oberhoffer, COE,10,0.132,0.000,0,1,2008
+Nathan Roling, LOR,53,0.120,0.024,-2,7,2008
+Michael Thompson, COR,35,0.109,0.000,-2,4,2008
+Theodore Bishop, DBQ,26,0.093,0.120,-1,3,2008
+Kyle Evangelista, LOR,18,0.079,0.000,-1,2,2008
+Ryan Fincham, COR,15,0.104,0.000,-1,2,2008
+Lance Hollandsworth, BVU,7,0.000,0.000,-1,0,2008
+Skylar Price, COE,10,0.159,0.000,0,1,2008
+Joe Nelson, LUT,6,0.000,0.000,-1,0,2008
+Steven Zamora, COE,8,0.105,0.000,0,1,2008
+Ryan Jordan, DBQ,6,0.065,0.000,0,1,2008
+Dillon Meyer, WAR,7,0.065,0.000,-1,1,2008
+Mitchell Feller, BVU,5,0.078,0.000,0,0,2008
+Cael Smith, SIM,5,0.078,0.000,0,0,2008
+Jay Myers, BVU,3,0.000,0.000,0,0,2008
+Andrew Reese, DBQ,3,0.000,0.000,0,0,2008
+Nick Walker, SIM,2,0.000,0.000,0,0,2008
+Ryan Altiere, LOR,2,0.000,0.000,0,0,2008
+TJ Reidy, COE,2,0.000,0.000,0,0,2008
+Alex Lose, LOR,2,0.000,0.000,0,0,2008
+Zach Smith, SIM,2,0.000,0.000,0,0,2008
+Ryan Clausen, COR,2,0.000,0.000,0,0,2008
+Doug Elfstrom, LUT,2,0.000,0.000,0,0,2008
+Grayson Pangburn, LUT,1,0.000,0.000,0,0,2008
+Kyle McGivney, LUT,1,0.000,0.000,0,0,2008
+Nate Todd, LUT,1,0.000,0.000,0,0,2008
+Nate Lahr, WAR,1,0.000,0.000,0,0,2008
+Justin Putz, WAR,3,0.270,0.000,0,1,2008
+Kyle Soeder, LOR,1,0.000,0.000,0,0,2008
+Nick Teson, LOR,1,0.000,0.000,0,0,2008
+Joel Hugunin, CEN,1,0.000,0.000,0,0,2008
+Phil Lundberg, LUT,1,0.000,0.000,0,0,2008
+JT Pells, COR,1,0.000,0.000,0,0,2008
+Nicholas Selby, COR,1,0.000,0.000,0,0,2008
+Brent Richter, BVU,0,NA,NA,NA,NA,2008
+Devon Archibald, BVU,1,0.000,NA,0,0,2008
+Patrick Thostenson, LOR,0,NA,NA,NA,NA,2008
+Caleb Wilson, COR,0,NA,NA,NA,NA,2008
+Michael Rivera, DBQ,0,NA,NA,NA,NA,2008
+Luke Roth, LOR,0,NA,NA,NA,NA,2008
+Max Flaig, LUT,0,NA,NA,NA,NA,2008
+Byron Abram, DBQ,0,NA,NA,NA,NA,2008
+Tony Bladel, DBQ,0,NA,NA,NA,NA,2008
+Justin Svehla, COE,0,NA,NA,NA,NA,2008
+Brandon Pietrzyk, BVU ,180,0.341,0.289,16,46,2009
+Mike Johnson, WAR ,199,0.294,0.141,12,45,2009
+Pat Richmond, COE ,181,0.295,0.173,11,41,2009
+Zack Topping, LUT ,151,0.281,0.134,8,33,2009
+Mike Furlong, CEN ,167,0.296,0.195,10,38,2009
+Nick Olberding, LOR ,171,0.293,0.187,10,39,2009
+Brad Blum, BVU ,178,0.302,0.197,12,41,2009
+Patrick Grau, WAR ,202,0.311,0.257,14,48,2009
+Adam Nisenson, COE ,153,0.260,0.104,6,32,2009
+Caleb Rangel, CEN ,158,0.288,0.169,9,35,2009
+Chris Reynolds, LUT ,174,0.256,0.128,7,35,2009
+Nate Neis, LUT ,183,0.268,0.077,8,39,2009
+Matt Pfister, COR ,83,0.256,0.101,3,17,2009
+Jesse Ramirez, DBQ ,119,0.286,0.182,7,26,2009
+Andrew Patzke, COR ,113,0.276,0.192,6,24,2009
+Ben Kuebel, LOR ,166,0.253,0.122,6,34,2009
+Kevin Kloewer, BVU ,164,0.308,0.307,11,38,2009
+Steve Beckman, LUT ,155,0.254,0.053,6,31,2009
+Ryan Velvick, COE ,181,0.271,0.212,9,39,2009
+Cory Dawson, SIM ,173,0.270,0.182,8,37,2009
+Anthony Miller, CEN ,146,0.241,0.065,4,29,2009
+Derek Knutson, CEN ,147,0.278,0.197,8,32,2009
+Ben Tressel, CEN ,179,0.251,0.082,7,36,2009
+Corey Rasmussen, SIM ,184,0.245,0.090,6,36,2009
+Ryan Schisler, COE ,172,0.261,0.146,7,36,2009
+Danny Rose, WAR ,218,0.234,0.087,6,42,2009
+Jarred Lackey, CEN ,163,0.261,0.182,7,34,2009
+Mark Weber, LUT ,127,0.244,0.139,4,25,2009
+Tyler McAllister, COE ,182,0.229,0.090,4,34,2009
+Shadi Abuhakmeh, DBQ ,134,0.272,0.231,7,29,2009
+John Schroeder, LOR ,150,0.266,0.169,7,31,2009
+Curt Bjork, SIM ,157,0.260,0.126,7,32,2009
+Matthew Shimanovsky, COR ,127,0.259,0.171,5,26,2009
+Clark Egdorf, LOR ,136,0.229,0.133,3,26,2009
+Casey Korn, COR ,133,0.263,0.184,6,28,2009
+Jesse Reis, SIM ,170,0.270,0.195,8,36,2009
+Jared Swim, SIM ,166,0.229,0.118,4,31,2009
+Jerrold Martijn, WAR ,164,0.237,0.117,5,32,2009
+Michael Stephenson, BVU ,144,0.241,0.118,4,28,2009
+Austin Brown, LOR ,143,0.234,0.173,4,27,2009
+Mark Blum, BVU ,174,0.216,0.076,3,31,2009
+Michael Hoffman, BVU ,166,0.219,0.122,3,30,2009
+Scott Ethell, SIM ,155,0.239,0.154,5,30,2009
+Joe Thompson, LUT ,131,0.220,0.073,2,24,2009
+Adam Gross, LOR ,165,0.241,0.179,5,32,2009
+Kyle Jones, WAR ,179,0.239,0.162,5,35,2009
+Dave Lakin, CEN ,92,0.210,0.027,1,16,2009
+Steve Chamberlin, WAR ,116,0.210,0.069,1,21,2009
+A.J. Lewis, WAR ,181,0.217,0.115,3,33,2009
+BJ Juergens, LOR ,139,0.212,0.137,2,25,2009
+Ben Schott, LUT ,160,0.241,0.196,5,31,2009
+Zach Nagle, WAR ,166,0.222,0.134,3,31,2009
+Dave Johnson, SIM ,157,0.220,0.151,3,29,2009
+Chris Duran, DBQ ,154,0.196,0.023,1,26,2009
+Jeff Wagner, COE ,113,0.198,0.063,1,19,2009
+Evan Bierman, DBQ ,145,0.211,0.117,2,26,2009
+Ben Roemmich, WAR ,205,0.215,0.119,3,37,2009
+Alex Larson, DBQ ,140,0.208,0.173,2,25,2009
+Chris Jones, SIM ,164,0.195,0.113,0,28,2009
+Garrett Hill, BVU ,113,0.195,0.069,0,19,2009
+Alex Miklo, LOR ,161,0.197,0.089,1,27,2009
+Jake Waddle, LUT ,170,0.234,0.197,4,32,2009
+Chris Hylland, DBQ ,118,0.211,0.117,2,21,2009
+Jon Reiner, COE ,112,0.189,0.089,0,18,2009
+Tyler Case, BVU ,126,0.194,0.078,0,21,2009
+Alex Thomas, LUT ,141,0.149,0.049,-3,20,2009
+Tyler Wivinis, CEN ,96,0.159,0.025,-2,14,2009
+Tyler Shireman, LOR ,142,0.167,0.050,-2,21,2009
+Mitch Fandel, BVU ,3,0.847,1.000,1,2,2009
+John Delaplane, COE ,1,0.540,0.000,0,0,2009
+Julian Cantu, DBQ ,1,0.540,0.000,0,0,2009
+Mark Proust, COE ,1,0.540,0.000,0,0,2009
+Louis Dettorre, DBQ ,1,0.540,0.000,0,0,2009
+Shane Nelson, CEN ,1,0.540,0.000,0,0,2009
+Ty Larsen, SIM ,1,0.540,0.000,0,0,2009
+Matt Reynolds, LUT ,4,0.375,0.000,0,1,2009
+Kevin Bradley, LUT ,5,0.324,0.000,0,1,2009
+Nate McCollough, BVU ,2,0.455,0.500,0,1,2009
+Ryan Jordan, DBQ ,2,0.270,0.000,0,0,2009
+John Hupp, SIM ,2,0.270,0.000,0,0,2009
+Joe Swanson, COE ,9,0.240,0.000,0,2,2009
+Jason Hassman, CEN ,57,0.311,0.200,4,13,2009
+Dan Genrich, LUT ,27,0.297,0.200,2,6,2009
+Mark Hennessy, DBQ ,13,0.308,0.200,1,3,2009
+Jacob Miksell, WAR ,11,0.330,0.300,1,3,2009
+Josh Stanton, CEN ,56,0.239,0.040,2,11,2009
+Orlando Mejia, DBQ ,58,0.244,0.043,2,11,2009
+Nick McKenzie, COE ,31,0.255,0.120,1,6,2009
+Ryan Clausen, COR ,67,0.280,0.233,4,15,2009
+Matthew Bruhn, LUT ,34,0.205,0.033,0,6,2009
+Justin Putz, WAR ,23,0.230,0.000,1,4,2009
+Kyle Hammann, CEN ,5,0.270,0.000,0,1,2009
+Bobby Bieniek, SIM ,3,0.180,0.000,0,0,2009
+Cale Smith, SIM ,71,0.218,0.094,1,13,2009
+Mark Corbeil, COR ,24,0.299,0.364,2,6,2009
+J.T. Pells, COR ,49,0.214,0.049,1,9,2009
+Clay Henricksen, LOR ,27,0.259,0.000,1,6,2009
+Ryan Fincham, COR ,73,0.227,0.138,2,14,2009
+Spencer Stumpff, WAR ,15,0.196,0.000,0,3,2009
+John Logan, COE ,97,0.223,0.120,2,18,2009
+Bill Albee, DBQ ,67,0.229,0.133,2,13,2009
+Isiah Stevens, WAR ,45,0.209,0.075,1,8,2009
+Jacob Schwind, COE ,22,0.218,0.100,0,4,2009
+Devon Archibald, BVU ,12,0.328,0.500,1,3,2009
+Scott DeAngelis, COE ,92,0.207,0.080,1,16,2009
+Travis Olson, LOR ,24,0.196,0.125,0,4,2009
+Ben Chestnut, CEN ,48,0.228,0.079,1,9,2009
+Caleb Russell, DBQ ,88,0.208,0.091,1,15,2009
+David Bartine, COR ,90,0.210,0.028,1,16,2009
+Blake Smith, CEN ,88,0.197,0.122,0,15,2009
+Michael Tierney, COR ,84,0.217,0.160,1,15,2009
+Max Tunning, COE ,86,0.206,0.093,1,15,2009
+Brock Yossi, BVU ,98,0.202,0.038,1,17,2009
+Richard Garcia, DBQ ,109,0.264,0.177,5,23,2009
+Billy Schmitt, WAR ,79,0.181,0.028,0,13,2009
+Kyle Soeder, LOR ,46,0.212,0.146,1,8,2009
+Spencer Sobba, COE ,49,0.222,0.079,1,9,2009
+B.J. Pilling, CEN ,26,0.198,0.087,0,4,2009
+Jason Douglas, COR ,77,0.184,0.061,0,12,2009
+Caleb Wilson, COR ,56,0.222,0.235,1,10,2009
+Darin Schneider, LUT ,22,0.158,0.000,0,3,2009
+Michael Loney, DBQ ,16,0.216,0.250,0,3,2009
+Jacob Rannals, DBQ ,18,0.220,0.000,0,3,2009
+Mitchel Obey, LUT ,4,0.135,0.000,0,1,2009
+Ryan Julian, LOR ,4,0.135,0.000,0,1,2009
+Ryan Pyles, DBQ ,55,0.189,0.067,0,9,2009
+Steve Johnston, BVU ,110,0.190,0.136,0,18,2009
+Jeffrey Stevens, DBQ ,85,0.180,0.085,0,14,2009
+Andy Krekel, COR ,52,0.195,0.196,0,9,2009
+Quinn O'Brien, CEN ,34,0.225,0.154,1,6,2009
+Jesse Searls, COR ,69,0.164,0.065,-1,10,2009
+Justin Svehla, COE ,15,0.136,0.000,0,2,2009
+Nick Robertson, COE ,24,0.195,0.158,0,4,2009
+Dan Krauss, COR ,28,0.179,0.125,0,4,2009
+Brett Wilson, BVU ,32,0.181,0.042,0,5,2009
+Jason Hayes, SIM ,98,0.190,0.091,0,16,2009
+Michael Hoppman, DBQ ,24,0.170,0.050,0,4,2009
+Colton Calvert, SIM ,5,0.108,0.000,0,1,2009
+Zach Jones, CEN ,17,0.180,0.188,0,3,2009
+Brandon Thurm, WAR ,20,0.161,0.000,0,3,2009
+Paul Ryan, LUT ,13,0.202,0.273,0,2,2009
+Zach Smith, SIM ,31,0.164,0.000,0,5,2009
+Drew Yarkosky, SIM ,16,0.165,0.000,0,2,2009
+Cody Raisch, COE ,34,0.200,0.045,0,6,2009
+Michael Frazier, DBQ ,9,0.068,0.000,-1,1,2009
+Mitchell Feller, BVU ,11,0.155,0.000,0,2,2009
+Drew Otto, COE ,19,0.119,0.059,-1,2,2009
+Michael Szela, COE ,12,0.123,0.000,0,2,2009
+Sean Raisch, COE ,25,0.120,0.048,-1,3,2009
+Nick Maxwell, BVU ,15,0.116,0.000,-1,2,2009
+Nick Weinmeister, COR ,33,0.042,0.000,-3,3,2009
+Bobby Orosco, DBQ ,8,0.049,0.000,-1,1,2009
+Joseph Hilby, DBQ ,6,0.000,0.000,-1,0,2009
+Alex Lose, LOR ,6,0.135,0.000,0,1,2009
+Matt Lewis, COR ,3,0.000,0.000,0,0,2009
+Andy Compton, BVU ,4,0.098,0.000,0,0,2009
+Ryne Billesbach, CEN ,2,0.000,0.000,0,0,2009
+Justin Brown, COR ,2,0.000,0.000,0,0,2009
+Ryan Bahnemann, LUT ,2,0.000,0.000,0,0,2009
+Brett Stein, BVU ,2,0.000,0.000,0,0,2009
+Ian Fitzgerald, LUT ,4,0.203,0.000,0,1,2009
+Justin Ramos, DBQ ,3,0.130,0.000,0,0,2009
+Scott Radke, BVU ,2,0.000,0.000,0,0,2009
+Mason Nicklos, BVU ,2,0.195,0.000,0,0,2009
+Blayke Conway, DBQ ,2,0.000,0.000,0,0,2009
+Steven Zamora, COE ,1,0.000,0.000,0,0,2009
+Hector Diaz, DBQ ,1,0.000,0.000,0,0,2009
+Nate Lahr, WAR ,1,0.000,0.000,0,0,2009
+Ron Manthe, DBQ ,2,0.210,0.000,0,0,2009
+Alex Mallonee, LOR ,1,0.000,0.000,0,0,2009
+Trent Prather, BVU ,2,0.195,0.000,0,0,2009
+Tyler Pearson, SIM ,1,0.000,0.000,0,0,2009
+Charlie Muir, COR ,1,0.000,0.000,0,0,2009
+Carl Lottman, LUT ,1,0.000,0.000,0,0,2009
+Jossue Vega, DBQ ,0,NA,NA,NA,NA,2009
+Michael Rivera, DBQ ,0,NA,NA,NA,NA,2009
+Tyler Wright, WAR ,0,NA,NA,NA,NA,2009
+Josh McQuillen, COE ,0,NA,NA,NA,NA,2009
+Reece Jedlicka, LOR ,4,0.400,NA,0,1,2009
+Nathan McSpadden, DBQ ,0,NA,NA,NA,NA,2009
+Jordan Skaar, DBQ ,0,NA,NA,NA,NA,2009
+Nate Todd, LUT ,0,NA,NA,NA,NA,2009
+Greg Siems, LUT ,0,NA,NA,NA,NA,2009
+Jeff Riddle, LUT ,1,0.390,NA,0,0,2009
+Justin Christian, DBQ ,0,NA,NA,NA,NA,2009
+Kyler Laurie, LOR ,1,0.390,NA,0,0,2009
+Zach Schwartz, LOR ,0,NA,NA,NA,NA,2009
+Austin Safranski, LOR ,0,NA,NA,NA,NA,2009
+Brandon Janss, COE ,0,NA,NA,NA,NA,2009
+Adam Squires, CEN ,1,0.390,NA,0,0,2009
+Ben Schott, LUT ,180,0.346,0.333,17,46,2010
+Scott Ethell, SIM ,174,0.294,0.204,11,39,2010
+Ryan Schisler, COE ,182,0.275,0.130,9,39,2010
+Dave Johnson, SIM ,161,0.347,0.364,15,41,2010
+Mike Furlong, CEN ,189,0.291,0.204,11,42,2010
+Jarred Lackey, CEN ,178,0.299,0.241,11,41,2010
+Calvin Rea, LOR ,153,0.332,0.320,13,38,2010
+Brad Blum, BVU ,211,0.270,0.099,10,45,2010
+Andrew Danna, DBQ ,163,0.316,0.297,12,39,2010
+Michael Hoffman, BVU ,189,0.266,0.156,8,40,2010
+David Bartine, COR ,127,0.245,0.055,4,25,2010
+Drew Yoder, WAR ,167,0.258,0.147,7,34,2010
+Mark Weber, LUT ,170,0.265,0.158,8,36,2010
+Brandon Pietrzyk, BVU ,195,0.292,0.277,12,44,2010
+Chris Reynolds, LUT ,186,0.240,0.070,6,36,2010
+Patrick Grau, WAR ,165,0.318,0.331,13,40,2010
+Clay Henricksen, LOR ,154,0.250,0.090,6,31,2010
+Kevin Kloewer, BVU ,186,0.301,0.295,12,43,2010
+Kyle Soeder, LOR ,121,0.276,0.215,6,26,2010
+Michael Stephenson, BVU ,194,0.237,0.048,5,37,2010
+Ryan Velvick, COE ,181,0.285,0.248,10,40,2010
+Pat Richmond, COE ,190,0.242,0.127,6,37,2010
+Ben Tressel, CEN ,180,0.254,0.096,7,37,2010
+Zack Topping, LUT ,134,0.236,0.121,4,26,2010
+Jeff Riddle, LUT ,158,0.261,0.172,7,33,2010
+Matt Pfister, COR ,137,0.232,0.068,3,26,2010
+Danny Rose, WAR ,183,0.240,0.073,5,36,2010
+Zach Rogers, COR ,116,0.252,0.133,4,23,2010
+Nick Stein, COE ,194,0.296,0.310,12,44,2010
+Ben Roemmich, WAR ,181,0.224,0.101,4,33,2010
+Ryan Bahnemann, LUT ,129,0.239,0.148,4,25,2010
+Josh Stanton, CEN ,138,0.256,0.205,5,28,2010
+Mark Blum, BVU ,173,0.240,0.145,5,34,2010
+Anthony Miller, CEN ,176,0.220,0.082,3,32,2010
+John Schroeder, LOR ,165,0.240,0.142,5,32,2010
+BJ Juergens, LOR ,149,0.243,0.178,5,29,2010
+Brett Wilson, BVU ,132,0.199,0.058,1,22,2010
+Caleb Rangel, CEN ,148,0.241,0.098,4,29,2010
+Justin Svehla, SIM ,141,0.204,0.056,1,24,2010
+Todd Whited, DBQ ,130,0.255,0.183,5,26,2010
+Kevin Schuver, COE ,175,0.258,0.178,7,36,2010
+Colton Calvert, SIM ,167,0.232,0.124,4,32,2010
+Brock Grubbs, DBQ ,107,0.216,0.024,2,19,2010
+Alexander Larson, DBQ ,136,0.227,0.104,3,25,2010
+Ryan Allison, CEN ,166,0.250,0.207,6,33,2010
+Corey Rasmussen, SIM ,187,0.214,0.110,3,33,2010
+Adam Nisenson, COE ,148,0.218,0.096,2,27,2010
+Tyler Case, BVU ,142,0.209,0.090,2,25,2010
+Jason Hassman, CEN ,127,0.216,0.092,2,23,2010
+Brock Yossi, BVU ,127,0.195,0.037,0,21,2010
+Nate Lahr, WAR ,164,0.242,0.230,5,32,2010
+Steve Chamberlin, WAR ,139,0.173,0.024,-1,22,2010
+Zach Smith, SIM ,150,0.196,0.033,1,25,2010
+Joe Thompson, LUT ,126,0.203,0.076,1,22,2010
+Scott DeAngelis, COE ,120,0.192,0.063,0,20,2010
+J.T. Pells, COR ,85,0.188,0.071,0,14,2010
+Ryan Fincham, COR ,93,0.205,0.122,1,16,2010
+Steve Beckman, LUT ,154,0.190,0.064,0,25,2010
+Nicholas Martin, DBQ ,155,0.187,0.094,0,25,2010
+Matthew Bliven, COR ,87,0.161,0.049,-1,13,2010
+Matthew Shimanovsky, COR ,114,0.202,0.087,1,20,2010
+Ben Kuebel, LOR ,143,0.165,0.056,-2,21,2010
+Kevin Bradley, LUT ,108,0.157,0.022,-2,16,2010
+Ryan Clausen, COR ,128,0.153,0.009,-3,18,2010
+Mike Kray, WAR ,1,0.540,0.000,0,0,2010
+Robert Carlson, COR ,1,0.540,0.000,0,0,2010
+Mitch Fandel, BVU ,3,0.360,0.000,0,1,2010
+Nick Maxwell, BVU ,12,0.356,0.111,1,3,2010
+Nick Norris, COR ,8,0.300,0.000,1,2,2010
+Max Seeman, CEN ,2,0.270,0.000,0,0,2010
+Austin Graham, LUT ,4,0.330,0.000,0,1,2010
+Tony Stenberg, WAR ,2,0.270,0.000,0,0,2010
+Mark Fantini, WAR ,2,0.270,0.000,0,0,2010
+Ryne Billesbach, CEN ,8,0.267,0.200,0,2,2010
+Matthew Gaddis, DBQ ,14,0.221,0.000,0,3,2010
+Spencer Radabaugh, LOR ,37,0.300,0.207,2,9,2010
+Billy Schmitt, WAR ,122,0.302,0.288,8,28,2010
+Ryan Scheetz, BVU ,64,0.241,0.082,2,12,2010
+John Delaplane, COE ,19,0.285,0.188,1,4,2010
+Matt Reynolds, LUT ,9,0.223,0.000,0,2,2010
+Austin Brown, LOR ,106,0.225,0.042,2,20,2010
+Blake Smith, CEN ,81,0.258,0.151,3,17,2010
+Grant Thomas, SIM ,53,0.238,0.087,2,10,2010
+Mitchel Obey, LUT ,93,0.263,0.193,4,19,2010
+Neil Eddie, BVU ,31,0.220,0.074,1,6,2010
+Kirby Rock, CEN ,6,0.242,0.167,0,1,2010
+Tyler Mason, CEN ,7,0.311,0.333,1,2,2010
+Trent Prather, BVU ,6,0.180,0.000,0,1,2010
+Alex Davis, BVU ,6,0.285,0.000,0,1,2010
+Matthew Bruhn, LUT ,86,0.231,0.045,2,16,2010
+Drew Yarkosky, SIM ,100,0.214,0.048,1,18,2010
+Ethan Hale, SIM ,54,0.232,0.160,1,10,2010
+Jacob Miksell, WAR ,74,0.210,0.074,1,13,2010
+Collin Frampton, WAR ,53,0.252,0.103,2,11,2010
+Allen Mann, CEN ,70,0.247,0.186,2,14,2010
+John Logan, COE ,82,0.236,0.134,2,16,2010
+Jacob Schwind, COE ,58,0.244,0.191,2,11,2010
+Nathan Lucas, DBQ ,90,0.195,0.037,0,15,2010
+Tyler Crandell, SIM ,95,0.200,0.132,1,16,2010
+Aaron Laskowski, DBQ ,91,0.194,0.026,0,15,2010
+Ryan Doty, WAR ,53,0.175,0.041,0,8,2010
+Nick Robertson, COE ,56,0.239,0.220,2,11,2010
+Jeffrey Stevens, DBQ ,69,0.197,0.081,0,12,2010
+Andrew Krehbiel, WAR ,12,0.201,0.091,0,2,2010
+Kyle Barton, LOR ,91,0.209,0.153,1,16,2010
+Bobby Shepherd, DBQ ,39,0.184,0.081,0,6,2010
+Brad Agan, SIM ,99,0.211,0.064,1,18,2010
+Andrew Patzke, COR ,51,0.220,0.122,1,9,2010
+Kyle Duggan, DBQ ,68,0.170,0.017,-1,10,2010
+Klayton Breitbach, DBQ ,39,0.204,0.118,0,7,2010
+Philip Elking, DBQ ,55,0.202,0.152,0,9,2010
+Nick McKenzie, COE ,28,0.179,0.000,0,4,2010
+Mike Canevello, LOR ,85,0.198,0.045,0,14,2010
+Kaileb Armbruster, COE ,101,0.217,0.171,2,18,2010
+Austin Linderwell, DBQ ,63,0.196,0.150,0,11,2010
+David Lakin, CEN ,49,0.183,0.000,0,8,2010
+Jordan Ries, LOR ,36,0.174,0.031,0,6,2010
+Sam Stetzel, CEN ,9,0.163,0.000,0,1,2010
+Thomas Weber, LUT ,4,0.135,0.000,0,1,2010
+Spencer Tripp, COR ,4,0.135,0.000,0,1,2010
+Danny Lee, LOR ,27,0.149,0.000,-1,4,2010
+Andy Compton, BVU ,48,0.180,0.095,0,8,2010
+Travis Olson, LOR ,36,0.173,0.088,0,6,2010
+Joe Swanson, COE ,20,0.204,0.118,0,3,2010
+Matt Knabel, WAR ,85,0.143,0.012,-2,12,2010
+Andy Krekel, COR ,70,0.192,0.154,0,12,2010
+Levi Montague, WAR ,16,0.176,0.000,0,3,2010
+Clay Emmrich, WAR ,10,0.215,0.222,0,2,2010
+Ben Chestnut, CEN ,64,0.176,0.109,-1,10,2010
+Spencer Sobba, COE ,44,0.186,0.152,0,7,2010
+Alex Mallonee, LOR ,27,0.133,0.040,-1,4,2010
+Milton Kurschner, COR ,25,0.180,0.050,0,4,2010
+Scott Benson, WAR ,62,0.144,0.053,-2,9,2010
+Dan Marshall, WAR ,49,0.144,0.106,-1,7,2010
+R.J. Aubert, DBQ ,18,0.118,0.000,-1,2,2010
+Ryan Nordtvedt, COR ,36,0.144,0.061,-1,5,2010
+Bobby Bieniek, SIM ,26,0.113,0.042,-1,3,2010
+Noah Mahlik, DBQ ,14,0.159,0.083,0,2,2010
+Kevin Harlander, LOR ,42,0.126,0.000,-2,5,2010
+Jesse Lawler, DBQ ,72,0.168,0.071,-1,11,2010
+Mark Hennessy, DBQ ,26,0.138,0.000,-1,3,2010
+Andrew Reese, DBQ ,9,0.150,0.000,0,1,2010
+Tyler Pawletzki, SIM ,34,0.109,0.034,-2,4,2010
+Tyler Pearson, SIM ,31,0.119,0.000,-1,4,2010
+Derek Bergan, LOR ,31,0.104,0.000,-2,4,2010
+Jesse Searls, COR ,9,0.101,0.111,0,1,2010
+Craig Furstenau, COR ,14,0.072,0.000,-1,1,2010
+Wade Morris, COE ,14,0.039,0.000,-1,1,2010
+Kevin Jachim, LOR ,21,0.158,0.067,0,3,2010
+Tyler Larson, SIM ,18,0.052,0.000,-1,2,2010
+Mark Corbeil, COR ,19,0.022,0.000,-2,1,2010
+John Hupp, SIM ,11,0.000,0.000,-1,1,2010
+Ian Fitzgerald, LUT ,9,0.047,0.000,-1,1,2010
+Mitch Windle, DBQ ,7,0.000,0.000,-1,0,2010
+Jeff Rose, LUT ,4,0.000,0.000,0,0,2010
+Tanner Beck, COE ,4,0.000,0.000,0,0,2010
+Hector Diaz, DBQ ,3,0.000,0.000,0,0,2010
+Travis Cox, WAR ,2,0.000,0.000,0,0,2010
+Kyle Hibbing, BVU ,4,0.195,0.000,0,1,2010
+Louis Dettorre, DBQ ,2,0.000,0.000,0,0,2010
+Derec Thompson, DBQ ,1,0.000,0.000,0,0,2010
+Jon Rose, WAR ,1,0.000,0.000,0,0,2010
+Taylor White, DBQ ,2,0.210,0.000,0,0,2010
+Carl Lottman, LUT ,1,0.000,0.000,0,0,2010
+Andrew Nelson, LUT ,1,0.000,0.000,0,0,2010
+Chris Erickson, LUT ,1,0.000,0.000,0,0,2010
+Ryan Mertens, DBQ ,1,0.000,0.000,0,0,2010
+Brian Covington, WAR ,1,0.000,0.000,0,0,2010
+Seth Carson, CEN ,1,0.000,0.000,0,0,2010
+Blake Heitmeier, SIM ,1,0.000,0.000,0,0,2010
+Nathan Jepsen, COR ,1,0.000,0.000,0,0,2010
+Reece Jedlicka, LOR ,1,0.000,0.000,0,0,2010
+Nick Panvino, LOR ,0,NA,NA,NA,NA,2010
+Jared Waddle, LUT ,0,NA,NA,NA,NA,2010
+Dan Cleary, COR ,0,NA,NA,NA,NA,2010
+Chris Rock, LOR ,0,NA,NA,NA,NA,2010
+Clint Rhodes, SIM ,0,NA,NA,NA,NA,2010
+Tyler Wright, WAR ,0,NA,NA,NA,NA,2010
+Kevin Baranowski, COE ,0,NA,NA,NA,NA,2010
+Chris Reynolds, LUT ,194,0.274,0.133,10,42,2011
+Austin Brown, LOR ,142,0.261,0.146,6,29,2011
+BJ Juergens, LOR ,141,0.252,0.102,5,28,2011
+Brad Blum, BVU ,237,0.279,0.138,12,52,2011
+Mike Furlong, CEN ,173,0.264,0.129,8,36,2011
+Nick Stein, COE ,185,0.321,0.306,14,45,2011
+Ryan Scheetz, BVU ,203,0.231,0.060,5,38,2011
+Brock Grubbs, DBQ ,113,0.264,0.121,5,24,2011
+Adam Ariola, CEN ,131,0.243,0.103,4,26,2011
+Dave Johnson, SIM ,166,0.277,0.221,9,36,2011
+Chris Erikson, LUT ,132,0.220,0.051,2,24,2011
+Drew Yarkosky, SIM ,122,0.230,0.049,3,23,2011
+Anthony Miller, CEN ,161,0.214,0.044,2,29,2011
+Ryan Powers, WAR ,172,0.227,0.081,4,32,2011
+Scott DeAngelis, COE ,154,0.216,0.045,2,28,2011
+Caleb Rangel, CEN ,160,0.259,0.138,7,33,2011
+Tyler Crandell, SIM ,167,0.231,0.110,4,32,2011
+Sam Stetzel, CEN ,143,0.212,0.034,2,25,2011
+Michael Hoffman, BVU ,228,0.231,0.123,6,43,2011
+Andrew Krehbiel, WAR ,176,0.199,0.038,1,30,2011
+Ryan Velvick, COE ,167,0.236,0.115,5,32,2011
+Drew Yoder, WAR ,168,0.234,0.120,4,32,2011
+Kevin Kloewer, BVU ,218,0.280,0.303,12,48,2011
+Justin Svehla, SIM ,144,0.221,0.052,3,26,2011
+Adam Nisenson, COE ,182,0.203,0.056,1,31,2011
+Kevin Schuver, COE ,177,0.235,0.128,5,34,2011
+Brennan Melloy, COE ,148,0.228,0.140,3,28,2011
+Ben Roemmich, WAR ,195,0.226,0.115,4,36,2011
+Patrick Grau, WAR ,188,0.261,0.242,8,39,2011
+Vince Parisi, DBQ ,139,0.250,0.191,5,28,2011
+Brock Yossi, BVU ,223,0.196,0.041,1,38,2011
+Michael Schinstock, WAR ,153,0.216,0.126,2,28,2011
+Dylan Colo, BVU ,134,0.204,0.059,1,23,2011
+Ryan Bahnemann, LUT ,172,0.201,0.090,1,29,2011
+Jarred Lackey, CEN ,162,0.199,0.065,1,28,2011
+Mitchel Obey, LUT ,128,0.225,0.089,3,24,2011
+Zach Rogers, COR ,115,0.198,0.050,1,20,2011
+Nate Rost, WAR ,152,0.208,0.078,2,27,2011
+Tyler Leadley, COE ,192,0.200,0.062,1,33,2011
+Andrew Danna, DBQ ,159,0.258,0.270,6,33,2011
+Joe Paletta, BVU ,174,0.235,0.197,5,33,2011
+Ryan Doty, WAR ,133,0.200,0.087,1,23,2011
+Nicholas Martin, DBQ ,159,0.185,0.022,0,26,2011
+Nick Baldocchi, DBQ ,136,0.240,0.204,4,26,2011
+Zach Smith, SIM ,99,0.203,0.107,1,17,2011
+Brad Agan, SIM ,112,0.224,0.156,2,21,2011
+Joe Thompson, LUT ,173,0.201,0.096,1,30,2011
+Kevin Bradley, LUT ,131,0.170,0.044,-2,20,2011
+Matt Pfister, COR ,120,0.181,0.047,-1,19,2011
+Andrew Patzke, COR ,110,0.206,0.140,1,19,2011
+Colton Calvert, SIM ,138,0.170,0.048,-2,21,2011
+Todd Whited, DBQ ,147,0.213,0.046,2,26,2011
+Joe Walker, LOR ,130,0.174,0.026,-1,20,2011
+Mike Canevello, LOR ,125,0.195,0.040,0,21,2011
+Robert Carlson, COR ,83,0.180,0.029,0,13,2011
+Ryan Allison, CEN ,120,0.169,0.081,-1,18,2011
+Calvin Rea, LOR ,149,0.192,0.073,0,25,2011
+Tyler Case, BVU ,175,0.187,0.132,0,29,2011
+Andy Compton, BVU ,177,0.198,0.112,1,30,2011
+Levi Montague, WAR ,115,0.175,0.062,-1,18,2011
+Josh Stanton, CEN ,107,0.172,0.083,-1,17,2011
+Aaron Laskowski, DBQ ,117,0.171,0.052,-1,18,2011
+Milton Kurschner, COR ,89,0.175,0.014,-1,14,2011
+Steve Beckman, LUT ,161,0.177,0.008,-1,25,2011
+Ryan Clausen, COR ,108,0.154,0.033,-2,16,2011
+Clay Henricksen, LOR ,122,0.173,0.067,-1,19,2011
+Jesse Searls, COR ,95,0.142,0.024,-3,13,2011
+Ethan Hale, SIM ,133,0.157,0.044,-3,19,2011
+Mike Pudlo, LOR ,136,0.148,0.018,-3,19,2011
+Elliot Visuri,DBQ,1,0.910,1.000,0,1,2011
+Tony Stenberg, WAR ,1,0.540,0.000,0,0,2011
+Nick Battalini, LOR ,2,0.480,0.000,0,1,2011
+John Delaplane, COE ,1,0.540,0.000,0,0,2011
+Alex Rodriguez, LOR ,4,0.270,0.000,0,1,2011
+Chris Rock, LOR ,2,0.270,0.000,0,0,2011
+Bobby Bieniek, SIM ,11,0.232,0.000,0,2,2011
+Sean Raisch, COE ,100,0.290,0.273,6,22,2011
+Alex Davis, BVU ,35,0.225,0.061,1,6,2011
+Matthew Gaddis, DBQ ,31,0.226,0.071,1,6,2011
+Ryan Schisler, COE ,86,0.242,0.079,3,17,2011
+Nathan Lucas, DBQ ,106,0.236,0.080,3,20,2011
+Blake Heitmeier, SIM ,79,0.247,0.051,3,16,2011
+Trent Svehla, SIM ,78,0.226,0.063,2,15,2011
+Nate McCollough, BVU ,3,0.180,0.000,0,0,2011
+Ryan Tackitt, DBQ ,23,0.217,0.053,0,4,2011
+Nick Schlecht, BVU ,23,0.201,0.050,0,4,2011
+Tyler Weiss, DBQ ,13,0.170,0.000,0,2,2011
+Travis Olson, LOR ,48,0.208,0.071,1,8,2011
+Dan Marshall, WAR ,32,0.218,0.107,1,6,2011
+Christian Armas, DBQ ,7,0.154,0.000,0,1,2011
+Patton Hofer, COE ,8,0.234,0.143,0,2,2011
+Jeff Rose, LUT ,88,0.208,0.074,1,15,2011
+Spencer Sobba, COE ,22,0.203,0.056,0,4,2011
+Paul Ryan, LUT ,72,0.176,0.000,-1,11,2011
+Tyler Craig, SIM ,14,0.199,0.000,0,2,2011
+Seth Carson, CEN ,83,0.182,0.028,0,13,2011
+John Logan, COE ,90,0.184,0.075,0,15,2011
+Matthew Bruhn, LUT ,52,0.194,0.024,0,9,2011
+Kyle Soeder, LOR ,92,0.213,0.193,1,16,2011
+Max Seeman, CEN ,38,0.164,0.000,-1,6,2011
+Brett Crable, SIM ,23,0.192,0.100,0,4,2011
+Joe Grote, WAR ,17,0.194,0.125,0,3,2011
+Ty Larsen, SIM ,10,0.189,0.000,0,2,2011
+Ben Rockwell, DBQ ,4,0.135,0.000,0,1,2011
+Zack Buehrer, SIM ,5,0.260,0.250,0,1,2011
+T. Nelson, SIM,4,0.228,0.250,0,1,2011
+Grant Thomas, SIM ,45,0.181,0.054,0,7,2011
+Jordan Greenland, LUT ,62,0.180,0.020,0,10,2011
+Ian Fitzgerald, LUT ,37,0.205,0.000,0,6,2011
+Kyle Duggan, DBQ ,49,0.179,0.000,0,8,2011
+Connor Reilly, LOR ,59,0.162,0.038,-1,9,2011
+Bobby Shepherd, DBQ ,43,0.137,0.025,-1,6,2011
+Andrew Nelsen, LUT ,48,0.159,0.025,-1,7,2011
+Allen Mann, CEN ,81,0.163,0.032,-1,12,2011
+Mark Jablonski, LOR ,24,0.172,0.111,0,4,2011
+Tyler Pawletzki, SIM ,9,0.120,0.000,0,1,2011
+Kyle Barton, LOR ,71,0.172,0.034,-1,11,2011
+Robbie Jewell, LUT ,27,0.172,0.087,0,4,2011
+Jonathon Rose, WAR ,42,0.158,0.081,-1,6,2011
+Kaileb Armbruster, COE ,65,0.190,0.143,0,11,2011
+Eric DeSousa, LOR ,60,0.152,0.000,-1,9,2011
+Weston Foxx, BVU ,23,0.151,0.000,-1,3,2011
+Nick Maxwell, BVU ,40,0.134,0.029,-1,5,2011
+Neil Eddie, BVU ,39,0.207,0.235,0,7,2011
+Justin Brown, COR ,16,0.101,0.000,-1,2,2011
+Eric Croghan, BVU ,12,0.214,0.200,0,2,2011
+John Hupp, SIM ,12,0.188,0.100,0,2,2011
+Tyler Pearson, SIM ,7,0.193,0.000,0,1,2011
+Jake Barr, SIM ,69,0.147,0.049,-2,10,2011
+David Lakin, CEN ,49,0.134,0.023,-2,6,2011
+Ryan Nordtvedt, COR ,67,0.131,0.050,-2,9,2011
+Charlie Muir, COR ,64,0.147,0.000,-2,9,2011
+Phil Elking, DBQ ,24,0.106,0.000,-1,3,2011
+Craig Furstenau, COR ,38,0.099,0.000,-2,4,2011
+Matt Reynolds, LUT ,6,0.090,0.000,0,1,2011
+Mike Kray, WAR ,9,0.193,0.000,0,2,2011
+Scott Benson, WAR ,8,0.165,0.000,0,1,2011
+Nick Norris, COR ,37,0.099,0.000,-2,4,2011
+Tom Crohan, DBQ ,18,0.138,0.000,-1,2,2011
+James Vega, WAR ,18,0.150,0.000,0,3,2011
+Kevin Harlander, LOR ,7,0.077,0.000,0,1,2011
+Billy Dittmer, CEN ,15,0.072,0.000,-1,1,2011
+Spencer Radabaugh, LOR ,21,0.089,0.000,-1,2,2011
+Dalton Combs, COE ,9,0.060,0.000,-1,1,2011
+Mac Shepherd, DBQ ,11,0.120,0.000,0,1,2011
+Nathan Jepsen, COR ,13,0.102,0.000,-1,1,2011
+Chad Sibigtroth, BVU ,11,0.049,0.000,-1,1,2011
+Cameron Jimenez, COR ,13,0.042,0.000,-1,1,2011
+Eric Pittman, LUT ,35,0.095,0.000,-2,4,2011
+Mark Proust, COE ,19,0.134,0.000,-1,3,2011
+Alex Schnebbe, COR ,16,0.081,0.067,-1,2,2011
+Kody Karjala, COR ,16,0.060,0.000,-1,1,2011
+Jeffrey Stevens, DBQ ,22,0.037,0.000,-2,2,2011
+Erik Rasmussen, WAR ,9,0.000,0.000,-1,0,2011
+Jordan Ries, LOR ,13,0.150,0.000,0,2,2011
+Michael Chia, SIM ,6,0.000,0.000,-1,0,2011
+Danny Hershberger, CEN ,8,0.098,0.000,0,1,2011
+Nick Massina, WAR ,4,0.000,0.000,0,0,2011
+Austen Graham, LUT ,3,0.000,0.000,0,0,2011
+Andrew Reese, DBQ ,2,0.000,0.000,0,0,2011
+Paul Krenger, DBQ ,3,0.000,0.000,0,0,2011
+Mitch Windle, DBQ ,3,0.130,0.000,0,0,2011
+Justin Pothast, COR ,2,0.000,0.000,0,0,2011
+Michael Jontz, CEN ,3,0.130,0.000,0,0,2011
+Jake Raecker, WAR ,2,0.000,0.000,0,0,2011
+Clay Emmrich, WAR ,2,0.000,0.000,0,0,2011
+Martin Dwar, LOR ,1,0.000,0.000,0,0,2011
+Tanner Beck, COE ,2,0.000,0.000,0,0,2011
+John King, COE ,1,0.000,0.000,0,0,2011
+Carl Lottman, LUT ,1,0.000,0.000,0,0,2011
+Klayton Breitbach, DBQ ,1,0.000,0.000,0,0,2011
+Jace Ahrendsen, CEN ,1,0.000,0.000,0,0,2011
+Noah Mahlik, DBQ ,1,0.000,0.000,0,0,2011
+Nick Svare, COE ,1,0.000,0.000,0,0,2011
+Jesse Lawler, DBQ ,0,NA,NA,NA,NA,2011
+Jake Wittman, WAR ,1,0.390,NA,0,0,2011
+Sam Stetzel, CEN ,171,0.251,0.044,6,34,2012
+Blake Wilson, WAR ,169,0.245,0.120,6,33,2012
+Chris Erikson, LUT ,149,0.235,0.079,4,29,2012
+Zach Rogers, COR ,157,0.266,0.187,7,33,2012
+Nick Stein, COE ,208,0.291,0.247,12,47,2012
+Ryan Scheetz, BVU ,184,0.243,0.127,6,36,2012
+Andrew Krehbiel, WAR ,181,0.232,0.079,4,34,2012
+Sean Raisch, COE ,171,0.284,0.272,10,38,2012
+Ryan Powers, WAR ,172,0.234,0.086,5,33,2012
+Joe Gerace, COR ,168,0.233,0.099,4,32,2012
+Max Seeman, CEN ,103,0.214,0.075,1,18,2012
+Tyler Leadley, COE ,208,0.215,0.062,3,37,2012
+Adam Nisenson, COE ,199,0.232,0.097,5,38,2012
+Tyler Crandell, SIM ,174,0.235,0.124,5,33,2012
+Chris Reynolds, LUT ,187,0.258,0.195,8,38,2012
+Scott DeAngelis, COE ,216,0.201,0.051,1,37,2012
+Ryan Doty, WAR ,145,0.217,0.069,2,26,2012
+Michael Jontz, CEN ,168,0.233,0.054,4,32,2012
+Spencer Kuehn, DBQ ,151,0.218,0.096,2,27,2012
+Weston Foxx, BVU ,177,0.217,0.054,3,32,2012
+Kevin Bradley, LUT ,158,0.205,0.065,1,27,2012
+Matt Larson, LUT ,167,0.239,0.136,5,32,2012
+Jesse Munsterman, BVU ,140,0.209,0.073,2,25,2012
+Jordan Judkins, CEN ,153,0.198,0.058,1,26,2012
+Spencer Sobba, COE ,144,0.226,0.120,3,27,2012
+Dillon Plath, BVU ,127,0.224,0.119,3,23,2012
+Andrew Danna, DBQ ,171,0.217,0.122,3,31,2012
+Jake Barr, SIM ,174,0.209,0.097,2,31,2012
+Neil Eddie, BVU ,156,0.188,0.043,0,26,2012
+Ryan Bahnemann, LUT ,174,0.241,0.164,5,34,2012
+Christopher Briggs, DBQ ,165,0.222,0.112,3,30,2012
+Billy Kass, LOR ,164,0.251,0.224,6,33,2012
+Brock Yossi, BVU ,177,0.210,0.068,2,31,2012
+Beriah Quick, COR ,101,0.190,0.043,0,17,2012
+Mike Pudlo, LOR ,145,0.201,0.094,1,25,2012
+Grant Thomas, SIM ,161,0.207,0.061,2,28,2012
+Mike Furlong, CEN ,172,0.226,0.167,4,32,2012
+Tyler Craig, SIM ,175,0.233,0.167,4,33,2012
+Ryan Titman, BVU ,111,0.183,0.059,0,18,2012
+Levi Montague, WAR ,146,0.212,0.092,2,26,2012
+JD Hunter, COE ,132,0.193,0.019,0,22,2012
+Eric DeSousa, LOR ,145,0.189,0.048,0,24,2012
+Michael Chia, SIM ,152,0.202,0.092,1,26,2012
+Charlie Muir, COR ,126,0.180,0.046,-1,20,2012
+Travis Olson, LOR ,137,0.182,0.056,-1,22,2012
+Brett Crable, SIM ,146,0.172,0.031,-2,23,2012
+Ryan Nordtvedt, COR ,120,0.193,0.049,0,20,2012
+Craig Kerper, WAR ,138,0.179,0.057,-1,22,2012
+B.J. Juergens, LOR ,131,0.186,0.063,0,21,2012
+Joe Paletta, BVU ,155,0.191,0.068,0,26,2012
+Nick Martin, DBQ ,170,0.194,0.045,0,28,2012
+Michael Schinstock, WAR ,156,0.183,0.071,-1,25,2012
+Seth Carson, CEN ,155,0.179,0.075,-1,25,2012
+Todd Whited, DBQ ,110,0.202,0.060,1,19,2012
+Clay Henricksen, LOR ,136,0.184,0.026,0,22,2012
+Ethan Hale, SIM ,135,0.176,0.044,-1,21,2012
+Brennan Melloy, COE ,164,0.191,0.059,0,27,2012
+Milton Kurschner, COR ,144,0.195,0.027,0,24,2012
+Nick Schlect, BVU ,158,0.193,0.070,0,26,2012
+Jordan Ries, LOR ,113,0.187,0.122,0,18,2012
+Vince Parisi, DBQ ,105,0.177,0.067,-1,17,2012
+Juan Flores, COR ,122,0.168,0.000,-2,19,2012
+Allen Mann, CEN ,129,0.147,0.000,-3,18,2012
+Adam Ariola, CEN ,163,0.145,0.042,-4,23,2012
+Mike Canevello, LOR ,176,0.191,0.045,0,29,2012
+Colton Calvert, SIM ,108,0.137,0.063,-3,14,2012
+Zach Lashbrook, LUT ,1,0.540,0.000,0,0,2012
+Jake Daniels, BVU ,7,0.361,0.143,1,2,2012
+Daniel Schoess, LUT ,14,0.305,0.091,1,3,2012
+Jory Heckenberg, COE ,25,0.282,0.150,1,5,2012
+Tony Stenberg, WAR ,95,0.268,0.108,4,20,2012
+Alex Brown, BVU ,20,0.265,0.111,1,4,2012
+Josh Stanton, CEN ,47,0.236,0.051,1,9,2012
+John Delaplane, COE ,64,0.236,0.053,2,12,2012
+Danny Fahlgren, LOR ,49,0.250,0.098,2,10,2012
+Noah Mahlik, DBQ ,27,0.208,0.040,0,5,2012
+Andy Briggs, LUT ,34,0.231,0.100,1,6,2012
+Josh Pirtle, SIM ,6,0.180,0.000,0,1,2012
+Connor Reilly, LOR ,4,0.325,0.333,0,1,2012
+Dylan Colo, BVU ,68,0.216,0.066,1,12,2012
+Kyle Duggan, DBQ ,71,0.242,0.038,2,14,2012
+Zakary Kilpatrick, DBQ ,97,0.206,0.000,1,17,2012
+Andrew Nelson, LUT ,100,0.224,0.080,2,19,2012
+Nick Massina, WAR ,70,0.249,0.190,2,14,2012
+Jake Raecker, WAR ,78,0.230,0.066,2,15,2012
+Eric Croghan, BVU ,58,0.192,0.094,0,10,2012
+Thomas Weber, LUT ,93,0.209,0.028,1,16,2012
+Andrew O'Toole, CEN ,29,0.184,0.000,0,5,2012
+Tyler Pawletzki, SIM ,95,0.188,0.050,0,16,2012
+Alex Rodriguez, LOR ,53,0.207,0.068,1,9,2012
+Matt Reynolds, LUT ,15,0.248,0.182,1,3,2012
+Michael Goerdt, COE ,21,0.166,0.000,0,3,2012
+Chad Sibigtroth, BVU ,36,0.182,0.114,0,6,2012
+Erik Sipes, CEN ,51,0.192,0.093,0,8,2012
+Justin Brown, COR ,95,0.187,0.051,0,16,2012
+Chase Hirschauer, WAR ,55,0.162,0.038,-1,8,2012
+Drew Yoder, WAR ,45,0.210,0.150,1,8,2012
+Tom Weissbeck, CEN ,18,0.184,0.063,0,3,2012
+Jared Waddle, LUT ,4,0.135,0.000,0,1,2012
+Zach Wilcox, COR ,4,0.228,0.250,0,1,2012
+Chris Rana, COR ,98,0.197,0.076,0,17,2012
+AJ Reuter, COE ,26,0.190,0.160,0,4,2012
+Kaileb Armbruster, COE ,32,0.188,0.040,0,5,2012
+Aaron Peller, COE ,68,0.166,0.036,-1,10,2012
+Ben Obermann, LUT ,32,0.218,0.154,1,6,2012
+Pedro Rosa, SIM ,16,0.198,0.077,0,3,2012
+Nicholas Baldocchi, DBQ ,76,0.171,0.100,-1,12,2012
+Jordan Gawronski, DBQ ,82,0.173,0.045,-1,13,2012
+Tim Kayser, COE ,21,0.140,0.000,-1,3,2012
+Joe Walker, LOR ,91,0.165,0.026,-1,14,2012
+Ian Fitzgerald, LUT ,133,0.209,0.023,2,23,2012
+Patton Hofer, COE ,30,0.147,0.036,-1,4,2012
+Mark Jablonski, LOR ,16,0.134,0.000,-1,2,2012
+Austen Graham, LUT ,114,0.178,0.022,-1,18,2012
+Nathan Lucas, DBQ ,55,0.168,0.083,-1,8,2012
+Blake Heitmeier, SIM ,86,0.207,0.034,1,15,2012
+Conor Kelley, DBQ ,41,0.175,0.000,0,6,2012
+Kyle Barton, LOR ,33,0.181,0.040,0,5,2012
+Cole Tomlinson, COE ,11,0.136,0.000,0,1,2012
+Ryan Tackitt, DBQ ,13,0.186,0.100,0,2,2012
+Brock Grubbs, DBQ ,12,0.155,0.000,0,2,2012
+Jake Effron, CEN ,6,0.217,0.200,0,1,2012
+Eric Pittman, LUT ,110,0.136,0.041,-3,15,2012
+Mitch Obey, LUT ,65,0.153,0.019,-1,9,2012
+Jace Ahrendsen, CEN ,61,0.179,0.063,0,10,2012
+Peter Sandstedt, LUT ,33,0.132,0.063,-1,4,2012
+Aaron Laskowski, DBQ ,51,0.139,0.065,-2,7,2012
+Robbie Jewell, LUT ,47,0.139,0.024,-1,6,2012
+Joseph Grote, WAR ,50,0.136,0.024,-2,7,2012
+Alex Schnebbe, COR ,39,0.127,0.000,-1,5,2012
+Josh McQuillen, COE ,15,0.098,0.000,-1,2,2012
+Erik Rasmussen, WAR ,16,0.141,0.000,0,2,2012
+Taylor Nelson, SIM ,84,0.135,0.042,-3,11,2012
+Alex Davis, BVU ,26,0.146,0.000,-1,4,2012
+Craig Furstenau, COR ,36,0.096,0.029,-2,4,2012
+Tanner Beck, COE ,8,0.077,0.000,-1,1,2012
+Jeremy Ryan, COR ,18,0.108,0.063,-1,2,2012
+Cody Richter, LOR ,11,0.158,0.000,0,2,2012
+Andrew Burdick, COR ,38,0.083,0.000,-2,4,2012
+Trent Smith, CEN ,12,0.093,0.000,-1,1,2012
+Jackson Litterer, WAR ,10,0.054,0.000,-1,1,2012
+Michael Campbell, DBQ ,11,0.085,0.000,-1,1,2012
+Jacob Courtright, COR ,26,0.072,0.000,-2,2,2012
+Kody Karjala, COR ,29,0.108,0.000,-1,3,2012
+Kevin Harlander, LOR ,10,0.000,0.000,-1,1,2012
+Blake Jobe, COR ,7,0.000,0.000,-1,0,2012
+Jim Nowak, COR ,7,0.116,0.000,0,1,2012
+Tanner Oliver, BVU ,5,0.000,0.000,-1,0,2012
+Kyle Stennes, COR ,4,0.000,0.000,0,0,2012
+Nick Norris, COR ,4,0.098,0.000,0,0,2012
+Jeremy Gerardy, LOR ,3,0.000,0.000,0,0,2012
+Matt Kruger, WAR ,3,0.000,0.000,0,0,2012
+Nick Svare, COE ,3,0.000,0.000,0,0,2012
+Kyle Hibbing, BVU ,3,0.000,0.000,0,0,2012
+Mitchell Windle, DBQ ,3,0.000,0.000,0,0,2012
+Nick Anderson, SIM ,4,0.098,0.000,0,0,2012
+Jesse Lawler, DBQ ,4,0.105,0.000,0,0,2012
+Michael Riordan, DBQ ,2,0.000,0.000,0,0,2012
+Andrew Trott, COR ,2,0.000,0.000,0,0,2012
+Adam Kennedy, LOR ,2,0.000,0.000,0,0,2012
+Nick Battalini, LOR ,4,0.140,0.000,0,1,2012
+Chaz Boots, WAR ,2,0.000,0.000,0,0,2012
+Andy Wilbur, LUT ,2,0.000,0.000,0,0,2012
+Jordan Smith, COR ,2,0.000,0.000,0,0,2012
+Phillip Elking, DBQ ,1,0.000,0.000,0,0,2012
+Alex Jenson, WAR ,1,0.000,0.000,0,0,2012
+Mike Kray, WAR ,2,0.210,0.000,0,0,2012
+Bradley Cunningham, CEN ,1,0.000,0.000,0,0,2012
+James Stone, BVU ,1,0.000,0.000,0,0,2012
+Cole Grewell, SIM ,1,0.000,0.000,0,0,2012
+Aldon Severson, LUT ,1,0.000,0.000,0,0,2012
+Bryce Schutte, LUT ,0,NA,NA,NA,NA,2012
+Andrew Burgmeier, LUT ,1,0.420,NA,0,0,2012
+Ryan Friedrich, BVU ,0,NA,NA,NA,NA,2012
+R.J. Hoshell, LOR ,0,NA,NA,NA,NA,2012
+Paul Krenger, DBQ ,0,NA,NA,NA,NA,2012
+Chris Dorff, SIM ,0,NA,NA,NA,NA,2012
+Augie Lindmark, LUT ,0,NA,NA,NA,NA,2012
+Bret Bell, CEN ,0,NA,NA,NA,NA,2012
+Nathan Brown, COE ,0,NA,NA,NA,NA,2012
+Brian Nolasco, COE ,0,NA,NA,NA,NA,2012
+Brian Birks, SIM ,0,NA,NA,NA,NA,2012
+Alex Sharp, WAR ,0,NA,NA,NA,NA,2012
+Ian Grigsby, BVU ,0,NA,NA,NA,NA,2012
+Schuyler Radke, BVU ,0,NA,NA,NA,NA,2012
+Brian Pflum, LOR ,0,NA,NA,NA,NA,2012
+Brady Larson, WAR ,0,NA,NA,NA,NA,2012
+Ryan Powers, WAR ,182,0.294,0.113,11,41,2013
+Brandon Wessels, BVU ,180,0.264,0.105,8,38,2013
+Joe Paletta, BVU ,179,0.266,0.092,8,38,2013
+Drew Yoder, WAR ,193,0.268,0.160,9,41,2013
+Brett Crable, SIM ,175,0.224,0.038,4,32,2013
+Nick Stein, COE ,169,0.288,0.265,10,38,2013
+AJ Reuter, COE ,164,0.243,0.091,5,32,2013
+Eric Pittman, LUT ,137,0.244,0.115,4,27,2013
+Jake Barr, SIM ,186,0.223,0.081,4,34,2013
+Tyler Craig, SIM ,178,0.285,0.272,10,39,2013
+Mitch Knippenberg, LUT ,119,0.218,0.029,2,22,2013
+Adam Ariola, CEN ,169,0.210,0.049,2,30,2013
+Aldon Severson, LUT ,91,0.221,0.052,2,17,2013
+Blake Heitmeier, SIM ,144,0.241,0.029,4,28,2013
+Tyler Crandell, SIM ,177,0.241,0.146,5,35,2013
+Jesse Munsterman, BVU ,170,0.215,0.077,3,31,2013
+Spencer Kuehn, DBQ ,132,0.215,0.092,2,24,2013
+Andrew Krehbiel, WAR ,209,0.201,0.062,1,36,2013
+Robbie Rushing, CEN ,172,0.259,0.159,7,35,2013
+Blake Wilson, WAR ,176,0.208,0.094,2,31,2013
+Michael Goerdt, COE ,165,0.205,0.080,1,29,2013
+Jordan Gawronski, DBQ ,96,0.196,0.057,0,16,2013
+Sam Stetzel, CEN ,182,0.200,0.000,1,31,2013
+Seth Carson, CEN ,146,0.191,0.016,0,24,2013
+Levi Montague, WAR ,176,0.250,0.236,6,35,2013
+Zach Hendrikson, LUT ,109,0.194,0.042,0,18,2013
+Mike Pudlo, LOR ,166,0.200,0.029,1,28,2013
+Chris Briggs, DBQ ,121,0.210,0.147,1,21,2013
+JD Hunter, COE ,122,0.204,0.061,1,21,2013
+Ryan Doty, WAR ,158,0.215,0.155,2,28,2013
+Weston Foxx, BVU ,189,0.206,0.090,2,33,2013
+Mark Jablonski, LOR ,123,0.214,0.090,2,22,2013
+Andy Danna, DBQ ,147,0.219,0.150,2,27,2013
+Jake Esdohr, SIM ,119,0.203,0.088,1,21,2013
+Mike Canevello, LOR ,148,0.205,0.088,1,26,2013
+Craig Konrardy, COE ,129,0.204,0.114,1,22,2013
+Nick Schlect, BVU ,142,0.219,0.119,2,26,2013
+Andy Briggs, LUT ,137,0.184,0.034,0,22,2013
+Ethan Hale, SIM ,161,0.186,0.050,0,26,2013
+Jordan Judkins, CEN ,168,0.183,0.015,-1,27,2013
+Patton Hofer, COE ,151,0.182,0.076,-1,24,2013
+Ryan Scheetz, BVU ,135,0.180,0.034,-1,22,2013
+Ben Larison, COE ,179,0.206,0.111,2,31,2013
+Michael Schinstock, WAR ,156,0.170,0.049,-2,24,2013
+Nick Martin, DBQ ,96,0.153,0.012,-2,14,2013
+Dillon Plath, BVU ,155,0.179,0.060,-1,25,2013
+Jace Ahrendsen, CEN ,123,0.182,0.042,-1,20,2013
+Michael Jontz, CEN ,147,0.176,0.033,-1,23,2013
+Austen Graham, LUT ,129,0.195,0.049,0,22,2013
+Vince Parisi, DBQ ,102,0.159,0.046,-2,15,2013
+David Lowe, LUT ,100,0.182,0.082,0,16,2013
+Alex Rodrigues, LOR ,156,0.175,0.097,-1,24,2013
+Eric DeSousa, LOR ,139,0.166,0.043,-2,21,2013
+Michael Redmond, COE ,97,0.140,0.024,-3,13,2013
+Matt Larson, LUT ,123,0.155,0.088,-3,18,2013
+Danny Fahlgren, LOR ,105,0.124,0.024,-4,13,2013
+Craig Nelson, DBQ ,1,0.540,0.000,0,0,2013
+Brian Nolasco, COE ,2,0.270,0.000,0,0,2013
+Ryan Kemp, WAR ,58,0.271,0.173,3,12,2013
+Andrew Nelson, LUT ,42,0.219,0.079,1,8,2013
+Tanner Truesdell, BVU ,18,0.201,0.056,0,3,2013
+Tyler Willis, WAR ,6,0.180,0.000,0,1,2013
+Zach Miller, CEN ,3,0.180,0.000,0,0,2013
+Adrian Nunez, LOR ,3,0.180,0.000,0,0,2013
+Alex Jenson, WAR ,4,0.233,0.000,0,1,2013
+Niko Andriotis, LOR ,65,0.243,0.111,2,13,2013
+Lucas Jacque, LOR ,38,0.256,0.188,1,8,2013
+Jacob Redman, COE ,29,0.201,0.077,0,5,2013
+Andrew O'Toole, CEN ,81,0.215,0.096,1,15,2013
+Jeremy Lambert, BVU ,76,0.250,0.239,3,15,2013
+Noah Mahlik, DBQ ,79,0.206,0.031,1,14,2013
+Brian Paulsrud, LUT ,56,0.191,0.021,0,9,2013
+Aaron Laskowski, DBQ ,77,0.176,0.014,-1,12,2013
+Kyle Duggan, DBQ ,49,0.185,0.025,0,8,2013
+Jake Daniels, BVU ,23,0.206,0.136,0,4,2013
+Jackson Litterer, WAR ,73,0.209,0.068,1,13,2013
+Michael Riordan, DBQ ,53,0.202,0.067,0,9,2013
+Andrew Burgmeier, LUT ,18,0.185,0.000,0,3,2013
+Clay Emmrich, WAR ,94,0.195,0.129,0,16,2013
+Tim Kayser, COE ,62,0.178,0.036,0,10,2013
+Tony Stenberg, WAR ,101,0.183,0.046,0,16,2013
+Spencer Gritsch, CEN ,50,0.188,0.091,0,8,2013
+Daniel Schoess, LUT ,30,0.203,0.125,0,5,2013
+Jordan Ries, LOR ,104,0.182,0.079,0,17,2013
+Alex Davis, BVU ,97,0.172,0.051,-1,15,2013
+Neil Eddie, BVU ,91,0.166,0.064,-1,14,2013
+Michael Chia, SIM ,107,0.186,0.055,0,17,2013
+Pedro Rosa, SIM ,62,0.155,0.052,-1,9,2013
+Michael Campbell, DBQ ,77,0.171,0.070,-1,12,2013
+Austin Monfross, DBQ ,76,0.169,0.059,-1,12,2013
+Tanner Beck, COE ,83,0.159,0.000,-2,12,2013
+Josh Pirtle, SIM ,82,0.162,0.065,-1,12,2013
+Thomas Weber, LUT ,69,0.151,0.033,-2,10,2013
+Jake Scieszinski, SIM ,98,0.159,0.047,-2,14,2013
+Ryan Titman, BVU ,44,0.152,0.026,-1,6,2013
+Grant Seuferer, CEN ,35,0.191,0.000,0,6,2013
+Joe Grote, WAR ,30,0.187,0.077,0,5,2013
+Adam Kennedy, LOR ,39,0.164,0.057,-1,6,2013
+Bud Smith, SIM ,38,0.201,0.097,0,7,2013
+Patrick Walsh, LOR ,109,0.162,0.043,-2,16,2013
+Craig Kerper, WAR ,71,0.182,0.019,0,11,2013
+Trent Smith, CEN ,33,0.138,0.031,-1,4,2013
+Zach Lashbrook, LUT ,17,0.164,0.000,0,3,2013
+Cody Richter, LOR ,73,0.155,0.075,-2,11,2013
+Connor Reilly, LOR ,31,0.147,0.000,-1,4,2013
+Jory Heckenberg, COE ,31,0.144,0.000,-1,4,2013
+Jake Effron, CEN ,12,0.153,0.100,0,2,2013
+Nathan Brown, COE ,5,0.108,0.000,0,1,2013
+Nick Svare, COE ,35,0.162,0.097,-1,5,2013
+Zach Zylstra, CEN ,82,0.151,0.055,-2,12,2013
+Justin Montalvo, LOR ,69,0.145,0.048,-2,10,2013
+Alex Brown, BVU ,12,0.121,0.083,0,1,2013
+John Henderson, DBQ ,8,0.169,0.000,0,1,2013
+Jake Raecker, WAR ,22,0.108,0.050,-1,3,2013
+Ryan Duncan, BVU ,41,0.077,0.025,-3,4,2013
+Peter Sanstedt, LUT ,19,0.120,0.000,-1,2,2013
+Nate Even, LOR ,9,0.144,0.125,0,1,2013
+Kaileb Armbruster, COE ,33,0.111,0.040,-2,4,2013
+Steve Ryan, DBQ ,20,0.077,0.000,-1,2,2013
+Nick Anderson, SIM ,9,0.060,0.000,-1,1,2013
+Cole Tomlinson, COE ,10,0.060,0.000,-1,1,2013
+Dakotah Rostad, LUT ,43,0.106,0.077,-2,5,2013
+Allen Mann, CEN ,50,0.079,0.000,-3,5,2013
+Kirby Coppess, CEN ,51,0.064,0.000,-4,5,2013
+Nick Battalini, LOR ,37,0.075,0.029,-3,4,2013
+Brock Grubbs, DBQ ,29,0.113,0.154,-1,3,2013
+Jack Hoffmann, COE ,14,0.039,0.000,-1,1,2013
+Ben Obermann, LUT ,22,0.083,0.053,-1,2,2013
+Mitch Windle, DBQ ,20,0.046,0.050,-2,2,2013
+Alec Knop, LUT ,9,0.049,0.000,-1,1,2013
+Tyler Runge, DBQ ,10,0.159,0.000,0,1,2013
+Zane Butler, SIM ,6,0.000,0.000,-1,0,2013
+Gage Reis, SIM ,5,0.000,0.000,-1,0,2013
+Ben Rockwell, DBQ ,4,0.000,0.000,0,0,2013
+Duncan Harrison, LUT ,4,0.000,0.000,0,0,2013
+Schuyler Radke, BVU ,3,0.000,0.000,0,0,2013
+Tom Ameche, LOR ,3,0.000,0.000,0,0,2013
+Derek Yoder, COE ,4,0.105,0.000,0,0,2013
+Alex Simon, BVU ,2,0.000,0.000,0,0,2013
+Dakotah Wolken, CEN ,2,0.000,0.000,0,0,2013
+Brett Slager, COE ,3,0.000,0.000,0,0,2013
+Brady Kuennen, WAR ,1,0.000,0.000,0,0,2013
+Joe Moen, WAR ,1,0.000,0.000,0,0,2013
+Alex Weber, LUT ,2,0.195,0.000,0,0,2013
+Blake Moen, LUT ,1,0.000,0.000,0,0,2013
+Joel Martin, LUT ,1,0.000,0.000,0,0,2013
+Boothe, CEN ,1,0.000,0.000,0,0,2013
+Brody Baumann, WAR ,1,0.000,0.000,0,0,2013
+Chaz Boots, WAR ,1,0.000,0.000,0,0,2013
+Jordan Bahl, SIM ,2,0.195,0.000,0,0,2013
+Casey Waterman, LUT ,1,0.000,0.000,0,0,2013
+Ryan Vijums, LUT ,0,NA,NA,NA,NA,2013
+Joey Miller, LUT ,0,NA,NA,NA,NA,2013
+Daniel Porteous, DBQ ,0,NA,NA,NA,NA,2013
+Eric Pelano, DBQ ,1,0.390,NA,0,0,2013
+Robbie Anstoetter, WAR ,0,NA,NA,NA,NA,2013
+Matt McKinney, LUT ,0,NA,NA,NA,NA,2013
+Chris Evanello, COE ,0,NA,NA,NA,NA,2013
+Justin Clark, DBQ ,0,NA,NA,NA,NA,2013
+Kyle Hoffman, LOR ,0,NA,NA,NA,NA,2013
+Craig Konrardy, COE ,228,0.290,0.158,13,51,2015
+Jack Hoffmann, COE ,159,0.258,0.159,6,33,2015
+Dalton Garst, DBQ ,170,0.241,0.105,5,33,2015
+Eric Gurbacki, BVU ,163,0.252,0.127,6,33,2015
+Michael Goerdt, COE ,219,0.266,0.186,10,46,2015
+Andrew Burgmeier, LUT ,128,0.244,0.095,4,25,2015
+Daniel Casanova, DBQ ,167,0.256,0.148,6,34,2015
+Ryan Kemp, WAR ,201,0.282,0.242,11,44,2015
+DJ Utley, WAR ,195,0.281,0.246,10,43,2015
+Jacob Thumann, WAR ,192,0.296,0.270,12,44,2015
+Aldon Severson, LUT ,175,0.271,0.205,8,37,2015
+Zach Zylstra, CEN ,192,0.252,0.135,7,39,2015
+Tanner Truesdell, BVU ,171,0.252,0.173,6,34,2015
+AJ Reuter, COE ,180,0.249,0.165,6,36,2015
+Blake Wilson, WAR ,185,0.253,0.207,7,37,2015
+Michael Reuter, CEN ,134,0.216,0.073,2,24,2015
+Jory Heckenberg, COE ,193,0.241,0.120,6,38,2015
+Spence Bonner, LOR ,175,0.227,0.071,4,33,2015
+Gage Reis, SIM ,152,0.240,0.123,4,30,2015
+Kirby Coppess, CEN ,186,0.236,0.141,5,36,2015
+Bennett Mann, BVU ,155,0.253,0.174,6,31,2015
+Austin Burlin, SIM ,129,0.228,0.127,3,24,2015
+Patrick Walsh, LOR ,180,0.236,0.124,5,35,2015
+Bryce Wessels, BVU ,163,0.219,0.123,3,30,2015
+Jon Opdahl, LUT ,175,0.223,0.102,3,32,2015
+Jake Scieszinski, SIM ,133,0.202,0.051,1,23,2015
+Jake Esdohr, SIM ,171,0.232,0.099,4,32,2015
+Adam Lindell, CEN ,173,0.233,0.158,4,33,2015
+Milton Croes, WAR ,186,0.266,0.253,8,39,2015
+Cole Tomlinson, COE ,199,0.236,0.105,5,38,2015
+Grant Henning, COE ,181,0.236,0.185,5,35,2015
+Thomas Wisecup, BVU ,115,0.177,0.019,-1,18,2015
+Zach Brown, CEN ,171,0.209,0.087,2,30,2015
+Tyler Willis, WAR ,195,0.206,0.061,2,34,2015
+Neil Marshall, BVU ,179,0.224,0.156,4,33,2015
+Gaetano Florio, DBQ ,133,0.181,0.082,-1,21,2015
+Michael Salazar, DBQ ,117,0.216,0.084,2,21,2015
+Alex Weber, LUT ,179,0.219,0.063,3,33,2015
+Tony Heiser, LOR ,166,0.193,0.068,0,28,2015
+Jackson Litterer, WAR ,181,0.196,0.063,1,31,2015
+Michael Redmond, COE ,197,0.197,0.077,1,33,2015
+Joe Silversmith, LUT ,184,0.198,0.075,1,31,2015
+Nolan Ritter, LOR ,131,0.185,0.010,0,21,2015
+David Lowe, LUT ,167,0.192,0.060,0,28,2015
+Bud Smith, SIM ,145,0.186,0.048,0,24,2015
+Jonathan Greiner, SIM ,145,0.197,0.065,1,24,2015
+Ryan Karrick, DBQ ,121,0.188,0.039,0,20,2015
+Cole Reeg, LOR ,188,0.205,0.104,2,33,2015
+Brandon Wessels, BVU ,165,0.226,0.130,4,31,2015
+Anthony Flattery, LOR ,148,0.171,0.030,-2,23,2015
+Mitch Knippenberg, LUT ,144,0.226,0.145,3,27,2015
+Adam Kennedy, LOR ,158,0.193,0.131,0,26,2015
+Luke Leibforth, LOR ,151,0.182,0.032,-1,24,2015
+Spencer Gritsch, CEN ,135,0.180,0.043,-1,21,2015
+Mason Ellis, CEN ,119,0.160,0.029,-2,18,2015
+Tyler Mougin, WAR ,158,0.174,0.045,-1,25,2015
+Lucas Jacque, LOR ,97,0.162,0.057,-2,14,2015
+Taylor Harmon, SIM ,115,0.125,0.020,-4,15,2015
+Kyle Crampton, CEN ,8,0.249,0.143,0,2,2015
+Dan Urban, COE ,7,0.231,0.000,0,1,2015
+Eddie Pablo, DBQ ,17,0.245,0.143,1,3,2015
+Carlos Pineda, LUT ,77,0.244,0.141,2,15,2015
+Matt Larson, LUT ,120,0.234,0.097,3,23,2015
+Ben Jacobson, COE ,24,0.238,0.143,1,5,2015
+Cameron Johnson, BVU ,6,0.180,0.000,0,1,2015
+Andrew Anderson, SIM ,3,0.180,0.000,0,0,2015
+Devin Wagenman, BVU ,36,0.214,0.000,1,6,2015
+Andrew Brierton, COE ,59,0.238,0.200,2,11,2015
+Seth Griffiths, CEN ,85,0.220,0.083,2,16,2015
+James Workman, DBQ ,78,0.216,0.048,1,14,2015
+Dan Weis, LOR ,14,0.182,0.000,0,2,2015
+Noah Paper, BVU ,92,0.178,0.000,-1,15,2015
+Kolby Hilgenberg, BVU ,45,0.238,0.220,1,9,2015
+Jacob Evans, DBQ ,88,0.209,0.071,1,16,2015
+Thomas Schaedel, COE ,16,0.159,0.000,0,2,2015
+Dakotah Wolken, CEN ,114,0.179,0.038,-1,18,2015
+Austin McWhite, DBQ ,108,0.249,0.253,4,22,2015
+Blake Mahoney, WAR ,20,0.194,0.056,0,3,2015
+Ryan Duncan, BVU ,50,0.195,0.114,0,8,2015
+Zeb Noel, SIM ,29,0.203,0.000,0,5,2015
+Will Fogel, DBQ ,64,0.173,0.017,-1,10,2015
+Alec Zwanziger, COE ,120,0.202,0.052,1,21,2015
+Thomas Simon, COE ,33,0.183,0.067,0,5,2015
+Zach Hendrikson, LUT ,110,0.221,0.160,2,20,2015
+Luke Anctil, SIM ,62,0.185,0.088,0,10,2015
+Ryan Vijums, LUT ,28,0.185,0.000,0,5,2015
+Mike Brown, WAR ,30,0.157,0.000,-1,4,2015
+Matt Hogan, DBQ ,69,0.182,0.067,0,11,2015
+Danny Fahlgren, LOR ,45,0.172,0.000,0,7,2015
+Michael Riordan, DBQ ,33,0.143,0.000,-1,5,2015
+Thomas Johnson, LOR ,23,0.214,0.150,0,4,2015
+Michael Muto, LOR ,4,0.135,0.000,0,1,2015
+Robbie Anstoetter, WAR ,52,0.180,0.067,0,8,2015
+Cody Reimer, LUT ,51,0.181,0.067,0,8,2015
+Trace Florek, DBQ ,100,0.181,0.024,-1,16,2015
+Michael Zellar, BVU ,30,0.151,0.067,-1,4,2015
+Jacob Hirst, CEN ,80,0.199,0.109,0,14,2015
+Ryan Koester, LOR ,32,0.150,0.036,-1,5,2015
+Tyler Frideres, CEN ,39,0.141,0.000,-1,5,2015
+Zachary Cook, SIM ,26,0.134,0.000,-1,3,2015
+Chaz Boots, WAR ,29,0.124,0.034,-1,4,2015
+Ethan Kain, SIM ,15,0.133,0.067,-1,2,2015
+Clay Henning, WAR ,19,0.155,0.000,0,3,2015
+Dan Pecoraro, LOR ,15,0.202,0.000,0,3,2015
+Adam Richman, SIM ,12,0.158,0.000,0,2,2015
+Devon Harms, BVU ,58,0.145,0.021,-2,8,2015
+Andy Carr, CEN ,42,0.145,0.054,-1,6,2015
+Devan Wicks, SIM ,94,0.159,0.100,-2,14,2015
+Matt Kruger, WAR ,73,0.150,0.063,-2,10,2015
+Kendall Candor, BVU ,31,0.150,0.037,-1,4,2015
+Nick Anderson, SIM ,69,0.157,0.083,-1,10,2015
+Ben Giebler, BVU ,12,0.132,0.091,0,2,2015
+Brett Slager, COE ,6,0.152,0.167,0,1,2015
+Will Doherty, DBQ ,102,0.167,0.101,-1,15,2015
+Noah Stochl, CEN ,51,0.154,0.116,-1,7,2015
+Jeremy Roehrick, SIM ,42,0.110,0.026,-2,5,2015
+Nate Even, LOR ,18,0.168,0.000,0,3,2015
+Ryan Garrett, CEN ,50,0.099,0.021,-3,6,2015
+John Henderson, DBQ ,38,0.086,0.000,-2,4,2015
+Marcel Felsmann, DBQ ,10,0.217,0.143,0,2,2015
+Zach Hovick, WAR ,24,0.087,0.000,-1,3,2015
+Chad Crabill, LOR ,16,0.068,0.000,-1,1,2015
+Hunter Hillygus, SIM ,9,0.103,0.000,0,1,2015
+Tyler Lewan, DBQ ,34,0.132,0.000,-1,4,2015
+Casey Waterman, LUT ,44,0.106,0.027,-2,5,2015
+Brandt Ames, COE ,12,0.110,0.000,-1,1,2015
+Austin Monfross, DBQ ,26,0.074,0.042,-2,3,2015
+Keegin Branin, SIM ,44,0.092,0.026,-3,5,2015
+Michael Wesner, LUT ,10,0.156,0.000,0,1,2015
+Tyler Imrich, DBQ ,7,0.056,0.000,-1,1,2015
+Jake Anctil, SIM ,5,0.000,0.000,-1,0,2015
+Jack Strellner, COE ,7,0.120,0.000,0,1,2015
+Ty Poterfield, SIM ,7,0.171,0.000,0,1,2015
+Max Uetz, LUT ,4,0.105,0.000,0,0,2015
+Zach Lashbrook, LUT ,4,0.098,0.000,0,0,2015
+Alex Jenson, WAR ,3,0.000,0.000,0,0,2015
+Isaac Maffett, COE ,4,0.203,0.000,0,1,2015
+Joe Monosmith, BVU ,1,0.000,0.000,0,0,2015
+Jack Kline, COE ,1,0.000,0.000,0,0,2015
+Brad Schwind, LOR ,1,0.000,0.000,0,0,2015
+Nick Carlisle, SIM ,2,0.195,0.000,0,0,2015
+Noah Burdt, DBQ ,1,0.000,0.000,0,0,2015
+Tanner Johnson, WAR ,1,0.000,0.000,0,0,2015
+Jordan Gier, CEN ,1,0.000,0.000,0,0,2015
+Dylan Diveney, CEN ,0,NA,NA,NA,NA,2015
+Justin Petersen, COE ,0,NA,NA,NA,NA,2015
+Aaron Boettger, DBQ ,1,0.390,NA,0,0,2015
+Matt Burrell, SIM ,0,NA,NA,NA,NA,2015
+Isaac Sturm, LOR ,0,NA,NA,NA,NA,2015
+Kyle Gritsch, CEN ,0,NA,NA,NA,NA,2015
+Chandler Sturtz, CEN ,1,0.390,NA,0,0,2015
+Austin Konagel, LOR ,113,0.284,0.124,6,25,2016
+Craig Konrardy, COE ,171,0.291,0.191,10,38,2016
+Noah Paper, BVU ,157,0.231,0.042,4,30,2016
+Mitch Knippenberg, LUT ,211,0.296,0.233,13,48,2016
+Austin Burlin, SIM ,174,0.311,0.268,12,41,2016
+Kevin DeLaney, COE ,170,0.232,0.051,4,32,2016
+Neil Marshall, BVU ,210,0.323,0.296,16,51,2016
+Brandon Wessels, BVU ,200,0.283,0.193,11,44,2016
+Michael Redmond, COE ,167,0.257,0.144,7,34,2016
+Tanner Johnson, WAR ,129,0.258,0.147,5,26,2016
+Jacob Thumann, WAR ,197,0.311,0.331,14,47,2016
+Tanner Truesdell, BVU ,185,0.296,0.278,12,42,2016
+Danny Paluch, LOR ,99,0.267,0.150,4,21,2016
+Bennett Mann, BVU ,195,0.302,0.312,13,45,2016
+Bryce Hingst, LUT ,172,0.224,0.074,3,32,2016
+Jon Opdahl, LUT ,209,0.233,0.097,5,40,2016
+Clay Henning, WAR ,178,0.229,0.060,4,33,2016
+Jarad Clevenger, DBQ ,150,0.234,0.079,4,29,2016
+Milton Croes, WAR ,177,0.264,0.162,8,37,2016
+Dalton Garst, DBQ ,187,0.228,0.080,4,35,2016
+Tony Heiser, LOR ,145,0.219,0.084,2,26,2016
+Bud Smith, SIM ,166,0.257,0.178,7,34,2016
+Andrew Brierton, COE ,152,0.244,0.163,5,30,2016
+Thomas Johnson, LOR ,148,0.210,0.031,2,26,2016
+Alex Weber, LUT ,221,0.261,0.156,9,46,2016
+Zach Hovick, WAR ,182,0.226,0.055,4,34,2016
+Cody Reimer, LUT ,161,0.240,0.126,5,31,2016
+Austin McWhite, DBQ ,160,0.262,0.197,7,33,2016
+Joe Silversmith, LUT ,208,0.252,0.127,8,42,2016
+Lucas Jacque, LOR ,125,0.230,0.136,3,24,2016
+Kendall Candor, BVU ,138,0.259,0.204,6,28,2016
+Devin Wagenman, BVU ,181,0.250,0.152,6,36,2016
+Ryan Koester, LOR ,153,0.288,0.323,9,34,2016
+Thomas Kempf, DBQ ,107,0.235,0.116,3,21,2016
+Ryan Bouwman, CEN ,119,0.255,0.200,5,24,2016
+Nolan Ritter, LOR ,142,0.189,0.031,0,23,2016
+Ryan Kemp, WAR ,197,0.240,0.197,6,38,2016
+Will Doherty, DBQ ,170,0.231,0.138,4,32,2016
+Garrett Saunders, CEN ,171,0.211,0.093,2,30,2016
+Grant Henning, COE ,162,0.217,0.142,3,29,2016
+Jacob Evans, DBQ ,143,0.186,0.016,0,23,2016
+Michael Reuter, CEN ,150,0.222,0.184,3,28,2016
+Spencer Gritsch, CEN ,164,0.227,0.110,4,31,2016
+Jonathan Greiner, SIM ,140,0.201,0.043,1,24,2016
+Jake Halverson, LUT ,171,0.203,0.037,1,30,2016
+Gage Reis, SIM ,132,0.233,0.186,3,25,2016
+Blake Mahoney, WAR ,201,0.219,0.106,4,37,2016
+Gaetano Florio, DBQ ,121,0.198,0.079,1,21,2016
+Patrick Walsh, LOR ,141,0.206,0.116,1,25,2016
+Luke Anctil, SIM ,136,0.183,0.087,-1,22,2016
+Tyler Willis, WAR ,178,0.189,0.027,0,29,2016
+Danny Weis, LOR ,99,0.174,0.056,-1,15,2016
+Ben Larison, COE ,108,0.185,0.022,0,17,2016
+Jacob Hirst, CEN ,111,0.215,0.177,2,20,2016
+Kyle Crampton, CEN ,101,0.212,0.174,1,18,2016
+Noah Stochl, CEN ,138,0.170,0.072,-2,21,2016
+Czenvic Rojer, LUT ,191,0.219,0.199,3,35,2016
+Taylor Harmon, SIM ,120,0.179,0.041,-1,19,2016
+Trent Dooley, SIM ,130,0.191,0.129,0,22,2016
+Devon Harms, BVU ,124,0.156,0.037,-2,18,2016
+Mike Brown, WAR ,134,0.166,0.065,-2,20,2016
+Alec Zwanziger, COE ,106,0.185,0.084,0,17,2016
+Adam Lindell, CEN ,117,0.160,0.068,-2,17,2016
+Renning, BVU ,2,0.270,0.000,0,0,2016
+Trace Florek, DBQ ,11,0.307,0.182,1,3,2016
+Tommy Gleason, LUT ,17,0.258,0.067,1,3,2016
+Eddie Pablo, DBQ ,5,0.216,0.000,0,1,2016
+Adam Richman, SIM ,31,0.255,0.115,1,6,2016
+Adrian Nunez, LOR ,86,0.206,0.099,1,15,2016
+Jake Oglesby, LOR ,14,0.210,0.000,0,2,2016
+Robbie Agerbeek, LOR ,9,0.180,0.000,0,1,2016
+Michael Wesner, LUT ,10,0.269,0.222,0,2,2016
+Brandon Blom, SIM ,8,0.233,0.000,0,2,2016
+Cameron Johnson, BVU ,101,0.255,0.207,4,21,2016
+Sartor, BVU ,39,0.287,0.294,2,9,2016
+Max Uetz, LUT ,86,0.241,0.182,3,17,2016
+Dan Urban, COE,32,0.185,0.069,0,5,2016
+Tyler Lewan, DBQ ,85,0.209,0.080,1,15,2016
+Sawer Ocheltree, SIM ,61,0.253,0.125,2,12,2016
+Michael Zellar, BVU ,96,0.220,0.078,2,18,2016
+Colton Knox, COE ,79,0.188,0.028,0,13,2016
+Hunter Hillygus, SIM ,104,0.203,0.065,1,18,2016
+Caylor Deeth, SIM ,7,0.154,0.000,0,1,2016
+Kyle May, DBQ ,65,0.178,0.033,0,10,2016
+Ryan Karrick, DBQ ,87,0.187,0.053,0,14,2016
+Blake Lishka, COE ,40,0.226,0.138,1,7,2016
+Trevor Dudar, SIM ,68,0.178,0.017,0,11,2016
+Zach Hendrikson, LUT ,110,0.200,0.110,1,19,2016
+Robbie Anstoetter, WAR ,47,0.169,0.087,-1,7,2016
+Jacob Petry, SIM ,88,0.167,0.013,-1,13,2016
+Andy Anderson, SIM ,32,0.186,0.037,0,5,2016
+Ryan Garrett, CEN ,83,0.185,0.068,0,13,2016
+Austin Thomas, DBQ ,30,0.185,0.042,0,5,2016
+Luke Leibforth, LOR ,94,0.187,0.027,0,15,2016
+Michael Muto, LOR ,49,0.193,0.000,0,8,2016
+Tyler Imrich, DBQ ,56,0.184,0.022,0,9,2016
+Nolan Arp, COE ,53,0.163,0.022,-1,8,2016
+Michael Salazar, DBQ ,54,0.195,0.024,0,9,2016
+Trevor Luther, SIM ,22,0.173,0.095,0,3,2016
+Zach Brown, CEN ,90,0.164,0.049,-1,13,2016
+Ryan Vijums, LUT ,50,0.176,0.075,0,8,2016
+Brett Slager, COE ,64,0.168,0.037,-1,10,2016
+David Fitzgerald, WAR ,18,0.141,0.056,-1,2,2016
+Trent Athman, LUT ,26,0.187,0.056,0,4,2016
+Michael Golinski, COE ,10,0.239,0.333,0,2,2016
+Ben Jacobson, COE ,64,0.151,0.036,-1,9,2016
+Cody Hyler, WAR ,57,0.156,0.021,-1,8,2016
+Jeremy Morski, DBQ ,47,0.165,0.026,-1,7,2016
+Kolby Hilgenberg, BVU ,41,0.137,0.075,-1,5,2016
+Jack Strellner, COE ,52,0.196,0.125,0,9,2016
+Dallyn Putz, CEN ,10,0.108,0.000,0,1,2016
+Kolby Reed, CEN ,29,0.152,0.000,-1,4,2016
+Dakotah Wolken, CEN ,41,0.140,0.000,-1,6,2016
+Eric Hall, DBQ ,82,0.159,0.072,-1,12,2016
+AJ Liddell, BVU ,50,0.160,0.071,-1,7,2016
+Trey Kehoe, SIM ,26,0.127,0.042,-1,3,2016
+Jacob Burns, COE ,6,0.090,0.000,0,1,2016
+Richard Bryza, LOR ,7,0.133,0.000,0,1,2016
+Keegin Brannin, SIM ,35,0.123,0.000,-1,4,2016
+Jake Vogt, LUT ,21,0.116,0.000,-1,3,2016
+Ty Porterfield, SIM ,13,0.083,0.000,-1,1,2016
+Samuel Van Fleet, WAR ,23,0.121,0.000,-1,3,2016
+Cale Ewald, BVU ,14,0.077,0.000,-1,1,2016
+Jared Herzog, SIM ,7,0.077,0.000,0,1,2016
+Tanner Westmoreland, WAR ,8,0.114,0.125,0,1,2016
+Brandt Ames, COE ,10,0.093,0.000,-1,1,2016
+Phillip Byrd, DBQ ,9,0.103,0.000,0,1,2016
+Tyler Mougin, WAR ,37,0.079,0.000,-2,4,2016
+Thomas Simon, COE ,22,0.129,0.056,-1,3,2016
+Austin Lechtenberg, WAR ,9,0.136,0.222,0,1,2016
+Seth Griffiths, CEN ,40,0.075,0.000,-3,4,2016
+Chris Riddle, CEN ,15,0.149,0.091,0,2,2016
+Steim, BVU ,12,0.134,0.182,0,2,2016
+Dylan Diveney, CEN ,16,0.090,0.000,-1,2,2016
+Nick Carlisle, SIM ,20,0.107,0.000,-1,2,2016
+Jake Anctil, SIM ,23,0.111,0.000,-1,3,2016
+Kyle Ferree, CEN ,5,0.078,0.000,0,0,2016
+Sean Miller, LOR ,6,0.130,0.000,0,1,2016
+Jackson Sheppard, DBQ ,5,0.240,0.000,0,1,2016
+Jordahl, LUT ,2,0.000,0.000,0,0,2016
+Nathan Carlin, SIM ,2,0.000,0.000,0,0,2016
+Thomas Greffly, LOR ,2,0.000,0.000,0,0,2016
+Joey Sullivan, LUT ,1,0.000,0.000,0,0,2016
+Brandon Hull, SIM ,1,0.000,0.000,0,0,2016
+Parker Bolt, WAR ,1,0.000,0.000,0,0,2016
+17, LOR ,1,0.000,0.000,0,0,2016
+Toby Wall, CEN ,1,0.000,0.000,0,0,2016
+Ruben Olavarria, DBQ ,1,0.000,0.000,0,0,2016
+Hoffman, LOR ,1,0.000,0.000,0,0,2016
+Andrew Wrona, LOR ,0,NA,NA,NA,NA,2016
+Jordan True, LUT ,0,NA,NA,NA,NA,2016
+Colin Sexton, SIM ,0,NA,NA,NA,NA,2016
+Cameron Frazier, COE ,0,NA,NA,NA,NA,2016
+Brent Parker, CEN ,0,NA,NA,NA,NA,2016
+P.J. Carey, CEN ,1,0.420,NA,0,0,2016
+Nate Beckman, LUT ,0,NA,NA,NA,NA,2016
+Robert Primrose, WAR ,0,NA,NA,NA,NA,2016
+Kyle Sawyer,BVU,2,0.465,0.000,0,1,2004
+Marc Goeders,BVU,14,0.240,0.000,0,3,2004
+Ben Lickteig,BVU,160,0.282,0.188,9,35,2004
+Brian Ricken,BVU,155,0.220,0.036,3,28,2004
+Kent Bass,BVU,84,0.231,0.068,2,16,2004
+Nick Viet,BVU,4,0.233,0.000,0,1,2004
+Alex Fokken,BVU,61,0.181,0.035,0,10,2004
+Joe Poole,BVU,156,0.261,0.202,7,32,2004
+Mike Soenen,BVU,147,0.253,0.210,5,30,2004
+Derek Fink,BVU,125,0.235,0.130,3,24,2004
+Dan Nuehring,BVU,87,0.191,0.054,0,14,2004
+Matt Reichle,BVU,125,0.200,0.087,1,21,2004
+Cory Kennedy,BVU,102,0.199,0.146,1,17,2004
+Justin Burns,BVU,53,0.202,0.156,0,9,2004
+Adam Hardie,BVU,42,0.177,0.030,0,7,2004
+Mike Koenecke,BVU,22,0.153,0.105,0,3,2004
+Justin List,BVU,8,0.114,0.125,0,1,2004
+Justin Poole,BVU,10,0.132,0.000,0,1,2004
+Michael Barta,BVU,2,0.000,0.000,0,0,2004
+Dustin Schulz,BVU,2,0.195,0.000,0,0,2004
+Jeremiah Knutzen,BVU,0,NA,NA,NA,NA,2004
+Tyler Nitz,BVU,0,NA,NA,NA,NA,2004
+Adam Duerfeldt,CEN,159,0.248,0.131,5,32,2004
+Steve Gebhart,CEN,173,0.257,0.190,7,35,2004
+Pat Johnson,CEN,176,0.331,0.407,15,44,2004
+Tom Sheehan,CEN,120,0.236,0.120,3,23,2004
+Matt Murphy,CEN,117,0.201,0.030,1,20,2004
+Brett Delaney,CEN,33,0.232,0.115,1,6,2004
+Shea Stamp,CEN,165,0.250,0.188,6,33,2004
+Kody Wohlers,CEN,158,0.251,0.146,6,32,2004
+Dan Flaherty,CEN,9,0.184,0.000,0,1,2004
+Nate Landas,CEN,189,0.221,0.088,3,35,2004
+Austin DeHoogh,CEN,92,0.216,0.095,1,17,2004
+Josh Sandin,CEN,114,0.201,0.108,1,20,2004
+Casey Olney,CEN,31,0.128,0.000,-1,4,2004
+Matt Kuempel,CEN,1,0.000,0.000,0,0,2004
+Jeremy Robinson,CEN,1,0.000,0.000,0,0,2004
+Tanner Ludwig,CEN,1,0.390,NA,0,0,2004
+Kasey Reilly,COE,2,0.455,0.500,0,1,2004
+Will Renner,COE,165,0.338,0.343,14,42,2004
+Tim Higgins,COE,185,0.305,0.256,13,43,2004
+Grant Lodden,COE,16,0.218,0.000,0,3,2004
+Chad Kramer,COE,168,0.275,0.236,8,36,2004
+Eric Hemesath,COE,170,0.262,0.173,7,35,2004
+Josh Schauf,COE,148,0.220,0.105,3,27,2004
+Jon Schroeder,COE,177,0.272,0.290,9,38,2004
+Ashton Northern,COE,21,0.220,0.176,0,4,2004
+Nathan Dlouhy,COE,140,0.245,0.218,5,28,2004
+Travis Wiltgen,COE,181,0.231,0.082,4,34,2004
+Jase Jensen,COE,13,0.183,0.083,0,2,2004
+Quince Springer,COE,4,0.135,0.000,0,1,2004
+Ryan Smuck,COE,100,0.171,0.080,-1,15,2004
+Justin Maxwell,COE,74,0.174,0.051,-1,12,2004
+Andrew Roder,COE,21,0.165,0.105,0,3,2004
+Chad Osler,COE,3,0.000,0.000,0,0,2004
+Bart Dlouhy,COE,1,0.000,0.000,0,0,2004
+Nate Moore,COE,0,NA,NA,NA,NA,2004
+Nick Luke,COE,0,NA,NA,NA,NA,2004
+Dominic Wilson,COR,1,0.540,0.000,0,0,2004
+Danny Love,COR,155,0.214,0.060,2,28,2004
+Todd Reichart,COR,151,0.249,0.162,5,30,2004
+Ricky Legree,COR,149,0.240,0.105,4,29,2004
+Nate Eichmeyer,COR,138,0.251,0.192,5,28,2004
+Justin Mashburn,COR,142,0.215,0.091,2,26,2004
+Pat Block,COR,160,0.190,0.060,0,26,2004
+Tom Mager,COR,77,0.167,0.067,-1,12,2004
+Adam Hadenfeldt,COR,128,0.189,0.073,0,21,2004
+Drew Simonis,COR,142,0.179,0.105,-1,22,2004
+Joey Campanelli,COR,25,0.162,0.045,0,4,2004
+Kevin Moses,COR,49,0.168,0.152,-1,7,2004
+Kyle Crawford,COR,2,0.000,0.000,0,0,2004
+Jared Spangenberg,COR,1,0.000,0.000,0,0,2004
+Ryan Suttenfield,COR,1,0.000,0.000,0,0,2004
+Kevin Van Dyke,COR,1,0.390,NA,0,0,2004
+Cameron Wendt,COR,0,NA,NA,NA,NA,2004
+Josh Beebe,COR,0,NA,NA,NA,NA,2004
+Travis Lyons,DBQ,151,0.268,0.162,7,32,2004
+Jarred Koos,DBQ,21,0.217,0.000,0,4,2004
+Keith Bernard,DBQ,139,0.241,0.078,4,27,2004
+Justin Shepard,DBQ,155,0.250,0.123,6,31,2004
+Joe Hapanionek,DBQ,150,0.255,0.234,6,31,2004
+Jimmy Hudson,DBQ,32,0.222,0.043,1,6,2004
+Cole Lyons,DBQ,125,0.236,0.125,3,24,2004
+Nathan Mozena,DBQ,103,0.195,0.057,0,17,2004
+Mark Becker,DBQ,115,0.193,0.078,0,19,2004
+Jeremy Rannals,DBQ,122,0.219,0.129,2,22,2004
+Tim Griffith,DBQ,89,0.196,0.148,0,15,2004
+Jason Crane,DBQ,55,0.176,0.065,0,9,2004
+Jamey Rannals,DBQ,18,0.215,0.000,0,3,2004
+Ben Ecker,DBQ,14,0.105,0.000,-1,2,2004
+Andy Peterson,DBQ,12,0.087,0.000,-1,1,2004
+Christopher Tanne,DBQ,7,0.000,0.000,-1,0,2004
+Kyle Miller,DBQ,5,0.084,0.000,0,1,2004
+Dustin Hauswirth,DBQ,5,0.078,0.000,0,0,2004
+Kamron Koplitz,DBQ,4,0.000,0.000,0,0,2004
+Mitch Williams,DBQ,1,0.000,0.000,0,0,2004
+Josh Uhenhake,DBQ,1,0.000,0.000,0,0,2004
+Mike Cassidy,DBQ,2,0.270,0.000,0,0,2004
+Patrick Reilly,LOR,6,0.360,0.000,1,2,2004
+Ryan Von Haden,LOR,128,0.284,0.168,7,28,2004
+Tom Andrews,LOR,141,0.287,0.240,8,31,2004
+AJ Sagen,LOR,61,0.212,0.019,1,11,2004
+Tim Schneden,LOR,3,0.180,0.000,0,0,2004
+George Bruggenthe,LOR,3,0.180,0.000,0,0,2004
+Bobby Bibeau,LOR,144,0.228,0.114,3,27,2004
+Chet Medinger,LOR,142,0.250,0.138,5,28,2004
+Kris Thomas,LOR,18,0.214,0.063,0,3,2004
+Greg Williams,LOR,11,0.247,0.200,0,2,2004
+Eric Gold,LOR,118,0.205,0.063,1,21,2004
+Ryan Bender,LOR,75,0.199,0.100,0,13,2004
+Matt Mausser,LOR,45,0.219,0.195,1,8,2004
+Dustin Roth,LOR,115,0.177,0.039,-1,18,2004
+Aaron Meyer,LOR,52,0.167,0.085,-1,8,2004
+Tim Andrews,LOR,5,0.108,0.000,0,1,2004
+Brad Hingtgen,LOR,41,0.180,0.143,0,7,2004
+Rob Rossi,LOR,14,0.113,0.000,-1,2,2004
+Jeff Plasschaert,LOR,23,0.140,0.000,-1,3,2004
+Jesse Freiberger,LOR,55,0.114,0.043,-2,7,2004
+Aaron Becker,LOR,12,0.122,0.250,0,1,2004
+Tom Sieverding,LOR,4,0.000,0.000,0,0,2004
+Tim Cundiff,LOR,1,0.000,0.000,0,0,2004
+Jon Ludovissy,LOR,1,0.000,0.000,0,0,2004
+David Fischer,LOR,1,0.000,0.000,0,0,2004
+John Jaeger,LUT,154,0.317,0.252,12,37,2004
+David Zelinskas,LUT,161,0.213,0.036,2,29,2004
+Kyle Schroeder,LUT,127,0.272,0.241,6,27,2004
+Michael Schmalfel,LUT,71,0.205,0.061,1,12,2004
+Steve Lunn,LUT,130,0.224,0.098,3,24,2004
+Brad Paulsrud,LUT,144,0.226,0.121,3,27,2004
+Spencer Jones,LUT,47,0.283,0.325,3,10,2004
+Matt Cessna,LUT,114,0.190,0.020,0,19,2004
+Neil Theisen,LUT,136,0.205,0.115,1,24,2004
+Kyle Pearson,LUT,100,0.191,0.056,0,17,2004
+Tim Carroll,LUT,5,0.186,0.000,0,1,2004
+Troy Peterson,LUT,7,0.189,0.000,0,1,2004
+Brock Reed,LUT,113,0.171,0.046,-1,17,2004
+Michael Nass,LUT,4,0.000,0.000,0,0,2004
+Ryan Klein,LUT,4,0.000,0.000,0,0,2004
+Adam Klaren,LUT,3,0.130,0.000,0,0,2004
+Tom Swenson,LUT,1,0.000,0.000,0,0,2004
+Erik Matth,LUT,1,0.000,NA,0,0,2004
+Aaron Roland,SIM,1,0.540,0.000,0,0,2004
+Dan Rieck,SIM,191,0.325,0.264,15,47,2004
+Grant Fjetland,SIM,200,0.262,0.079,9,42,2004
+Mike Donnenwerth,SIM,188,0.323,0.331,15,46,2004
+Chris Cyronek,SIM,164,0.245,0.086,5,32,2004
+Troy Hatten,SIM,204,0.281,0.231,11,45,2004
+Brett Murphy,SIM,152,0.263,0.183,7,32,2004
+Chris Beall,SIM,177,0.249,0.181,6,35,2004
+James Brown,SIM,65,0.278,0.200,3,14,2004
+Adam Wieck,SIM,3,0.180,0.000,0,0,2004
+Dusty Kain,SIM,155,0.225,0.121,3,29,2004
+Joey Young,SIM,168,0.250,0.224,6,34,2004
+Blake Shepherd,SIM,6,0.222,0.200,0,1,2004
+Ross Anderson,SIM,15,0.097,0.067,-1,2,2004
+Justin Stoulil,SIM,22,0.165,0.176,0,3,2004
+JD Hews,SIM,10,0.078,0.000,-1,1,2004
+David Isaacson,SIM,4,0.000,0.000,0,0,2004
+TJ Kasperbauer,SIM,3,0.000,0.000,0,0,2004
+Ben Ramsay,SIM,1,0.000,0.000,0,0,2004
+AJ Simmons,SIM,0,NA,NA,NA,NA,2004
+Joel Reynolds,WAR,193,0.309,0.231,14,45,2004
+Brian Greiner,WAR,185,0.294,0.234,11,42,2004
+Aaron Port,WAR,167,0.259,0.102,7,34,2004
+Brian Pins,WAR,174,0.236,0.134,5,33,2004
+Chris Winter,WAR,186,0.217,0.078,3,34,2004
+Chris Robertson,WAR,131,0.220,0.093,2,24,2004
+Caleb Klein,WAR,175,0.252,0.266,6,35,2004
+Tito Romero,WAR,85,0.200,0.107,1,15,2004
+Casey Toops,WAR,164,0.197,0.047,1,28,2004
+Patrick Henderson,WAR,142,0.187,0.043,0,23,2004
+Rick Hillard,WAR,8,0.135,0.000,0,1,2004
+Nathan Carlson,WAR,20,0.146,0.053,-1,3,2004
+Mark Numedahl,WAR,14,0.163,0.000,0,2,2004
+Steve Domino,WAR,12,0.078,0.000,-1,1,2004
+Brandon Steinbrec,WAR,4,0.000,0.000,0,0,2004
+Tom Kersbergen,WAR,3,0.000,0.000,0,0,2004
+Tim Rodemeyer,WAR,1,0.000,0.000,0,0,2004
+Jeff Spiwak,WAR,1,0.000,0.000,0,0,2004
+Orlando Rivas,WAR,1,0.000,0.000,0,0,2004
+Ryan Martin,WAR,0,NA,NA,NA,NA,2004
+Kevin Mott,WAR,0,NA,NA,NA,NA,2004
+Joe Poole,BVU,149,0.261,0.097,6,31,2006
+Adam Hardie,BVU,130,0.207,0.068,1,23,2006
+Ryan Dupic,BVU,125,0.248,0.202,4,25,2006
+Derek Fink,BVU,150,0.268,0.235,7,32,2006
+Alex Fokken,BVU,109,0.193,0.060,0,18,2006
+David Callahan,BVU,160,0.195,0.038,1,27,2006
+Zach Habben,BVU,114,0.180,0.121,-1,18,2006
+Michael Barta,BVU,48,0.223,0.140,1,9,2006
+Chris Dolezal,BVU,11,0.216,0.100,0,2,2006
+Lance Eddie,BVU,88,0.197,0.053,0,15,2006
+Justin List,BVU,63,0.179,0.068,0,10,2006
+Jeff Weisenborn,BVU,16,0.174,0.000,0,2,2006
+Marc Goeders,BVU,103,0.134,0.000,-3,14,2006
+Dustin Schulz,BVU,34,0.109,0.000,-2,4,2006
+Nate Halupnick,BVU,12,0.110,0.000,-1,1,2006
+Alexander Messero,BVU,15,0.066,0.000,-1,1,2006
+Dan Reis,BVU,1,0.000,0.000,0,0,2006
+Blake Wittrock,BVU,1,0.000,0.000,0,0,2006
+Dan Christiansen,BVU,1,0.390,NA,0,0,2006
+Tim Petersen,BVU,0,NA,NA,NA,NA,2006
+Adam Duerfeldt,CEN,166,0.356,0.304,16,44,2006
+Jeremy Kippley,CEN,172,0.265,0.186,8,36,2006
+Matt Murphy,CEN,134,0.218,0.009,2,24,2006
+Derek Knutson,CEN,158,0.243,0.157,5,31,2006
+Shea Stamp,CEN,185,0.272,0.168,9,39,2006
+Jake Jadlowski,CEN,150,0.218,0.089,3,27,2006
+Michael Edwards,CEN,153,0.232,0.119,4,29,2006
+Justin Owens,CEN,142,0.155,0.009,-3,20,2006
+Thomas Sheehan,CEN,103,0.216,0.035,2,19,2006
+Brett Delaney,CEN,7,0.214,0.000,0,1,2006
+Andy Long,CEN,66,0.186,0.020,0,11,2006
+Aaron Heffernan,CEN,67,0.151,0.036,-2,10,2006
+Jacob Vaverka,CEN,11,0.132,0.000,0,1,2006
+Matt Kuempel,CEN,5,0.000,0.000,-1,0,2006
+Adam Squires,CEN,0,NA,NA,NA,NA,2006
+Chad Kramer,COE,199,0.276,0.162,10,43,2006
+Will Renner,COE,153,0.304,0.207,10,36,2006
+Cody Smith,COE,201,0.244,0.112,6,40,2006
+Brock Auten,COE,183,0.263,0.230,8,38,2006
+Justin Maxwell,COE,183,0.220,0.067,3,33,2006
+Travis Wiltgen,COE,210,0.218,0.065,4,38,2006
+BJ Noethe,COE,163,0.191,0.028,0,27,2006
+Ryan Baranowski,COE,155,0.191,0.050,0,26,2006
+Ryan Smuck,COE,159,0.189,0.091,0,26,2006
+Skylar Price,COE,15,0.311,0.267,1,4,2006
+Bart Dlouhy,COE,12,0.198,0.091,0,2,2006
+Quince Springer,COE,17,0.151,0.067,0,2,2006
+Dan Adams,COE,25,0.207,0.118,0,4,2006
+Jon Reiner,COE,8,0.056,0.000,-1,1,2006
+Robert DeMoulin,COE,6,0.065,0.000,0,1,2006
+Paul Endriss,COE,5,0.000,0.000,-1,0,2006
+Michael Szela,COE,3,0.000,0.000,0,0,2006
+Jon Fitzpatrick,COE,1,0.000,0.000,0,0,2006
+Brad Grady,COE,0,NA,NA,NA,NA,2006
+Ryan Nicholson,COE,1,NA,NA,NA,NA,2006
+Lucas Novotny,COE,0,NA,NA,NA,NA,2006
+Tyler Downing,COR,132,0.252,0.115,5,27,2006
+Ben Rudman,COR,129,0.209,0.050,1,23,2006
+Kyle Noesen,COR,141,0.232,0.092,4,27,2006
+Jim Bose,COR,146,0.238,0.135,4,28,2006
+Joey Campanelli,COR,124,0.179,0.045,-1,20,2006
+Anthony Cozzi,COR,138,0.176,0.025,-1,22,2006
+Cameron Gallegos,COR,122,0.155,0.029,-2,18,2006
+Jason Hemann,COR,34,0.261,0.040,1,7,2006
+Steve Murray,COR,75,0.181,0.101,0,12,2006
+Casey Korn,COR,99,0.157,0.090,-2,14,2006
+Tad Barry,COR,113,0.168,0.090,-1,17,2006
+Steven Klingaman,COR,9,0.153,0.000,0,1,2006
+Matthew Bliven,COR,6,0.000,0.000,-1,0,2006
+Dan Cleary,COR,1,0.000,0.000,0,0,2006
+Alex Pompa,COR,1,0.000,0.000,0,0,2006
+Eric Mann,COR,0,NA,NA,NA,NA,2006
+Kyle Harris,DBQ,135,0.273,0.121,7,29,2006
+Jeremy Rannals,DBQ,153,0.248,0.132,5,31,2006
+John Uribe,DBQ,126,0.224,0.111,3,23,2006
+Adam Burroughs,DBQ,142,0.214,0.112,2,25,2006
+Jeremy Perez,DBQ,109,0.137,0.010,-3,15,2006
+Stryder Morissett,DBQ,76,0.215,0.029,1,14,2006
+Bill Albee,DBQ,7,0.210,0.000,0,1,2006
+Bobby Vos,DBQ,3,0.180,0.000,0,0,2006
+Ryan Dunkel,DBQ,105,0.239,0.144,3,20,2006
+Jared Koos,DBQ,39,0.207,0.086,0,7,2006
+TJ Chase,DBQ,55,0.204,0.051,0,10,2006
+Joe Martin,DBQ,35,0.194,0.125,0,6,2006
+Byron Abram,DBQ,4,0.135,0.000,0,1,2006
+Ryan Jordan,DBQ,9,0.161,0.111,0,1,2006
+Mitch Williams,DBQ,94,0.152,0.037,-2,13,2006
+Cory Schmaltz,DBQ,32,0.113,0.031,-1,4,2006
+Ben Maiers,DBQ,16,0.191,0.000,0,3,2006
+Timothy Terrell,DBQ,20,0.161,0.059,0,3,2006
+Jeff Hoerner,DBQ,43,0.160,0.057,-1,6,2006
+Tony Bladel,DBQ,91,0.102,0.000,-5,10,2006
+Christopher Dahle,DBQ,13,0.102,0.000,-1,1,2006
+Andrew Crane,DBQ,21,0.101,0.000,-1,2,2006
+Brian Johannsen,DBQ,4,0.000,0.000,0,0,2006
+Billy French,DBQ,2,0.000,0.000,0,0,2006
+Pat Simmons,DBQ,1,0.000,0.000,0,0,2006
+Justin Shaffer,DBQ,0,NA,NA,NA,NA,2006
+Jordan Skaar,DBQ,1,0.390,NA,0,0,2006
+Adam Gross,LOR,146,0.220,0.060,3,27,2006
+Don Pirkle,LOR,141,0.199,0.033,1,24,2006
+Nick Olberding,LOR,175,0.188,0.079,0,29,2006
+Patrick Reilly,LOR,143,0.182,0.008,-1,23,2006
+Dan Lynch,LOR,125,0.191,0.037,0,21,2006
+Jason Lange,LOR,2,0.270,0.000,0,0,2006
+Tim Andrews,LOR,76,0.305,0.194,5,18,2006
+Dustin Roth,LOR,111,0.188,0.061,0,18,2006
+Kris Thomas,LOR,127,0.198,0.059,1,22,2006
+Blaine Nicks,LOR,31,0.161,0.000,-1,5,2006
+Nathan Roling,LOR,28,0.145,0.000,-1,4,2006
+Greg Williams,LOR,99,0.156,0.012,-2,14,2006
+Brad Hingtgen,LOR,102,0.175,0.036,-1,16,2006
+George Bruggenthi,LOR,60,0.131,0.000,-2,8,2006
+Aaron Becker,LOR,67,0.181,0.118,0,11,2006
+Tyler Shireman,LOR,4,0.000,0.000,0,0,2006
+Dan Cutler,LOR,1,0.000,0.000,0,0,2006
+Nick Teson,LOR,0,NA,NA,NA,NA,2006
+Bobby Friederick,LOR,0,NA,NA,NA,NA,2006
+Kyle Schroeder,LUT,137,0.355,0.328,13,36,2006
+Alex Ross,LUT,125,0.244,0.041,4,25,2006
+Mike Schmalfeldt,LUT,168,0.223,0.055,3,31,2006
+Matt Cessna,LUT,168,0.209,0.067,2,30,2006
+Troy Peterson,LUT,135,0.230,0.140,3,25,2006
+Jeff Hiatt,LUT,150,0.173,0.059,-1,23,2006
+Alex Thomas,LUT,44,0.218,0.000,1,8,2006
+Blake Humpal,LUT,94,0.209,0.060,1,17,2006
+Phillip Worden,LUT,56,0.206,0.040,1,10,2006
+Nathan Neis,LUT,89,0.201,0.069,1,15,2006
+Jacob Waddle,LUT,98,0.208,0.068,1,17,2006
+Alan Seabrooke,LUT,24,0.160,0.045,0,4,2006
+Steve Lunn,LUT,111,0.176,0.078,-1,17,2006
+Eric Banwarth,LUT,18,0.090,0.000,-1,2,2006
+Kirby VanDeWalker,LUT,4,0.105,0.000,0,0,2006
+Doug Elfstrom,LUT,1,0.000,0.000,0,0,2006
+Scott Hanson,LUT,0,NA,NA,NA,NA,2006
+Ross Anderson,SIM,141,0.276,0.085,7,30,2006
+Jon Clanton,SIM,137,0.333,0.306,12,34,2006
+James Brown,SIM,133,0.307,0.190,9,31,2006
+Dusty Kain,SIM,150,0.242,0.113,5,29,2006
+Jason McClaflin,SIM,124,0.211,0.046,2,22,2006
+Chris Cyronek,SIM,134,0.218,0.078,2,24,2006
+Mike Turnure,SIM,147,0.202,0.078,1,25,2006
+Aaron Roland,SIM,6,0.332,0.167,1,1,2006
+Curtis Bjork,SIM,7,0.457,0.750,1,2,2006
+Justin Peters,SIM,2,0.455,0.500,0,1,2006
+Tom Gross,SIM,5,0.422,0.500,1,2,2006
+Justin Stoulil,SIM,90,0.248,0.089,3,18,2006
+Brandon Bingham,SIM,61,0.227,0.060,1,11,2006
+Kyle Meyer,SIM,100,0.231,0.125,2,19,2006
+Brook Beisell,SIM,64,0.223,0.213,1,12,2006
+AJ Wicke,SIM,34,0.116,0.036,-1,4,2006
+Cody Cooper,SIM,13,0.198,0.000,0,2,2006
+Kelly Wilson,SIM,3,0.000,0.000,0,0,2006
+Chris Jones,SIM,2,0.000,0.000,0,0,2006
+Brady Buresh,SIM,1,0.000,0.000,0,0,2006
+Casey Pauli,WAR,187,0.294,0.150,12,42,2006
+Brian Greiner,WAR,173,0.328,0.322,14,43,2006
+Ryan Grant,WAR,184,0.223,0.078,4,34,2006
+Patrick Henderson,WAR,162,0.219,0.100,3,30,2006
+Kyle Blacker,WAR,136,0.176,0.033,-1,21,2006
+Mike Johnson,WAR,140,0.176,0.105,-1,22,2006
+Aaron Saeugling,WAR,2,0.270,0.000,0,0,2006
+Marc Numedahl,WAR,66,0.248,0.039,2,13,2006
+Tom Kersbergen,WAR,90,0.258,0.139,4,18,2006
+Darren O'Donnell,WAR,47,0.323,0.385,4,11,2006
+Kyle Jones,WAR,97,0.238,0.210,3,19,2006
+AJ Lewis,WAR,12,0.135,0.000,0,2,2006
+Jake Shandri,WAR,68,0.199,0.105,0,12,2006
+Danny Broihier,WAR,54,0.199,0.114,0,9,2006
+Ryan Johnson,WAR,41,0.203,0.000,0,7,2006
+Matt Scherbring,WAR,5,0.108,0.000,0,1,2006
+Ryan Martin,WAR,8,0.165,0.000,0,1,2006
+James Rodgers,WAR,6,0.090,0.000,0,1,2006
+Zach Schoh,WAR,42,0.175,0.063,0,7,2006
+Brandon Steinbrec,WAR,29,0.124,0.120,-1,4,2006
+Scott Mangin,WAR,15,0.104,0.000,-1,2,2006
+Zach Nagle,WAR,0,NA,NA,NA,NA,2006
+Thomas Kempf,DBQ,165,0.259,0.079,7,34,2017
+E. Willis,WAR,227,0.257,0.096,9,46,2017
+Joe Silversmith,LUT,156,0.304,0.281,10,36,2017
+C. Hyler,WAR,187,0.252,0.121,7,38,2017
+Jacob Burns,COE,160,0.238,0.103,5,31,2017
+B. Mahoney,WAR,216,0.242,0.109,7,42,2017
+Andrew Brierton,COE,166,0.259,0.179,7,34,2017
+Kevin DeLaney,COE,192,0.248,0.151,7,38,2017
+Austin Konagel,LOR,153,0.244,0.094,5,30,2017
+Seth Griffiths,CEN,196,0.237,0.089,5,38,2017
+J. Thumann,WAR,214,0.291,0.292,13,48,2017
+Noah Paper,BVU,169,0.217,0.028,3,31,2017
+Bryce Hingst,LUT,188,0.239,0.088,6,37,2017
+Hunter Hillygus,SIM,138,0.247,0.133,5,27,2017
+Jake Halverson,LUT,151,0.226,0.069,3,28,2017
+Kolby Hilgenberg,BVU,178,0.260,0.191,7,37,2017
+Austin McWhite,DBQ,175,0.257,0.176,7,36,2017
+Jake Oglesby,LOR,136,0.237,0.112,4,26,2017
+Mitch Bruggers,LUT,152,0.231,0.091,4,29,2017
+Kyle Hunter,NWU,163,0.207,0.074,2,29,2017
+Luke Leibforth,LOR,175,0.205,0.026,2,30,2017
+Zach Brown,CEN,175,0.233,0.137,4,33,2017
+Bryce Rheault,BVU,185,0.220,0.085,3,34,2017
+Garrett Saunders,CEN,190,0.247,0.179,6,38,2017
+Devin Wagenman,BVU,186,0.243,0.144,6,37,2017
+Cody Reimer,LUT,182,0.234,0.113,5,35,2017
+A. Lechtenbe,WAR,136,0.184,0.008,0,22,2017
+Jake Vogt,LUT,211,0.235,0.128,6,40,2017
+Danny Weis,LOR,175,0.221,0.082,3,32,2017
+Noah Stochl,CEN,177,0.197,0.087,1,30,2017
+Joey Sullivan,LUT,142,0.239,0.139,4,28,2017
+Ben Jacobson,COE,121,0.222,0.117,2,22,2017
+Brook Johnson,NWU,139,0.215,0.085,2,25,2017
+Kyle Alvarado,COE,130,0.218,0.107,2,24,2017
+D. Fitzgeral,WAR,190,0.212,0.081,2,34,2017
+Nolan Ritter,LOR,150,0.180,0.008,-1,24,2017
+Kendall Candor,BVU,185,0.211,0.112,2,33,2017
+Peyton Renning,BVU,173,0.210,0.115,2,31,2017
+Nolan Arp,COE,156,0.205,0.096,1,27,2017
+Trent Dooley,SIM,151,0.217,0.129,2,27,2017
+Michael Salazar,DBQ,128,0.229,0.135,3,24,2017
+Marquis Dew,DBQ,107,0.229,0.156,2,20,2017
+Michael Reuter,CEN,172,0.199,0.090,1,29,2017
+Will Doherty,DBQ,174,0.222,0.061,3,32,2017
+Tony Heiser,LOR,97,0.198,0.060,0,16,2017
+Jon Opdahl,LUT,182,0.200,0.087,1,31,2017
+Tanner Wood,CEN,185,0.212,0.092,2,33,2017
+C. Henning,WAR,195,0.200,0.032,1,33,2017
+Luke Anctil,SIM,130,0.199,0.118,1,22,2017
+M. Brown,WAR,197,0.196,0.096,1,33,2017
+Danny Paluch,LOR,159,0.216,0.122,2,29,2017
+Eric Hall,DBQ,100,0.209,0.135,1,18,2017
+David Morris,NWU,114,0.188,0.052,0,19,2017
+Jacob Hirst,CEN,148,0.213,0.160,2,26,2017
+Thomas Johnson,LOR,115,0.168,0.029,-2,17,2017
+Jack Strellner,COE,118,0.187,0.051,0,19,2017
+Jack Lasswell,DBQ,141,0.177,0.009,-1,22,2017
+Trent Athman,LUT,142,0.179,0.034,-1,22,2017
+Jared Herzog,SIM,93,0.176,0.072,-1,15,2017
+Michael Muto,LOR,132,0.179,0.071,-1,21,2017
+Matt Orozco,NWU,107,0.179,0.108,-1,17,2017
+S. Fleet,WAR,124,0.169,0.056,-2,19,2017
+Devon Harms,BVU,143,0.147,0.016,-4,20,2017
+Porter Sartor,BVU,123,0.186,0.085,0,20,2017
+Josh Osborne,SIM,90,0.180,0.100,0,14,2017
+Aaron Ochsner,NWU,160,0.180,0.075,-1,25,2017
+Tyler Winterstein,NWU,122,0.166,0.074,-2,18,2017
+Cameron Johnson,BVU,115,0.161,0.076,-2,17,2017
+Spencer Scheer,NWU,141,0.172,0.121,-1,22,2017
+Jordan Kaplan,COE,139,0.184,0.096,0,22,2017
+Jonathan Greiner,SIM,129,0.151,0.035,-3,18,2017
+Ryan Koester,LOR,144,0.181,0.117,-1,23,2017
+Nathan Carlin,SIM,90,0.134,0.090,-3,12,2017
+Waylon Alvarado,LUT,1,0.910,1.000,0,1,2017
+Joe Rock,BVU,12,0.335,0.000,1,3,2017
+Collin McClain,NWU,3,0.310,0.000,0,1,2017
+Jacob Henry,COE,24,0.295,0.143,1,5,2017
+Justin Corfield,NWU,16,0.267,0.071,1,3,2017
+Kyle May,DBQ,7,0.329,0.286,1,2,2017
+J. Holub,WAR,6,0.312,0.200,0,1,2017
+Cole Schumacher,NWU,84,0.280,0.203,4,18,2017
+Thomas Simon,COE,55,0.257,0.130,2,11,2017
+Cale Ewald,BVU,33,0.312,0.407,2,8,2017
+Tommy Gleason,LUT,13,0.198,0.000,0,2,2017
+Cam Lulow,NWU,12,0.183,0.000,0,2,2017
+Kelby Johnson,LUT,12,0.198,0.100,0,2,2017
+Tyler Imrich,DBQ,30,0.199,0.074,0,5,2017
+Owen Gubbels,NWU,89,0.177,0.000,-1,14,2017
+Ethan McHenry,BVU,62,0.245,0.200,2,12,2017
+Ryan Garrett,CEN,86,0.202,0.029,1,15,2017
+Thomas Kahle,COE,15,0.169,0.071,0,2,2017
+Cole Jensen,LUT,7,0.154,0.000,0,1,2017
+Z. Hovick,WAR,91,0.188,0.049,0,15,2017
+Grant Henning,COE,85,0.223,0.176,2,16,2017
+Chris Riddle,CEN,89,0.214,0.093,1,16,2017
+Dan Urban,COE,30,0.235,0.241,1,6,2017
+Colson Frakes,SIM,12,0.168,0.000,0,2,2017
+Trevor Kimm,CEN,91,0.197,0.099,0,15,2017
+Spencer Olson,LUT,16,0.206,0.133,0,3,2017
+Kelvin Medrano,DBQ,90,0.206,0.127,1,16,2017
+Jared Scdoris,NWU,46,0.195,0.116,0,8,2017
+Trey Kehoe,SIM,40,0.205,0.094,0,7,2017
+Dallyn Putz,CEN,13,0.197,0.167,0,2,2017
+Tanner Reising,LUT,4,0.135,0.000,0,1,2017
+Tyler Tennyson,BVU,5,0.186,0.000,0,1,2017
+C. Kannegiet,WAR,5,0.186,0.000,0,1,2017
+Salvador Anguiano,NWU,83,0.146,0.000,-2,12,2017
+Caylor Deeth,SIM,31,0.139,0.000,-1,4,2017
+Blake Lishka,COE,58,0.148,0.000,-1,8,2017
+Jacob Petry,SIM,34,0.199,0.038,0,6,2017
+Colton Knox,COE,17,0.174,0.000,0,3,2017
+Adam Richman,SIM,66,0.208,0.193,1,12,2017
+Truman Schmitt,SIM,80,0.181,0.091,0,13,2017
+Phillip Byrd,DBQ,24,0.146,0.000,-1,3,2017
+Joe Rebik,CEN,24,0.146,0.000,-1,3,2017
+Tyler Lewan,DBQ,89,0.193,0.120,0,15,2017
+Jake Stoulil,SIM,11,0.172,0.000,0,2,2017
+Andy Anderson,SIM,38,0.155,0.000,-1,5,2017
+Micah Hoage,NWU,34,0.138,0.031,-1,5,2017
+Gaetano Florio,DBQ,86,0.152,0.066,-2,12,2017
+Nick Bruno,NWU,60,0.184,0.175,0,10,2017
+Ty Porterfield,SIM,49,0.143,0.000,-1,7,2017
+Tyler Dralle,COE,26,0.149,0.042,-1,4,2017
+Gannon Jordahl,LUT,41,0.177,0.086,0,6,2017
+AJ Liddell,BVU,5,0.108,0.000,0,1,2017
+Tanner Jansen,SIM,7,0.241,0.200,0,1,2017
+Joel Maxwell,NWU,6,0.155,0.000,0,1,2017
+Max Uetz,LUT,75,0.147,0.030,-2,10,2017
+Jarad Clevenger,DBQ,77,0.162,0.048,-1,11,2017
+Richard Bryza,LOR,21,0.190,0.063,0,3,2017
+Isaac Evans,COE,49,0.177,0.053,0,8,2017
+Michael Zellar,BVU,43,0.125,0.000,-2,5,2017
+Jacob Evans,DBQ,84,0.124,0.013,-3,11,2017
+Thomas Greffly,LOR,24,0.122,0.045,-1,3,2017
+Liam Fitzpatrick,COE,14,0.133,0.000,0,2,2017
+Nick Carlisle,SIM,58,0.147,0.000,-1,8,2017
+Justus Stocks,NWU,68,0.156,0.070,-1,10,2017
+Nate Hoth,LOR,18,0.090,0.000,-1,2,2017
+Mike Sullivan,LOR,8,0.166,0.167,0,1,2017
+Ryan Karrick,DBQ,93,0.154,0.027,-2,13,2017
+Parker Truesdell,BVU,14,0.105,0.000,-1,2,2017
+Kyle Crampton,CEN,37,0.143,0.091,-1,5,2017
+Luke Johnson,LUT,44,0.102,0.000,-2,5,2017
+James Babic,NWU,31,0.134,0.037,-1,4,2017
+Matt Clark,LUT,7,0.077,0.000,0,1,2017
+Michael Collins,CEN,31,0.112,0.100,-1,4,2017
+Nolan Weber,COE,51,0.206,0.033,0,9,2017
+Sean Miller,LOR,10,0.188,0.333,0,2,2017
+T. Nunemaker,WAR,33,0.073,0.000,-2,3,2017
+Brandon Hull,SIM,15,0.114,0.000,-1,2,2017
+T. Mougin,WAR,31,0.058,0.000,-2,3,2017
+Ryan Steim,BVU,13,0.030,0.000,-1,1,2017
+Andrew Wrona,LOR,8,0.000,0.000,-1,0,2017
+Robbie Agerbeek,LOR,7,0.000,0.000,-1,0,2017
+D. Kramer,WAR,7,0.000,0.000,-1,0,2017
+Cameron Frazier,COE,6,0.000,0.000,-1,0,2017
+Alex Crile,SIM,8,0.098,0.000,0,1,2017
+Cole Havlovic,CEN,3,0.000,0.000,0,0,2017
+Joshua Henriksen,SIM,3,0.000,0.000,0,0,2017
+Ryan LaPage,LUT,2,0.000,0.000,0,0,2017
+Luke Carroll,DBQ,2,0.000,0.000,0,0,2017
+B. Milewski,WAR,3,0.130,0.000,0,0,2017
+Zack Murphy,LOR,3,0.130,0.000,0,0,2017
+Jacob Day,DBQ,1,0.000,0.000,0,0,2017
+Cody Kramschuster,DBQ,1,0.000,0.000,0,0,2017
+Andrew White,NWU,1,0.000,0.000,0,0,2017
+Kaiden Fiebelkorn,CEN,1,0.000,0.000,0,0,2017
+T. Hovick,WAR,1,0.000,0.000,0,0,2017
+Jack Greene,COE,0,NA,NA,NA,NA,2017
+Corey Broxson,CEN,0,NA,NA,NA,NA,2017
+Alex Vaassen,LOR,1,0.420,NA,0,0,2017
+C. Guinn,WAR,1,0.390,NA,0,0,2017
+Brent Parker,CEN,0,NA,NA,NA,NA,2017
+Ricky Reed,COE,0,NA,NA,NA,NA,2017
+J Lowery,SIM,1,0.390,NA,0,0,2017
+B. Moats,WAR,0,NA,NA,NA,NA,2017
+Tucker McHugh,NWU,0,NA,NA,NA,NA,2017
+Jordan Kaplan, COE ,185,0.285,0.156,10,41,2018
+Garrett Saunders, CEN ,182,0.283,0.188,10,40,2018
+Danny Weis, LOR ,186,0.299,0.229,12,43,2018
+Jake Halverson, LUT ,157,0.252,0.121,6,32,2018
+Peyton Renning, BVU ,172,0.283,0.213,9,38,2018
+Jarad Clevenger, DBQ ,140,0.233,0.070,4,27,2018
+Grant Henning, COE ,166,0.270,0.211,8,35,2018
+Austin Konagel, LOR ,192,0.232,0.072,5,36,2018
+Dalton Garst, DBQ ,191,0.250,0.113,7,38,2018
+Devin Wagenman, BVU ,169,0.247,0.117,6,34,2018
+Jack Lasswell, DBQ ,191,0.223,0.043,4,35,2018
+Will Doherty, DBQ ,149,0.250,0.178,5,30,2018
+Trent Athmann, LUT ,170,0.272,0.203,8,36,2018
+Zach Hovick, WAR ,175,0.232,0.080,4,33,2018
+Trey Kehoe, SIM ,130,0.235,0.085,3,25,2018
+Noah Sacco, SIM ,159,0.229,0.098,4,30,2018
+Thomas Kempf, DBQ ,147,0.221,0.094,3,27,2018
+Tyler Winterstein, NWU ,129,0.242,0.148,4,25,2018
+Kellen Mitchell, DBQ ,131,0.226,0.097,3,24,2018
+Bryce Rheault, BVU ,183,0.227,0.114,4,34,2018
+Kevin DeLaney, COE ,177,0.223,0.106,3,33,2018
+Jake Oglesby, LOR ,168,0.234,0.105,4,32,2018
+Coleman Roberts, BVU ,159,0.236,0.157,4,31,2018
+Coy Moore, CEN ,154,0.223,0.106,3,28,2018
+Ryan Koester, LOR ,182,0.253,0.201,7,37,2018
+Jake Vogt, LUT ,186,0.244,0.163,6,37,2018
+Tanner Wood, CEN ,150,0.257,0.221,6,31,2018
+Tyler Tennyson, BVU ,104,0.194,0.052,0,17,2018
+Jacob Burns, COE ,152,0.208,0.088,2,27,2018
+Cody Hyler, WAR ,165,0.227,0.110,4,31,2018
+Hunter Hillygus, SIM ,157,0.218,0.079,3,29,2018
+Thomas Greffly, LOR ,113,0.236,0.214,3,22,2018
+Cole Thompson, LOR ,172,0.203,0.101,1,30,2018
+Trevor Kimm, CEN ,159,0.211,0.055,2,28,2018
+Jared Herzog, SIM ,164,0.204,0.094,1,28,2018
+JoJo McNair, WAR ,129,0.204,0.090,1,22,2018
+Eric Willis, WAR ,184,0.223,0.121,4,34,2018
+Bryce Hingst, LUT ,172,0.220,0.131,3,31,2018
+Derek McCready, LUT ,149,0.214,0.115,2,27,2018
+Nolan Arp, COE ,123,0.202,0.065,1,21,2018
+Tyler Imrich, DBQ ,122,0.216,0.131,2,22,2018
+Joe Rebik, CEN ,153,0.229,0.155,4,29,2018
+Isaac Evans, COE ,179,0.207,0.093,2,31,2018
+Luke Fennelly, LOR ,158,0.191,0.071,0,26,2018
+Richard Bryza, LOR ,162,0.202,0.110,1,28,2018
+Kyle Crampton, CEN ,118,0.224,0.160,2,22,2018
+Mitch Bruggers, LUT ,150,0.196,0.083,1,25,2018
+Ryan Bouwman, CEN ,142,0.189,0.057,0,23,2018
+David Fitzgerald, WAR ,159,0.168,0.015,-2,24,2018
+Parker Truesdell, BVU ,119,0.177,0.055,-1,19,2018
+Truman Schmitt, SIM ,141,0.207,0.127,1,25,2018
+Scott Meier, SIM ,151,0.173,0.031,-2,23,2018
+Danny Paluch, LOR ,180,0.181,0.048,-1,29,2018
+Blake Mahoney, WAR ,178,0.194,0.104,0,30,2018
+Porter Sartor, BVU ,142,0.211,0.172,2,25,2018
+Clay Henning, WAR ,148,0.159,0.016,-3,22,2018
+Nathan Carlin, SIM ,132,0.166,0.037,-2,20,2018
+Brandon Urias, SIM ,99,0.128,0.044,-4,13,2018
+Cole Schumacher, NWU ,125,0.154,0.038,-3,18,2018
+Ryan Gorman, LOR ,1,0.540,0.000,0,0,2018
+Emmanuel JEffery, WAR ,27,0.298,0.042,2,6,2018
+Cole Havlovic, CEN ,5,0.348,0.000,0,1,2018
+Chris Haring, LOR ,2,0.455,0.500,0,1,2018
+Jackson Cummins, NWU ,2,0.270,0.000,0,0,2018
+J. Stocks, NWU ,25,0.273,0.000,1,5,2018
+Justus Stocks, NWU ,82,0.277,0.188,4,18,2018
+Robbie Agerbeek, LOR ,17,0.279,0.188,1,4,2018
+Joe McKibben, LUT ,66,0.233,0.052,2,13,2018
+O. Gubbels, NWU ,48,0.235,0.026,1,9,2018
+Derek Kolbush, NWU ,94,0.257,0.141,4,19,2018
+D. Kolbush, NWU ,34,0.248,0.077,1,7,2018
+Justin Jenson, DBQ ,91,0.257,0.165,4,19,2018
+Daniel Berger, COE ,48,0.231,0.073,1,9,2018
+Alex Savary, BVU ,54,0.245,0.114,2,11,2018
+Riley Ward, NWU ,51,0.216,0.044,1,9,2018
+Ian Meyer, DBQ ,19,0.301,0.267,1,4,2018
+Michael Hoffman, DBQ ,16,0.259,0.083,1,3,2018
+Matt Gruszkowski, LOR ,9,0.251,0.167,0,2,2018
+Brent Parker, CEN ,6,0.180,0.000,0,1,2018
+Parker Ridge, WAR ,106,0.182,0.031,0,17,2018
+Matt Clark, LUT ,53,0.249,0.213,2,11,2018
+Tyler Lewan, DBQ ,105,0.201,0.116,1,18,2018
+Luke Carroll, DBQ ,29,0.222,0.083,1,5,2018
+Joel Maxwell, NWU ,64,0.240,0.135,2,12,2018
+Dan Weir, CEN ,9,0.248,0.143,0,2,2018
+Cole Jensen, LUT ,59,0.183,0.056,0,9,2018
+Zach McCoy, DBQ ,79,0.220,0.019,1,14,2018
+Adam Sacia, WAR ,19,0.150,0.000,0,3,2018
+Kaiden Fiebelkorn, CEN ,67,0.180,0.048,0,11,2018
+Ryley McGregor, BVU ,72,0.177,0.045,-1,11,2018
+Joseph Baumann, WAR ,25,0.192,0.045,0,4,2018
+Nick Strysik, CEN ,24,0.184,0.045,0,4,2018
+Dalton Vergith, NWU ,30,0.208,0.115,0,5,2018
+B. Johnson, NWU ,34,0.206,0.100,0,6,2018
+Kolton Arnold, SIM ,85,0.171,0.051,-1,13,2018
+Ryan Garrett, CEN ,84,0.189,0.044,0,14,2018
+Tyler Hovick, WAR ,46,0.210,0.105,1,8,2018
+Josh Pawlowski, DBQ ,22,0.185,0.053,0,4,2018
+Thomas Kahle, COE ,34,0.179,0.074,0,5,2018
+M. Orozco, NWU ,33,0.227,0.125,1,6,2018
+Blake Wooten, CEN ,6,0.220,0.000,0,1,2018
+Chase Jamison, WAR ,4,0.135,0.000,0,1,2018
+Tommy Gleason, LUT ,96,0.188,0.051,0,16,2018
+Brook Johnson, NWU ,36,0.207,0.182,0,6,2018
+Nick Bruno, NWU ,38,0.213,0.152,1,7,2018
+Nick Henrichs, BVU ,100,0.202,0.154,1,17,2018
+Tyler Dralle, COE ,90,0.165,0.060,-1,14,2018
+Cameron Frazier, COE ,29,0.202,0.095,0,5,2018
+S. Scheer, NWU ,23,0.164,0.095,0,3,2018
+Matthew Schrader, COE ,44,0.188,0.029,0,7,2018
+Jared Swanson, LUT ,91,0.172,0.038,-1,14,2018
+Cody Kramschuster, DBQ ,43,0.177,0.128,0,7,2018
+Gabriel Panza, DBQ ,18,0.221,0.077,0,3,2018
+Kelby Johnson, LUT ,77,0.217,0.180,1,14,2018
+Spencer Scheer, NWU ,79,0.149,0.043,-2,11,2018
+Kyle Alvarado, COE ,79,0.164,0.093,-1,12,2018
+Clint Kannegieter, WAR ,55,0.140,0.000,-2,7,2018
+TJ Johnson, COE ,83,0.172,0.045,-1,13,2018
+Nasir Ricks, DBQ ,60,0.153,0.054,-1,9,2018
+Riley LeGrand, COE ,32,0.196,0.179,0,5,2018
+K. Hunter, NWU ,36,0.158,0.061,-1,5,2018
+Jacob Henry, COE ,87,0.178,0.070,-1,14,2018
+Joe Rock, BVU ,64,0.144,0.000,-2,9,2018
+J. Scdoris, NWU ,26,0.174,0.000,0,4,2018
+Matt Orozco, NWU ,57,0.199,0.184,0,10,2018
+Owen Gubbels, NWU ,63,0.139,0.000,-2,8,2018
+Chris Riddle, CEN ,76,0.188,0.185,0,12,2018
+Micah Hoage, NWU ,16,0.172,0.133,0,2,2018
+Michael Muto, LOR ,35,0.161,0.000,-1,5,2018
+Thomas Simon, COE ,87,0.145,0.027,-2,12,2018
+Tanner Jansen, SIM ,75,0.168,0.132,-1,11,2018
+Tyler Nunemaker, WAR ,100,0.160,0.100,-2,15,2018
+Tyler Stoltze, BVU ,82,0.149,0.029,-2,12,2018
+Patrick Diemer, CEN ,19,0.194,0.250,0,3,2018
+Bradyn Thomas, NWU ,19,0.168,0.063,0,3,2018
+Kyle Hunter, NWU ,66,0.145,0.000,-2,9,2018
+Gannon Jordahl, LUT ,47,0.140,0.068,-1,6,2018
+Isalino Valencia, DBQ ,28,0.199,0.136,0,5,2018
+Ryan King Jr., WAR ,26,0.157,0.045,0,4,2018
+Spencer Olson, LUT ,11,0.098,0.000,-1,1,2018
+Carlos Garrido, LOR ,21,0.172,0.059,0,3,2018
+B. Thomas, NWU ,21,0.152,0.059,0,3,2018
+Jared Scdoris, NWU ,45,0.162,0.056,-1,7,2018
+Michael Collins, CEN ,14,0.135,0.000,0,2,2018
+Keaton King, BVU ,16,0.190,0.083,0,3,2018
+Luke Smailes, COE ,6,0.090,0.000,0,1,2018
+Dylan Pardoe, LOR ,6,0.090,0.000,0,1,2018
+Cameron Liston, SIM ,22,0.132,0.053,-1,3,2018
+Anthony Fumagalli, CEN ,76,0.146,0.000,-2,11,2018
+Lucas Farren, CEN ,16,0.094,0.000,-1,2,2018
+Daniel Opdahl, LUT ,12,0.175,0.000,0,2,2018
+D. Vergith, NWU ,12,0.145,0.000,0,2,2018
+Dallyn Putz, CEN ,12,0.115,0.000,-1,1,2018
+TJ Deardorff, COE ,13,0.104,0.000,-1,1,2018
+Alec Hensley, SIM ,25,0.061,0.000,-2,2,2018
+Nolan Weber, COE ,19,0.142,0.000,-1,3,2018
+Ryan Steim, BVU ,30,0.077,0.000,-2,3,2018
+Andrew Wrona, LOR ,12,0.000,0.000,-1,1,2018
+James Babic, NWU ,10,0.039,0.000,-1,1,2018
+Corey Broxson, CEN ,7,0.056,0.000,-1,1,2018
+Joshua Henriksen, SIM ,8,0.098,0.000,0,1,2018
+W. Stute, NWU ,7,0.167,0.000,0,1,2018
+Jonathan Shelabarger, SIM ,5,0.078,0.000,0,0,2018
+Jacob Holub, WAR ,3,0.000,0.000,0,0,2018
+Kyle Schnobrich, LUT ,3,0.000,0.000,0,0,2018
+Brandon Ramos, DBQ ,5,0.162,0.000,0,1,2018
+M. Hoage, NWU ,3,0.000,0.000,0,0,2018
+J. Babic, NWU ,2,0.000,0.000,0,0,2018
+N. Bruno, NWU ,2,0.000,0.000,0,0,2018
+Alex Vaassen, LOR ,2,0.000,0.000,0,0,2018
+Justin Corfield, NWU ,3,0.130,0.000,0,0,2018
+J. Corfield, NWU ,2,0.000,0.000,0,0,2018
+Zack Murphy, LOR ,3,0.140,0.000,0,0,2018
+Wyatt Stute, NWU ,2,0.195,0.000,0,0,2018
+Logan Dent, BVU ,1,0.000,0.000,0,0,2018
+John Rugen, CEN ,1,0.000,0.000,0,0,2018
+Tanner Reising, LUT ,1,0.000,0.000,0,0,2018
+39, WAR ,1,0.000,0.000,0,0,2018
+J. Maxwell, NWU ,1,0.000,0.000,0,0,2018
+Kyle Hauser, CEN ,0,NA,NA,NA,NA,2018
+Phillip Mallory, DBQ ,0,NA,NA,NA,NA,2018
+Easton Bahr, BVU ,2,0.390,NA,0,1,2018
+Brody Murphy, NWU ,0,NA,NA,NA,NA,2018
+Tanner Schminke, CEN ,0,NA,NA,NA,NA,2018
+Jake Ford, CEN ,0,NA,NA,NA,NA,2018
+Jack Boehm, LUT ,0,NA,NA,NA,NA,2018
+Daniel Westra, LOR ,0,NA,NA,NA,NA,2018
+Brandon Heilskov, LUT ,1,0.390,NA,0,0,2018
+J Lowery, SIM ,0,NA,NA,NA,NA,2018
