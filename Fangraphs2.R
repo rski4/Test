@@ -3,6 +3,7 @@ library(DT)
 library(shinythemes)
 library(shinyWidgets)
 require(RCurl)
+require(ggplot2)
 
 ui <- navbarPage("IIAC Fangraphs",
   
@@ -43,7 +44,8 @@ ui <- navbarPage("IIAC Fangraphs",
                tableOutput("Run.Expectancy.Event"), align = "center"),
                       tags$head(tags$style("table {background-color: ghostwhite; }", media="screen", type="text/css"))),
              tabPanel("Inning"),
-             tabPanel("Count"),
+             tabPanel("Count", fluidRow(plotOutput("Count.Runs.Created")), 
+                      fluidRow(plotOutput("Count.Triple.Slash")), align = "center"),
              tabPanel("Win Probability"),
              tabPanel("Park Factors")
              ),
@@ -107,6 +109,33 @@ server <- function(input, output) {
   
   output$Player.Spray.Chart <- renderPlot({
     spray.chart(input$'batterID')})
+  
+  
+  count <- read.csv(text=getURL("https://raw.githubusercontent.com/rski4/Test/master/League%20Count%20Analysis.txt"), sep=" ")
+  
+  count <- as.data.frame(count)
+  count$Obp <- with(count, round((Walk + Hit) / N, 3))
+  
+  triple.slash <- count[,c("count","BA", "Obp", "Slg")]
+  triple.slash.gg <- melt(count[,c('count','BA','Obp','Slg')],id.vars = 1)
+  
+  output$Count.Runs.Created <- renderPlot({
+    ggplot(data = count, aes(x = count, y = RC.AB)) +
+      geom_col(fill = "firebrick") +
+      ggtitle("Runs Created \nper Opportunity") +
+      theme(plot.title = element_text(face = "bold", size = 18),
+            axis.text = element_text(face = "bold", size = 12),
+            axis.title = element_text(face = "bold", size = 14))
+  })
+  
+  output$Count.Triple.Slash <- renderPlot({
+    ggplot(data = triple.slash.gg, aes(x = count, y = value)) +
+      geom_col(aes(fill = variable), position = "dodge") +
+      ggtitle("Avg/Obp/Slg\nby Count") +
+      theme(plot.title = element_text(face = "bold", size = 18),
+            axis.text = element_text(face = "bold", size = 12),
+            axis.title = element_text(face = "bold", size = 14))
+  })
 
     }
 
