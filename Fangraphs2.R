@@ -5,6 +5,8 @@ library(shinyWidgets)
 require(RCurl)
 require(ggplot2)
 
+# Testing with a comment
+
 ui <- navbarPage("IIAC Fangraphs",
   
   setBackgroundColor(rgb(178,34,34,200, maxColorValue = 255)),
