@@ -24,8 +24,8 @@ ui <- navbarPage("IIAC Fangraphs",
              ),
   
   navbarMenu("Pitching",
-             tabPanel("Standard"),
-             tabPanel("Advanced")
+             tabPanel("Standard", dataTableOutput("Pitching.Stats.Standard")),
+             tabPanel("Advanced", dataTableOutput("Pitching.Stats.Advanced")) 
              ),
   
   navbarMenu("Team",
@@ -82,6 +82,10 @@ server <- function(input, output) {
   play=rbind(play17, play18)
   
   eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Spray%20Chart.R")))
+  pitch.adv = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/IIACpitching.adv.csv"))
+  ind.pitch = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/IIACIndPitching.csv"))
+  bat.adv = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/hittingIIAC.csv"))
+
   
   output$Batting.Stats.Standard <- renderDataTable(
     ind.bat[order(ind.bat$year, decreasing = TRUE),],
@@ -91,7 +95,7 @@ server <- function(input, output) {
   )
   
   output$Batting.Stats.Advanced <- renderDataTable(
-    rv.player[order(rv.player$Runs.Created, decreasing = TRUE),],
+    bat.adv[order(bat.adv$year, decreasing = TRUE),],
     filter = 'top',
     rownames = FALSE,
     options = list(pageLength = 50, autoWidth = TRUE)
@@ -138,7 +142,19 @@ server <- function(input, output) {
             axis.text = element_text(face = "bold", size = 12),
             axis.title = element_text(face = "bold", size = 14))
   })
-
+  output$Pitching.Stats.Standard <- renderDataTable(
+    ind.pitch[order(ind.pitch$year, decreasing = TRUE),],
+    filter = 'top',
+    rownames = FALSE,
+    options = list(pageLength = 50, autoWidth = TRUE)
+  )
+  
+  output$Pitching.Stats.Advanced <- renderDataTable(
+    pitch.adv[order(pitch.adv$year, decreasing = TRUE),],
+    filter = 'top',
+    rownames = FALSE,
+    options = list(pageLength = 50, autoWidth = TRUE)
+  )
     }
 
 shinyApp(ui = ui, server = server)
