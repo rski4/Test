@@ -4,66 +4,7 @@ library(shinythemes)
 library(shinyWidgets)
 require(RCurl)
 require(ggplot2)
-
-# Testing with a comment
-
-ui <- navbarPage("IIAC Fangraphs",
-  
-  setBackgroundColor(rgb(178,34,34,200, maxColorValue = 255)),
-  
-  selected = "Home",
-  
-  tabPanel("Home",
-           tags$h1("Blog"),
-           tags$p("Blog will go here")
-           ),
-      
-  navbarMenu("Batting",
-             tabPanel("Standard", dataTableOutput("Batting.Stats.Standard")),
-             tabPanel("Advanced", dataTableOutput("Batting.Stats.Advanced"))
-             ),
-  
-  navbarMenu("Pitching",
-             tabPanel("Standard", dataTableOutput("Pitching.Stats.Standard")),
-             tabPanel("Advanced", dataTableOutput("Pitching.Stats.Advanced")) 
-             ),
-  
-  navbarMenu("Team",
-             tabPanel("Standard"),
-             tabPanel("Advanced"),
-             tabPanel("Spray Charts"),
-             tabPanel("Base Runners"),
-             tabPanel("Out"),
-             tabPanel("Count")
-             ),
-  
-  navbarMenu("IIAC",
-             tabPanel("Run Expectancy", fluidRow(
-                      tableOutput("Run.Expectancy"), align = "center"),
-                      tags$head(tags$style("table {background-color: ghostwhite; }", media="screen", type="text/css"))
-                      ),
-             tabPanel("Run Values", fluidRow(
-               tableOutput("Run.Expectancy.Event"), align = "center"),
-                      tags$head(tags$style("table {background-color: ghostwhite; }", media="screen", type="text/css"))),
-             tabPanel("Inning"),
-             tabPanel("Count", fluidRow(plotOutput("Count.Runs.Created")), 
-                      fluidRow(plotOutput("Count.Triple.Slash")), align = "center"),
-             tabPanel("Win Probability"),
-             tabPanel("Park Factors")
-             ),
-  
-  navbarMenu("Player",
-             tabPanel("Spray Charts", textInput("batterID", h3("Batter ID"), 
-                                                value = "Enter batterID"),
-                      plotOutput("Player.Spray.Chart")),
-             tabPanel("Base Runners"),
-             tabPanel("Out"),
-             tabPanel("Count")
-             ),
-  
-  tabPanel("Glossary")
-)
-
+require(data.table)
 
 server <- function(input, output) {
   output$Blog = renderText({print("Blog will go here")})
@@ -85,7 +26,7 @@ server <- function(input, output) {
   pitch.adv = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/IIACpitching.adv.csv"))
   ind.pitch = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/IIACIndPitching.csv"))
   bat.adv = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/hittingIIAC.csv"))
-
+  
   
   output$Batting.Stats.Standard <- renderDataTable(
     ind.bat[order(ind.bat$year, decreasing = TRUE),],
@@ -111,7 +52,7 @@ server <- function(input, output) {
     base.out.re[order(base.out.re$outs_0, decreasing = FALSE),]},
     hover = TRUE,
     spacing = 'l'
-    )
+  )
   
   output$Player.Spray.Chart <- renderPlot({
     spray.chart(input$'batterID')})
@@ -155,6 +96,4 @@ server <- function(input, output) {
     rownames = FALSE,
     options = list(pageLength = 50, autoWidth = TRUE)
   )
-    }
-
-shinyApp(ui = ui, server = server)
+}
