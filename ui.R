@@ -15,8 +15,11 @@ ui <- navbarPage("IIAC Fangraphs",
                  selected = "Home",
                  
                  tabPanel("Home",
-                          tags$h1("Blog"),
-                          tags$p("Blog will go here")
+                          fluidPage(
+                            titlePanel("Blog"),
+                            
+                            fluidRow(
+                              column(12,includeHTML("IIACBatChange.html"))))
                  ),
                  
                  navbarMenu("Batting",
