@@ -19,7 +19,7 @@ ui <- navbarPage("IIAC Fangraphs",
                             titlePanel("Blog"),
                             
                             fluidRow(
-                              column(12,includeHTML("IIACBatChange.html"))))
+                              column(12,includeHTML("IIAC_BatChange/IIACBatChange.html"))))
                  ),
                  
                  navbarMenu("Batting",
