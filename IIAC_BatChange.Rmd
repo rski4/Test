@@ -1,0 +1,306 @@
+---
+title: "The Effects of the Bat Change in the IIAC"
+author: "Luke Smailes"
+date: "November 2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+After the 2010 season, the standard for aluminum baseball bats was changed across many levels including the NCAA, a majority of high school associations, and all the way down to little league. A major surge in offensive numbers promted the NCAA to make this change. From 2008-2010, runs were up 14% while home runs were up 38%. While the main aims were to fix D-I play and get players hoping to reach that level accustomed to using the same bats, the effects trickled down to Division-III baseball and the Iowa Conference.
+
+A lot of people will tell you that offense is what makes the game of baseball exciting, so why would anyone want to dull it down? When you look at the science behind the play from pre-2011, the BESR era, it's alot easier to understand the change.
+
+The previous bat performance standard, BESR (Ball Exit Speed Ratio) is the ratio of the speed with which the ball exits the collision with the bat divided by the total speed of the bat and ball before the collision. (Dr. Daniel A. Russell - Penn St.)
+
+$BESR = \frac{V_\text{exit}}{V_\text{ball} + V_\text{bat}}$
+
+The offensive numbers were staggering through this era, but pitchers were also being put in very dangerous situations. Being the closest defender in play to the hitter made them extremely susceptible to getting drilled with unavoidable come-backers. ESPN's Sports Science found that a 90mph pitch could come off a BESR bat at 108mph which could come back to the mound in .0375 seconds with 4,000 lbs. of force.
+
+
+With this information, there was the realization that a change needed to be made and that came with mandating the use bats that met the BBCOR standards. BBCOR (Batted Ball Coefficient of Restitution) essentially gauges the "trampoline effect" that the bat has on the ball, and 0.5 was set to be the maximum coefficient. This means that BBCOR bat's coefficient of restitution was only slightly higher than that of a wood bat, which the NCAA used up until 1973. The sweet spot of bats went from being roughly 5 inches with BESR bats to roughly 3 inches with BBCOR bats, causing balls to leave the bat 5% slower on average.
+
+```{r echo=FALSE, warning=FALSE}
+#Luke Smailes
+#26 October 2018
+#The Effects of The Bat Change On The IIAC
+
+rm(list=ls())
+setwd("~/Desktop/Baseball Analytics/IIAC/Blog Post 1")
+teams <- read.csv("IIACTeamData.bp1.csv")
+besr.teams <- subset(teams, year < 2011)
+bbcor.teams <- subset(teams, year >= 2011)
+hitting1 <- read.csv("IIAC_Batting.bp1.csv") 
+adv.hitting1 <- read.csv("hittingIIAC.bp1.csv")
+pitching1 <- read.csv("IIACIndPitching.bp1.csv")
+adv.pitching1 <- read.csv("IIACpitching.adv.bp1.csv")
+hitting2 <- na.omit(hitting1)
+adv.hitting2 <- na.omit(adv.hitting1)
+pitching2 <- na.omit(pitching1)
+adv.pitching2 <- na.omit(adv.pitching1)
+hitting <- subset(hitting2, ab >= 25)
+adv.hitting <- subset(adv.hitting2, pa >= 30)
+pitching <- subset(pitching2, ip >= 15)
+adv.pitching <- subset(adv.pitching2, ip > 15)
+
+# with(adv.hitting, mean(wOBA)) #All-Time Mean
+# with(adv.hitting, mean(wRC)) #All_time Mean
+
+#Bat Change Classifications
+besr.hitting <- subset(hitting, year < 2011)
+besr.adv.hitting <- subset(adv.hitting, year < 2011)
+bbcor.hitting <- subset(hitting, year >= 2011)
+bbcor.adv.hitting <- subset(adv.hitting, year >= 2011)
+besr.pitching <- subset(pitching, year < 2011)
+besr.adv.pitching <- subset(adv.pitching, year < 2011)
+bbcor.pitching <- subset(pitching, year >= 2011)
+bbcor.adv.pitching <- subset(adv.pitching, year >= 2011)
+
+#with(besr.adv.hitting, mean())
+#with(bbcor.adv.hitting, mean())
+
+# with(besr.hitting, mean(X2b))
+# with(bbcor.hitting, mean(X2b))
+# 
+# with(besr.hitting, sum(r))
+# with(bbcor.hitting, sum(r))
+# 
+# with(besr.teams, mean(sh))
+# with(bbcor.teams, mean(sh))
+# with(besr.teams, sum(h))
+# with(bbcor.teams, sum(h))
+# 
+# with(besr.hitting, mean(slg.))
+# with(bbcor.hitting, mean(slg.))
+# with(besr.teams, mean(slg.))
+# with(bbcor.teams, mean(slg.))
+
+# sum(besr.teams$hr) / sum(besr.teams$G) #HR/Game per team
+# 2*(sum(besr.teams$hr) / sum(besr.teams$G)) #Approximation of HR/Game
+# 
+# sum(bbcor.teams$hr) / sum(bbcor.teams$G) #HR/Game per team
+# 2*(sum(bbcor.teams$hr) / sum(bbcor.teams$G)) #Approximation of HR/Game
+# 
+# with(besr.adv.pitching, mean(FIP))
+# with(bbcor.adv.pitching, mean(FIP))
+# 
+# with(besr.teams, mean(e))
+# with(bbcor.teams, mean(e))
+# 
+# sum(besr.teams$e) / sum(besr.teams$G) #E/Game per team
+# 2*(sum(besr.teams$e) / sum(besr.teams$G)) #Approximation of HE/Game
+# 
+# sum(bbcor.teams$e) / sum(bbcor.teams$G) #E/Game per team
+# 2*(sum(bbcor.teams$e) / sum(bbcor.teams$G)) #Approximation of E/Game
+# 
+# with(besr.teams, sum(sh))
+# with(bbcor.teams, sum(sh))
+# 
+# sum(besr.teams$r) / sum(besr.teams$G) #R/Game per team
+# 2*(sum(besr.teams$r) / sum(besr.teams$G)) #Approximation of R/Game
+# 
+# sum(bbcor.teams$r) / sum(bbcor.teams$G) #R/Game per team
+# 2*(sum(bbcor.teams$r) / sum(bbcor.teams$G)) #Approximation of R/Game
+
+hit02 <- subset(besr.teams, year == 2002)
+hit03 <- subset(besr.teams, year == 2003)
+hit04 <- subset(besr.teams, year == 2004)
+hit05 <- subset(besr.teams, year == 2005)
+hit06 <- subset(besr.teams, year == 2006)
+hit07 <- subset(besr.teams, year == 2007)
+hit08 <- subset(besr.teams, year == 2008)
+hit09 <- subset(besr.teams, year == 2009)
+hit10 <- subset(besr.teams, year == 2010)
+hit11 <- subset(bbcor.teams, year == 2011)
+hit12 <- subset(bbcor.teams, year == 2012)
+hit13 <- subset(bbcor.teams, year == 2013)
+hit14 <- subset(bbcor.teams, year == 2014)
+hit15 <- subset(bbcor.teams, year == 2015)
+hit16 <- subset(bbcor.teams, year == 2016)
+hit17 <- subset(bbcor.teams, year == 2017)
+hit18 <- subset(bbcor.teams, year == 2018)
+
+hr02 <- with(hit02, mean(hr))
+hr03 <- with(hit03, mean(hr))
+hr04 <- with(hit04, mean(hr))
+hr05 <- with(hit05, mean(hr))
+hr06 <- with(hit06, mean(hr))
+hr07 <- with(hit07, mean(hr))
+hr08 <- with(hit08, mean(hr))
+hr09 <- with(hit09, mean(hr))
+hr10 <- with(hit10, mean(hr))
+hr11 <- with(hit11, mean(hr))
+hr12 <- with(hit12, mean(hr))
+hr13 <- with(hit13, mean(hr))
+hr14 <- with(hit14, mean(hr))
+hr15 <- with(hit15, mean(hr))
+hr16 <- with(hit16, mean(hr))
+hr17 <- with(hit17, mean(hr))
+hr18 <- with(hit18, mean(hr))
+
+x <- data.frame("Avg.HR" = c(hr02, hr03, hr04, hr05, hr06, hr07, hr08, hr09, hr10, hr11, hr12, hr13, hr14, hr15, hr16, hr17, hr18), "Season" = 2002:2018, stringsAsFactors = FALSE)
+#y <- data.frame("Avg. HR" = hr02:hr18, "Season" = 2002:2018)
+
+#library(ggplot2)
+# hr.season <- ggplot(data=x, aes(x = Season, y = Avg.HR)) +
+#   geom_bar(stat="identity", fill = "steelblue") +
+#   geom_text(aes(label=Season), vjust=-0.3, size=3.5, main = "IIAC Average HRs per Season") +
+#   theme_minimal()
+  
+
+#hr.season
+
+barplot(x$Avg.HR, x$Season, ylim = c(0,30),
+        col = ifelse(x$Season > 2010, "red", "blue"), main = "Average HR per Season", xlab = "Season", ylab = "Avg. HR")
+text(1500,27, "26", cex = 1)
+text(3700,25, "24", cex = 1)
+text(6300,27, "26.5", cex = 1)
+text(9000,25, "23.8", cex = 1)
+text(10800,15.5, "14.2", cex = 1)
+text(13400,14.5, "13.3", cex = 1)
+text(15600,17, "15.6", cex = 1)
+text(18000,22, "21.2", cex = 1)
+text(20500,24.5, "23.6", cex = 1)
+text(23000,12, "11.1", cex = 1)
+text(25200,11, "10.4", cex = 1)
+text(27600,8, "7", cex = 1)
+text(30400,11.5, "10.9", cex = 1)
+text(32700,17.5, "16.8", cex = 1)
+text(35000,21, "20.3", cex = 1)
+text(37500,14.5, "13.9", cex = 1)
+text(40000,13.2, "12.4", cex = 1)
+
+text(1500,1, "02", cex = 1, font = 2)
+text(3700,1, "03", cex = 1, font = 2 )
+text(6300,1, "04", cex = 1, font = 2)
+text(8800,1, "05", cex = 1, font = 2)
+text(10800,1, "06", cex = 1, font = 2)
+text(13400,1, "07", cex = 1, font = 2)
+text(15600,1, "08", cex = 1, font = 2)
+text(18000,1, "09", cex = 1, font = 2)
+text(20500,1, "10", cex = 1, font = 2)
+text(23000,1, "11", cex = 1, font = 2)
+text(25200,1, "12", cex = 1, font = 2)
+text(27600,1, "13", cex = 1, font = 2)
+text(30400,1, "14", cex = 1, font = 2)
+text(32700,1, "15", cex = 1, font = 2)
+text(35000,1, "16", cex = 1, font = 2)
+text(37500,1, "17", cex = 1, font = 2)
+text(40000,1, "18", cex = 1, font = 2)
+
+text(10800,28.5, "BESR", cex = 1, font = 2)
+text(32700,28.5, "BBCOR", cex = 1, font = 2)
+
+
+
+merged.adv.hitting <- merge(besr.adv.hitting, bbcor.adv.hitting, by = 'Player')
+merged.adv.hitting$wRC.Diff <- merged.adv.hitting$wRC.x - merged.adv.hitting$wRC.y
+
+bp1_teams <- read.csv("BP1_Teams.csv")
+#bp1_teams <- round(bp1_teams$BESR,1)
+#bp1_teams <- round(bp1_teams$BBCOR,1)
+
+# sum(hit04$sb)
+# sum(hit03$sb)
+# sum(hit02$sb)
+# 
+# sum(hit07$sb)
+# sum(hit06$sb)
+# sum(hit05$sb)
+# sum(hit13$sb)
+# sum(hit08$sb)
+# 
+# sum(hit09$sh)
+# sum(hit08$sh)
+# sum(hit07$sh)
+# sum(hit06$sh)
+# sum(hit05$sh)
+# sum(hit04$sh)
+# sum(hit03$sh)
+# sum(hit02$sh)
+# sum(hit18$sh)
+# 
+# 
+# mean(hit04$fld.)
+# mean(hit03$fld.)
+# 
+# mean(hit07$fld.)
+# mean(hit06$fld.)
+# mean(hit08$fld.)
+
+hit <- read.csv("IIACTeamData.csv")
+#hit <- subset(hitting, year != "2014")
+
+hit$X1b = hit$h - hit$hr - hit$X3b - hit$X2b
+hit$wOBA = NA
+hit$wOBA = ((.39*hit$bb) + (.42*hit$hbp) + (.54*hit$X1b) + (.91*hit$X2b) + (1.22*hit$X3b) + (1.46*hit$hr))/(hit$ab + hit$bb + hit$hbp + hit$sf) 
+
+hit$ISO = (hit$X2b + (2*hit$X3b) + (3*hit$hr))/(hit$ab)
+
+hit$pa = (hit$ab + hit$bb + hit$hbp +  hit$sf + hit$sh)
+mean.wOBA = mean(hit$wOBA, na.rm = TRUE)
+mean.OBP = mean(hit$ob., na.rm = TRUE)
+wOBA.scale = mean.OBP/mean.wOBA
+hit$wRAA = ((hit$wOBA - mean.wOBA)/(wOBA.scale)) * hit$pa
+
+sum.r = sum(hit$r, na.rm = TRUE)
+sum.pa = sum(hit$pa, na.rm = TRUE)
+hit$wRC = (((hit$wOBA - mean.wOBA) / wOBA.scale) + (sum.r/sum.pa)) * hit$pa
+
+hit.besr <- subset(hit, year < 2011)
+hit.bbcor <- subset(hit, year >= 2011)
+
+# mean(hit.besr$wOBA)
+# mean(hit.bbcor$wOBA)
+# 
+# mean(hit.besr$wRC)
+# mean(hit.bbcor$wRC)
+# 
+# mean(hit.besr$wRAA)
+# mean(hit.bbcor$wRAA)
+# 
+# mean(hit.besr$ISO)
+# mean(hit.bbcor$ISO)
+
+hit.besr2 <- subset(hit, year < 2011 & Team != "Cornell College")
+#mean(hit.besr2$wRC)
+
+```
+
+After looking at the data in the plot above of average home runs per team per season, for the most part, we see what we expected. The BESR era with the livelier bats produced more homers, especially from 2002-2005 and then again in 2009 and 2010. But what happened from 2006 to 2008? Something was going on. We've seen spring weather in Iowa make for some tough conditions to play in, but it doesn't seem likely that constant bad weather was the main cause for a 3 year dip in power numbers.
+
+
+Maybe it just so happened that the conference teams were more focused on winning with speed, defense, and good pitching while playing a form of "small ball". However, more bases were stolen from 02-05, as shown in Table 1, when the home run numbers were high. Also, we see that there was not a lot of variance in fielding percentages, as they were pretty constant around .940. 
+
+The most likely cause a simply random lack of power throughout the conference drom 2006-2008 without a concerned effort to change game plans. I think the coaches began to react to the lack of power that their teams naturally had but didn't make philosophical changes prior to the decreased power outputs. Because of this, we see more sacrifice bunts as the home run numbers decrease. In 2003, there were 163 total sac bunts in the Iowa Conference. By 2007, with the lowest home run average of the BESR era, there were a total of 259. Additionally, 2002 saw 169 sac bunts and 2008 saw 239. Bunting definitely became a bigger part of the game plan of teams.
+
+```{r echo=FALSE}
+knitr::kable(bp1_teams, caption = "Table 1")
+```
+
+In 2004 4 teams hit at least 25 home runs (with Simpson at 47 and Coe at 46). There were only 3 teams (Buena Vista - 2008, Buena Vista - 2009, Loras - 2009) that hit 25 or more home runs from 2006-2009. The bats were the same, but pitching and the overall offensive makeup of teams was different. I would have predicted that with better bats, pitchers would be more prone to pitch around hitters, resulting in more walks. However, the walks were similar between the two eras.  
+
+In the first year of the BBCOR era (2011), an average IIAC team hit 12.5 less home runs with their new bats than in the previous year. From 2011-2014, only 3 teams (Buena Vista - 2011, Coe - 2011, and Coe - 2012) hit 20 home runs or more. Central College went from hitting 32 home runs in 2010 to hitting 3 home runs in 2011. In 2013, we see the extreme lull in home runs. Only one team cracked double digits (Wartburg - 17 HRs) and Luther did not hit a single one. 2014 was better, but then 2015 and 2016 happened...
+
+The bar plot shows what seem to be power surges in 2015 and 2016. However, two teams have dominated the BBCOR era so far and have had big contributions to those averages. First, the 2015 Wartburg team clubbed 45 home runs (ranking second nationally) with a .158 ISO en route to a 20-8 conference record and 33 total wins. Wartburg amazingly finished the season with the top 5 home run hitters in the conference. Conference player of the year and Wartburg outfielder, Jacob Thumann, hit 8 homers, tied for third on his team.
+
+The next season, the IIAC saw another offensive powerhouse crush opposing pitchers. This time it was Buena Vista who hit 46 home runs with a .185 ISO to go along with a team on-base percentage of .417. They finished with a 33-11 record and were only bested by Wartburg in the conference. The Beavers were led by their conference player of the year, Neil Marshall, who like Thumann, ranked third on his team in home runs with 7. He also lead D-III baseball in doubles with 25. 
+
+
+The offensive numbers that Wartburg and Buena Vista put up in those seasons would have been good for the BESR era, let alone with BBCOR bats. Without these two juggernauts, the home run averages would have been normal for the BBCOR era. 
+
+```{r echo=FALSE, warning=FALSE}
+table2 <- read.csv("Table2.csv")
+
+library(knitr)
+kable(table2)
+```
+
+When looking at the advanced metrics in Table 2, everything makes sense except for wRC. For the current analysis, I applied the same linear weights to both eras, so the data is telling us that there were slightly more runs created since BBCOR bats were mandated. Once I dug a little deeper, I realized that there were a couple of factors that were attributing to this unexpected result. First, Cornell College brought down the averages in the BESR era. They were 50 runs below the average wRC during the era and only climbed above 242 wRC once in 2003. Finally in 2011, the first year of BBCOR, Cornell posted 129 wRC as a team in what would turn out to be their final year competing in the Iowa Conference. If Cornell is removed from our sample, the average wRC of the BESR era is 247. The Rams are now enjoying the Midwest Conference (or perhaps the rest of the conference is enjoying them). 
+
+Another reason why we might see a higher average wRC in the BBCOR era is the extremes on either end of the metric. I took the bottom 20% (16 teams for BESR and 14 teams for BBCOR) of seasonal wRC totals from both eras and I found that the average was 188 wRC in the BESR era and 193 wRC in the BBCOR era. Then I did the same thing with the other extreme - the best offensive teams in the conference since 2002. The top 20% of BESR teams averaged 295 wRC and BBCOR teams averaged 300 wRC. This shows us that the BESR era had more bad teams, like Cornell, weighing them down while the BBCOR era had a couple of great offensive teams that brought the overall BBCOR average up despite using bats with less pop.
+
+The takeaways from this analysis are that we need to either consider the eras separately or include additional parameters in future models to account for the disparities. For example, If I were to run a linear regression, I would include a dummy variable to account for the two different eras.
+
+The NCAA wanted to bring back some of the strategic aspects of the game, while also making pitchers and infielders less prone to severe injury. So far, the switch to BBCOR bats has been successful in curbing outrageous home run totals, but time will tell if these numbers will remain constant or if we will see more teams have 40+ home runs seasons in the future.  
