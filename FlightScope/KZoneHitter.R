@@ -9,6 +9,8 @@ KZoneHitter = function(df = bp, player = "Ski ", hit = FALSE) {
     z = factor(c(7, 4, 1, 8, 5, 2, 9, 6, 3))
   )
   
+  df$hit.flag = with(df, ifelse(is.na(hit.ball.speed), "Not Hit", "Hit"))
+  
   if(hit)
          ggplot() + ggtitle(as.character(player)) +
            xlim(-1.5, 1.5) + xlab("") +
@@ -26,7 +28,7 @@ KZoneHitter = function(df = bp, player = "Ski ", hit = FALSE) {
            geom_rect(data = k.zone,
                      aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
                      color = "grey20", fill = "white") +
-           geom_point(data = df[which(df$batter == player),], aes(x = px, y = pz))
-  
-}
-
+           geom_point(data = df[which(df$batter == player),], aes(x = px, y = pz, color = hit.flag)) +
+           scale_color_manual(values = c("Hit" = "red", "Not Hit" = "black"),
+                              name = "")
+  }
