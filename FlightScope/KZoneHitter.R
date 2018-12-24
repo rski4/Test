@@ -21,7 +21,7 @@ KZoneHitter = function(df = bp, player = "Ski ", hit = FALSE) {
                      color = "grey20", fill = "white") +
            geom_point(data = df[which(df$batter == player),], aes(x = px, y = pz, size = hit.ball.speed, color = hit.ball.launch.v)) +
            scale_color_gradient(low="blue", high="red", name = "Launch Angle") +
-           scale_size(range = c(0.01,3), name = "Exit Velo") +
+           scale_size(range = c(1,5), name = "Exit Velo") +
            theme(legend.text = element_text(size = 14),
                  title = element_text(size = 18))
   else
