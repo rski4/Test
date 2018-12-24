@@ -73,7 +73,7 @@ SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angl
           title = element_text(size = 18, face = "bold"),
           legend.position = "bottom") +
     xlab("") + ylab("") + ggtitle(as.character(player)) +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y, color = hit.ball.speed)) +
+    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y, color = hit.ball.speed), size = 3) +
     scale_color_gradient(low="blue", high="red", name = "Exit Velo")
   
   else
