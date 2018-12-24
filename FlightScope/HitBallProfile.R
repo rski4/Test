@@ -44,11 +44,14 @@ ggplot() +
   geom_segment(aes(x = 0, xend = 100, y = 0, yend = 0), color = "grey50") +
   geom_segment(aes(x = 0, xend = 70, y = 0, yend = 70), color = "grey50") +
   geom_arc(aes(x0 = 0, y0 = 0, r = 20, start = pi/4, end = pi/2), color = "grey50") +
-  annotate(geom="text", x=80, y=73, label="100 mph", color="grey10", size = 5) +
+  annotate(geom="text", x=80, y=73, label="100 MPH", color="grey10", size = 5) +
   annotate(geom="text", x=12, y=6, label="45", color="grey10", size = 5) +
   geom_point(data = df[which(df$batter == player),], aes(x = evla.x, y = evla.y)) +
-  scale_y_continuous(breaks = c(100,90,80,70,60)) +
+  scale_y_continuous(breaks = c(100,90,80,70,60,-60,-70,-80,-90,-100), 
+                     labels = c("100 MPH", "90 MPH","80 MPH", "70 MPH", "60 MPH", 
+                                "60 MPH", "70 MPH", "80 MPH", "90 MPH", "100 MPH")) +
   theme(axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 14),
         axis.ticks.x = element_blank(),
         axis.title.x = element_blank(),
         axis.title.y = element_blank(),
