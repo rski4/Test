@@ -8,7 +8,7 @@ SprayChartFS = function(df = bp, player = "Ski ") {
   
   ggplot() +
     geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y), size = 3) +
-    xlim(-240,240) + ylim(0,400) +
+    xlim(-240,240) + ylim(0,385) +
     geom_segment(aes(x = 0, xend = -236, y = 0, yend = 236)) +
     geom_segment(aes(x = 0, xend = 226, y = 0, yend = 226)) +
     geom_curve(aes(x = -236, xend = 226, y = 236, yend = 226), curvature = -.60) +
