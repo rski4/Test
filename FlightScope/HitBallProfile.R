@@ -44,8 +44,8 @@ ggplot() +
   geom_segment(aes(x = 0, xend = 100, y = 0, yend = 0), color = "grey50") +
   geom_segment(aes(x = 0, xend = 70, y = 0, yend = 70), color = "grey50") +
   geom_arc(aes(x0 = 0, y0 = 0, r = 20, start = pi/4, end = pi/2), color = "grey50") +
-  annotate(geom="text", x=80, y=73, label="100 mph", color="grey88", size = 5) +
-  annotate(geom="text", x=12, y=6, label="45", color="grey88", size = 5) +
+  annotate(geom="text", x=80, y=73, label="100 mph", color="grey10", size = 5) +
+  annotate(geom="text", x=12, y=6, label="45", color="grey10", size = 5) +
   geom_point(data = df[which(df$batter == player),], aes(x = evla.x, y = evla.y)) +
   scale_y_continuous(breaks = c(100,90,80,70,60)) +
   theme(axis.text.x = element_blank(),
