@@ -23,7 +23,7 @@ KZoneHitter = function(df = bp, player = "Ski ", hit = FALSE) {
            scale_color_gradient(low="blue", high="red", name = "Launch Angle") +
            scale_size(range = c(0.01,3), name = "Exit Velo") +
            theme(legend.text = element_text(size = 14),
-                 title = element_text(size = 18, family = "bold"))
+                 title = element_text(size = 18, face = "bold"))
   else
          ggplot() + ggtitle(as.character(player)) +
            xlim(-1.5, 1.5) + xlab("") +
@@ -35,5 +35,6 @@ KZoneHitter = function(df = bp, player = "Ski ", hit = FALSE) {
            scale_color_manual(values = c("Hit" = "red", "Not Hit" = "black"),
                               name = "") +
            theme(legend.text = element_text(size = 14),
-                 title = element_text(size = 18, family = "bold"))
+                 title = element_text(size = 18, face = "bold"))
   }
+
