@@ -7,7 +7,7 @@ SprayChartFS = function(df = bp, player = "Ski ") {
   df$hc.y = with(df, cospi(abs(hit.ball.launch.h)/180)*hit.carry.dist)
   
   ggplot() +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y)) +
+    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y), size = 3) +
     xlim(-240,240) + ylim(0,400) +
     geom_segment(aes(x = 0, xend = -236, y = 0, yend = 236)) +
     geom_segment(aes(x = 0, xend = 226, y = 0, yend = 226)) +
@@ -22,7 +22,8 @@ SprayChartFS = function(df = bp, player = "Ski ") {
           panel.border=element_blank(),
           panel.grid.major=element_blank(),
           panel.grid.minor=element_blank(),
-          plot.background=element_blank()) +
+          plot.background=element_blank(),
+          title = element_text(size = 18, face = "bold")) +
     xlab("") + ylab("") + ggtitle(as.character(player))
 }
 
