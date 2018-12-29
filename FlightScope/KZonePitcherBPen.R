@@ -15,7 +15,7 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
     ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
     xlim(-3, 3) + xlab("") +
     ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type, color = pitch.speed), size = 3) +
+    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type, color = pitch.speed), size = 5) +
     geom_rect(data = k.zone,
               aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
               color = "grey20", fill = "white", alpha = .001) +
@@ -31,7 +31,7 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
     ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
     xlim(-3, 3) + xlab("") +
     ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, color = pitch.speed), size = 3) +
+    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, color = pitch.speed), size = 5) +
     geom_rect(data = k.zone,
               aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
               color = "grey20", fill = "white", alpha = .001) +
@@ -47,7 +47,7 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
     ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
     xlim(-3, 3) + xlab("") +
     ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type), size = 3) +
+    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type), size = 5) +
     geom_rect(data = k.zone,
               aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
               color = "grey20", fill = "white", alpha = .001) +
@@ -62,7 +62,7 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
     ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
     xlim(-3, 3) + xlab("") +
     ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz), size = 3) +
+    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz), size = 5) +
     geom_rect(data = k.zone,
               aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
               color = "grey20", fill = "white", alpha = .001) +
