@@ -20,7 +20,7 @@ ui <- navbarPage("Coe Statcast",
                                                            choices = list("Ski" = "Ski ", "Nolan" = "Nolan ",
                                                                           "Cam" = "Cam ", "Jordan" = "Jordan ",
                                                                           "Luke" = "Luke ", "Kevin" = "Kevin ",
-                                                                          "Colton White" = "Colton White"), selected = "Ski "),
+                                                                          "Jared White" = "Colton White"), selected = "Ski "),
                                        mainPanel(
                                          tabsetPanel(
                                            tabPanel("Spray Chart"),
@@ -34,7 +34,7 @@ ui <- navbarPage("Coe Statcast",
                                                                      choices = list("Ski" = "Ski ", "Nolan" = "Nolan ",
                                                                                     "Cam" = "Cam ", "Jordan" = "Jordan ",
                                                                                     "Luke" = "Luke ", "Kevin" = "Kevin ",
-                                                                                    "Colton White" = "Colton White"), selected = "Ski "),
+                                                                                    "Jared White" = "Colton White"), selected = "Ski "),
                                        mainPanel(
                                          tabsetPanel(
                                            tabPanel("Spray Chart"),
@@ -48,7 +48,7 @@ ui <- navbarPage("Coe Statcast",
                                                                        choices = list("Ski" = "Ski ", "Nolan" = "Nolan ",
                                                                                       "Cam" = "Cam ", "Jordan" = "Jordan ",
                                                                                       "Luke" = "Luke ", "Kevin" = "Kevin ",
-                                                                                      "Colton White" = "Colton White"), selected = "Ski "),
+                                                                                      "Jared White" = "Colton White"), selected = "Ski "),
                                          tabsetPanel(
                                            tabPanel("Spray Chart", checkboxInput("SprayChartCheckEVBP","Exit Velo",
                                                                                  value = FALSE),
@@ -60,16 +60,49 @@ ui <- navbarPage("Coe Statcast",
                                            tabPanel("Batted Balls",
                                                     fluidRow(column(12,plotOutput("BatBallProfileBP", width = "100%", height = "100%")),
                                                     column(5, plotOutput("EVvLABP", width = "100%", height = "100%")),
-                                                    column(5, offset = 2,plotOutput("LAvLDBP", width = "100%", height = "100%")))
+                                                    column(5, offset = 2, plotOutput("LAvLDBP", width = "100%", height = "100%")))
                                                     )
                                          )
                                        )
                                      ))),
                  
-                 navbarMenu("Pitchers",
-                            tabPanel("Game"),
-                            tabPanel("Live"),
-                            tabPanel("Bullpen"))
+                 navbarMenu("Pitchers", 
+                            tabPanel("Game", fluidPage(selectInput("player.pitch", h3("Pitcher"), 
+                                                                             choices = list("Leroy Jenkins (#99)" = "Leroy Jenkins (#99)"), selected = "Leroy Jenkins (#99)"),
+                                                       mainPanel(
+                                                         tabsetPanel(
+                                                           tabPanel("K Zone"),
+                                                           tabPanel("Pitch Selection"),
+                                                           tabPanel("Movement"),
+                                                           tabPanel("Release")
+                                                         )
+                                                       ))),
+                            tabPanel("Live", fluidPage(selectInput("player.pitch", h3("Pitcher"), 
+                                                                   choices = list("Leroy Jenkins (#99)" = "Leroy Jenkins (#99)"), selected = "Leroy Jenkins (#99)"),
+                                                       mainPanel(
+                                                         tabsetPanel(
+                                                           tabPanel("K Zone"),
+                                                           tabPanel("Pitch Selection"),
+                                                           tabPanel("Movement"),
+                                                           tabPanel("Release")
+                                                         )
+                                                       ))),
+                            tabPanel("Bullpen", fluidPage(selectInput("player.pitch", h3("Pitcher"), 
+                                                                      choices = list("Leroy Jenkins (#99)" = "Leroy Jenkins (#99)"), selected = "Leroy Jenkins (#99)"),
+                                                          mainPanel(
+                                                            tabsetPanel(
+                                                              tabPanel("K Zone", checkboxInput("KZonePitcherBPenSpeed","Speed",
+                                                                                              value = FALSE),
+                                                                       checkboxInput("KZonePitcherBPenType","Pitch Type",
+                                                                                     value = FALSE),
+                                                                       plotOutput("KZoneBPenPitch")),
+                                                              tabPanel("Movement",
+                                                                       fluidRow(column(5,plotOutput("MovementBPenPFX", width = "100%", height = "100%")),
+                                                                                column(5,offset = 2, plotOutput("MovementBPen", width = "100%", height = "100%")))),
+                                                              tabPanel("Release",
+                                                                       plotOutput("ReleaseBPen"))
+                                                            )
+                                                          ))))
                  
                  )
 
@@ -86,6 +119,8 @@ server <- function(input, output) {
   eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/KZoneHitter.R")))
   
   eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/HitBallProfile.R")))
+  
+  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/KZonePitcherBPen.R")))
   
   hit.leader = ddply(bp, .(batter), summarise,
                      Max.Exit.Velo = format(round(max(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
@@ -120,6 +155,35 @@ server <- function(input, output) {
                                  ylab("Launch Angle") +
                                  theme(axis.text = element_text(size = 14),
                                        axis.title = element_text(size = 16, face = "bold")), height = 500, width = 500)
+  
+  output$KZoneBPenPitch <- renderPlot({KZonePitcherBPen(player = input$'player.pitch', speed = input$'KZonePitcherBPenSpeed', pitch.type = input$'KZonePitcherBPenType')}, height = 800, width = 700)
+  
+  output$MovementBPenPFX <- renderPlot(ggplot() +
+                                      ggtitle("Pitcher View") +
+                                      xlab("Horizontal Break last 40ft") + ylab("Vertical Break last 40ft") +
+                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), aes(x = pfxx, y = pfxz), size = 4) +
+                                      theme(axis.text = element_text(size = 14),
+                                            axis.title = element_text(size = 16, face = "bold"),
+                                            title = element_text(size = 18, face = "bold")), height = 500, width = 500)
+  
+  output$MovementBPen <- renderPlot(ggplot() +
+                                      ggtitle("Hitter View") +
+                                      xlab("Horizontal Break") + ylab("Vertical Break") +
+                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), aes(x = pitch.break.h, y = pitch.break.ind.v), size = 4) +
+                                      theme(axis.text = element_text(size = 14),
+                                            axis.title = element_text(size = 16, face = "bold"),
+                                            title = element_text(size = 18, face = "bold")), height = 500, width = 500)
+  
+  output$ReleaseBPen <- renderPlot(ggplot() +
+                                     xlim(-3,3) +
+                                     ylim(0, 7) +
+                                     xlab("Release Side") + ylab("Release Height") +
+                                     ggtitle("Release") +
+                                     geom_point(data = bp, aes(x = pitch.release.side, y = pitch.release.height), size = 4) +
+                                     theme(axis.text = element_text(size = 14),
+                                           axis.title = element_text(size = 16, face = "bold"),
+                                           title = element_text(size = 18, face = "bold")), height = 500, width = 500)
+  
 }
 
 shinyApp(ui = ui, server = server)
