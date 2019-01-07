@@ -1,4 +1,5 @@
 require(ggplot2)
+require(tidyverse)
 
 HitBallProfile = function(df = bp, player = "Ski "){
   df$evla.x = with(df, cospi(abs(hit.ball.launch.v/180))*hit.ball.speed)
@@ -18,11 +19,11 @@ HitBallProfile = function(df = bp, player = "Ski "){
   return(df)
 }
 
-ggplot() +
+ggplot(data = filter(df, batter == player)) +
   xlim(0,100) + ylim(-100,100) +
   geom_segment(aes(x = 0, xend = 100, y = 0, yend = 0), color = "grey88") +
   geom_arc(aes(x0 = 0, y0 = 0, r = 100, start = (-pi/2), end = (2*pi)), color = "grey88", fill = "grey88") +
-  geom_point(data = df[which(df$batter == player),], aes(x = evla.x, y = evla.y)) +
+  geom_point(data = filter(df, batter == player), aes(x = evla.x, y = evla.y)) +
   theme(panel.background=element_blank(),
         panel.grid.major=element_blank(),
         panel.grid.minor=element_blank(),
@@ -60,4 +61,3 @@ ggplot() +
         panel.grid.minor = element_blank(),
         plot.background = element_blank())
 }
-
