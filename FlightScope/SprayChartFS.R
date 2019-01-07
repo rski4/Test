@@ -1,4 +1,5 @@
-require(ggplot2)
+library(ggplot2)
+library(tidyverse)
 
 SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angle = FALSE) {
   df$hc.x = with(df, ifelse(hit.ball.launch.h > 0, 
@@ -26,7 +27,7 @@ SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angl
           title = element_text(size = 18, face = "bold"),
           legend.position = "bottom") +
     xlab("") + ylab("") + ggtitle(as.character(player)) +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y, color = hit.ball.speed, size = hit.ball.launch.v)) +
+    geom_point(data = filter(df, batter == player), aes(x = hc.x, y = hc.y, color = hit.ball.speed, size = hit.ball.launch.v)) +
     scale_color_gradient(low="blue", high="red", name = "Exit Velo") +
     scale_size(range = c(1,6), name = "Launch Angle")
   
@@ -50,7 +51,7 @@ SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angl
           title = element_text(size = 18, face = "bold"),
           legend.position = "bottom") +
     xlab("") + ylab("") + ggtitle(as.character(player)) +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y, size = hit.ball.launch.v)) +
+    geom_point(data = filter(df, batter == player), aes(x = hc.x, y = hc.y, size = hit.ball.launch.v)) +
     scale_size(range = c(1,6), name = "Launch Angle")
   
   else if(exit.velo)
@@ -73,7 +74,7 @@ SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angl
           title = element_text(size = 18, face = "bold"),
           legend.position = "bottom") +
     xlab("") + ylab("") + ggtitle(as.character(player)) +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y, color = hit.ball.speed), size = 3) +
+    geom_point(data = filter(df, batter == player), aes(x = hc.x, y = hc.y, color = hit.ball.speed), size = 3) +
     scale_color_gradient(low="blue", high="red", name = "Exit Velo")
   
   else
@@ -95,7 +96,6 @@ SprayChartFS = function(df = bp, player = "Ski ", exit.velo = FALSE, launch.angl
           plot.background=element_blank(),
           title = element_text(size = 18, face = "bold")) +
     xlab("") + ylab("") + ggtitle(as.character(player)) +
-    geom_point(data = df[which(df$batter == player),], aes(x = hc.x, y = hc.y), size = 3)
+    geom_point(data = filter(df, batter == player), aes(x = hc.x, y = hc.y), size = 3)
 
 }
-
