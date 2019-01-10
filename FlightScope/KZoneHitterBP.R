@@ -30,7 +30,7 @@ KZoneHitter <- function(df = bp, player = "Ski ", exit.velo = FALSE) {
                      text = paste("Exit Velo:", hit.ball.speed,
                                   "<br> Launch Angle:", hit.ball.launch.v,
                                   "<br> Pitch Velo:", pitch.speed)),
-                 size = 4) +
+                 size = 4, alpha = 1/2) +
       scale_color_gradient(low="blue", high="red", name = "Exit Velo") 
   } 
   
@@ -42,10 +42,10 @@ KZoneHitter <- function(df = bp, player = "Ski ", exit.velo = FALSE) {
                      text = paste("Exit Velo:", hit.ball.speed,
                                   "<br> Launch Angle:", hit.ball.launch.v,
                                   "<br> Pitch Velo:", pitch.speed)), 
-                 size = 4) + 
+                 size = 4, alpha = 1/2) + 
       scale_color_manual(values = c("Hit" = "red", "Not Hit" = "black"),name = "")
   }
   
   ggplotly(gg1, tooltip = c("text"))
   
-  }
+}
