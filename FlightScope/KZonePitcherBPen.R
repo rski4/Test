@@ -1,4 +1,6 @@
-require(ggplot2)
+library(ggplot2)
+library(tidyverse)
+library(plotly)
 
 KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FALSE, pitch.type = FALSE){
   k.zone = data.frame(
@@ -11,65 +13,73 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
   
   df$pitch.type = "FB"
   
-  if(speed & pitch.type)
-    ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
-    xlim(-3, 3) + xlab("") +
-    ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type, color = pitch.speed), size = 5) +
+  gg <- ggplot() + 
+    ggtitle(as.character(player), subtitle = "Hitter View") +
+    xlim(-1.5, 1.5) + xlab("") +
+    ylim(1, 4.5) + ylab("") +
     geom_rect(data = k.zone,
               aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
-              color = "grey20", fill = "white", alpha = .001) +
-    scale_color_continuous(low = "red", high = "red4") +
-    labs(color = "Speed", shape = "Pitch Type") +
-    theme(title = element_text(size = 18, face = "bold"),
-          plot.background=element_blank(),
-          panel.border = element_rect(colour = "black", fill=NA),
-          legend.key = element_blank(),
-          legend.text = element_text(size = 14))
+              color = "grey20", fill = "white") +
+    theme(legend.text = element_text(size = 14),
+          title = element_text(size = 18, face = "bold"))
   
-  else if(speed)
-    ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
-    xlim(-3, 3) + xlab("") +
-    ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, color = pitch.speed), size = 5) +
-    geom_rect(data = k.zone,
-              aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
-              color = "grey20", fill = "white", alpha = .001) +
-    scale_color_continuous(low = "red", high = "red4") +
-    labs(color = "Speed") +
-    theme(title = element_text(size = 18, face = "bold"),
-          plot.background=element_blank(),
-          panel.border = element_rect(colour = "black", fill=NA),
-          legend.key = element_blank(),
-          legend.text = element_text(size = 14))
+  if(speed & pitch.type) {
+    gg1 <- gg + 
+      geom_point(data = filter(df, pitcher == player), 
+                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height, 
+                     shape = pitch.type, color = pitch.speed,
+                     text = paste("Velocity:", pitch.speed,
+                                 "<br> Spin Rate:", pitch.spin,
+                                 "<br> Spin Axis:", pitch.spin.axis,
+                                 "<br> V Break:", pitch.break.ind.v,
+                                 "<br> H Break:", -pitch.break.h)), 
+                 size = 4, alpha = 1/2) +
+      scale_color_continuous(low = "red", high = "red4") +
+      labs(color = "Speed", shape = "Pitch Type")
+  }
+    
+  else if(speed) {
+    gg1 <- gg +
+      geom_point(data = filter(df, pitcher == player), 
+                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height, 
+                     color = pitch.speed,
+                     text = paste("Velocity:", pitch.speed,
+                                 "<br> Spin Rate:", pitch.spin,
+                                 "<br> Spin Axis:", pitch.spin.axis,
+                                 "<br> V Break:", pitch.break.ind.v,
+                                 "<br> H Break:", -pitch.break.h)), 
+                 size = 4, alpha = 1/2) +
+      scale_color_continuous(low = "red", high = "red4") +
+      labs(color = "Speed")
+  }
   
-  else if(pitch.type)
-    ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
-    xlim(-3, 3) + xlab("") +
-    ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz, shape = pitch.type), size = 5) +
-    geom_rect(data = k.zone,
-              aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
-              color = "grey20", fill = "white", alpha = .001) +
-    labs(shape = "Pitch Type") +
-    theme(title = element_text(size = 18, face = "bold"),
-          plot.background=element_blank(),
-          panel.border = element_rect(colour = "black", fill=NA),
-          legend.key = element_blank(),
-          legend.text = element_text(size = 14))
+  else if(pitch.type) {
+    gg1 <- gg +
+      geom_point(data = filter(df, pitcher == player), 
+                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height, 
+                     shape = pitch.type,
+                     text = paste("Velocity:", pitch.speed,
+                                 "<br> Spin Rate:", pitch.spin,
+                                 "<br> Spin Axis:", pitch.spin.axis,
+                                 "<br> V Break:", pitch.break.ind.v,
+                                 "<br> H Break:", -pitch.break.h)), 
+                 size = 4, alpha = 1/2) +
+      labs(shape = "Pitch Type")
+  }
+    
   
-  else
-    ggplot() + ggtitle(as.character(player), subtitle = "Hitter View") +
-    xlim(-3, 3) + xlab("") +
-    ylim(0, 6) + ylab("") +
-    geom_point(data = df[which(df$pitcher == player),], aes(x = px, y = pz), size = 5) +
-    geom_rect(data = k.zone,
-              aes(xmin = x1, xmax = x2, ymin = y2, ymax = y1), 
-              color = "grey20", fill = "white", alpha = .001) +
-    scale_color_continuous(low = "red", high = "red4") +
-    labs(color = "Speed", shape = "Pitch Type") +
-    theme(title = element_text(size = 18, face = "bold"),
-          plot.background = element_blank(),
-          panel.border = element_rect(colour = "black", fill=NA))
+  else {
+    gg1 <- gg +
+      geom_point(data = filter(df, pitcher == player), 
+                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height,
+                     text = paste("Velocity:", pitch.speed,
+                                 "<br> Spin Rate:", pitch.spin,
+                                 "<br> Spin Axis:", pitch.spin.axis,
+                                 "<br> V Break:", pitch.break.ind.v,
+                                 "<br> H Break:", -pitch.break.h)),
+                 size = 4, alpha = 1/2)
+  }
   
-}
+  ggplotly(gg1, tooltip = c("text"))
+  
+  }
