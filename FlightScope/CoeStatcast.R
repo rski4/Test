@@ -1,13 +1,12 @@
-require(shiny)
-require(plyr)
-require(DT)
-require(ggplot2)
-require(ggforce)
-require(RCurl)
+library(shiny)
+library(plyr)
+library(DT)
+library(ggplot2)
+library(ggforce)
+library(RCurl)
 library(tidyverse)
 library(plotly)
 library(grid)
-library(dplyr)
 
 ui <- navbarPage("Coe Statcast",
                  
@@ -95,16 +94,11 @@ ui <- navbarPage("Coe Statcast",
                                                                       choices = list("Leroy Jenkins (#99)" = "Leroy Jenkins (#99)"), selected = "Leroy Jenkins (#99)"),
                                                           mainPanel(
                                                             tabsetPanel(
-                                                              tabPanel("Dashboard", checkboxGroupInput("PitchDashBPenPitchType", 
-                                                                                                       label = h3("Pitch Type"),
-                                                                                                       choices = list("FB" = "FB",
-                                                                                                                      "CB" = "CB",
-                                                                                                                      "CU" = "CU",
-                                                                                                                      "CH" = "CH",
-                                                                                                                      "SL" = "SL"),
-                                                                                                       selected = c("FB","CB","CU","CH","SL")),
-                                                                       div(fluidRow(column(6,plotOutput("PitchDashVeloSpinBPen", width = "100%", height = "600")),
-                                                                                column(6, plotlyOutput("PitchDashKZoneBPen", width = "450px", height = "600px"))),style = 'width:1400px;')),
+                                                              tabPanel("Dashboard",
+                                                                       div(fluidRow(column(6, plotOutput("PitchDashVeloSpinBPen", width = "100%", height = "600")),
+                                                                                column(6, plotlyOutput("PitchDashKZoneBPen", width = "450px", height = "600px"))),
+                                                                           fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "700px", width = "700px")),
+                                                                                    column(6, plotlyOutput("PitchDashSpinAxisSpinCirBPen", height = "700px", width = "700px"))), style = 'width:1400px;')),
                                                               tabPanel("K Zone", checkboxInput("KZonePitcherBPenSpeed","Speed",
                                                                                               value = FALSE),
                                                                        checkboxInput("KZonePitcherBPenType","Pitch Type",
@@ -202,12 +196,16 @@ server <- function(input, output) {
                                            axis.title = element_text(size = 16, face = "bold"),
                                            title = element_text(size = 18, face = "bold")), height = 500, width = 500)
   
-  output$PitchDashVeloSpinBPen <- renderPlot({grid.draw(rbind(ggplotGrob(velo.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type == input$'PitchDashBPenPitchType'))), 
-                                                             ggplotGrob(spin.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type == input$'PitchDashBPenPitchType'))), 
-                                                             ggplotGrob(spin.axis.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type == input$'PitchDashBPenPitchType'))), 
+  output$PitchDashVeloSpinBPen <- renderPlot({grid.draw(rbind(ggplotGrob(velo.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
+                                                             ggplotGrob(spin.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
+                                                             ggplotGrob(spin.axis.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
                                                              size = "last"))})
   
-  output$PitchDashKZoneBPen <- renderPlotly(KZonePitcherBPen(df = filter(bp, pitch.type == input$'PitchDashBPenPitchType'), player = input$'player.pitch'))
+  output$PitchDashKZoneBPen <- renderPlotly(KZonePitcherBPen(df = bp, player = input$'player.pitch'))
+  
+  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bp, pitcher == input$'player.pitch')))
+  
+  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen())
   
 }
 
