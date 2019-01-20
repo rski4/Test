@@ -11,8 +11,6 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
     z = factor(c(7, 4, 1, 8, 5, 2, 9, 6, 3))
   )
   
-  df$pitch.type = "FB"
-  
   gg <- ggplot() + 
     ggtitle(as.character(player), subtitle = "Hitter View") +
     xlim(-1.5, 1.5) + xlab("") +
