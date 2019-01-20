@@ -4,14 +4,6 @@ library(tidyverse)
 library(plotly)
 library(grid)
 
-bp = read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/BP/BP_Session.csv"), col.names = paste("col", 1:77, sep = "."))
-
-eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
-
-bp = flightscopeVar(bp)
-
-bp$pitch.type <- "FB"
-
 # Velocity #
 
 velo.bullpen <- function(df = bp) {
