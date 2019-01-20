@@ -72,16 +72,16 @@ KZonePitcherBPen = function(df = bp, player = "Leroy Jenkins (#99)", speed = FAL
   else {
     gg1 <- gg +
       geom_point(data = filter(df, pitcher == player), 
-                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height, shape = pitch.type),
+                 aes(x = -pitch.k.zone.offset, y = pitch.k.zone.height, 
+                     shape = pitch.type,
+                     text = paste("Velocity:", pitch.speed,
+                                  "<br> Spin Rate:", pitch.spin,
+                                  "<br> Spin Axis:", pitch.spin.axis,
+                                  "<br> V Break:", pitch.break.ind.v,
+                                  "<br> H Break:", -pitch.break.h)),
                  size = 4, alpha = 1/2)
   }
   
-  ggplotly(gg1,
-           text = paste("Velocity:", pitch.speed,
-                        "<br> Spin Rate:", pitch.spin,
-                        "<br> Spin Axis:", pitch.spin.axis,
-                        "<br> V Break:", pitch.break.ind.v,
-                        "<br> H Break:", -pitch.break.h),
-           tooltip = c("text"))
+  ggplotly(gg1, tooltip = c("text"))
   
   }
