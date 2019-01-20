@@ -68,12 +68,15 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bp){
     annotate(geom="text", x=110, y=0, label= expression(paste("90",degree,"")), color="grey20", size = 5) +
     annotate(geom="text", x=0, y=-105, label= expression(paste("180",degree,"")), color="grey20", size = 5) +
     annotate(geom="text", x=-110, y=0, label= expression(paste("270",degree,"")), color="grey20", size = 5) +
-    geom_point(data = df, aes(x = spin.circ.x, y = spin.circ.y,
+    geom_point(data = df, 
+               aes(x = spin.circ.x, y = spin.circ.y, 
+                              shape = pitch.type,
                               text = paste("Velocity:", pitch.speed,
                                            "<br> Spin Rate:", pitch.spin,
                                            "<br> Spin Axis:", pitch.spin.axis,
                                            "<br> V Break:", pitch.break.ind.v,
-                                           "<br> H Break:", -pitch.break.h)), size = 4, alpha = 2/3) +
+                                           "<br> H Break:", -pitch.break.h)), 
+               size = 4, alpha = 1/2) +
     theme(axis.text.x = element_blank(),
           axis.text.y = element_blank(),
           axis.ticks = element_blank(),
@@ -168,12 +171,15 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bp){
     geom_segment(aes(x = -1800, xend = 1800, y = 0, yend = 0), color = "black", alpha = 1/2) +
     geom_segment(aes(x = -1250, xend = 1250, y = 1250, yend = -1250), color = "grey20", alpha = 1/3, linetype = "dashed") +
     geom_segment(aes(x = 1250, xend = -1250, y = 1250, yend = -1250), color = "grey20", alpha = 1/3, linetype = "dashed") +
-    geom_point(data = df, aes(x = spin.circ.rpm.x, y = spin.circ.rpm.y,
-                              text = paste("Velocity:", pitch.speed,
+    geom_point(data = df, 
+               aes(x = spin.circ.rpm.x, y = spin.circ.rpm.y,
+                   shape = pitch.type,
+                   text = paste("Velocity:", pitch.speed,
                                            "<br> Spin Rate:", pitch.spin,
                                            "<br> Spin Axis:", pitch.spin.axis,
                                            "<br> V Break:", pitch.break.ind.v,
-                                           "<br> H Break:", -pitch.break.h)), size = 4, alpha = 2/3) +
+                                           "<br> H Break:", -pitch.break.h)), 
+               size = 4, alpha = 1/2) +
     theme(axis.text.x = element_blank(),
           axis.text.y = element_blank(),
           axis.ticks = element_blank(),
@@ -236,6 +242,3 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bp){
     layout(title = "Spin Axis and Spin Rate")
   
 }
-
-
-  
