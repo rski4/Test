@@ -7,6 +7,7 @@ library(RCurl)
 library(tidyverse)
 library(plotly)
 library(grid)
+library(shinyWidgets)
 
 ui <- navbarPage("Coe Statcast",
                  
@@ -61,9 +62,9 @@ ui <- navbarPage("Coe Statcast",
                                            tabPanel("K Zone", checkboxInput("KZoneHitCheckBP", "Hit Balls", value = FALSE),
                                                     plotlyOutput("KZoneBP", width = "650px", height = "800px")),
                                            tabPanel("Batted Balls",
-                                                    fluidRow(column(12,plotlyOutput("BatBallProfileBP", width = "600px", height = "800px")),
+                                                    div(fluidRow(column(12,plotlyOutput("BatBallProfileBP", width = "600px", height = "800px")),
                                                     column(5, plotOutput("EVvLABP", width = "100%", height = "100%")),
-                                                    column(5, offset = 2, plotOutput("LAvLDBP", width = "100%", height = "100%")))
+                                                    column(5, offset = 2, plotOutput("LAvLDBP", width = "100%", height = "100%"))), style = 'width:1000px;')
                                                     )
                                          )
                                        )
@@ -94,7 +95,12 @@ ui <- navbarPage("Coe Statcast",
                                                                       choices = list("Leroy Jenkins (#99)" = "Leroy Jenkins (#99)"), selected = "Leroy Jenkins (#99)"),
                                                           mainPanel(
                                                             tabsetPanel(
-                                                              tabPanel("Dashboard",
+                                                              tabPanel("Dashboard", pickerInput(
+                                                                inputId = "PitchType",
+                                                                label = "Pitch Type",
+                                                                choices = c("FB", "CB", "SL", "CH"),
+                                                                selected = c("FB", "CB", "SL", "CH"),
+                                                                multiple = TRUE),
                                                                        div(fluidRow(column(6, plotOutput("PitchDashVeloSpinBPen", width = "100%", height = "600")),
                                                                                 column(6, plotlyOutput("PitchDashKZoneBPen", width = "450px", height = "600px"))),
                                                                            fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "700px", width = "700px")),
@@ -120,7 +126,9 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 
 bp <- flightscopeVar(bp)
 
-bp$pitch.type <- "FB"
+bp <- bp %>% mutate(
+  pitch.type = ifelse(pitch.speed > 75, "FB", "CH")
+)
 
 server <- function(input, output) {
   
@@ -155,25 +163,33 @@ server <- function(input, output) {
   output$BatBallProfileBP <- renderPlotly({HitBallProfile(player = input$'hitter')})
   
   output$EVvLABP <- renderPlot(ggplot() +
-                                 geom_point(data = subset(bp, batter == input$'hitter'), aes(x = hit.ball.speed, y = hit.ball.launch.v), size = 3) +
+                                 geom_point(data = subset(bp, batter == input$'hitter'), 
+                                            aes(x = hit.ball.speed, y = hit.ball.launch.v), 
+                                            size = 4, alpha = 1/2) +
                                  xlab("Exit Velo") +
                                  ylab("Launch Angle") +
                                  theme(axis.text = element_text(size = 14),
-                                       axis.title = element_text(size = 16, face = "bold")), height = 500, width = 500)
+                                       axis.title = element_text(size = 16, face = "bold")), 
+                               height = 500, width = 500)
   
   output$LAvLDBP <- renderPlot(ggplot() +
-                                 geom_point(data = subset(bp, batter == input$'hitter'), aes(x = hit.ball.launch.h, y = hit.ball.launch.v), size = 3) +
+                                 geom_point(data = subset(bp, batter == input$'hitter'), 
+                                            aes(x = hit.ball.launch.h, y = hit.ball.launch.v), 
+                                            size = 4, alpha = 1/2) +
                                  xlab("Launch Direction") +
                                  ylab("Launch Angle") +
                                  theme(axis.text = element_text(size = 14),
-                                       axis.title = element_text(size = 16, face = "bold")), height = 500, width = 500)
+                                       axis.title = element_text(size = 16, face = "bold")), 
+                               height = 500, width = 500)
   
   output$KZoneBPenPitch <- renderPlotly({KZonePitcherBPen(player = input$'player.pitch', speed = input$'KZonePitcherBPenSpeed', pitch.type = input$'KZonePitcherBPenType')})
   
   output$MovementBPenPFX <- renderPlot(ggplot() +
                                       ggtitle("Pitcher View") +
                                       xlab("Horizontal Break last 40ft") + ylab("Vertical Break last 40ft") +
-                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), aes(x = pfxx, y = pfxz), size = 4) +
+                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), 
+                                                 aes(x = pfxx, y = pfxz), 
+                                                 size = 4, alpha = 1/2) +
                                       theme(axis.text = element_text(size = 14),
                                             axis.title = element_text(size = 16, face = "bold"),
                                             title = element_text(size = 18, face = "bold")), height = 500, width = 500)
@@ -181,7 +197,9 @@ server <- function(input, output) {
   output$MovementBPen <- renderPlot(ggplot() +
                                       ggtitle("Hitter View") +
                                       xlab("Horizontal Break") + ylab("Vertical Break") +
-                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), aes(x = pitch.break.h, y = pitch.break.ind.v), size = 4) +
+                                      geom_point(data = subset(bp, pitcher == input$'player.pitch'), 
+                                                 aes(x = pitch.break.h, y = pitch.break.ind.v), 
+                                                 size = 4, alpha = 1/2) +
                                       theme(axis.text = element_text(size = 14),
                                             axis.title = element_text(size = 16, face = "bold"),
                                             title = element_text(size = 18, face = "bold")), height = 500, width = 500)
@@ -191,21 +209,23 @@ server <- function(input, output) {
                                      ylim(0, 7) +
                                      xlab("Release Side") + ylab("Release Height") +
                                      ggtitle("Release") +
-                                     geom_point(data = bp, aes(x = pitch.release.side, y = pitch.release.height), size = 4) +
+                                     geom_point(data = bp, 
+                                                aes(x = pitch.release.side, y = pitch.release.height), 
+                                                size = 4, alpha = 1/2) +
                                      theme(axis.text = element_text(size = 14),
                                            axis.title = element_text(size = 16, face = "bold"),
                                            title = element_text(size = 18, face = "bold")), height = 500, width = 500)
   
-  output$PitchDashVeloSpinBPen <- renderPlot({grid.draw(rbind(ggplotGrob(velo.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
-                                                             ggplotGrob(spin.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
-                                                             ggplotGrob(spin.axis.bullpen(df = filter(bp, pitcher == input$'player.pitch'))), 
+  output$PitchDashVeloSpinBPen <- renderPlot({grid.draw(rbind(ggplotGrob(velo.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type %in% input$'PitchType'))), 
+                                                             ggplotGrob(spin.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type %in% input$'PitchType'))), 
+                                                             ggplotGrob(spin.axis.bullpen(df = filter(bp, pitcher == input$'player.pitch', pitch.type %in% input$'PitchType'))), 
                                                              size = "last"))})
   
-  output$PitchDashKZoneBPen <- renderPlotly(KZonePitcherBPen(df = bp, player = input$'player.pitch'))
+  output$PitchDashKZoneBPen <- renderPlotly(KZonePitcherBPen(df = filter(bp, pitch.type %in% input$'PitchType'), player = input$'player.pitch'))
+
+  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bp, pitcher == input$'player.pitch', pitch.type %in% input$'PitchType')))
   
-  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bp, pitcher == input$'player.pitch')))
-  
-  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen())
+  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bp, pitcher == input$'player.pitch', pitch.type %in% input$'PitchType')))
   
 }
 
