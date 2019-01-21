@@ -6,32 +6,27 @@ library(grid)
 
 # Velocity #
 
-velo.bullpen <- function(df = bp) {
-  ggplot() +
-    geom_point(data = df, aes(x = no, y = pitch.speed, shape = pitch.type), size = 4, alpha = 2/3) +
-    xlab("Pitch Number") + ylab("Velocity") + labs(shape = "Pitch Type")
-    
+PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
+  py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
+                color = I('black'), marker = list(size = 10),
+                text = ~paste("Pitch No:", no,
+                              "<br>Type:", pitch.type,
+                              "<br>Velo:", pitch.speed,
+                              "<br>Spin Rate:", pitch.spin,
+                              "<br>Spin Axis:", pitch.spin.axis))
+  subplot(
+    add_markers(py, y = ~pitch.speed, hoverinfo = 'text') %>% 
+      layout(yaxis = list(title = "Velocity")),
+    add_markers(py, y = ~pitch.spin, showlegend = F, hoverinfo = 'text + y') %>% 
+      layout(yaxis = list(title = "Spin Rate")),
+    add_markers(py, y = ~pitch.spin.axis, showlegend = F, hoverinfo = 'text + y') %>% 
+      layout(yaxis = list(title = "Spin Axis",
+                          tickvals = c(0, 90, 180, 270))),
+    nrows = 3, shareX = TRUE, titleY = TRUE
+  ) %>% 
+    layout(xaxis = list(title = "Pitch Number"))
+  
 }
-
-spin.bullpen <- function(df = bp) {
-  ggplot() +
-    geom_point(data = df, aes(x = no, y = pitch.spin, shape = pitch.type), size = 4, alpha = 2/3) +
-    xlab("Pitch Number") + ylab("Spin Rate") + labs(shape = "Pitch Type")
-}
-
-spin.axis.bullpen <- function(df = bp) {
-  ggplot() +
-    geom_point(data = df, aes(x = no, y = pitch.spin.axis, shape = pitch.type), size = 4, alpha = 2/3) +
-    xlab("Pitch Number") + ylab("Spin Axis (degrees)") + labs(shape = "Pitch Type") +
-    scale_y_continuous(breaks = c(90, 180, 270, 360))
-}
-
-spin.scatter.bullpen <- function(df = bp) {
-  ggplot() +
-    geom_point(data = df, aes(x = pitch.spin.axis, y = pitch.spin, shape = pitch.type), size = 4) +
-    xlab("Spin Axis (degrees)") + ylab("Spin Rate") + labs(shape = "Pitch Type") +
-    scale_x_continuous(breaks = c(90, 180, 270, 360))
-}  
 
 PitchDashSpinAxisVeloCirBPen <- function(df = bp){
   df <- df %>% mutate(spin.circ.x = -pitch.speed*cospi((pitch.spin.axis+90)/180), 
