@@ -4,7 +4,7 @@ library(tidyverse)
 library(plotly)
 library(grid)
 
-PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
+PitchDashVeloSpinSeqBPen <- function(df = bp) {
   py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
                 color = I('black'), marker = list(size = 10),
                 text = ~paste("Pitch No:", no,
