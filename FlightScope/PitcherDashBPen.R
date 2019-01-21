@@ -4,7 +4,27 @@ library(tidyverse)
 library(plotly)
 library(grid)
 
-# Velocity #
+PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
+  py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
+                color = I('black'), marker = list(size = 10),
+                text = ~paste("Pitch No:", no,
+                              "<br>Type:", pitch.type,
+                              "<br>Velo:", pitch.speed,
+                              "<br>Spin Rate:", pitch.spin,
+                              "<br>Spin Axis:", pitch.spin.axis))
+  subplot(
+    add_markers(py, y = ~pitch.speed, hoverinfo = 'text') %>% 
+      layout(yaxis = list(title = "Velocity")),
+    add_markers(py, y = ~pitch.spin, showlegend = F, hoverinfo = 'text + y') %>% 
+      layout(yaxis = list(title = "Spin Rate")),
+    add_markers(py, y = ~pitch.spin.axis, showlegend = F, hoverinfo = 'text + y') %>% 
+      layout(yaxis = list(title = "Spin Axis",
+                          tickvals = c(0, 90, 180, 270))),
+    nrows = 3, shareX = TRUE, titleY = TRUE
+  ) %>% 
+    layout(xaxis = list(title = "Pitch Number"))
+  
+}
 
 PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
   py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
