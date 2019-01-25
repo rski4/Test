@@ -26,7 +26,7 @@ PitchDashVeloSpinSeqBPen <- function(df = bpen) {
   
 }
 
-PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
+PitchDashSpinAxisVeloCirBPen <- function(df = bpen) {
   py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
                 color = I('black'), marker = list(size = 10),
                 text = ~paste("Pitch No:", no,
@@ -48,7 +48,7 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bp) {
   
 }
 
-PitchDashSpinAxisVeloCirBPen <- function(df = bp){
+PitchDashSpinAxisVeloCirBPen <- function(df = bpen){
   df <- df %>% mutate(spin.circ.x = -pitch.speed*cospi((pitch.spin.axis+90)/180), 
                       spin.circ.y = pitch.speed*sinpi((pitch.spin.axis+90)/180))
   
@@ -155,7 +155,7 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bp){
   
 }
 
-PitchDashSpinAxisSpinCirBPen <- function(df = bp){
+PitchDashSpinAxisSpinCirBPen <- function(df = bpen){
   df <- df %>% mutate(spin.circ.rpm.x = -pitch.spin*cospi((pitch.spin.axis+90)/180), 
                       spin.circ.rpm.y = pitch.spin*sinpi((pitch.spin.axis+90)/180))
   
