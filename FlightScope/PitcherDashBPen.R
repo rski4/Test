@@ -4,7 +4,7 @@ library(tidyverse)
 library(plotly)
 library(grid)
 
-PitchDashVeloSpinSeqBPen <- function(df = bp) {
+PitchDashVeloSpinSeqBPen <- function(df = bpen) {
   py <- plot_ly(df, x = ~no, alpha = 0.5, symbol = ~pitch.type, 
                 color = I('black'), marker = list(size = 10),
                 text = ~paste("Pitch No:", no,
@@ -15,9 +15,9 @@ PitchDashVeloSpinSeqBPen <- function(df = bp) {
   subplot(
     add_markers(py, y = ~pitch.speed, hoverinfo = 'text') %>% 
       layout(yaxis = list(title = "Velocity")),
-    add_markers(py, y = ~pitch.spin, showlegend = F, hoverinfo = 'text + y') %>% 
+    add_markers(py, y = ~pitch.spin, showlegend = F, hoverinfo = 'text') %>% 
       layout(yaxis = list(title = "Spin Rate")),
-    add_markers(py, y = ~pitch.spin.axis, showlegend = F, hoverinfo = 'text + y') %>% 
+    add_markers(py, y = ~pitch.spin.axis, showlegend = F, hoverinfo = 'text') %>% 
       layout(yaxis = list(title = "Spin Axis",
                           tickvals = c(0, 90, 180, 270))),
     nrows = 3, shareX = TRUE, titleY = TRUE
