@@ -3,6 +3,17 @@ library(RCurl)
 library(tidyverse)
 library(plotly)
 
+bpen.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/Bullpen.01.22.2019.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26_2.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.4 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26_3.csv"), col.names = paste("col", 1:77, sep = "."))
+
+bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4))
+
+bpen <- flightscopeVar(bpen)
+
+bpen$pitch.type <- sub("^$", "No Type", bpen$pitch.type)
+
 PitchDashVeloSpinSeqBPen <- function(df = bpen, player = "Andrew Schmit") {
   py <- plot_ly(data = filter(df, pitcher == player), 
                 x = ~no, symbol = ~pitch.type, 
