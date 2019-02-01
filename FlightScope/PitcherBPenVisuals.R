@@ -198,9 +198,9 @@ PitchMovementBatViewBPen <- function(df = bpen, player = "Andrew Schmit") {
            title = "Hitter View Movement")
 }
               
-PitchDashSpinAxisVeloCirBPen <- function(df = bpen){
+PitchDashSpinAxisVeloCirBPen <- function(df = bpen, player = "Andrew Schmit"){
   df <- df %>% mutate(spin.circ.x = -pitch.speed*cospi((pitch.spin.axis+90)/180), 
-                      spin.circ.y = pitch.speed*sinpi((pitch.spin.axis+90)/180))
+                          spin.circ.y = pitch.speed*sinpi((pitch.spin.axis+90)/180))
   
   circleFun <- function(center=c(0,0), diameter=100, npoints=100, start=0, end=2, filled=TRUE){
     tt <- seq(start*pi, end*pi, length.out=npoints)
@@ -219,92 +219,85 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bpen){
   velo70 <- circleFun(c(0,0), diameter = 160, npoints = 100, start = 0, end = 2, filled = TRUE)
   velo60 <- circleFun(c(0,0), diameter = 140, npoints = 100, start = 0, end = 2, filled = TRUE)
   
-  
-  gg <- ggplot() +
-    geom_polygon(data = velo90, aes(x,y), fill = "red") +
-    geom_polygon(data = velo80, aes(x,y), fill = "green3") +
-    geom_polygon(data = velo70, aes(x,y), fill = "peachpuff") +
-    geom_polygon(data = velo60, aes(x,y), fill = "plum3") +
-    geom_segment(aes(x = 0, xend = 0, y = 100, yend = -100), color = "black", alpha = 1/2) +
-    geom_segment(aes(x = -100, xend = 100, y = 0, yend = 0), color = "black", alpha = 1/2) +
-    geom_segment(aes(x = -70, xend = 70, y = 70, yend = -70), color = "grey20", alpha = 1/3, linetype = "dashed") +
-    geom_segment(aes(x = 70, xend = -70, y = 70, yend = -70), color = "grey20", alpha = 1/3, linetype = "dashed") +
-    annotate(geom="text", x=0, y=105, label= expression(paste("0",degree,"")), color="grey20", size = 5) +
-    annotate(geom="text", x=110, y=0, label= expression(paste("90",degree,"")), color="grey20", size = 5) +
-    annotate(geom="text", x=0, y=-105, label= expression(paste("180",degree,"")), color="grey20", size = 5) +
-    annotate(geom="text", x=-110, y=0, label= expression(paste("270",degree,"")), color="grey20", size = 5) +
-    geom_point(data = df, 
-               aes(x = spin.circ.x, y = spin.circ.y, 
-                   shape = pitch.type,
-                   text = paste("Velocity:", pitch.speed,
-                                "<br> Spin Rate:", pitch.spin,
-                                "<br> Spin Axis:", pitch.spin.axis,
-                                "<br> V Break:", pitch.break.ind.v,
-                                "<br> H Break:", -pitch.break.h)), 
-               size = 4, alpha = 1/2) +
-    theme(axis.text.x = element_blank(),
-          axis.text.y = element_blank(),
-          axis.ticks = element_blank(),
-          axis.title.x = element_blank(),
-          axis.title.y = element_blank(),
-          panel.background = element_blank(),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          plot.background = element_blank())
-  
-  ggplotly(gg, tooltip = c("text")) %>%
-    add_annotations(x=0, y=105,
-                    xref = "x", yref = "y",
-                    text = "0", 
-                    font = list(color = '#333333', 
-                                size = 14),
-                    showarrow = F) %>% 
-    add_annotations(x=110, y=0,
-                    xref = "x", yref = "y",
-                    text = "90", 
-                    font = list(color = '#333333', 
-                                size = 14),
-                    showarrow = F) %>% 
-    add_annotations(x=0, y=-105,
-                    xref = "x", yref = "y",
-                    text = "180", 
-                    font = list(color = '#333333', 
-                                size = 14),
-                    showarrow = F) %>% 
-    add_annotations(x=-110, y=0,
-                    xref = "x", yref = "y",
-                    text = "270", 
-                    font = list(color = '#333333', 
-                                size = 14),
-                    showarrow = F) %>%
-    add_annotations(x=-100, y=100,
-                    xref = "x", yref = "y",
-                    text = "100-90 MPH", 
-                    font = list(color = 'red',
-                                size = 16),
-                    showarrow = F) %>%
-    add_annotations(x=-100, y=90,
-                    xref = "x", yref = "y",
-                    text = "90-80 MPH", 
-                    font = list(color = '#00CD00',
-                                size = 16),
-                    showarrow = F) %>%
-    add_annotations(x=-100, y=80,
-                    xref = "x", yref = "y",
-                    text = "80-70 MPH", 
-                    font = list(color = '#FFDAB9',
-                                size = 16),
-                    showarrow = F) %>%
-    add_annotations(x=-100, y=70,
-                    xref = "x", yref = "y",
-                    text = "<70 MPH", 
-                    font = list(color = '#CD96CD',
-                                size = 16),
-                    showarrow = F) %>%
-    layout(title = "Spin Axis and Velocity")
+  plot_ly(data = filter(df, pitcher == player),
+          symbols = c("Fastball" = 'circle', 
+                      "Curveball" = 'triangle-up', 
+                      "Changeup" = 'square', 
+                      "Cutter" = 'x',
+                      "Slider" = 'diamond',
+                      "No Type" = 'cross')) %>% 
+    add_polygons(data = velo90,
+                 x = ~x, y = ~y, fillcolor = '#CD2626',
+                 line = list(color = '#CD2626'),
+                 name = "100-90 MPH") %>%
+    add_polygons(data = velo80,
+                 x = ~x, y = ~y, fillcolor = '#00CD00',
+                 line = list(color = '#00CD00'),
+                 name = "90-80 MPH") %>%
+    add_polygons(data = velo70,
+                 x = ~x, y = ~y, fillcolor = '#FFDAB9',
+                 line = list(color = '#FFDAB9'),
+                 name = "80-70 MPH") %>%
+    add_polygons(data = velo60,
+                 x = ~x, y = ~y, fillcolor = '#B0E0E6',
+                 line = list(color = '#B0E0E6'),
+                 name = "70-60 MPH") %>%
+    add_segments(x = -71, xend = 71, y = 71, yend = -71,
+                 showlegend = FALSE,
+                 line = list(color = '#B0B0B0',
+                             dash = 'dash'), hoverinfo = "none") %>%
+    add_segments(x = -71, xend = 71, y = -71, yend = 71,
+                 showlegend = FALSE,
+                 line = list(color = '#B0B0B0',
+                             dash = 'dash'), hoverinfo = "none") %>%
+    add_segments(x = 0, xend = 0, y = 100, yend = -100,
+                 showlegend = FALSE,
+                 line = list(color = '#333333'), hoverinfo = "none") %>%
+    add_segments(x = -100, xend = 100, y = 0, yend = 0,
+                 showlegend = FALSE,
+                 line = list(color = '#333333'), hoverinfo = "none") %>%
+    add_markers(data = filter(df, pitcher == player),
+                x = ~spin.circ.x, y = ~spin.circ.y, symbol = ~pitch.type,
+                marker = list(size = 10,
+                              opacity = 0.65,
+                              color = 'black'),
+                text = ~paste("<br>Type:", pitch.type,
+                              "<br>Velo:", pitch.speed,
+                              "<br>Spin Rate:", pitch.spin,
+                              "<br>Spin Axis:", pitch.spin.axis,
+                              "<br>V. Break:", pitch.break.ind.v,
+                              "<br>H. Break:", pitch.break.h),
+                hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
+    add_annotations(text = "0˚", 
+                    x = 0, y = 105,
+                    font = list(size = 16),
+                    showarrow = FALSE) %>% 
+    add_annotations(text = "90˚", 
+                    x = 110, y = 0,
+                    font = list(size = 16),
+                    showarrow = FALSE) %>%
+    add_annotations(text = "180˚", 
+                    x = 0, y = -105,
+                    font = list(size = 16),
+                    showarrow = FALSE) %>%
+    add_annotations(text = "270˚", 
+                    x = -110, y = 0,
+                    font = list(size = 16),
+                    showarrow = FALSE) %>%
+    layout(xaxis = list(zeroline = FALSE,
+                        title = "",
+                        showline = FALSE,
+                        showticklabels = FALSE,
+                        showgrid = FALSE),
+           yaxis = list(zeroline = FALSE,
+                        title = "",
+                        showline = FALSE,
+                        showticklabels = FALSE,
+                        showgrid = FALSE),
+           title = "Velo and Spin Axis")
   
 }
-      
+
 PitchDashSpinAxisSpinCirBPen <- function(df = bp){
   df <- df %>% mutate(spin.circ.rpm.x = -pitch.spin*cospi((pitch.spin.axis+90)/180), 
                       spin.circ.rpm.y = pitch.spin*sinpi((pitch.spin.axis+90)/180))
