@@ -116,18 +116,20 @@ ui <- navbarPage("Coe Statcast",
                                                                 choices = c("Fastball", "Curveball", "Cutter", "Changeup", "Slider", "No Type"),
                                                                 selected = c("Fastball", "Curveball", "Cutter", "Changeup", "Slider", "No Type"),
                                                                 multiple = TRUE),
-                                                                       div(fluidRow(column(6, plotlyOutput("PitchDashVeloSpinSeqBPen", width = "100%", height = "600")),
-                                                                                column(6, plotlyOutput("PitchDashKZoneBPen", width = "450px", height = "600px"))),
-                                                                           fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "700px", width = "700px")),
-                                                                                    column(6, plotlyOutput("PitchDashSpinAxisSpinCirBPen", height = "700px", width = "700px"))), style = 'width:1400px;')),
+                                                                       div(fluidRow(column(6, plotlyOutput("PitchDashVeloSpinSeqBPen", width = "100%", height = "500")),
+                                                                                column(6, plotlyOutput("PitchDashKZoneBPen", width = "550px", height = "500px"))),
+                                                                           br(),
+                                                                           br(),
+                                                                           fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "500px", width = "700px")),
+                                                                                    column(6, plotlyOutput("PitchDashSpinAxisSpinCirBPen", height = "500px", width = "700px"))), style = 'width:1400px;')),
                                                               tabPanel("K Zone", checkboxInput("KZonePitcherBPenSpeed","Speed",
                                                                                               value = FALSE),
                                                                        checkboxInput("KZonePitcherBPenType","Pitch Type",
                                                                                      value = FALSE),
                                                                        plotlyOutput("KZoneBPenPitch", width = "650px", height = "800px")),
                                                               tabPanel("Movement",
-                                                                       fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "100%", height = "100%")),
-                                                                                column(5,offset = 2, plotlyOutput("MovementBPen", width = "100%", height = "100%")))),
+                                                                       div(fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "700px", height = "700px")),
+                                                                                column(5,offset = 2, plotlyOutput("MovementBPen", width = "700px", height = "700px"))), style = 'width:1400px;')),
                                                               tabPanel("Release",
                                                                        plotlyOutput("ReleaseBPen"))
                                                             )
@@ -210,9 +212,9 @@ server <- function(input, output) {
   
   output$PitchDashKZoneBPen <- renderPlotly(PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchType'), player = input$'player.pitch.bpen'))
 
-  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bpen, pitcher == input$'player.pitch.bpen', pitch.type %in% input$'PitchType')))
+  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bpen, pitch.type %in% input$'PitchType'), player = input$'player.pitch.bpen'))
   
-  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitcher == input$'player.pitch.bpen', pitch.type %in% input$'PitchType')))
+  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitch.type %in% input$'PitchType'), player = input$'player.pitch.bpen'))
   
 }
 
