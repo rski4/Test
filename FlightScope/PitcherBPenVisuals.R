@@ -412,3 +412,31 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bpen, player = "Andrew Schmit"){
            title = "Spin Rate and Spin Axis")  
 }
 
+PitchTableBPen <- function(df = bpen, player = "Andrew Schmit") {
+  df <- df %>% 
+    dplyr::mutate(in.zone = ifelse(pz <= 3.5 & 
+                                   pz >= 1.6 & 
+                                   px >= -0.95 & 
+                                   px <= 0.95, 1, 0))
+  
+  pitch.table <- df %>% 
+    filter(pitcher == player) %>% 
+    dplyr::filter(!is.na(in.zone)) %>% 
+    dplyr::group_by(pitch.type) %>% 
+    dplyr::summarise(Zone.Pct = mean(in.zone, na.rm = TRUE),
+                     Med.Velo = median(pitch.speed, na.rm = TRUE),
+                     Med.Break.V = median(pitch.break.ind.v, na.rm = TRUE),
+                     Med.Break.H = median(pitch.break.h, na.rm = TRUE),
+                     Med.Spin.Rate = median(pitch.spin, na.rm = TRUE),
+                     Med.Spin.Axis = median(pitch.spin.axis, na.rm = TRUE),
+                     No.Pitch = length(no)
+    )
+  
+  
+  
+  return(pitch.table)
+}
+
+
+
+
