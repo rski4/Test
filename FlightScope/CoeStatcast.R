@@ -9,6 +9,26 @@ library(plotly)
 library(data.table)
 library(shinyWidgets)
 
+bp <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/BP/BP_Session.csv"), col.names = paste("col", 1:77, sep = "."))
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
+
+bp <- flightscopeVar(bp)
+
+bp <- bp %>% mutate(
+  pitch.type = ifelse(pitch.speed > 75, "FB", "CH")
+)
+
+bp.hitters <- unique(bp$batter)
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/SprayChartFS.R")))
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/KZoneHitterBP.R")))
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/HitBallProfileBP.R")))
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/PitcherBPenVisuals.R")))
+
 ui <- navbarPage("Coe Statcast",
                  
                  selected = "Hitter Leaderboard",
@@ -48,11 +68,8 @@ ui <- navbarPage("Coe Statcast",
                                        )
                                      )),
                             tabPanel("BP",
-                                       mainPanel(fluidPage(selectInput("hitter", h3("Hitter"), 
-                                                                       choices = list("Ski" = "Ski ", "Nolan" = "Nolan ",
-                                                                                      "Cam" = "Cam ", "Jordan" = "Jordan ",
-                                                                                      "Luke" = "Luke ", "Kevin" = "Kevin ",
-                                                                                      "Jared White" = "Colton White"), selected = "Ski "),
+                                       mainPanel(fluidPage(selectInput("hitter.input.bp", h3("Hitter"), 
+                                                                       choices = bp.hitters, selected = "Ski "),
                                          tabsetPanel(
                                            tabPanel("Spray Chart", checkboxInput("SprayChartCheckEVBP","Exit Velo",
                                                                                  value = FALSE),
@@ -102,13 +119,7 @@ ui <- navbarPage("Coe Statcast",
                                                          )
                                                        ))),
                             tabPanel("Bullpen", mainPanel(fluidPage(selectInput("player.pitch.bpen", h3("Pitcher"), 
-                                                                      choices = list("Andrew Schmit" = "Andrew Schmit",
-                                                                                     "AJ Reuter" = "AJ Reuter",
-                                                                                     "Jeffrey Anders" = "Jeffrey Anders",
-                                                                                     "Lucas Robbins" = "Lucas Robbins",
-                                                                                     "Tyrell Johnson" = "Tyrell Johnson",
-                                                                                     "Ryan Baranowski" = "Ryan Baranowski",
-                                                                                     "Hunter Collachia" = "Hunter Collachia"), selected = "Ryan Baranowski"),
+                                                                      choices = unique(bpen$pitcher), selected = "Ryan Baranowski"),
                                                             tabsetPanel(
                                                               tabPanel("Dashboard", pickerInput(
                                                                 inputId = "PitchType",
@@ -116,8 +127,8 @@ ui <- navbarPage("Coe Statcast",
                                                                 choices = c("Fastball", "Curveball", "Cutter", "Changeup", "Slider", "No Type"),
                                                                 selected = c("Fastball", "Curveball", "Cutter", "Changeup", "Slider", "No Type"),
                                                                 multiple = TRUE),
-                                                                       div(fluidRow(column(6, plotlyOutput("PitchDashVeloSpinSeqBPen", width = "100%", height = "500")),
-                                                                                column(6, plotlyOutput("PitchDashKZoneBPen", width = "550px", height = "500px"))),
+                                                                       div(fluidRow(column(12, tableOutput("PitchTableBPen")),
+                                                                                column(12, plotlyOutput("PitchDashKZoneBPen", width = "550px", height = "500px"))),
                                                                            br(),
                                                                            br(),
                                                                            fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "500px", width = "700px")),
@@ -129,7 +140,7 @@ ui <- navbarPage("Coe Statcast",
                                                                        plotlyOutput("KZoneBPenPitch", width = "650px", height = "800px")),
                                                               tabPanel("Movement",
                                                                        div(fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "700px", height = "700px")),
-                                                                                column(5,offset = 2, plotlyOutput("MovementBPen", width = "700px", height = "700px"))), style = 'width:1400px;')),
+                                                                                column(5,offset = 1, plotlyOutput("MovementBPen", width = "700px", height = "700px"))), style = 'width:1400px;')),
                                                               tabPanel("Release",
                                                                        plotlyOutput("ReleaseBPen"))
                                                             )
@@ -139,26 +150,11 @@ ui <- navbarPage("Coe Statcast",
                  
                  )
 
-bp <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/BP/BP_Session.csv"), col.names = paste("col", 1:77, sep = "."))
-
-eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
-
-bp <- flightscopeVar(bp)
-
-bp <- bp %>% mutate(
-  pitch.type = ifelse(pitch.speed > 75, "FB", "CH")
-)
 
 
 server <- function(input, output) {
   
-  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/SprayChartFS.R")))
   
-  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/KZoneHitterBP.R")))
-  
-  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/HitBallProfileBP.R")))
-  
-  eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/PitcherBPenVisuals.R")))
   
   hit.leader = ddply(bp, .(batter), summarise,
                      Max.Exit.Velo = format(round(max(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
@@ -174,14 +170,14 @@ server <- function(input, output) {
     options = list(autoWidth = TRUE)
   )
   
-  output$SprayChartBP <- renderPlot({SprayChartFS(player = input$'hitter', exit.velo = input$'SprayChartCheckEVBP', launch.angle = input$'SprayChartCheckLABP')}, height = 600, width = 600)
+  output$SprayChartBP <- renderPlot({SprayChartFS(player = input$'hitter.input.bp', exit.velo = input$'SprayChartCheckEVBP', launch.angle = input$'SprayChartCheckLABP')}, height = 600, width = 600)
   
-  output$KZoneBP <- renderPlotly({KZoneHitter(player = input$'hitter', exit.velo = input$'KZoneHitCheckBP')})
+  output$KZoneBP <- renderPlotly({KZoneHitter(player = input$'hitter.input.bp', exit.velo = input$'KZoneHitCheckBP')})
   
-  output$BatBallProfileBP <- renderPlotly({HitBallProfile(player = input$'hitter')})
+  output$BatBallProfileBP <- renderPlotly({HitBallProfile(player = input$'hitter.input.bp')})
   
   output$EVvLABP <- renderPlot(ggplot() +
-                                 geom_point(data = subset(bp, batter == input$'hitter'), 
+                                 geom_point(data = subset(bp, batter == input$'hitter.input.bp'), 
                                             aes(x = hit.ball.speed, y = hit.ball.launch.v), 
                                             size = 4, alpha = 1/2) +
                                  xlab("Exit Velo") +
@@ -191,7 +187,7 @@ server <- function(input, output) {
                                height = 500, width = 500)
   
   output$LAvLDBP <- renderPlot(ggplot() +
-                                 geom_point(data = subset(bp, batter == input$'hitter'), 
+                                 geom_point(data = subset(bp, batter == input$'hitter.input.bp'), 
                                             aes(x = hit.ball.launch.h, y = hit.ball.launch.v), 
                                             size = 4, alpha = 1/2) +
                                  xlab("Launch Direction") +
@@ -208,7 +204,7 @@ server <- function(input, output) {
   
   output$ReleaseBPen <- renderPlotly(PitchReleaseBPen(df = bpen, player = input$'player.pitch.bpen'))
   
-  output$PitchDashVeloSpinSeqBPen <- renderPlotly({PitchDashVeloSpinSeqBPen(df = filter(bpen, pitch.type %in% input$'PitchType'), player = input$'player.pitch.bpen')})
+  output$PitchTableBPen <- renderTable({PitchTableBPen(df = bpen, player = input$'player.pitch.bpen')})
   
   output$PitchDashKZoneBPen <- renderPlotly(PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchType'), player = input$'player.pitch.bpen'))
 
