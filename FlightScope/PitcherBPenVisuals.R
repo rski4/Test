@@ -91,9 +91,11 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
                               "<br>H. Break:", pitch.break.h),
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
       layout(xaxis = list(title = "",
-                          zeroline = FALSE),
+                          zeroline = FALSE,
+                          range = c(-3,3)),
              yaxis = list(title = "",
-                          zeroline = FALSE),
+                          zeroline = FALSE,
+                          range = c(0,6.5)),
              title = as.character(player)) %>% 
       colorbar(title = "Velo")
   }
@@ -122,9 +124,11 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
                               "<br>H. Break:", pitch.break.h),
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
       layout(xaxis = list(title = "",
-                          zeroline = FALSE),
+                          zeroline = FALSE,
+                          range = c(-3,3)),
              yaxis = list(title = "",
-                          zeroline = FALSE),
+                          zeroline = FALSE,
+                          range = c(0,6.5)),
              title = as.character(player))
   }
 }
