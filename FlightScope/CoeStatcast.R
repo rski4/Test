@@ -126,8 +126,7 @@ ui <- navbarPage("Coe Statcast",
                                                                 choices = unique(bpen$pitch.type),
                                                                 selected = unique(bpen$pitch.type),
                                                                 multiple = TRUE),
-                                                                checkboxInput("KZonePitcherBPenSpeed","Speed",
-                                                                                              value = FALSE),
+                                                                checkboxInput("KZonePitcherBPenSpeed","Velo", value = FALSE),
                                                                        plotlyOutput("KZoneBPenPitch", width = "650px", height = "800px")),
                                                               tabPanel("Movement", pickerInput(
                                                                 inputId = "PitchTypeMovementBPen",
@@ -181,7 +180,7 @@ server <- function(input, output) {
   
   output$HitLALHBP <- renderPlotly({HitLALHBP(df = bp, player = input$'hitter.input.bp')})
   
-  output$KZoneBPenPitch <- renderPlotly({PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeKZoneBPen'), player = input$'player.pitch.bpen', Velo = input$'KZonePitcherBPenSpeed')})
+  output$KZoneBPenPitch <- renderPlotly({PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeKZoneBpen'), player = input$'player.pitch.bpen', Velo = input$'KZonePitcherBPenSpeed')})
   
   output$MovementBPenPFX <- renderPlotly({PitchMovementBatViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeMovementBPen'), player = input$'player.pitch.bpen')})
   
