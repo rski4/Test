@@ -12,7 +12,7 @@ ConvertFeet <- function(df){
                 'px',
                 'pz')
   for (i in char.var) {
-    df <- sapply(strsplit(as.character(live[,i]), "'|\""),
+    df <- sapply(strsplit(as.character(df[,i]), "'|\""),
                  function(x){ifelse(is.na(x[2]) == TRUE,
                                     round(as.numeric(x[1]), digits = 2),
                                     ifelse(x[1] >= 0,
