@@ -2,6 +2,7 @@ library(ggplot2)
 library(RCurl)
 library(tidyverse)
 library(plotly)
+library(data.table)
 
 bpen.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/Bullpen.01.22.2019.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26.csv"), col.names = paste("col", 1:77, sep = "."))
@@ -18,6 +19,15 @@ bpen <- flightscopeVar(bpen)
 
 bpen$pitch.type <- sub("^$", "No Type", bpen$pitch.type)
 
+pitch.symbols <- c("Fastball" = 'circle', 
+                   "Curveball" = 'triangle-up', 
+                   "Changeup" = 'square', 
+                   "Cutter" = 'x',
+                   "Slider" = 'diamond',
+                   "Sinker" = 'triangle-down',
+                   "Splitter" = 'star',
+                   "No Type" = 'cross')
+
 PitchDashVeloSpinSeqBPen <- function(df = bpen, player = "Andrew Schmit") {
   py <- plot_ly(data = filter(df, pitcher == player), 
                 x = ~no, symbol = ~pitch.type, 
@@ -31,12 +41,7 @@ PitchDashVeloSpinSeqBPen <- function(df = bpen, player = "Andrew Schmit") {
                               "<br>Spin Axis:", pitch.spin.axis,
                               "<br>V. Break:", pitch.break.ind.v,
                               "<br>H. Break:", pitch.break.h),
-                symbols = c("Fastball" = 'circle', 
-                            "Curveball" = 'triangle-up', 
-                            "Changeup" = 'square', 
-                            "Cutter" = 'x',
-                            "Slider" = 'diamond',
-                            "No Type" = 'cross'))
+                symbols = pitch.symbols)
   subplot(
     add_markers(py, y = ~pitch.speed, hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>% 
       layout(yaxis = list(title = "Velocity")),
@@ -67,12 +72,7 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
   
   if (Velo){
     plot_ly(colors = c("red", "firebrick4"),
-            symbols = c("Fastball" = 'circle', 
-                        "Curveball" = 'triangle-up', 
-                        "Changeup" = 'square', 
-                        "Cutter" = 'x',
-                        "Slider" = 'diamond',
-                        "No Type" = 'cross')) %>%  
+            symbols = pitch.symbols) %>%  
       add_segments(data = k.zone, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2, 
                    color = I("black"), showlegend = FALSE) %>% 
       add_segments(data = nine.box, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2,
@@ -101,12 +101,7 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
   }
   
   else {
-    plot_ly(symbols = c("Fastball" = 'circle', 
-                        "Curvball" = 'triangle', 
-                        "Changeup" = 'square', 
-                        "Cutter" = 'x',
-                        "Slider" = 'diamond',
-                        "No Type" = 'cross')) %>%  
+    plot_ly(symbols = pitch.symbols) %>%  
       add_segments(data = k.zone, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2, 
                    color = I("black"), showlegend = FALSE) %>% 
       add_segments(data = nine.box, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2,
@@ -145,12 +140,7 @@ PitchReleaseBPen <- function(df = bpen, player = "Andrew Schmit") {
                         "<br>V. Break:", pitch.break.ind.v,
                         "<br>H. Break:", -pitch.break.h),
           hoverinfo = 'text', hoverlabel = list(bgcolor = 'white'),
-          symbol = ~pitch.type, symbols = c("Fastball" = 'circle', 
-                                            "Curveball" = 'triangle-up', 
-                                            "Changeup" = 'square', 
-                                            "Cutter" = 'x',
-                                            "Slider" = 'diamond',
-                                            "No Type" = 'cross')) %>% 
+          symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Pitch Release Side (ft)",
                         range = c(-4,4),
                         zeroline = FALSE),
@@ -172,12 +162,7 @@ PitchMovementPitchViewBPen <- function(df = bpen, player = "Andrew Schmit") {
                         "<br>Spin Axis:", pitch.spin.axis,
                         "<br>V. Break:", pitch.break.ind.v,
                         "<br>H. Break:", pitch.break.h),
-          symbol = ~pitch.type, symbols = c("Fastball" = 'circle', 
-                                            "Curveball" = 'triangle-up', 
-                                            "Changeup" = 'square', 
-                                            "Cutter" = 'x',
-                                            "Slider" = 'diamond',
-                                            "No Type" = 'cross')) %>% 
+          symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Horizontal Break (in)"),
            yaxis = list(title = "Vertical Break (in)"),
            title = "Pitcher View Movement")
@@ -195,12 +180,7 @@ PitchMovementBatViewBPen <- function(df = bpen, player = "Andrew Schmit") {
                         "<br>Spin Axis:", pitch.spin.axis,
                         "<br>V. Break:", pitch.break.ind.v,
                         "<br>H. Break:", pitch.break.h),
-          symbol = ~pitch.type, symbols = c("Fastball" = 'circle', 
-                                            "Curveball" = 'triangle-up', 
-                                            "Changeup" = 'square', 
-                                            "Cutter" = 'x',
-                                            "Slider" = 'diamond',
-                                            "No Type" = 'cross')) %>% 
+          symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Horizontal Break last 40ft (in)"),
            yaxis = list(title = "Vertical Break last 40ft (in)"),
            title = "Hitter View Movement")
@@ -228,12 +208,7 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bpen, player = "Andrew Schmit"){
   velo60 <- circleFun(c(0,0), diameter = 140, npoints = 100, start = 0, end = 2, filled = TRUE)
   
   plot_ly(data = filter(df, pitcher == player),
-          symbols = c("Fastball" = 'circle', 
-                      "Curveball" = 'triangle-up', 
-                      "Changeup" = 'square', 
-                      "Cutter" = 'x',
-                      "Slider" = 'diamond',
-                      "No Type" = 'cross')) %>% 
+          symbols = pitch.symbols) %>% 
     add_polygons(data = velo90,
                  x = ~x, y = ~y, fillcolor = '#CD2626',
                  line = list(color = '#CD2626'),
@@ -305,7 +280,7 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bpen, player = "Andrew Schmit"){
            title = "Velo and Spin Axis")
   
 }
-
+      
 PitchDashSpinAxisSpinCirBPen <- function(df = bpen, player = "Andrew Schmit"){
   df <- df %>% mutate(spin.circ.x = -pitch.spin*cospi((pitch.spin.axis+90)/180), 
                           spin.circ.y = pitch.spin*sinpi((pitch.spin.axis+90)/180))
@@ -331,12 +306,7 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bpen, player = "Andrew Schmit"){
   
   
   plot_ly(data = filter(df, pitcher == player),
-          symbols = c("Fastball" = 'circle', 
-                      "Curveball" = 'triangle-up', 
-                      "Changeup" = 'square', 
-                      "Cutter" = 'x',
-                      "Slider" = 'diamond',
-                      "No Type" = 'cross')) %>% 
+          symbols = pitch.symbols) %>% 
     add_polygons(data = spin2200,
                  x = ~x, y = ~y, fillcolor = '#CD2626',
                  line = list(color = '#CD2626'),
@@ -419,9 +389,9 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bpen, player = "Andrew Schmit"){
 PitchTableBPen <- function(df = bpen, player = "Andrew Schmit") {
   df <- df %>% 
     dplyr::mutate(in.zone = ifelse(pz <= 3.5 & 
-                                   pz >= 1.6 & 
-                                   px >= -0.95 & 
-                                   px <= 0.95, 1, 0))
+                                     pz >= 1.6 & 
+                                     px >= -0.95 & 
+                                     px <= 0.95, 1, 0))
   
   pitch.table <- df %>% 
     filter(pitcher == player) %>% 
@@ -440,7 +410,6 @@ PitchTableBPen <- function(df = bpen, player = "Andrew Schmit") {
   
   return(pitch.table)
 }
-
 
 
 
