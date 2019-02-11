@@ -15,6 +15,8 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/PitcherBPenVisuals.R")))
 
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/HitterLiveVisuals.R")))
+
 ui <- navbarPage("Coe Statcast",
                  
                  selected = "Hitter Leaderboard",
@@ -40,16 +42,23 @@ ui <- navbarPage("Coe Statcast",
                                        )
                                      )),
                             tabPanel("Live",
-                                     fluidPage(selectInput("batter", h3("Hitter"), 
-                                                                     choices = list("Ski" = "Ski ", "Nolan" = "Nolan ",
-                                                                                    "Cam" = "Cam ", "Jordan" = "Jordan ",
-                                                                                    "Luke" = "Luke ", "Kevin" = "Kevin ",
-                                                                                    "Jared White" = "Colton White"), selected = "Ski "),
+                                     fluidPage(selectInput("hitter.live", h3("Hitter"), 
+                                                                     choices = unique(live$batter), selected = "Nolan Arp"),
                                        mainPanel(
                                          tabsetPanel(
-                                           tabPanel("Spray Chart"),
-                                           tabPanel("K Zone"),
-                                           tabPanel("Batted Balls")
+                                           tabPanel("Spray Chart", checkboxInput("SprayChartCheckEVLive","Exit Velo",
+                                                                               value = FALSE),
+                                                    checkboxInput("SprayChartCheckLALive","Launch Angle",
+                                                                  value = FALSE),
+                                                    plotOutput("SprayChartLive", width = "100%")),
+                                           tabPanel("K Zone",
+                                                    div(br(),
+                                                        plotlyOutput("HitKZoneLive", width = "650px", height = "800px"))),
+                                           tabPanel("Batted Balls",
+                                           div(fluidRow(column(12, plotlyOutput("HitBallProfileLive", width = "600px", height = "800px")),
+                                                        column(5, plotlyOutput("HitEVLALive", width = "500px", height = "500px")),
+                                                        column(5, offset = 1, plotlyOutput("HitLALHLive", width = "500px", height = "500px"))), style = 'width:1000px;')
+                                           )
                                          )
                                        )
                                      )),
@@ -196,6 +205,15 @@ server <- function(input, output) {
   
   output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeDashBPen'), player = input$'player.pitch.bpen'))
   
+  output$SprayChartLive <- renderPlot({SprayChartFS(df = live, player = input$'hitter.live', exit.velo = input$'SprayChartCheckEVLive', launch.angle = input$'SprayChartCheckLALive')}, height = 600, width = 600)
+  
+  output$HitKZoneLive <- renderPlotly({HitKZoneLive(df = live, player = input$'hitter.live')})
+  
+  output$HitBallProfileLive <- renderPlotly({HitBallProfileLive(df = live, player = input$'hitter.live')})
+  
+  output$HitEVLALive <- renderPlotly({HitEVLALive(df = live, player = input$'hitter.live')})
+  
+  output$HitLALHLive <- renderPlotly({HitLALHLive(df = live, player = input$'hitter.live')})
 }
 
 shinyApp(ui = ui, server = server)
