@@ -379,8 +379,13 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
                      No.Pitch = length(no)
     )
   
+  t1 <- t(pitch.table)
   
+  colnames(t1) <- t1[1,]
   
-  return(t(pitch.table))
+  t1 <- t1[-1,]
+  
+  t2 <- rownames_to_column(data.frame(t1), "Metric")
+  
+  return(t2)
 }
-
