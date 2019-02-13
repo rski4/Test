@@ -1,3 +1,6 @@
+library(RCurl)
+library(data.table)
+
 live.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05.csv"), col.names = paste("col", 1:77, sep = "."))
 live.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_02_12_2019.csv"), col.names = paste("col", 1:77, sep = "."))
 
