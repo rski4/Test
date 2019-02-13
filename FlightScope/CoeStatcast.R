@@ -17,6 +17,8 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/HitterLiveVisuals.R")))
 
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/PitcherLiveVisuals.R")))
+
 ui <- navbarPage("Coe Statcast",
                  
                  selected = "Hitter Leaderboard",
@@ -99,17 +101,22 @@ ui <- navbarPage("Coe Statcast",
                                                            tabPanel("Release")
                                                          )
                                                        ))),
-                            tabPanel("Live", mainPanel(fluidPage(selectInput("player.pitch", h3("Pitcher"), 
-                                                                   choices = list("Andrew Schmit" = "Andrew Schmit",
-                                                                                  "AJ Reuter" = "AJ Reuter",
-                                                                                  "Jeffrey Anders" = "Jeffrey Anders",
-                                                                                  "Lucas Robbins" = "Lucas Robbins",
-                                                                                  "Tyrell Johnson" = "Tyrell Johnson",
-                                                                                  "Ryan Baranowski" = "Ryan Baranowski",
-                                                                                  "Hunter Collachia" = "Hunter Collachia"), selected = "Ryan Baranowski"),
+                            tabPanel("Live", mainPanel(fluidPage(selectInput("player.pitch.live", h3("Pitcher"), 
+                                                                             choices = unique(live$pitcher), selected = "Andrew Schmit"),
                                                          tabsetPanel(
+                                                           tabPanel("Dashboard", pickerInput(
+                                                             inputId = "PitchTypeDashLive",
+                                                             label = "Pitch Type",
+                                                             choices = unique(live$pitch.type),
+                                                             selected = unique(live$pitch.type),
+                                                             multiple = TRUE),
+                                                             div(fluidRow(column(12, tableOutput("PitchTableLive")),
+                                                                          column(12, plotlyOutput("PitchDashKZoneLive", width = "550px", height = "500px"))),
+                                                                 br(),
+                                                                 br(),
+                                                                 fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirLive", height = "500px", width = "700px")),
+                                                                          column(6, plotlyOutput("PitchDashSpinAxisSpinCirLive", height = "500px", width = "700px"))), style = 'width:1400px;')),
                                                            tabPanel("K Zone"),
-                                                           tabPanel("Pitch Selection"),
                                                            tabPanel("Movement"),
                                                            tabPanel("Release")
                                                          )
@@ -165,7 +172,7 @@ server <- function(input, output) {
   
   
   
-  hit.leader = ddply(bp, .(batter), summarise,
+  hit.leader = ddply(live, .(batter), summarise,
                      Max.Exit.Velo = format(round(max(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
                      Exit.Velo.Avg = format(round(mean(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
                      Launch.Angle.Avg = format(round(mean(hit.ball.launch.v, na.rm = TRUE), 2), nsmall = 2),
@@ -214,6 +221,14 @@ server <- function(input, output) {
   output$HitEVLALive <- renderPlotly({HitEVLALive(df = live, player = input$'hitter.live')})
   
   output$HitLALHLive <- renderPlotly({HitLALHLive(df = live, player = input$'hitter.live')})
+  
+  output$PitchTableLive <- renderTable({PitchTableLive(df = live, player = input$'player.pitch.live')})
+  
+  output$PitchDashKZoneLive <- renderPlotly(PitchKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
+  
+  output$PitchDashSpinAxisVeloCirLive <- renderPlotly(PitchDashSpinAxisVeloCirLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
+  
+  output$PitchDashSpinAxisSpinCirLive <- renderPlotly(PitchDashSpinAxisSpinCirLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
 }
 
 shinyApp(ui = ui, server = server)
