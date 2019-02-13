@@ -34,6 +34,7 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "Called Strikeout" = '#CD0000',
                    "Swinging Strikeout" = '#8B0000')
 
+
 PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
   k.zone <- data.frame(
     x1 = c(rep(-.95, 3), 0.95),
