@@ -1,6 +1,7 @@
-library(RCurl)
+live.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05.csv"), col.names = paste("col", 1:77, sep = "."))
+live.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_02_12_2019.csv"), col.names = paste("col", 1:77, sep = "."))
 
-live <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05.csv"), col.names = paste("col", 1:77, sep = "."))
+live <- data.frame(rbindlist(list(live.1, live.2)))
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
 
@@ -26,7 +27,9 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "Foul Ball" = '#A2CD5A',
                    "Single" = '#008B45',
                    "Swinging Strike" = '#8B0000',
-                   "Hit by Pitch" = '#A1A1A1')
+                   "Hit by Pitch" = '#A1A1A1',
+                   "Called Strikeout" = '#CD0000',
+                   "Swinging Strikeout" = '#8B0000')
 
 PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
   k.zone <- data.frame(
