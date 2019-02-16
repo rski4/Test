@@ -103,13 +103,21 @@ ui <- navbarPage("Coe Statcast",
                                                        ))),
                             tabPanel("Live", mainPanel(fluidPage(selectInput("player.pitch.live", h3("Pitcher"), 
                                                                              choices = unique(live$pitcher), selected = "Andrew Schmit"),
+                                                                 fluidRow(column(6, pickerInput(
+                                                                   inputId = "PitchTypeLive",
+                                                                   label = "Pitch Type",
+                                                                   choices = unique(live$pitch.type),
+                                                                   selected = unique(live$pitch.type),
+                                                                   multiple = TRUE)),
+                                                                   column(6, dateRangeInput(inputId = "PitchDateLive",
+                                                                                            label = "Date",
+                                                                                            start = min(as.Date(live$date)),
+                                                                                            end = max(as.Date(live$date)),
+                                                                                            min = min(as.Date(live$date)),
+                                                                                            max = max(as.Date(live$date)),
+                                                                                            format = "yyyy-mm-dd"))),
                                                          tabsetPanel(
-                                                           tabPanel("Dashboard", pickerInput(
-                                                             inputId = "PitchTypeDashLive",
-                                                             label = "Pitch Type",
-                                                             choices = unique(live$pitch.type),
-                                                             selected = unique(live$pitch.type),
-                                                             multiple = TRUE),
+                                                           tabPanel("Dashboard",
                                                              div(fluidRow(column(12, tableOutput("PitchTableLive")),
                                                                           column(12, plotlyOutput("PitchDashKZoneLive", width = "550px", height = "500px"))),
                                                                  br(),
@@ -123,41 +131,34 @@ ui <- navbarPage("Coe Statcast",
                                                        ))),
                             tabPanel("Bullpen", mainPanel(fluidPage(selectInput("player.pitch.bpen", h3("Pitcher"), 
                                                                       choices = unique(bpen$pitcher), selected = "Ryan Baranowski"),
+                                                                    fluidRow(column(6, pickerInput(
+                                                                      inputId = "PitchTypeBPen",
+                                                                      label = "Pitch Type",
+                                                                      choices = unique(bpen$pitch.type),
+                                                                      selected = unique(bpen$pitch.type),
+                                                                      multiple = TRUE)),
+                                                                      column(6, dateRangeInput(inputId = "PitchDateBPen",
+                                                                                              label = "Date",
+                                                                                              start = min(as.Date(bpen$date)),
+                                                                                              end = max(as.Date(bpen$date)),
+                                                                                              min = min(as.Date(bpen$date)),
+                                                                                              max = max(as.Date(bpen$date)),
+                                                                                              format = "yyyy-mm-dd"))),
                                                             tabsetPanel(
-                                                              tabPanel("Dashboard", pickerInput(
-                                                                inputId = "PitchTypeDashBPen",
-                                                                label = "Pitch Type",
-                                                                choices = unique(bpen$pitch.type),
-                                                                selected = unique(bpen$pitch.type),
-                                                                multiple = TRUE),
+                                                              tabPanel("Dashboard",
                                                                        div(fluidRow(column(12, tableOutput("PitchTableBPen")),
                                                                                 column(12, plotlyOutput("PitchDashKZoneBPen", width = "550px", height = "500px"))),
                                                                            br(),
                                                                            br(),
                                                                            fluidRow(column(6, plotlyOutput("PitchDashSpinAxisVeloCirBPen", height = "500px", width = "700px")),
                                                                                     column(6, plotlyOutput("PitchDashSpinAxisSpinCirBPen", height = "500px", width = "700px"))), style = 'width:1400px;')),
-                                                              tabPanel("K Zone", pickerInput(
-                                                                inputId = "PitchTypeKZoneBpen",
-                                                                label = "Pitch Type",
-                                                                choices = unique(bpen$pitch.type),
-                                                                selected = unique(bpen$pitch.type),
-                                                                multiple = TRUE),
+                                                              tabPanel("K Zone", 
                                                                 checkboxInput("KZonePitcherBPenSpeed","Velo", value = FALSE),
                                                                        plotlyOutput("KZoneBPenPitch", width = "650px", height = "800px")),
-                                                              tabPanel("Movement", pickerInput(
-                                                                inputId = "PitchTypeMovementBPen",
-                                                                label = "Pitch Type",
-                                                                choices = unique(bpen$pitch.type),
-                                                                selected = unique(bpen$pitch.type),
-                                                                multiple = TRUE),
+                                                              tabPanel("Movement",
                                                                        div(fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "700px", height = "700px")),
                                                                                 column(5,offset = 1, plotlyOutput("MovementBPen", width = "700px", height = "700px"))), style = 'width:1400px;')),
-                                                              tabPanel("Release", pickerInput(
-                                                                inputId = "PitchTypeReleaseBPen",
-                                                                label = "Pitch Type",
-                                                                choices = unique(bpen$pitch.type),
-                                                                selected = unique(bpen$pitch.type),
-                                                                multiple = TRUE),
+                                                              tabPanel("Release",
                                                                        plotlyOutput("ReleaseBPen"))
                                                             )
                                                           )
@@ -186,6 +187,7 @@ server <- function(input, output) {
     options = list(autoWidth = TRUE)
   )
   
+  #### Hitter BP ####
   output$SprayChartBP <- renderPlot({SprayChartFS(player = input$'hitter.input.bp', exit.velo = input$'SprayChartCheckEVBP', launch.angle = input$'SprayChartCheckLABP')}, height = 600, width = 600)
   
   output$HitKZoneBP <- renderPlotly({HitKZoneBP(df = bp, player = input$'hitter.input.bp')})
@@ -196,21 +198,44 @@ server <- function(input, output) {
   
   output$HitLALHBP <- renderPlotly({HitLALHBP(df = bp, player = input$'hitter.input.bp')})
   
-  output$KZoneBPenPitch <- renderPlotly({PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeKZoneBpen'), player = input$'player.pitch.bpen', Velo = input$'KZonePitcherBPenSpeed')})
+  #### Pitcher BPen ####
   
-  output$MovementBPenPFX <- renderPlotly({PitchMovementBatViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeMovementBPen'), player = input$'player.pitch.bpen')})
+  output$KZoneBPenPitch <- renderPlotly({PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBpen', 
+                                                                    as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                    as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen', Velo = input$'KZonePitcherBPenSpeed')})
   
-  output$MovementBPen <- renderPlotly(PitchMovementPitchViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeMovementBPen'), player = input$'player.pitch.bpen'))
+  output$MovementBPenPFX <- renderPlotly({PitchMovementBatViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen')})
   
-  output$ReleaseBPen <- renderPlotly(PitchReleaseBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeReleaseBPen'), player = input$'player.pitch.bpen'))
+  output$MovementBPen <- renderPlotly(PitchMovementPitchViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                             as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                             as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen'))
   
-  output$PitchTableBPen <- renderTable({PitchTableBPen(df = bpen, player = input$'player.pitch.bpen')})
+  output$ReleaseBPen <- renderPlotly(PitchReleaseBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                  as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                  as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen'))
   
-  output$PitchDashKZoneBPen <- renderPlotly(PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeDashBPen'), player = input$'player.pitch.bpen'))
+  output$PitchTableBPen <- renderTable({PitchTableBPen(df = filter(bpen, as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                   as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                       player = input$'player.pitch.bpen')})
+  
+  output$PitchDashKZoneBPen <- renderPlotly(PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                       as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                       as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                           player = input$'player.pitch.bpen'))
 
-  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeDashBPen'), player = input$'player.pitch.bpen'))
+  output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                                   player = input$'player.pitch.bpen'))
   
-  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeDashBPen'), player = input$'player.pitch.bpen'))
+  output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
+                                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                                   player = input$'player.pitch.bpen'))
+  
+  #### Hitter Live ####
   
   output$SprayChartLive <- renderPlot({SprayChartFS(df = live, player = input$'hitter.live', exit.velo = input$'SprayChartCheckEVLive', launch.angle = input$'SprayChartCheckLALive')}, height = 600, width = 600)
   
@@ -222,13 +247,26 @@ server <- function(input, output) {
   
   output$HitLALHLive <- renderPlotly({HitLALHLive(df = live, player = input$'hitter.live')})
   
-  output$PitchTableLive <- renderTable({PitchTableLive(df = live, player = input$'player.pitch.live')})
+  #### Pitcher Live ####
   
-  output$PitchDashKZoneLive <- renderPlotly(PitchKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
+  output$PitchTableLive <- renderTable({PitchTableLive(df = filter(live, as.Date(date) >= input$'PitchDateLive'[1],
+                                                                   as.Date(date) <= input$'PitchDateLive'[2]), 
+                                                       player = input$'player.pitch.live')})
   
-  output$PitchDashSpinAxisVeloCirLive <- renderPlotly(PitchDashSpinAxisVeloCirLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
+  output$PitchDashKZoneLive <- renderPlotly(PitchKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
+                                                                       as.Date(date) >= input$'PitchDateLive'[1],
+                                                                       as.Date(date) <= input$'PitchDateLive'[2]), 
+                                                           player = input$'player.pitch.live'))
   
-  output$PitchDashSpinAxisSpinCirLive <- renderPlotly(PitchDashSpinAxisSpinCirLive(df = filter(live, pitch.type %in% input$'PitchTypeDashLive'), player = input$'player.pitch.live'))
+  output$PitchDashSpinAxisVeloCirLive <- renderPlotly(PitchDashSpinAxisVeloCirLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
+                                                                                               as.Date(date) >= input$'PitchDateLive'[1],
+                                                                                               as.Date(date) <= input$'PitchDateLive'[2]), 
+                                                                                   player = input$'player.pitch.live'))
+  
+  output$PitchDashSpinAxisSpinCirLive <- renderPlotly(PitchDashSpinAxisSpinCirLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
+                                                                                               as.Date(date) >= input$'PitchDateLive'[1],
+                                                                                               as.Date(date) <= input$'PitchDateLive'[2]), 
+                                                                                   player = input$'player.pitch.live'))
 }
 
 shinyApp(ui = ui, server = server)
