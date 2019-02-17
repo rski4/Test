@@ -18,8 +18,10 @@ bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6))
 bpen <- flightscopeVar(bpen)
 
 bpen$pitch.type <- sub("^$", "No Type", bpen$pitch.type)
+bpen$pitch.type <- sub("Four Seam Fastball", "Fastball", bpen$pitch.type)
+bpen$pitch.type <- sub("Two Seam Fastball", "Fastball", bpen$pitch.type)
 
-pitch.symbols <- c("Fastball" = 'circle', 
+pitch.symbols <- c("Fastball" = 'circle',
                    "Curveball" = 'triangle-up', 
                    "Changeup" = 'square', 
                    "Cutter" = 'x',
