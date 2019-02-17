@@ -16,10 +16,10 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 live <- ConvertFeet(live)
 
 live$pitch.type <- sub("^$", "No Type", live$pitch.type)
+live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
+live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
 
 pitch.symbols <- c("Fastball" = 'circle',
-                   "Four Seam Fastball" = 'circle',
-                   "Two Seam Fastball" = 'circle',
                    "Curveball" = 'triangle-up', 
                    "Changeup" = 'square', 
                    "Cutter" = 'x',
