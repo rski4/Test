@@ -17,7 +17,9 @@ live <- ConvertFeet(live)
 
 live$pitch.type <- sub("^$", "No Type", live$pitch.type)
 
-pitch.symbols <- c("Fastball" = 'circle', 
+pitch.symbols <- c("Fastball" = 'circle',
+                   "Four Seam Fastball" = 'circle',
+                   "Two Seam Fastball" = 'circle',
                    "Curveball" = 'triangle-up', 
                    "Changeup" = 'square', 
                    "Cutter" = 'x',
