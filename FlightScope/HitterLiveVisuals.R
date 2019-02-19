@@ -37,7 +37,7 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "Hit by Pitch" = '#A1A1A1',
                    "Called Strikeout" = '#CD0000',
                    "Swinging Strikeout" = '#8B0000',
-                   "Contact Out" = '#EEDD82',
+                   "Contact Out" = '#FFD39B',
                    "No Outcome" = '#E3E3E3')
 
 hover.text <- ~paste("<br>Exit Velo:", hit.ball.speed,
@@ -236,4 +236,5 @@ HitLALHLive <- function(df = live, player = "Nolan Arp") {
                         range = c(-35,35)),
            yaxis = list(title = "Launch Angle"))
 }
+
 
