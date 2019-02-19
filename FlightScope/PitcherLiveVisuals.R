@@ -1,27 +1,6 @@
 library(RCurl)
 library(data.table)
 
-pitch.symbols <- c("Fastball" = 'circle',
-                   "Curveball" = 'triangle-up', 
-                   "Changeup" = 'square', 
-                   "Cutter" = 'x',
-                   "Slider" = 'diamond',
-                   "Sinker" = 'triangle-down',
-                   "Splitter" = 'star',
-                   "No Type" = 'cross')
-
-outcome.color <- c("Called Strike" = '#CD0000',
-                   "Ball" = '#7EC0EE',
-                   "Foul Ball" = '#A2CD5A',
-                   "Single" = '#008B45',
-                   "Swinging Strike" = '#8B0000',
-                   "Hit by Pitch" = '#A1A1A1',
-                   "Called Strikeout" = '#CD0000',
-                   "Swinging Strikeout" = '#8B0000',
-                   "Contact Out" = '#DAA520',
-                   "No Outcome" = '#E3E3E3')
-
-
 PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
   k.zone <- data.frame(
     x1 = c(rep(-.95, 3), 0.95),
@@ -47,12 +26,7 @@ PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
                 color = ~pitch.speed, 
                 symbol = ~pitch.type, 
                 marker = list(size = 10, opacity = 0.75),
-                text = ~paste("Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = hover.text.live,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
       layout(xaxis = list(title = "",
                           zeroline = FALSE,
@@ -65,7 +39,8 @@ PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
   }
   
   else {
-    plot_ly(symbols = pitch.symbols) %>%  
+    plot_ly(symbols = pitch.symbols,
+            colors = outcome.color) %>% 
       add_segments(data = k.zone, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2, 
                    color = I("black"), showlegend = FALSE) %>% 
       add_segments(data = nine.box, x = ~x1, xend = ~x2, y = ~y1, yend = ~y2,
@@ -73,15 +48,36 @@ PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
       add_trace(data = filter(df, pitcher == player),
                 x = ~px, y = ~pz,
                 type = 'scatter', mode = 'markers',
-                symbol = ~pitch.type, 
-                marker = list(size = 10, opacity = 0.75),
-                text = ~paste("Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
-                hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
+                #color = ~pitch.call,
+                symbol = ~pitch.type,
+                marker = list(size = 10, 
+                              opacity = 0.5,
+                              line = list(color = '#000000',
+                                          width = 2),
+                              color = '#FFFFFF'),
+                text = hover.text.live,
+                hoverinfo = 'text') %>%
+      add_trace(data = filter(df, pitcher == player),
+                x = ~px, y = ~pz,
+                type = 'scatter', mode = 'markers',
+                color = ~pitch.call,
+                #symbol = ~pitch.type,
+                marker = list(size = 8, 
+                              opacity = 0.6),
+                text = hover.text.live,
+                hoverinfo = 'text') %>%
+      add_trace(data = filter(df, pitcher == player),
+                x = ~px, y = ~pz,
+                type = 'scatter', mode = 'markers',
+                color = ~pitch.call,
+                symbol = ~pitch.type,
+                marker = list(size = 10, 
+                              opacity = 0.75,
+                              line = list(color = '#000000',
+                                          width = 2)),
+                text = hover.text.live,
+                hoverinfo = 'text',
+                showlegend = FALSE) %>%
       layout(xaxis = list(title = "",
                           zeroline = FALSE,
                           range = c(-3,3)),
@@ -89,6 +85,7 @@ PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
                           zeroline = FALSE,
                           range = c(0,6.5)),
              title = as.character(player))
+    
   }
 }
 
@@ -97,12 +94,7 @@ PitchReleaseLive <- function(df = live, player = "Andrew Schmit") {
           x = ~pitch.release.side, y = ~pitch.release.height,
           type = "scatter", mode = "markers",
           marker = list(size = 10, opacity = 0.6),
-          text = ~paste("<br>Type:", pitch.type,
-                        "<br>Velo:", pitch.speed,
-                        "<br>Spin Rate:", pitch.spin,
-                        "<br>Spin Axis:", pitch.spin.axis,
-                        "<br>V. Break:", pitch.break.ind.v,
-                        "<br>H. Break:", -pitch.break.h),
+          text = hover.text.live,
           hoverinfo = 'text', hoverlabel = list(bgcolor = 'white'),
           symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Pitch Release Side (ft)",
@@ -120,12 +112,7 @@ PitchMovementPitchViewLive <- function(df = live, player = "Andrew Schmit") {
           type = 'scatter', mode = 'markers',
           marker = list(size = 10,
                         opacity = 0.75),
-          text = ~paste("Type:", pitch.type,
-                        "<br>Velo:", pitch.speed,
-                        "<br>Spin Rate:", pitch.spin,
-                        "<br>Spin Axis:", pitch.spin.axis,
-                        "<br>V. Break:", pitch.break.ind.v,
-                        "<br>H. Break:", pitch.break.h),
+          text = hover.text.live,
           symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Horizontal Break (in)"),
            yaxis = list(title = "Vertical Break (in)"),
@@ -138,12 +125,7 @@ PitchMovementBatViewLive <- function(df = live, player = "Andrew Schmit") {
           type = 'scatter', mode = 'markers',
           marker = list(size = 10,
                         opacity = 0.75),
-          text = ~paste("Type:", pitch.type,
-                        "<br>Velo:", pitch.speed,
-                        "<br>Spin Rate:", pitch.spin,
-                        "<br>Spin Axis:", pitch.spin.axis,
-                        "<br>V. Break:", pitch.break.ind.v,
-                        "<br>H. Break:", pitch.break.h),
+          text = hover.text.live,
           symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Horizontal Break last 40ft (in)"),
            yaxis = list(title = "Vertical Break last 40ft (in)"),
@@ -208,12 +190,7 @@ PitchDashSpinAxisVeloCirLive <- function(df = live, player = "Andrew Schmit"){
                 marker = list(size = 10,
                               opacity = 0.65,
                               color = 'black'),
-                text = ~paste("<br>Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = hover.text.live,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
     add_annotations(text = "0˚", 
                     x = 0, y = 105,
@@ -314,12 +291,7 @@ PitchDashSpinAxisSpinCirLive <- function(df = live, player = "Andrew Schmit"){
                 marker = list(size = 10,
                               opacity = 0.65,
                               color = 'black'),
-                text = ~paste("<br>Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = hover.text.live,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
     add_annotations(text = "0˚", 
                     x = 0, y = 2300,
