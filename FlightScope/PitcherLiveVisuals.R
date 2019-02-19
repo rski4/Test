@@ -18,7 +18,7 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "Hit by Pitch" = '#A1A1A1',
                    "Called Strikeout" = '#CD0000',
                    "Swinging Strikeout" = '#8B0000',
-                   "Contact Out" = '#FFD39B',
+                   "Contact Out" = '#DAA520',
                    "No Outcome" = '#E3E3E3')
 
 
