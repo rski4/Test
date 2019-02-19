@@ -16,6 +16,7 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 live <- ConvertFeet(live)
 
 live$pitch.type <- sub("^$", "No Type", live$pitch.type)
+live$pitch.call <- sub("^$", "No Outcome", live$pitch.call)
 live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
 live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
 
@@ -35,7 +36,19 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "Swinging Strike" = '#8B0000',
                    "Hit by Pitch" = '#A1A1A1',
                    "Called Strikeout" = '#CD0000',
-                   "Swinging Strikeout" = '#8B0000')
+                   "Swinging Strikeout" = '#8B0000',
+                   "Contact Out" = '#EEDD82',
+                   "No Outcome" = '#E3E3E3')
+
+hover.text <- ~paste("<br>Exit Velo:", hit.ball.speed,
+                    "<br>Launch Angle:", hit.ball.launch.v,
+                    "<br>Direction:", hit.ball.launch.h,
+                    "<br>Carry:", hit.carry.dist,
+                    "<br>Pitcher:", pitcher,
+                    "<br>Pitcher Hand:", pitcher.hand,
+                    "<br>Pitch Speed:", pitch.speed,
+                    "<br>Pitch Type:", pitch.type,
+                    "<br>Outcome:", pitch.call)
 
 HitKZoneLive <- function(df = live, player = "Nolan Arp") {
   k.zone <- data.frame(
@@ -58,18 +71,36 @@ HitKZoneLive <- function(df = live, player = "Nolan Arp") {
     add_trace(data = filter(df, batter == player),
               x = ~px, y = ~pz,
               type = 'scatter', mode = 'markers',
+              #color = ~pitch.call,
+              symbol = ~pitch.type,
+              marker = list(size = 10, 
+                            opacity = 0.5,
+                            line = list(color = '#000000',
+                                        width = 2),
+                            color = '#FFFFFF'),
+              text = hover.text,
+              hoverinfo = 'text') %>%
+    add_trace(data = filter(df, batter == player),
+              x = ~px, y = ~pz,
+              type = 'scatter', mode = 'markers',
+              color = ~pitch.call,
+              #symbol = ~pitch.type,
+              marker = list(size = 8, 
+                            opacity = 0.6),
+              text = hover.text,
+              hoverinfo = 'text') %>%
+    add_trace(data = filter(df, batter == player),
+              x = ~px, y = ~pz,
+              type = 'scatter', mode = 'markers',
               color = ~pitch.call,
               symbol = ~pitch.type,
               marker = list(size = 10, 
-                            opacity = 0.75),
-              text = ~paste("<br>Exit Velo:", hit.ball.speed,
-                            "<br>Launch Angle:", hit.ball.launch.v,
-                            "<br>Direction:", hit.ball.launch.h,
-                            "<br>Carry:", hit.carry.dist,
-                            "<br>Pitch Speed:", pitch.speed,
-                            "<br>Pitch Type:", pitch.type,
-                            "<br>Outcome:", pitch.call),
-              hoverinfo = 'text') %>%
+                            opacity = 0.75,
+                            line = list(color = '#000000',
+                                        width = 2)),
+              text = hover.text,
+              hoverinfo = 'text',
+              showlegend = FALSE) %>%
     layout(xaxis = list(title = "",
                         zeroline = FALSE,
                         range = c(-3,3)),
@@ -79,6 +110,8 @@ HitKZoneLive <- function(df = live, player = "Nolan Arp") {
            title = as.character(player))
   
 }
+
+HitKZoneLive(player = "Jordan Kaplan")
 
 HitBallProfileLive  <- function(df = live, player = "Nolan Arp"){
   df <- df %>% 
@@ -143,13 +176,7 @@ HitBallProfileLive  <- function(df = live, player = "Nolan Arp"){
               marker = list(size = 10,
                             opacity = 0.65,
                             color = 'black'),
-              text = ~paste("<br>Exit Velo:", hit.ball.speed,
-                            "<br>Launch Angle:", hit.ball.launch.v,
-                            "<br>Direction:", hit.ball.launch.h,
-                            "<br>Carry:", hit.carry.dist,
-                            "<br>Pitch Speed:", pitch.speed,
-                            "<br>Pitch Type:", pitch.type,
-                            "<br>Outcome:", pitch.call),
+              text = hover.text,
               hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>% 
     add_annotations(text = "0˚", 
                     x = 105, y = 0,
@@ -189,13 +216,7 @@ HitEVLALive <- function(df = live, player = "Nolan Arp") {
                         opacity = 0.65,
                         color = 'black'),
           symbols = pitch.symbols, symbol = ~pitch.type,
-          text = ~paste("<br>Exit Velo:", hit.ball.speed,
-                        "<br>Launch Angle:", hit.ball.launch.v,
-                        "<br>Direction:", hit.ball.launch.h,
-                        "<br>Carry:", hit.carry.dist,
-                        "<br>Pitch Speed:", pitch.speed,
-                        "<br>Pitch Type:", pitch.type,
-                        "<br>Outcome:", pitch.call),
+          text = hover.text,
           hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>% 
     layout(xaxis = list(title = "Exit Velo"),
            yaxis = list(title = "Launch Angle"))
@@ -209,13 +230,7 @@ HitLALHLive <- function(df = live, player = "Nolan Arp") {
                         opacity = 0.65,
                         color = 'black'),
           symbols = pitch.symbols, symbol = ~pitch.type,
-          text = ~paste("<br>Exit Velo:", hit.ball.speed,
-                        "<br>Launch Angle:", hit.ball.launch.v,
-                        "<br>Direction:", hit.ball.launch.h,
-                        "<br>Carry:", hit.carry.dist,
-                        "<br>Pitch Speed:", pitch.speed,
-                        "<br>Pitch Type:", pitch.type,
-                        "<br>Outcome:", pitch.call),
+          text = hover.text,
           hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>% 
     layout(xaxis = list(title = "Launch Direction",
                         range = c(-35,35)),
