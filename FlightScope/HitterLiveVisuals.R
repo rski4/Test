@@ -4,8 +4,9 @@ library(data.table)
 live.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05.csv"), col.names = paste("col", 1:77, sep = "."))
 live.1$col.2 <- "2019/02/05"
 live.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_02_12_2019.csv"), col.names = paste("col", 1:77, sep = "."))
+live.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_19.csv"), col.names = paste("col", 1:77, sep = "."))
 
-live <- data.frame(rbindlist(list(live.1, live.2)))
+live <- data.frame(rbindlist(list(live.1, live.2, live.3)))
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
 
