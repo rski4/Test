@@ -10,10 +10,12 @@ bpen.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/m
 bpen.4 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26_3.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.5 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_29.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.6 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019-02-02.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.7 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_09.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.8 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_16.csv"), col.names = paste("col", 1:77, sep = "."))
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
 
-bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6))
+bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6, bpen.7, bpen.8))
 
 bpen <- flightscopeVar(bpen)
 
