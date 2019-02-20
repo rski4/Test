@@ -17,6 +17,7 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 live <- ConvertFeet(live)
 
 live$pitch.type <- sub("^$", "No Type", live$pitch.type)
+live$pitch.type <- sub("Undefined", "No Type", live$pitch.type)
 live$pitch.call <- sub("^$", "No Outcome", live$pitch.call)
 live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
 live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
