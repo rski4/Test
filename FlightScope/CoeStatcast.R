@@ -1,4 +1,4 @@
-(shiny)
+library(shiny)
 library(plyr)
 library(DT)
 library(ggplot2)
