@@ -1,4 +1,3 @@
-library(ggplot2)
 library(RCurl)
 library(tidyverse)
 library(plotly)
@@ -13,6 +12,11 @@ bpen.6 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/m
 bpen.7 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_09.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.8 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_16.csv"), col.names = paste("col", 1:77, sep = "."))
 
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/ConvertFeet.R")))
+
+bpen.8 <- flightscopeVar(bpen.8)
+bpen.8 <- ConvertFeet(bpen.8)
+
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
 
 bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6, bpen.7, bpen.8))
@@ -20,6 +24,7 @@ bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6, bpen.7, b
 bpen <- flightscopeVar(bpen)
 
 bpen$pitch.type <- sub("^$", "No Type", bpen$pitch.type)
+bpen$pitch.type <- sub("Undefined", "No Type", bpen$pitch.type)
 bpen$pitch.type <- sub("Four Seam Fastball", "Fastball", bpen$pitch.type)
 bpen$pitch.type <- sub("Two Seam Fastball", "Fastball", bpen$pitch.type)
 
@@ -31,6 +36,15 @@ pitch.symbols <- c("Fastball" = 'circle',
                    "Sinker" = 'triangle-down',
                    "Splitter" = 'star',
                    "No Type" = 'cross')
+
+unique(bpen$pitch.type)
+
+text.bpen = ~paste("Type:", pitch.type,
+                   "<br>Velo:", pitch.speed,
+                   "<br>Spin Rate:", pitch.spin,
+                   "<br>Spin Axis:", pitch.spin.axis,
+                   "<br>V. Break:", pitch.break.ind.v,
+                   "<br>H. Break:", pitch.break.h)
 
 PitchDashVeloSpinSeqBPen <- function(df = bpen, player = "Andrew Schmit") {
   py <- plot_ly(data = filter(df, pitcher == player), 
@@ -87,12 +101,7 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
                 color = ~pitch.speed, 
                 symbol = ~pitch.type, 
                 marker = list(size = 10, opacity = 0.75),
-                text = ~paste("Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = text.bpen,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
       layout(xaxis = list(title = "",
                           zeroline = FALSE,
@@ -115,12 +124,7 @@ PitchKZoneBPen <- function(df = bpen, player = "Andrew Schmit", Velo = FALSE){
                 type = 'scatter', mode = 'markers',
                 symbol = ~pitch.type, 
                 marker = list(size = 10, opacity = 0.75),
-                text = ~paste("Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = text.bpen,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
       layout(xaxis = list(title = "",
                           zeroline = FALSE,
@@ -137,12 +141,7 @@ PitchReleaseBPen <- function(df = bpen, player = "Andrew Schmit") {
           x = ~pitch.release.side, y = ~pitch.release.height,
           type = "scatter", mode = "markers",
           marker = list(size = 10, opacity = 0.6),
-          text = ~paste("<br>Type:", pitch.type,
-                        "<br>Velo:", pitch.speed,
-                        "<br>Spin Rate:", pitch.spin,
-                        "<br>Spin Axis:", pitch.spin.axis,
-                        "<br>V. Break:", pitch.break.ind.v,
-                        "<br>H. Break:", -pitch.break.h),
+          text = text.bpen,
           hoverinfo = 'text', hoverlabel = list(bgcolor = 'white'),
           symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Pitch Release Side (ft)",
@@ -160,12 +159,7 @@ PitchMovementPitchViewBPen <- function(df = bpen, player = "Andrew Schmit") {
           type = 'scatter', mode = 'markers',
           marker = list(size = 10,
                         opacity = 0.75),
-          text = ~paste("Type:", pitch.type,
-                        "<br>Velo:", pitch.speed,
-                        "<br>Spin Rate:", pitch.spin,
-                        "<br>Spin Axis:", pitch.spin.axis,
-                        "<br>V. Break:", pitch.break.ind.v,
-                        "<br>H. Break:", pitch.break.h),
+          text = text.bpen,
           symbol = ~pitch.type, symbols = pitch.symbols) %>% 
     layout(xaxis = list(title = "Horizontal Break (in)"),
            yaxis = list(title = "Vertical Break (in)"),
@@ -248,12 +242,7 @@ PitchDashSpinAxisVeloCirBPen <- function(df = bpen, player = "Andrew Schmit"){
                 marker = list(size = 10,
                               opacity = 0.65,
                               color = 'black'),
-                text = ~paste("<br>Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = text.bpen,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
     add_annotations(text = "0˚", 
                     x = 0, y = 105,
@@ -354,12 +343,7 @@ PitchDashSpinAxisSpinCirBPen <- function(df = bpen, player = "Andrew Schmit"){
                 marker = list(size = 10,
                               opacity = 0.65,
                               color = 'black'),
-                text = ~paste("<br>Type:", pitch.type,
-                              "<br>Velo:", pitch.speed,
-                              "<br>Spin Rate:", pitch.spin,
-                              "<br>Spin Axis:", pitch.spin.axis,
-                              "<br>V. Break:", pitch.break.ind.v,
-                              "<br>H. Break:", pitch.break.h),
+                text = text.bpen,
                 hoverinfo = 'text', hoverlabel = list(bgcolor = 'white')) %>%
     add_annotations(text = "0˚", 
                     x = 0, y = 2300,
@@ -415,5 +399,33 @@ PitchTableBPen <- function(df = bpen, player = "Andrew Schmit") {
   return(pitch.table)
 }
 
-
+PitchExtensionBPen <- function(df = bpen, player = "Andrew Schmit"){
+  pitch.rubber <- data.frame(
+    x = c(-1, -1, 1, 1),
+    x1 = c(-1, 1, 1, -1),
+    y = c(-.5, 0, 0, -.5),
+    y1 = c(0, 0, -.5, -.5))
+  
+  plot_ly(symbols = pitch.symbols) %>%
+    add_segments(data = pitch.rubber,
+                 x = ~x, xend = ~x1, y = ~y, yend = ~y1,
+                 color = I("grey50"), showlegend = FALSE) %>% 
+    add_trace(data = filter(df, pitcher == player),
+              x = ~pitch.release.side, y = ~pitch.extension,
+              type = 'scatter', mode = 'markers',
+              marker = list(size = 10,
+                            opacity = 0.75,
+                            line = list(color = "#000000",
+                                        width = 1)),
+              symbol = ~pitch.type,
+              text = text.bpen,
+              hoverinfo = 'text') %>%
+    layout(xaxis = list(range = c(-6,6),
+                        zeroline = FALSE,
+                        title = "Pitch Release Side"),
+           yaxis = list(range = c(-0.8,9),
+                        zeroline = FALSE,
+                        title = "Pitch Extension"),
+           title = paste(as.character(player),"Extension", sep = " "))
+}
 
