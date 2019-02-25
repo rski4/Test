@@ -428,7 +428,7 @@ PitchExtensionBPen <- function(df = bpen, player = "Andrew Schmit"){
            title = paste(as.character(player),"Extension", sep = " "))
 }
 
-PitchRelease3DBpen <- function(df = bpen, player = "Andrew Schmit") {
+PitchRelease3DBPen <- function(df = bpen, player = "Andrew Schmit") {
   pitch.rubber.3d <- data.frame(
     x = c(-1, -1, 1, 1, -1),
     y = c(-.5, 0, 0, -.5, -.5),
