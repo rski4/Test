@@ -25,6 +25,7 @@ bpen <- flightscopeVar(bpen)
 
 bpen$pitch.type <- sub("^$", "No Type", bpen$pitch.type)
 bpen$pitch.type <- sub("Undefined", "No Type", bpen$pitch.type)
+bpen$pitch.type[is.na(bpen$pitch.type)] <- "No Type"
 bpen$pitch.type <- sub("Four Seam Fastball", "Fastball", bpen$pitch.type)
 bpen$pitch.type <- sub("Two Seam Fastball", "Fastball", bpen$pitch.type)
 
@@ -36,8 +37,6 @@ pitch.symbols <- c("Fastball" = 'circle',
                    "Sinker" = 'triangle-down',
                    "Splitter" = 'star',
                    "No Type" = 'cross')
-
-unique(bpen$pitch.type)
 
 text.bpen = ~paste("Type:", pitch.type,
                    "<br>Velo:", pitch.speed,
@@ -429,3 +428,32 @@ PitchExtensionBPen <- function(df = bpen, player = "Andrew Schmit"){
            title = paste(as.character(player),"Extension", sep = " "))
 }
 
+PitchRelease3DBpen <- function(df = bpen, player = "Andrew Schmit") {
+  pitch.rubber.3d <- data.frame(
+    x = c(-1, -1, 1, 1, -1),
+    y = c(-.5, 0, 0, -.5, -.5),
+    z = c(0, 0, 0, 0, 0))
+  
+  plot_ly(symbols = pitch.symbols) %>%
+    add_trace(data = pitch.rubber.3d,
+              x = ~x, y = ~y, z = ~z,
+              type = 'scatter3d', mode = 'lines',
+              color = I("black"), showlegend = FALSE) %>%
+    add_markers(data = filter(df, pitcher == player),
+                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
+                marker = list(size = 5,
+                              opacity = 0.75,
+                              line = list(color = "#000000",
+                                          width = 1)),
+                symbol = ~pitch.type,
+                text = text.bpen, hoverinfo = 'text') %>%
+    layout(scene = list(xaxis = list(range = c(-6,6),
+                                     zeroline = FALSE,
+                                     title = "Pitch Release Side"),
+                        yaxis = list(range = c(-0.8,9),
+                                     zeroline = FALSE,
+                                     title = "Pitch Extension"),
+                        zaxis = list(range = c(0,7),
+                                     zeroline = FALSE,
+                                     title = "Pitch Height")))
+}
