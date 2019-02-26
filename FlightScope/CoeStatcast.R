@@ -134,13 +134,11 @@ ui <- navbarPage("Coe Statcast",
                                                                      choices = c("L", "R"),
                                                                      selected = c("L", "R"),
                                                                      multiple = TRUE)),
-                                                                   column(4, dateRangeInput(inputId = "PitchDateLive",
+                                                                   column(4, pickerInput(inputId = "PitchDateLive",
                                                                                             label = "Date",
-                                                                                            start = min(as.Date(live$date)),
-                                                                                            end = max(as.Date(live$date)),
-                                                                                            min = min(as.Date(live$date)),
-                                                                                            max = max(as.Date(live$date)),
-                                                                                            format = "yyyy-mm-dd"))),
+                                                                                            choices = as.character(unique(as.Date(live$date))),
+                                                                                            selected = as.character(unique(as.Date(live$date))),
+                                                                                            multiple = TRUE))),
                                                          tabsetPanel(
                                                            tabPanel("Dashboard",
                                                              div(fluidRow(column(12, tableOutput("PitchTableLive")),
@@ -154,24 +152,24 @@ ui <- navbarPage("Coe Statcast",
                                                            tabPanel("Movement", div(br(),fluidRow(column(5,plotlyOutput("MovementLivePFX", width = "700px", height = "700px")),
                                                                                            column(5,offset = 1, plotlyOutput("MovementLive", width = "700px", height = "700px"))), style = 'width:1400px;')),
                                                            tabPanel("Release",
-                                                                    div(br(), plotlyOutput("ReleaseLive")))
+                                                                    div(br(),fluidRow(column(4, plotlyOutput("ReleaseLive", width = "600px", height = "600px")),
+                                                                                      column(4, offset = 1, plotlyOutput("ExtensionLive", width = "600px", height = "600px"))), 
+                                                                        br(),fluidRow(column(12, plotlyOutput("PitchRelease3DLive", width = "900px", height = "600px"))), style = 'width:1400px;'))
                                                          )
                                                        ))),
                             tabPanel("Bullpen", mainPanel(fluidPage(selectInput("player.pitch.bpen", h3("Pitcher"), 
-                                                                      choices = unique(bpen$pitcher), selected = "Ryan Baranowski"),
+                                                                      choices = unique(bpen$pitcher), selected = "Drew Schmit"),
                                                                     fluidRow(column(6, pickerInput(
                                                                       inputId = "PitchTypeBPen",
                                                                       label = "Pitch Type",
                                                                       choices = unique(bpen$pitch.type),
                                                                       selected = unique(bpen$pitch.type),
                                                                       multiple = TRUE)),
-                                                                      column(6, dateRangeInput(inputId = "PitchDateBPen",
-                                                                                              label = "Date",
-                                                                                              start = min(as.Date(bpen$date)),
-                                                                                              end = max(as.Date(bpen$date)),
-                                                                                              min = min(as.Date(bpen$date)),
-                                                                                              max = max(as.Date(bpen$date)),
-                                                                                              format = "yyyy-mm-dd"))),
+                                                                      column(6, pickerInput(inputId = "PitchDateBPen",
+                                                                                               label = "Date",
+                                                                                               choices = as.character(unique(as.Date(bpen$date))),
+                                                                                               selected = as.character(unique(as.Date(bpen$date))),
+                                                                                               multiple = TRUE))),
                                                             tabsetPanel(
                                                               tabPanel("Dashboard",
                                                                        div(fluidRow(column(12, tableOutput("PitchTableBPen")),
@@ -184,10 +182,12 @@ ui <- navbarPage("Coe Statcast",
                                                                 checkboxInput("KZonePitcherBPenSpeed","Velo", value = FALSE),
                                                                        plotlyOutput("KZoneBPenPitch", width = "650px", height = "800px")),
                                                               tabPanel("Movement",
-                                                                       div(fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "700px", height = "700px")),
-                                                                                column(5,offset = 1, plotlyOutput("MovementBPen", width = "700px", height = "700px"))), style = 'width:1400px;')),
+                                                                       div(fluidRow(column(5,plotlyOutput("MovementBPenPFX", width = "600px", height = "600px")),
+                                                                                column(5,offset = 1, plotlyOutput("MovementBPen", width = "600px", height = "600px"))), style = 'width:1400px;')),
                                                               tabPanel("Release",
-                                                                       plotlyOutput("ReleaseBPen"))
+                                                                       div(br(),fluidRow(column(4, plotlyOutput("ReleaseBPen", width = "600px", height = "600px")),
+                                                                                         column(4, offset = 1, plotlyOutput("ExtensionBPen", width = "600px", height = "600px"))), 
+                                                                           br(),fluidRow(column(12, plotlyOutput("PitchRelease3DBPen", width = "900px", height = "600px"))), style = 'width:1400px;'))
                                                             )
                                                           )
                                                           ))
@@ -229,40 +229,43 @@ server <- function(input, output) {
   #### Pitcher BPen ####
   
   output$KZoneBPenPitch <- renderPlotly({PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                    as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                    as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                    as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
                                                         player = input$'player.pitch.bpen',
                                                         Velo = input$'KZonePitcherBPenSpeed')})
   
   output$MovementBPenPFX <- renderPlotly({PitchMovementBatViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen')})
+                                                                               as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
+                                                                   player = input$'player.pitch.bpen')})
   
   output$MovementBPen <- renderPlotly(PitchMovementPitchViewBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                             as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                             as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen'))
+                                                                             as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
+                                                                 player = input$'player.pitch.bpen'))
   
   output$ReleaseBPen <- renderPlotly(PitchReleaseBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                  as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                  as.Date(date) <= input$'PitchDateBPen'[2]), player = input$'player.pitch.bpen'))
+                                                                  as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
+                                                      player = input$'player.pitch.bpen'))
   
-  output$PitchTableBPen <- renderTable({PitchTableBPen(df = filter(bpen, as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                   as.Date(date) <= input$'PitchDateBPen'[2]), 
+  output$ExtensionBPen <- renderPlotly(PitchExtensionBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                      as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
+                                                          player = input$'player.pitch.bpen'))
+  
+  output$PitchRelease3DBPen <- renderPlotly(PitchRelease3DBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
+                                                                           as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
+                                                               player = input$'player.pitch.bpen'))
+  
+  output$PitchTableBPen <- renderTable({PitchTableBPen(df = filter(bpen, as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
                                                        player = input$'player.pitch.bpen')})
   
   output$PitchDashKZoneBPen <- renderPlotly(PitchKZoneBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                       as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                       as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                       as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
                                                            player = input$'player.pitch.bpen'))
 
   output$PitchDashSpinAxisVeloCirBPen <- renderPlotly(PitchDashSpinAxisVeloCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                                               as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
                                                                                    player = input$'player.pitch.bpen'))
   
   output$PitchDashSpinAxisSpinCirBPen <- renderPlotly(PitchDashSpinAxisSpinCirBPen(df = filter(bpen, pitch.type %in% input$'PitchTypeBPen', 
-                                                                                               as.Date(date) >= input$'PitchDateBPen'[1],
-                                                                                               as.Date(date) <= input$'PitchDateBPen'[2]), 
+                                                                                               as.character(as.Date(date)) %in% input$'PitchDateBPen'), 
                                                                                    player = input$'player.pitch.bpen'))
   
   #### Hitter Live ####
@@ -299,53 +302,55 @@ server <- function(input, output) {
   
   #### Pitcher Live ####
   
-  output$PitchTableLive <- renderTable({PitchTableLive(df = filter(live, as.Date(date) >= input$'PitchDateLive'[1],
-                                                                   as.Date(date) <= input$'PitchDateLive'[2],
+  output$PitchTableLive <- renderTable({PitchTableLive(df = filter(live, as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                    batter.hand %in% input$'HitterHandLivePitch'), 
                                                        player = input$'player.pitch.live')})
   
   output$PitchDashKZoneLive <- renderPlotly(PitchKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
-                                                                       as.Date(date) >= input$'PitchDateLive'[1],
-                                                                       as.Date(date) <= input$'PitchDateLive'[2],
+                                                                       as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                        batter.hand %in% input$'HitterHandLivePitch'), 
                                                            player = input$'player.pitch.live'))
   
   output$PitchDashSpinAxisVeloCirLive <- renderPlotly(PitchDashSpinAxisVeloCirLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
-                                                                                               as.Date(date) >= input$'PitchDateLive'[1],
-                                                                                               as.Date(date) <= input$'PitchDateLive'[2],
+                                                                                               as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                                                batter.hand %in% input$'HitterHandLivePitch'), 
                                                                                    player = input$'player.pitch.live'))
   
   output$PitchDashSpinAxisSpinCirLive <- renderPlotly(PitchDashSpinAxisSpinCirLive(df = filter(live, pitch.type %in% input$'PitchTypeLive',
-                                                                                               as.Date(date) >= input$'PitchDateLive'[1],
-                                                                                               as.Date(date) <= input$'PitchDateLive'[2],
+                                                                                               as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                                                batter.hand %in% input$'HitterHandLivePitch'), 
                                                                                    player = input$'player.pitch.live'))
   
   output$KZoneLivePitch <- renderPlotly({PitchKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
-                                                                    as.Date(date) >= input$'PitchDateLive'[1],
-                                                                    as.Date(date) <= input$'PitchDateLive'[2],
+                                                                    as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                     batter.hand %in% input$'HitterHandLivePitch'), 
                                                         player = input$'player.pitch.live',
                                                         Velo = input$'KZonePitcherLiveSpeed')})
   
   output$MovementLivePFX <- renderPlotly({PitchMovementBatViewLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
-                                                                               as.Date(date) >= input$'PitchDateLive'[1],
-                                                                               as.Date(date) <= input$'PitchDateLive'[2],
+                                                                               as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                                batter.hand %in% input$'HitterHandLivePitch'), 
                                                                    player = input$'player.pitch.live')})
   
   output$MovementLive <- renderPlotly(PitchMovementPitchViewLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
-                                                                             as.Date(date) >= input$'PitchDateLive'[1],
-                                                                             as.Date(date) <= input$'PitchDateLive'[2],
+                                                                             as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                              batter.hand %in% input$'HitterHandLivePitch'), 
                                                                  player = input$'player.pitch.live'))
   
   output$ReleaseLive <- renderPlotly(PitchReleaseLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
-                                                                             as.Date(date) >= input$'PitchDateLive'[1],
-                                                                             as.Date(date) <= input$'PitchDateLive'[2],
+                                                                  as.character(as.Date(date)) %in% input$'PitchDateLive',
                                                                              batter.hand %in% input$'HitterHandLivePitch'), 
                                                                  player = input$'player.pitch.live'))
+  
+  output$ExtensionLive <- renderPlotly(PitchExtensionLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
+                                                                  as.character(as.Date(date)) %in% input$'PitchDateLive',
+                                                                  batter.hand %in% input$'HitterHandLivePitch'), 
+                                                      player = input$'player.pitch.live'))
+  
+  output$PitchRelease3DLive <- renderPlotly(PitchRelease3DLive(df = filter(live, pitch.type %in% input$'PitchTypeLive', 
+                                                                  as.character(as.Date(date)) %in% input$'PitchDateLive',
+                                                                  batter.hand %in% input$'HitterHandLivePitch'), 
+                                                      player = input$'player.pitch.live'))
 }
 
 shinyApp(ui = ui, server = server)
