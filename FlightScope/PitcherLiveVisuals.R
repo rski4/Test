@@ -355,3 +355,68 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
   
   return(t2)
 }
+
+for(i in 1:nrow(live)) {
+  if(live$pitch.type[i] %in% c("Curveball", "Slider")) {
+    live$pitch.type.simp[i] = "Breaking Ball"
+  } else if (live$pitch.type[i] %in% c("Fastball", "Cutter", "Sinker", "Splitter")){
+    live$pitch.type.simp[i] = "Fastball"
+  } else if (live$pitch.type[i] == "Changeup"){
+    live$pitch.type.simp[i] = "Changeup"
+  } else {live$pitch.type.simp[i] = "No Type"}
+}
+
+pitch.symbols.simp <- c("Fastball" = 'circle',
+                        "Breaking Ball" = 'diamond', 
+                        "Changeup" = 'square',
+                        "No Type" = 'cross')
+
+PitchRelease3DLive <- function(df = live, player = "Andrew Schmit") {
+  pitch.rubber.3d <- data.frame(
+    x = c(-1, -1, 1, 1, -1),
+    y = c(-.5, 0, 0, -.5, -.5),
+    z = c(0, 0, 0, 0, 0))
+  
+  plot_ly(symbols = pitch.symbols.simp,
+          colors = outcome.color) %>%
+    add_trace(data = pitch.rubber.3d,
+              x = ~x, y = ~y, z = ~z,
+              type = 'scatter3d', mode = 'lines',
+              color = I("black"), showlegend = FALSE) %>%
+    add_markers(data = filter(df, pitcher == player),
+                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
+                marker = list(size = 7,
+                              opacity = 0.75,
+                              color = "#FFFFFF",
+                              line = list(color = "#000000",
+                                          width = 2)),
+                symbol = ~pitch.type.simp,
+                text = hover.text.live, hoverinfo = 'text') %>%
+    add_markers(data = filter(df, pitcher == player),
+                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
+                marker = list(size = 5,
+                              opacity = 0.75),
+                color = ~pitch.call,
+                text = hover.text.live, hoverinfo = 'text') %>%
+    add_markers(data = filter(df, pitcher == player),
+                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
+                marker = list(size = 7,
+                              opacity = 0.75,
+                              line = list(color = "#000000",
+                                          width = 2)),
+                color = ~pitch.call,
+                symbol = ~pitch.type.simp,
+                showlegend = FALSE) %>%
+    layout(scene = list(xaxis = list(range = c(-6,6),
+                                     zeroline = FALSE,
+                                     title = "Pitch Release Side"),
+                        yaxis = list(range = c(-0.8,9),
+                                     zeroline = FALSE,
+                                     title = "Pitch Extension"),
+                        zaxis = list(range = c(0,7),
+                                     zeroline = FALSE,
+                                     title = "Pitch Height")))
+  
+}
+
+
