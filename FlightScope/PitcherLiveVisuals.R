@@ -419,7 +419,7 @@ PitchRelease3DLive <- function(df = live, player = "Andrew Schmit") {
   
 }
 
-PitchReleaseLive <- function(df = live, player = "Andrew Schmit") {
+PitchExtensionLive <- function(df = live, player = "Andrew Schmit") {
   pitch.rubber <- data.frame(
     x = c(-1, -1, 1, 1),
     x1 = c(-1, 1, 1, -1),
