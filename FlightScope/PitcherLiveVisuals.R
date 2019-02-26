@@ -1,6 +1,57 @@
 library(RCurl)
 library(data.table)
 
+live.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05.csv"), col.names = paste("col", 1:77, sep = "."))
+live.1$col.2 <- "2019/02/05"
+live.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_02_12_2019.csv"), col.names = paste("col", 1:77, sep = "."))
+live.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_19.csv"), col.names = paste("col", 1:77, sep = "."))
+
+live <- data.frame(rbindlist(list(live.1, live.2, live.3)))
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
+
+live <- flightscopeVar(live)
+
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/ConvertFeet.R")))
+
+live <- ConvertFeet(live)
+
+live$pitch.type <- sub("^$", "No Type", live$pitch.type)
+live$pitch.call <- sub("^$", "No Outcome", live$pitch.call)
+live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
+live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
+
+pitch.symbols <- c("Fastball" = 'circle',
+                   "Curveball" = 'triangle-up', 
+                   "Changeup" = 'square', 
+                   "Cutter" = 'x',
+                   "Slider" = 'diamond',
+                   "Sinker" = 'triangle-down',
+                   "Splitter" = 'star',
+                   "No Type" = 'cross')
+
+outcome.color <- c("Called Strike" = '#CD0000',
+                   "Ball" = '#7EC0EE',
+                   "Foul Ball" = '#A2CD5A',
+                   "Single" = '#008B45',
+                   "Swinging Strike" = '#8B0000',
+                   "Hit by Pitch" = '#A1A1A1',
+                   "Called Strikeout" = '#CD0000',
+                   "Swinging Strikeout" = '#8B0000',
+                   "Contact Out" = '#DAA520',
+                   "No Outcome" = '#E3E3E3')
+
+hover.text.live <- ~paste("<br>Exit Velo:", hit.ball.speed,
+                          "<br>Launch Angle:", hit.ball.launch.v,
+                          "<br>Direction:", hit.ball.launch.h,
+                          "<br>Carry:", hit.carry.dist,
+                          "<br>Pitcher:", pitcher,
+                          "<br>Pitcher Hand:", pitcher.hand,
+                          "<br>Pitch Speed:", pitch.speed,
+                          "<br>Pitch Type:", pitch.type,
+                          "<br>Outcome:", pitch.call)
+
+
 PitchKZoneLive <- function(df = live, player = "Andrew Schmit", Velo = FALSE){
   k.zone <- data.frame(
     x1 = c(rep(-.95, 3), 0.95),
@@ -356,69 +407,6 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
   return(t2)
 }
 
-for(i in 1:nrow(live)) {
-  if(live$pitch.type[i] %in% c("Curveball", "Slider")) {
-    live$pitch.type.simp[i] = "Breaking Ball"
-  } else if (live$pitch.type[i] %in% c("Fastball", "Cutter", "Sinker", "Splitter")){
-    live$pitch.type.simp[i] = "Fastball"
-  } else if (live$pitch.type[i] == "Changeup"){
-    live$pitch.type.simp[i] = "Changeup"
-  } else {live$pitch.type.simp[i] = "No Type"}
-}
-
-pitch.symbols.simp <- c("Fastball" = 'circle',
-                        "Breaking Ball" = 'diamond', 
-                        "Changeup" = 'square',
-                        "No Type" = 'cross')
-
-PitchRelease3DLive <- function(df = live, player = "Andrew Schmit") {
-  pitch.rubber.3d <- data.frame(
-    x = c(-1, -1, 1, 1, -1),
-    y = c(-.5, 0, 0, -.5, -.5),
-    z = c(0, 0, 0, 0, 0))
-  
-  plot_ly(symbols = pitch.symbols.simp,
-          colors = outcome.color) %>%
-    add_trace(data = pitch.rubber.3d,
-              x = ~x, y = ~y, z = ~z,
-              type = 'scatter3d', mode = 'lines',
-              color = I("black"), showlegend = FALSE) %>%
-    add_markers(data = filter(df, pitcher == player),
-                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
-                marker = list(size = 7,
-                              opacity = 0.75,
-                              color = "#FFFFFF",
-                              line = list(color = "#000000",
-                                          width = 2)),
-                symbol = ~pitch.type.simp,
-                text = hover.text.live, hoverinfo = 'text') %>%
-    add_markers(data = filter(df, pitcher == player),
-                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
-                marker = list(size = 5,
-                              opacity = 0.75),
-                color = ~pitch.call,
-                text = hover.text.live, hoverinfo = 'text') %>%
-    add_markers(data = filter(df, pitcher == player),
-                x = ~pitch.release.side, y = ~pitch.extension, z = ~pitch.release.height,
-                marker = list(size = 7,
-                              opacity = 0.75,
-                              line = list(color = "#000000",
-                                          width = 2)),
-                color = ~pitch.call,
-                symbol = ~pitch.type.simp,
-                showlegend = FALSE) %>%
-    layout(scene = list(xaxis = list(range = c(-6,6),
-                                     zeroline = FALSE,
-                                     title = "Pitch Release Side"),
-                        yaxis = list(range = c(-0.8,9),
-                                     zeroline = FALSE,
-                                     title = "Pitch Extension"),
-                        zaxis = list(range = c(0,7),
-                                     zeroline = FALSE,
-                                     title = "Pitch Height")))
-  
-}
-
 PitchExtensionLive <- function(df = live, player = "Andrew Schmit") {
   pitch.rubber <- data.frame(
     x = c(-1, -1, 1, 1),
@@ -433,15 +421,18 @@ PitchExtensionLive <- function(df = live, player = "Andrew Schmit") {
     add_trace(data = filter(df, pitcher == player),
               x = ~pitch.release.side, y = ~pitch.extension,
               type = "scatter", mode = "markers",
-              marker = list(size = 10, opacity = 0.6),
+              marker = list(size = 10,
+                            opacity = 0.75,
+                            line = list(color = "#000000",
+                                        width = 1)),
               text = hover.text.live,
               hoverinfo = 'text',
-              symbol = ~pitch.type)
+              symbol = ~pitch.type) %>% 
     layout(xaxis = list(title = "Pitch Release Side (ft)",
-                        range = c(-4,4),
+                        range = c(-6,6),
                         zeroline = FALSE),
            yaxis = list(title = "Pitch Release Extension (ft)",
-                        range = c(0,7),
+                        range = c(-0.8,9),
                         zeroline = FALSE),
            title = paste(as.character(player),"Extension", sep = " "))
 }
@@ -508,6 +499,3 @@ PitchRelease3DLive <- function(df = live, player = "Andrew Schmit") {
                                      title = "Pitch Height")))
   
 }
-
-
-
