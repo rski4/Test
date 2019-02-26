@@ -428,13 +428,28 @@ PitchExtensionBPen <- function(df = bpen, player = "Andrew Schmit"){
            title = paste(as.character(player),"Extension", sep = " "))
 }
 
+for(i in 1:nrow(bpen)) {
+  if(bpen$pitch.type[i] %in% c("Curveball", "Slider")) {
+    bpen$pitch.type.simp[i] = "Breaking Ball"
+  } else if (bpen$pitch.type[i] %in% c("Fastball", "Cutter", "Sinker", "Splitter")){
+    bpen$pitch.type.simp[i] = "Fastball"
+  } else if (bpen$pitch.type[i] == "Changeup"){
+    bpen$pitch.type.simp[i] = "Changeup"
+  } else {bpen$pitch.type.simp[i] = "No Type"}
+}
+
+pitch.symbols.simp <- c("Fastball" = 'circle',
+                        "Breaking Ball" = 'diamond', 
+                        "Changeup" = 'square',
+                        "No Type" = 'cross')
+
 PitchRelease3DBPen <- function(df = bpen, player = "Andrew Schmit") {
   pitch.rubber.3d <- data.frame(
     x = c(-1, -1, 1, 1, -1),
     y = c(-.5, 0, 0, -.5, -.5),
     z = c(0, 0, 0, 0, 0))
   
-  plot_ly(symbols = pitch.symbols) %>%
+  plot_ly(symbols = pitch.symbols.simp) %>%
     add_trace(data = pitch.rubber.3d,
               x = ~x, y = ~y, z = ~z,
               type = 'scatter3d', mode = 'lines',
@@ -445,7 +460,7 @@ PitchRelease3DBPen <- function(df = bpen, player = "Andrew Schmit") {
                               opacity = 0.75,
                               line = list(color = "#000000",
                                           width = 1)),
-                symbol = ~pitch.type,
+                symbol = ~pitch.type.simp,
                 text = text.bpen, hoverinfo = 'text') %>%
     layout(scene = list(xaxis = list(range = c(-6,6),
                                      zeroline = FALSE,
