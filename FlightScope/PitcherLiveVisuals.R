@@ -388,6 +388,7 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
   return(t2)
 }
 
+
 PitchExtensionLive <- function(df = live, player = "Andrew Schmit") {
   pitch.rubber <- data.frame(
     x = c(-1, -1, 1, 1),
