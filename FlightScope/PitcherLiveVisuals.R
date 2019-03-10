@@ -366,8 +366,8 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
     dplyr::filter(!is.na(in.zone)) %>% 
     dplyr::group_by(pitch.type) %>% 
     dplyr::summarise(Zone.Pct = mean(in.zone, na.rm = TRUE),
-                     Swing.K.Pct = length(df[pitch.call=="Swinging Strike"])/length(df),
-                     Contact.Pct = length(df[pitch.call=="Single"])/length(df),
+                     Swing.K.Pct = length(filter(df, pitch.call=="Swinging Strike"))/length(df),
+                     Contact.Pct = length(filter(df, pitch.call=="Single"))/length(df),
                      Med.Velo = median(pitch.speed, na.rm = TRUE),
                      Med.Break.V = median(pitch.break.ind.v, na.rm = TRUE),
                      Med.Break.H = median(pitch.break.h, na.rm = TRUE),
