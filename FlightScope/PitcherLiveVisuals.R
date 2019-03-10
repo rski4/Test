@@ -361,8 +361,8 @@ PitchTableLive <- function(df = live, player = "Andrew Schmit") {
                                      px >= -0.95 & 
                                      px <= 0.95, 1, 0))
   
-  pitch.table <- live %>% 
-    filter(pitcher == "Alex Timp") %>% 
+  pitch.table <- df %>% 
+    filter(pitcher == player) %>% 
     dplyr::filter(!is.na(in.zone)) %>% 
     dplyr::group_by(pitch.type) %>% 
     dplyr::summarise(Zone.Pct = mean(in.zone, na.rm = TRUE),
