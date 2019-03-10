@@ -5,6 +5,7 @@ ConvertSci <- function(df){
     mutate(pitch.speed = round(pitch.speed*2.23694, 3),
            pitch.release.height = round(pitch.release.height*3.28084, 3),
            pitch.release.side = round(pitch.release.side*3.28084, 3),
+           pitch.extension = round(pitch.extension*3.28084, 3),
            pitch.break.v = round(pitch.break.v*3.28084, 3),
            pitch.break.ind.v = round(pitch.break.ind.v*3.28084, 3),
            pitch.break.h = round(pitch.break.h*3.28084, 3),
