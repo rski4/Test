@@ -17,11 +17,13 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 
 live <- ConvertSci(live)
 
+
 live$pitch.type <- sub("^$", "No Type", live$pitch.type)
 live$pitch.type <- sub("Undefined", "No Type", live$pitch.type)
 live$pitch.call <- sub("^$", "No Outcome", live$pitch.call)
 live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
 live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
+live$batter <- sub("Tyrell Johnson", "TJ Johnson", live$batter)
 
 pitch.symbols <- c("Fastball" = 'circle',
                    "Curveball" = 'triangle-up', 
@@ -113,8 +115,6 @@ HitKZoneLive <- function(df = live, player = "Nolan Arp") {
            title = as.character(player))
   
 }
-
-HitKZoneLive(player = "Jordan Kaplan")
 
 HitBallProfileLive  <- function(df = live, player = "Nolan Arp"){
   df <- df %>% 
@@ -239,6 +239,43 @@ HitLALHLive <- function(df = live, player = "Nolan Arp") {
                         range = c(-35,35)),
            yaxis = list(title = "Launch Angle"))
 }
+
+PlateDisciplineIndLive <- function(df = live, player = "Nolan Arp") {
+  df <- df %>% 
+    dplyr::mutate(in.zone = ifelse(pz <= 3.5 & 
+                                     pz >= 1.6 & 
+                                     px >= -0.95 & 
+                                     px <= 0.95, 1, 0),
+                  swing.flag = ifelse(pitch.call %in% c("Swinging Strike",
+                                                        "Swinging Strikeout",
+                                                        "Single",
+                                                        "Foul Ball",
+                                                        "Double",
+                                                        "Contact Out"), 1, 0),
+                  contact.flag = ifelse(pitch.call %in% c("Single",
+                                                          "Double",
+                                                          "Contact Out"), 1, 0),
+                  swing.strike.flag = ifelse(pitch.call %in% c("Swinging Strike",
+                                                               "Swinging Strikeout",
+                                                               "Foul Ball"), 1, 0))
+  plate.discipline.ind <- df %>%
+    dplyr::filter(batter == player & !is.na(in.zone)) %>% 
+    dplyr::group_by(pitch.type) %>% 
+    dplyr::summarise(zSwPct = sum(swing.flag[in.zone == 1])/sum(in.zone[in.zone == 1]),
+                     zContPct = sum(contact.flag[in.zone == 1])/sum(in.zone[in.zone == 1]),
+                     in.zone.n = length(in.zone[in.zone == 1]),
+                     oSwPct = sum(swing.flag[in.zone == 0])/length(in.zone[in.zone == 0]),
+                     oContPct = sum(contact.flag[in.zone == 0])/length(in.zone[in.zone == 0]),
+                     out.zone.n = length(in.zone[in.zone == 0]),
+                     SwPct = sum(swing.flag)/length(in.zone),
+                     ContPct = sum(contact.flag)/sum(swing.flag),
+                     ZonePct = sum(in.zone)/length(in.zone),
+                     SwStrPct = sum(swing.strike.flag)/length(in.zone),
+                     total.pitches = length(in.zone))
+  
+  return(plate.discipline.ind)
+}
+
 
 
 
