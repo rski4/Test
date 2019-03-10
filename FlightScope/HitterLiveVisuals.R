@@ -273,7 +273,15 @@ PlateDisciplineIndLive <- function(df = live, player = "Nolan Arp") {
                      SwStrPct = sum(swing.strike.flag)/length(in.zone),
                      total.pitches = length(in.zone))
   
-  return(plate.discipline.ind)
+  t1 <- t(plate.discipline.ind)
+  
+  colnames(t1) <- t1[1,]
+  
+  t1 <- t1[-1,]
+  
+  t2 <- rownames_to_column(data.frame(t1), "Metric")
+  
+  return(t2)
 }
 
 
