@@ -1,4 +1,3 @@
-library(shiny)
 library(plyr)
 library(DT)
 library(ggplot2)
@@ -19,14 +18,23 @@ eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/Fl
 
 eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/PitcherLiveVisuals.R")))
 
+eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/LiveLeaderboards.R")))
+
 ui <- navbarPage("Coe Statcast",
                  
                  selected = "Hitter Leaderboard",
                  
                  tabPanel("Hitter Leaderboard", 
-                          dataTableOutput("HitLeader", width = "80%")),
+                          tabsetPanel(tabPanel("Hit Balls", 
+                                               dataTableOutput("HitBallLeaderLive")),
+                                      tabPanel("Plate Discipline",
+                                               dataTableOutput("PlateDisciplineLeaderLive")))),
                  
-                 tabPanel("Pitcher Leaderboard"),
+                 tabPanel("Pitcher Leaderboard", 
+                          tabsetPanel(tabPanel("Hit Balls", 
+                                               dataTableOutput("PitchHitBallLeaderLive")),
+                                      tabPanel("Plate Discipline",
+                                               dataTableOutput("PitchPlateDisciplineLeaderLive")))),
                  
                  navbarMenu("Hitters",
                             tabPanel("Game",
@@ -58,15 +66,20 @@ ui <- navbarPage("Coe Statcast",
                                                    choices = c("L", "R"),
                                                    selected = c("L", "R"),
                                                    multiple = TRUE)),
-                                                 column(4, dateRangeInput(inputId = "PitchDateLiveHit",
-                                                                          label = "Date",
-                                                                          start = min(as.Date(live$date)),
-                                                                          end = max(as.Date(live$date)),
-                                                                          min = min(as.Date(live$date)),
-                                                                          max = max(as.Date(live$date)),
-                                                                          format = "yyyy-mm-dd"))),
+                                                 column(4, pickerInput(inputId = "HitDateLive",
+                                                                       label = "Date",
+                                                                       choices = as.character(unique(as.Date(live$date))),
+                                                                       selected = as.character(unique(as.Date(live$date))),
+                                                                       multiple = TRUE))),
                                        mainPanel(
                                          tabsetPanel(
+                                           tabPanel("Dashboard", 
+                                                    div(br(),fluidRow(tabsetPanel(tabPanel("Plate Discipline",
+                                                                                           column(12, tableOutput("PlateDisciplineIndLive"))),
+                                                                                  tabPanel("Hit Balls",
+                                                                                           column(12, tableOutput("HitBallTableIndLive")))),
+                                                                 column(6, plotlyOutput("HitKZoneDashLive", width = "600px", height = "700px")),
+                                                                 column(6, plotlyOutput("HitBallProfileDashLive", width = "600px", height = "700px"))), style = 'width:1400px;')),
                                            tabPanel("Spray Chart", checkboxInput("SprayChartCheckEVLive","Exit Velo",
                                                                                value = FALSE),
                                                     checkboxInput("SprayChartCheckLALive","Launch Angle",
@@ -199,21 +212,33 @@ ui <- navbarPage("Coe Statcast",
 
 server <- function(input, output) {
   
+  #### Hitter Leaderboard ####
   
-  
-  hit.leader = ddply(live, .(batter), summarise,
-                     Max.Exit.Velo = format(round(max(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
-                     Exit.Velo.Avg = format(round(mean(hit.ball.speed, na.rm = TRUE), 2), nsmall = 2),
-                     Launch.Angle.Avg = format(round(mean(hit.ball.launch.v, na.rm = TRUE), 2), nsmall = 2),
-                     Max.Carry = format(round(max(hit.carry.dist, na.rm = TRUE), 2), nsmall = 2),
-                     Carry.Avg = format(round(mean(hit.carry.dist, na.rm = TRUE), 2), nsmall = 2))
-  
-  output$HitLeader <- renderDataTable(
-    arrange(hit.leader, desc(Max.Exit.Velo)),
+  output$HitBallLeaderLive <- renderDataTable({arrange(HitBallLeaderLive(df = live), desc(EVmed))},
     filter = 'top',
     rownames = FALSE,
-    options = list(autoWidth = TRUE)
-  )
+    options = list(autoWidth = TRUE,
+                   pageLength = 25))
+  
+  output$PlateDisciplineLeaderLive <- renderDataTable({arrange(PlateDisciplineLeaderLive(df = live), desc(zSwPct))},
+                                                      filter = 'top',
+                                                      rownames = FALSE,
+                                                      options = list(autoWidth = TRUE,
+                                                                     pageLength = 25))
+  
+  #### Pitcher Leaderboard ####
+  
+  output$PitchHitBallLeaderLive <- renderDataTable({arrange(PitchHitBallLeaderLive(df = live), EVmed)},
+                                              filter = 'top',
+                                              rownames = FALSE,
+                                              options = list(autoWidth = TRUE,
+                                                             pageLength = 25))
+  
+  output$PitchPlateDisciplineLeaderLive <- renderDataTable({arrange(PitchPlateDisciplineLeaderLive(df = live), desc(oSwPct))},
+                                                      filter = 'top',
+                                                      rownames = FALSE,
+                                                      options = list(autoWidth = TRUE,
+                                                                     pageLength = 25))
   
   #### Hitter BP ####
   output$SprayChartBP <- renderPlot({SprayChartFS(player = input$'hitter.input.bp', exit.velo = input$'SprayChartCheckEVBP', launch.angle = input$'SprayChartCheckLABP')}, height = 600, width = 600)
@@ -270,33 +295,52 @@ server <- function(input, output) {
   
   #### Hitter Live ####
   
+  output$PlateDisciplineIndLive <- renderTable({PlateDisciplineIndLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit',
+                                                                                   as.character(as.Date(date)) %in% input$'HitDateLive',
+                                                                                   pitcher.hand %in% input$'PitcherHandLiveBat'), 
+                                                                          player = input$'hitter.live')}, 
+                                               caption = "<b> <span style='color:#000000'> Plate Discipline </b>",
+                                               caption.placement = getOption("xtable.caption.placement", "top"))
+  
+  output$HitBallTableIndLive <- renderTable({HitBallTableIndLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit',
+                                                                                as.character(as.Date(date)) %in% input$'HitDateLive',
+                                                                                pitcher.hand %in% input$'PitcherHandLiveBat'), 
+                                                                    player = input$'hitter.live')},
+                                            caption = "<b> <span style='color:#000000'> Hit Balls </b>",
+                                            caption.placement = getOption("xtable.caption.placement", "top"))
+  
+  output$HitKZoneDashLive <- renderPlotly({HitKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
+                                                                    as.character(as.Date(date)) %in% input$'HitDateLive',
+                                                                    pitcher.hand %in% input$'PitcherHandLiveBat'), 
+                                                        player = input$'hitter.live')})
+  
+  output$HitBallProfileDashLive <- renderPlotly({HitBallProfileLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
+                                                                                as.character(as.Date(date)) %in% input$'HitDateLive',
+                                                                                pitcher.hand %in% input$'PitcherHandLiveBat'), 
+                                                                player = input$'hitter.live')})
+  
   output$SprayChartLive <- renderPlot({SprayChartFS(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
-                                                                as.Date(date) >= input$'PitchDateLiveHit'[1],
-                                                                as.Date(date) <= input$'PitchDateLiveHit',
+                                                                as.character(as.Date(date)) %in% input$'HitDateLive',
                                                                 pitcher.hand %in% input$'PitcherHandLiveBat'),
                                                     player = input$'hitter.live', exit.velo = input$'SprayChartCheckEVLive', launch.angle = input$'SprayChartCheckLALive')}, height = 600, width = 600)
   
   output$HitKZoneLive <- renderPlotly({HitKZoneLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
-                                                                as.Date(date) >= input$'PitchDateLiveHit'[1],
-                                                                as.Date(date) <= input$'PitchDateLiveHit',
+                                                                as.character(as.Date(date)) %in% input$'HitDateLive',
                                                                 pitcher.hand %in% input$'PitcherHandLiveBat'), 
                                                     player = input$'hitter.live')})
   
   output$HitBallProfileLive <- renderPlotly({HitBallProfileLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
-                                                                            as.Date(date) >= input$'PitchDateLiveHit'[1],
-                                                                            as.Date(date) <= input$'PitchDateLiveHit',
+                                                                            as.character(as.Date(date)) %in% input$'HitDateLive',
                                                                             pitcher.hand %in% input$'PitcherHandLiveBat'), 
                                                                 player = input$'hitter.live')})
   
   output$HitEVLALive <- renderPlotly({HitEVLALive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
-                                                              as.Date(date) >= input$'PitchDateLiveHit'[1],
-                                                              as.Date(date) <= input$'PitchDateLiveHit',
+                                                              as.character(as.Date(date)) %in% input$'HitDateLive',
                                                               pitcher.hand %in% input$'PitcherHandLiveBat'),
                                                   player = input$'hitter.live')})
   
   output$HitLALHLive <- renderPlotly({HitLALHLive(df = filter(live, pitch.type %in% input$'PitchTypeLiveHit', 
-                                                              as.Date(date) >= input$'PitchDateLiveHit'[1],
-                                                              as.Date(date) <= input$'PitchDateLiveHit',
+                                                              as.character(as.Date(date)) %in% input$'HitDateLive',
                                                               pitcher.hand %in% input$'PitcherHandLiveBat'), 
                                                   player = input$'hitter.live')})
   
