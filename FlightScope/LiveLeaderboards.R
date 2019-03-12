@@ -24,7 +24,7 @@ PlateDisciplineLeaderLive <- function(df = live) {
   plate.discipline.leader <- live %>%
     dplyr::filter(!is.na(in.zone)) %>% 
     dplyr::group_by(batter) %>%
-    dplyr::summarise(zSwPct = sum(swing.flag[in.zone == 1])/sum(in.zone[in.zone == 1]),
+    dplyr::summarise(zSwPct = round(sum(swing.flag[in.zone == 1])/sum(in.zone[in.zone == 1]), digits = 2),
                      zContPct = round(sum(contact.flag[in.zone == 1])/sum(in.zone[in.zone == 1]), digits = 2),
                      in.zone.n = length(in.zone[in.zone == 1]),
                      oSwPct = round(sum(swing.flag[in.zone == 0])/length(in.zone[in.zone == 0]), digits = 2),
