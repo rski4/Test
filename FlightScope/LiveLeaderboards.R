@@ -2,28 +2,6 @@ library(RCurl)
 library(data.table)
 library(tidyverse)
 
-live.1 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_05_sci.csv"), col.names = paste("col", 1:77, sep = "."))
-live.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_12_sci.csv"), col.names = paste("col", 1:77, sep = "."))
-live.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_19_sci.csv"), col.names = paste("col", 1:77, sep = "."))
-live.4 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Live/Live_2019_02_25_sci.csv"), col.names = paste("col", 1:77, sep = "."))
-
-live <- data.frame(rbindlist(list(live.1, live.2, live.3, live.4)))
-
-eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/flightscopeVar.R")))
-
-live <- flightscopeVar(live)
-
-eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/ConvertFeet.R")))
-eval(parse(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/ConvertSci.R")))
-
-live <- ConvertSci(live)
-
-live$pitch.type <- sub("^$", "No Type", live$pitch.type)
-live$pitch.call <- sub("^$", "No Outcome", live$pitch.call)
-live$pitch.type <- sub("Four Seam Fastball", "Fastball", live$pitch.type)
-live$pitch.type <- sub("Two Seam Fastball", "Fastball", live$pitch.type)
-live$batter <- sub("Tyrell Johnson", "TJ Johnson", live$batter)
-
 PlateDisciplineLeaderLive <- function(df = live) {
   live <- live %>% 
     dplyr::mutate(in.zone = ifelse(pz <= 3.5 & 
