@@ -284,6 +284,32 @@ PlateDisciplineIndLive <- function(df = live, player = "Nolan Arp") {
   return(t2)
 }
 
+HitBallTableIndLive <- function(df = live, player = "Nolan Arp") {
+  Hit.Ball.Ind <- df %>% 
+    filter(!is.na(hit.ball.speed) & batter == player) %>% 
+    group_by(pitch.type) %>% 
+    summarise(N = length(hit.ball.speed),
+              LAmed = median(hit.ball.launch.v, na.rm = TRUE),
+              EVmax = max(hit.ball.speed, na.rm = TRUE),
+              EVmed = median(hit.ball.speed, na.rm = TRUE),
+              Carrymax = max(hit.carry.dist, na.rm = TRUE),
+              Carrymed = median(hit.carry.dist, na.rm = TRUE),
+              HardHitpct = length(hit.ball.speed[hit.ball.speed > 90])/length(hit.ball.speed),
+              LDpct = length(hit.ball.speed[hit.ball.launch.v >= 10 & hit.ball.launch.v <= 25])/length(hit.ball.launch.v),
+              FBpct = length(hit.ball.speed[hit.ball.launch.v > 25])/length(hit.ball.speed),
+              GBpct = length(hit.ball.speed[hit.ball.launch.v < 10])/length(hit.ball.speed))
+  
+  t1 <- t(Hit.Ball.Ind)
+  
+  colnames(t1) <- t1[1,]
+  
+  t1 <- t1[-1,]
+  
+  t2 <- rownames_to_column(data.frame(t1), "Metric")
+  
+  return(t2)
+}
+
 
 
 
