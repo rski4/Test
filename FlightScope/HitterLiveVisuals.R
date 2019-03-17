@@ -318,7 +318,7 @@ PitchInfoTableIndLive <- function(df = live, player = "Nolan Arp") {
                                                          "Curveball"), 1, 0))
                   
     
-    dplyr::filter(batter == player & !is.na(pitch.type)) %>% 
+    dplyr::filter(!is.na(pitch.type)) %>% 
     dplyr::group_by(pitch.type) %>% 
     dplyr::summarise(FB.pct = sum(FB.flag == 1)/length(pitch.type),
                      CH.pct = length(pitch.type == "Changeup")/length(pitch.type),
