@@ -46,14 +46,14 @@ outcome.color <- c("Called Strike" = '#CD0000',
                    "No Outcome" = '#E3E3E3')
 
 hover.text.live <- ~paste("<br>Exit Velo:", hit.ball.speed,
-                    "<br>Launch Angle:", hit.ball.launch.v,
-                    "<br>Direction:", hit.ball.launch.h,
-                    "<br>Carry:", hit.carry.dist,
-                    "<br>Pitcher:", pitcher,
-                    "<br>Pitcher Hand:", pitcher.hand,
-                    "<br>Pitch Speed:", pitch.speed,
-                    "<br>Pitch Type:", pitch.type,
-                    "<br>Outcome:", pitch.call)
+                          "<br>Launch Angle:", hit.ball.launch.v,
+                          "<br>Direction:", hit.ball.launch.h,
+                          "<br>Carry:", hit.carry.dist,
+                          "<br>Pitcher:", pitcher,
+                          "<br>Pitcher Hand:", pitcher.hand,
+                          "<br>Pitch Speed:", pitch.speed,
+                          "<br>Pitch Type:", pitch.type,
+                          "<br>Outcome:", pitch.call)
 
 HitKZoneLive <- function(df = live, player = "Nolan Arp") {
   k.zone <- data.frame(
@@ -310,6 +310,24 @@ HitBallTableIndLive <- function(df = live, player = "Nolan Arp") {
   return(t2)
 }
 
-
-
-
+PitchInfoTableIndLive <- function(df = live, player = "Nolan Arp") {
+  Pitch.Info.Ind <- df %>%
+    dplyr::filter(batter == player & !is.na(pitch.type)) %>% 
+    dplyr::group_by(pitch.type) %>% 
+    dplyr::summarise(FB.pct = sum(pitch.type[pitch.type == "Four Seam Fastball" | "Two Seam Fastball"])/sum(pitch.type),
+                     CH.pct = sum(pitch.type[pitch.type == "Changeup"])/sum(pitch.type),
+                     SL.pct = sum(pitch.type[pitch.type == "Slider"])/sum(pitch.type),
+                     CV.pct = sum(pitch.type[pitch.type == "Curveball"])/sum(pitch.type),
+                     BreakB.pct = sum(pitch.type[pitch.type == "Slider" | "Curveball"])/sum(pitch.type))
+  
+  t1 <- t(Pitch.Info.Ind)
+  
+  colnames(t1) <- t1[1,]
+  
+  t1 <- t1[-1,]
+  
+  t2 <- rownames_to_column(data.frame(t1), "Metric")
+  
+  return(t2)
+  
+}
