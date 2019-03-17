@@ -312,13 +312,19 @@ HitBallTableIndLive <- function(df = live, player = "Nolan Arp") {
 
 PitchInfoTableIndLive <- function(df = live, player = "Nolan Arp") {
   Pitch.Info.Ind <- df %>%
+    dplyr::mutate(FB.flag = ifelse(pitch.type %in% c("Four Seam Fastball",
+                                                     "Two Seam Fastball"), 1, 0),
+                  BreakB.flag = ifelse(pitch.type %in% c("Slider",
+                                                         "Curveball"), 1, 0))
+                  
+    
     dplyr::filter(batter == player & !is.na(pitch.type)) %>% 
     dplyr::group_by(pitch.type) %>% 
-    dplyr::summarise(FB.pct = sum(pitch.type[pitch.type == "Four Seam Fastball" | "Two Seam Fastball"])/sum(pitch.type),
-                     CH.pct = sum(pitch.type[pitch.type == "Changeup"])/sum(pitch.type),
-                     SL.pct = sum(pitch.type[pitch.type == "Slider"])/sum(pitch.type),
-                     CV.pct = sum(pitch.type[pitch.type == "Curveball"])/sum(pitch.type),
-                     BreakB.pct = sum(pitch.type[pitch.type == "Slider" | "Curveball"])/sum(pitch.type))
+    dplyr::summarise(FB.pct = sum(FB.flag == 1)/length(pitch.type),
+                     CH.pct = length(pitch.type == "Changeup")/length(pitch.type),
+                     SL.pct = length(pitch.type == "Slider")/length(pitch.type),
+                     CV.pct = length(pitch.type == "Curveball")/length(pitch.type),
+                     BreakB.pct = sum(BreakB.flag == 1)/length(pitch.type))
   
   t1 <- t(Pitch.Info.Ind)
   
