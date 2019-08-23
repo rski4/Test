@@ -10,14 +10,16 @@ Created on Tue Oct  2 23:35:18 2018
 import pandas as pd
 import numpy as np
 
-games17 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2017Data//games2017.csv"
-games18 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2018Data//games2018.csv"
-events17 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2017Data//events2017.csv"
-events18 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2018Data//events2018.csv"
+#games17 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2017Data//games2017.csv"
+#games18 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2018Data//games2018.csv"
+#events17 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2017Data//events2017.csv"
+#events18 = "//Users//noahpurcell//Desktop//IIAC_Scraping//2018Data//events2018.csv"
 
-teams_f = "//Users//noahpurcell//Desktop//IIAC_Scraping//iiac_teams.csv"
+events19 = "//Users//noahpurcell//Desktop//IIAC_Scraping//Test//events2019.csv"
 
-#out = "//Users//noahpurcell//Desktop//IIAC_Scraping//2017Data//events2017test.csv"
+teams_f = "//Users//noahpurcell//Desktop//IIAC_Scraping//Test//iiac_teams.csv"
+
+out = "//Users//noahpurcell//Desktop//IIAC_Scraping//Test//events2019.csv"
 
 
 def get_clean_teams():
@@ -45,24 +47,24 @@ def add_clean_teams(in_f, out_f):
     
     
     
-    
 def teams_to_cols(row, team, teams):
     if pd.isnull(row[team]):
         return np.nan
-    elif row[team] == "concordia":
-        if row["date"] in ("3/17/2017","3/19/2017","3/7/2018"):
-            name = teams[row[team]].split()[0]
-            name += " " + teams[row[team]].split("/")[1]
-            return name
-        elif row["date"] == "3/8/2018":
-            return "concordia university chicago"
-        elif row["date"] == "3/14/2018":
-            return teams[row[team]].split("/")[0]
-        else:
-            print(row["date"])
-            return row[team]
-    else:
+#    elif row[team] == "concordia":
+#        if row["date"] in ("3/17/2017","3/19/2017","3/7/2018"):
+#            name = teams[row[team]].split()[0]
+#            name += " " + teams[row[team]].split("/")[1]
+#            return name
+#        elif row["date"] == "3/8/2018":
+#            return "concordia university chicago"
+#        elif row["date"] == "3/14/2018":
+#            return teams[row[team]].split("/")[0]
+#        else:
+#            print(row["date"])
+#            return row[team]
+    if row[team] in teams.keys():
         return teams[row[team]]
+    return row[team]
     
     
     
