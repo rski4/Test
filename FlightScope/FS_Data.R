@@ -1,4 +1,3 @@
-library(RCurl)
 library(tidyverse)
 library(data.table)
 
@@ -30,9 +29,23 @@ bpen.5 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/m
 bpen.6 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019-02-02.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.7 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_09.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.8 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_16.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.9 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_10_23.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.10 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_10_30.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.11 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_11_06_2019.csv"), col.names = paste("col", 1:77, sep = "."))
 
 bpen.8 <- flightscopeVar(bpen.8)
 bpen.8 <- ConvertFeet(bpen.8)
+
+bpen.9 <- flightscopeVar(bpen.9)
+bpen.9 <- ConvertSci(bpen.9)
+
+bpen.10 <- flightscopeVar(bpen.10)
+bpen.10 <- ConvertSci(bpen.10)
+
+bpen.11 <- flightscopeVar(bpen.11)
+bpen.11 <- ConvertSci(bpen.11)
+
+
 
 bpen <- rbindlist(list(bpen.1, bpen.2, bpen.3, bpen.4, bpen.5, bpen.6, bpen.7, bpen.8))
 
