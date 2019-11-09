@@ -24,15 +24,15 @@ bpen.2 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/m
 bpen.3 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26_2.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.4 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_26_3.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.5 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_01_29.csv"), col.names = paste("col", 1:77, sep = "."))
-#bpen.6 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019-02-02.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.6 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_02.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.7 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_09.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.8 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_02_16.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.9 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_10_23.csv"), col.names = paste("col", 1:77, sep = "."))
 bpen.10 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_10_30.csv"), col.names = paste("col", 1:77, sep = "."))
-bpen.11 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_11_06_2019.csv"), col.names = paste("col", 1:77, sep = "."))
+bpen.11 <- read.csv(text = getURL("https://raw.githubusercontent.com/rski4/Test/master/FlightScope/Bullpen/BPen_2019_11_06.csv"), col.names = paste("col", 1:77, sep = "."))
 
 
-bpen <- rbindlist(list(bpen.2, bpen.3, bpen.4, bpen.5, bpen.7, bpen.8, bpen.9, bpen.10, bpen.11))
+bpen <- rbindlist(list(bpen.2, bpen.3, bpen.4, bpen.5, bpen.6, bpen.7, bpen.8, bpen.9, bpen.10, bpen.11))
 
 bpen <- flightscopeVar(bpen)
 bpen <- ConvertSci(bpen)
@@ -70,7 +70,5 @@ df$pitch.type <- df$pitch.type %>%
   gsub("Two Seam Fastball", "Fastball", .)
   
   
-
-
   
 
