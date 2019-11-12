@@ -58,9 +58,9 @@ live$sess.type <- "Live"
 
 # All Data
 
-df <- rbindlist(list(scrim, live, bpen))
+fs <- rbindlist(list(scrim, live, bpen))
 
-df$pitch.type <- df$pitch.type %>% 
+fs$pitch.type <- fs$pitch.type %>% 
   gsub("Cutter", "Fastball", .) %>%
   gsub("Sinker", "Fastball", .) %>% 
   gsub("Undefined", "No Type", .) %>% 
@@ -68,7 +68,17 @@ df$pitch.type <- df$pitch.type %>%
   gsub("^$", "No Type", .) %>% 
   gsub("Four Seam Fastball", "Fastball", .) %>% 
   gsub("Two Seam Fastball", "Fastball", .)
-  
-  
-  
+
+fs$pitcher <- fs$pitcher %>% 
+  gsub("Tyrell", "TJ", .) %>% 
+  gsub("Jake Schmit", "Jacob Schmit", .)
+
+fs <- fs %>% 
+  mutate(
+    date = as.Date(as.character(date), "%Y/%m/%d")
+  )
+
+fs$season = ifelse(fs$date > as.Date('2019-06-25'), "Fall 2019", "Spring 2019")
+
+save(fs, file = "fs.RData")  
 
